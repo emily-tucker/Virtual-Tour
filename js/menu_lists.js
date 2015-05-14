@@ -36,8 +36,8 @@ var subhart = [
 new MenuItem({text: 'Location', icon: 'fa fa-university ', target: 'external', href: "#"})
 ]
 var subfree = [
-new MenuItem({text: 'Shuttle Stops', icon: 'fa fa-university', target: 'external', href: "#"}),
-new MenuItem({text: 'Times', icon: 'fa fa-university', target: 'external', href: "#"})
+new MenuItem({text: 'Shuttle Stops', icon: 'fa fa-bus', target: 'external', href: "#"}),
+new MenuItem({text: 'Times', icon: 'fa fa-bus', target: 'external', href: "#"})
 ]
 
 var subpass = [
@@ -95,7 +95,7 @@ new MenuItem({text: 'KWSB Radio', icon: 'fa fa-university', target: 'external', 
 ]
 
 var subactivities = [
-new MenuItem({text: 'Clubs and Organizations', icon: 'fa fa-university', items: subclub}),
+new MenuItem({text: 'Clubs', icon: 'fa fa-university', items: subclub}),
 new MenuItem({text: 'Recreation', icon: 'fa fa-gamepad', target: 'external', href: "#"})
 ]
 var subvisit = [
@@ -112,7 +112,6 @@ new MenuItem({text: 'Visit Campus', icon: 'fa fa-university ', items: subvisit})
 new MenuItem({text: 'Activities', icon: 'fa fa-smile-o ', items: subactivities}),
 new MenuItem({text: 'Housing', icon: 'fa fa-home ', items: subhousing}),
 new MenuItem({text: 'Nearby', icon: 'fa fa-road ', items: subnear}),
-new MenuItem({text: 'Downtown Gunnison', icon: 'fa fa-university '})
 ]
 
 var subbike = [
