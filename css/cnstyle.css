@@ -4,11 +4,64 @@ body.contextual_navigation
     margin: 0px;
 }
 
+
+/**********************
+* Drill Down Menu Styles
+***********************/
+
+.dd-wrapper ul, .dd-wrapper ul li, .dd-wrapper li, .dd-wrapper li ul, .dd-wrapper li ul li {
+  margin: 0; padding: 0; list-style: none; top: 0%;
+  }
+.dd-wrapper .dd-menu {
+  overflow: hidden; position: absolute; width:100%;
+  }
+.dd-wrapper  .dd-menu ul {
+  position: absolute; top: 0%; right: 0;
+  }
+
+/***********************
+* Blue Menu CSS
+************************/
+
+.blue .dd-wrapper {
+  font: bold;
+  font-family: Helvetica;
+  font-size: 1.5vw;
+  }
+
+.blue .dd-menu a {
+  background:rgba(0,0,0,0.5); text-decoration: none; padding: 3% 3% 3% 5%; display: block; color: white;
+  }
+
+.blue .dd-menu ul a {
+  background:rgba(0,0,0,0.1); text-shadow: 2px 2px #000;
+  }
+.blue .dd-menu a:hover {
+  background: rgba(255,255,255,.7);
+  }
+.blue .dd-menu li.dd-parent a:hover {
+  color: black; text-shadow: 0px 0px;
+  }
+.blue .dd-menu li.dd-parent a.active {
+  color: #ccc; background: rgba(0,0,0,0.5);
+  }
+
+
+
 .menu{
     position: fixed;
     width: 20%;
-    top: 15%;
+    top: 5%;
     z-index: 1000;
+}
+
+#map{
+    position: fixed;
+    width: 25%;
+    height: 38%;
+    right: 0;
+    overflow: hidden;
+    z-index: 5;
 }
 
 #map{
@@ -218,7 +271,7 @@ comment out so the map doesn't auto scale
 .caption_wrapper {
     width:25%;
     height:auto;
-    left: 10%;
+    left: 21%;
     overflow:hidden;
     position:fixed;
 }
