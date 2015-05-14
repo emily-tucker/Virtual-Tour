@@ -47,7 +47,7 @@ new MenuItem({text: 'CBMR Website', icon: 'fa fa-university', target: 'external'
 
 
 var subcbmr = [
-new MenuItem({text: 'About', icon: 'fa fa-university', target: 'external', href: "#"}),
+new MenuItem({text: 'About', icon: 'fa fa-image', target: 'external', href: "#"}),
 new MenuItem({text: 'Ski Pass', icon: 'fa fa-university', items: subpass}),
 new MenuItem({text: 'Free Shuttle', icon: 'fa fa-university', items: subfree})
 ]
@@ -56,7 +56,7 @@ new MenuItem({text: 'Free Shuttle', icon: 'fa fa-university', items: subfree})
 var subnear = [
 new MenuItem({text: 'CBMR', icon: 'fa fa-tree', items: subcbmr}),
 new MenuItem({text: 'Monarch', icon: 'fa fa-tree', target: 'external', href: "#"}),
-new MenuItem({text: 'Hartman Rocks', icon: 'fa fa-university', items: subhart}),
+new MenuItem({text: 'Hartman Rocks', icon: 'fa fa-bicycle', items: subhart}),
 new MenuItem({text: 'Blue Mesa', icon: 'fa fa-university', items: subblue}),
 new MenuItem({text: 'Wanita Hot Springs', icon: 'fa fa-university', items: subwanita})
 ]
@@ -75,8 +75,8 @@ new MenuItem({text: 'Pinnacles', icon: 'fa fa-bed', target: "locations", href: '
 
 
 var subhousing = [
-new MenuItem({text: 'On Campus', icon: 'fa fa-university', items: subon}),
-new MenuItem({text: 'Off Campus', icon: 'fa fa-university', items: suboff})
+new MenuItem({text: 'On Campus', icon: 'fa fa-building', items: subon}),
+new MenuItem({text: 'Off Campus', icon: 'fa fa-home', items: suboff})
 ]
 
 var subacademicclub = [
@@ -95,12 +95,12 @@ new MenuItem({text: 'KWSB Radio', icon: 'fa fa-university', target: 'external', 
 ]
 
 var subactivities = [
-new MenuItem({text: 'Clubs', icon: 'fa fa-university', items: subclub}),
+new MenuItem({text: 'Clubs', icon: 'fa fa-music', items: subclub}),
 new MenuItem({text: 'Recreation', icon: 'fa fa-gamepad', target: 'external', href: "#"})
 ]
 var subvisit = [
-new MenuItem({text: 'Setup Visit', icon: 'fa fa-university', target: 'external', href: "http://www.western.edu/future-students/visiting-campus/visit-western"}),
-new MenuItem({text: 'Contact Us', icon: 'fa fa-university', target: 'external', href: "http://www.western.edu/future-students/contact-admissions/meet-admissions-counselors"})
+new MenuItem({text: 'Setup Visit', icon: 'fa fa-check-square', target: 'external', href: "http://www.western.edu/future-students/visiting-campus/visit-western"}),
+new MenuItem({text: 'Contact Us', icon: 'fa fa-phone', target: 'external', href: "http://www.western.edu/future-students/contact-admissions/meet-admissions-counselors"})
 ]
 
 
@@ -115,12 +115,12 @@ new MenuItem({text: 'Nearby', icon: 'fa fa-road ', items: subnear}),
 ]
 
 var subbike = [
-new MenuItem({text: 'Hartmans Rocks', icon: 'fa fa-university', target: 'external', href: "#"}),
-new MenuItem({text: 'Trails Nearby', icon: 'fa fa-university', target: 'external', href: "#"})
+new MenuItem({text: 'Hartmans Rocks', icon: 'fa fa-tree', target: 'external', href: "#"}),
+new MenuItem({text: 'Trails Nearby', icon: 'fa fa-motorcycle', target: 'external', href: "#"})
 ]
 var subski = [
-new MenuItem({text: 'CBMR', icon: 'fa fa-university', target: 'external', href: "#"}),
-new MenuItem({text: 'Monarch', icon: 'fa fa-university', target: 'external', href: "#"})
+new MenuItem({text: 'CBMR', icon: 'fa fa-tree', target: 'external', href: "#"}),
+new MenuItem({text: 'Monarch', icon: 'fa fa-tree', target: 'external', href: "#"})
 ]
 
 
@@ -131,33 +131,33 @@ new MenuItem({text: 'Trail Running', icon: 'fa fa-bicycle', target: 'external', 
 ]
 
 var subsoccer = [
-new MenuItem({text: 'Soccer Field', icon: 'fa fa-university', target: 'external', href: "#"}),
-new MenuItem({text: 'Staff', icon: 'fa fa-university', target: 'external', href: "#"})
+new MenuItem({text: 'Soccer Field', icon: 'fa fa-futbol-o', target: 'external', href: "#"}),
+new MenuItem({text: 'Staff', icon: 'fa fa-users', target: 'external', href: "#"})
 ]
 
 var subswimming = [
 new MenuItem({text: 'Swimming Pool', icon: 'fa fa-university', target: 'external', href: "#"}),
-new MenuItem({text: 'Staff', icon: 'fa fa-university', target: 'external', href: "#"})
+new MenuItem({text: 'Staff', icon: 'fa fa-users', target: 'external', href: "#"})
 ]
 
 var subtrack = [
 new MenuItem({text: 'Indoor Facility', icon: 'fa fa-university', target: 'external', href: "#"}),
-new MenuItem({text: 'Staff', icon: 'fa fa-university', target: 'external', href: "#"})
+new MenuItem({text: 'Staff', icon: 'fa fa-users', target: 'external', href: "#"})
 ]
 
 var subwrestling = [
 new MenuItem({text: 'Paul Wright Gym', icon: 'fa fa-university', target: 'external', href: "#"}),
-new MenuItem({text: 'Staff', icon: 'fa fa-university', target: 'external', href: "#"})
+new MenuItem({text: 'Staff', icon: 'fa fa-users', target: 'external', href: "#"})
 ]
 
 var subbasketball = [
 new MenuItem({text: 'Paul Wright Gym', icon: 'fa fa-university', target: 'external', href: "#"}),
-new MenuItem({text: 'Staff', icon: 'fa fa-university', target: 'external', href: "#"})
+new MenuItem({text: 'Staff', icon: 'fa fa-users', target: 'external', href: "#"})
 ]
 
 var subfootball = [
 new MenuItem({text: 'Mountaineer Bowl', icon: 'fa fa-university', target:"external", href: "http://www.western.edu/future-students/visiting-campus/virtual-tour/virtual-tour-westerns-campus/mountaineer-bowl", onclick:"javascript:void window.open('http://www.western.edu/future-students/visiting-campus/virtual-tour/virtual-tour-westerns-campus/mountaineer-bowl','1430177789396','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=300%,top=75%');return false;"}),
-new MenuItem({text: 'Staff', icon: 'fa fa-university', target: 'external', href: "#"})
+new MenuItem({text: 'Staff', icon: 'fa fa-users', target: 'external', href: "#"})
 ]
 
 
@@ -167,7 +167,7 @@ new MenuItem({text: 'Basketball', icon: 'fa fa-university', items: subbasketball
 new MenuItem({text: 'Wrestling', icon: 'fa fa-university', items: subwrestling}),
 new MenuItem({text: 'Track', icon: 'fa fa-university', items: subtrack}),
 new MenuItem({text: 'Swimming', icon: 'fa fa-university', items: subswimming}),
-new MenuItem({text: 'Soccer', icon: 'fa fa-university', items: subsoccer})
+new MenuItem({text: 'Soccer', icon: 'fa fa-futbol-o', items: subsoccer})
 ]
 
 
@@ -205,7 +205,7 @@ var subgrad = [
 new MenuItem({text: 'Art', icon: 'fa fa-paint-brush', target: 'external', href: "#"}),
 new MenuItem({text: 'Creative Writing', icon: 'fa fa-pencil', target: 'external', href: "#"}),
 new MenuItem({text: 'Education', icon: 'fa fa-book', target: 'external', href: "#"}),
-new MenuItem({text: 'Enviromental Management', icon: 'fa fa-recycle', items: submenu}),
+new MenuItem({text: 'Environmental Management', icon: 'fa fa-recycle', items: submenu}),
 new MenuItem({text: 'High Altitude Exercise Physiology', icon: 'fa fa-heartbeat', items: submenu}),
 ]
 
@@ -268,113 +268,113 @@ new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 var subplrm = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Art Page', icon: 'fa fa-building', target: 'external', href: "#"}),
+new MenuItem({text: 'PLRM Page', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 
 var subaccounting = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Anthropology Page', icon: 'fa fa-building', target: 'external', href: "#"}),
+new MenuItem({text: 'Accounting Page', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 
 var subart = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Accounting Page', icon: 'fa fa-building', target: 'external', href: "#"}),
+new MenuItem({text: 'Art Page', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 var subecon = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Accounting Page', icon: 'fa fa-building', target: 'external', href: "#"}),
+new MenuItem({text: 'Economics Page', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 var subresort = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Accounting Page', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
+new MenuItem({text: 'Resort Management', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 var subentre = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Accounting Page', icon: 'fa fa-building', target: 'external', href: "#"}),
+new MenuItem({text: 'Entrepreneurship Page', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 var submanage = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Accounting Page', icon: 'fa fa-building', target: 'external', href: "#"}),
+new MenuItem({text: 'Management Page', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 var submath = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Accounting Page', icon: 'fa fa-building', target: 'external', href: "#"}),
+new MenuItem({text: 'Mathematics Page', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 var subchem = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Accounting Page', icon: 'fa fa-building', target: 'external', href: "#"}),
+new MenuItem({text: 'Chemistry Page', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 var subbio = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Accounting Page', icon: 'fa fa-building', target: 'external', href: "#"}),
+new MenuItem({text: 'Biology Page', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 var subphysics = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Accounting Page', icon: 'fa fa-building', target: 'external', href: "#"}),
+new MenuItem({text: 'Physics Page', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 var subanthro = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Accounting Page', icon: 'fa fa-building', target: 'external', href: "#"}),
+new MenuItem({text: 'Anthropology Page', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 var subgeo = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Accounting Page', icon: 'fa fa-building', target: 'external', href: "#"}),
+new MenuItem({text: 'Geology Page', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 var subgeograph = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Accounting Page', icon: 'fa fa-building', target: 'external', href: "#"}),
+new MenuItem({text: 'Geography Page', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 var subland = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Accounting Page', icon: 'fa fa-building', target: 'external', href: "#"}),
+new MenuItem({text: 'Land and Resource Page', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 
 var subspanish = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Accounting Page', icon: 'fa fa-building', target: 'external', href: "#"}),
+new MenuItem({text: 'Spanish Page', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 var subenglish = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Accounting Page', icon: 'fa fa-building', target: 'external', href: "#"}),
+new MenuItem({text: 'English Page', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 
 var subcreative = [
 new MenuItem({text: 'Professors', icon: 'fa fa-male', target: 'external', href: "#"}),
 new MenuItem({text: 'Buildings', icon: 'fa fa-building', target: 'external', href: "#"}),
-new MenuItem({text: 'Accounting Page', icon: 'fa fa-building', target: 'external', href: "#"}),
+new MenuItem({text: 'Writing Page', icon: 'fa fa-building', target: 'external', href: "#"}),
 new MenuItem({text: 'Courses', icon: 'fa fa-th', target: 'external', href: "#"})
 ]
 var subenvCat = [
