@@ -163,6 +163,15 @@ section:target, .show{
     z-index: 10;
 }
 
+.visit_button{
+    position: fixed;
+    z-index: 1;
+    right: 30%;
+    top: -8%;
+    max-height: 7%;
+    z-index: 10;
+}
+
 .switch_button {
     position: fixed;
     z-index: 1;
@@ -199,7 +208,7 @@ section:target, .show{
     position: relative;
     padding:7px 25px;
 }
-.beginButton, .switch_button, .restart_button, .map_button {
+.beginButton, .switch_button, .restart_button, .map_button,  .visit_button{
     margin-top: 5%;
     -moz-box-shadow: 3px 4px 0px 0px #8a2a21;
     -webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
@@ -225,7 +234,7 @@ section:target, .show{
     text-shadow:0px 1px 0px #810e05;
 }
 
-.beginButton:hover, .switch_button:hover, .restart_button:hover, .map_button:hover {
+.beginButton:hover, .switch_button:hover, .restart_button:hover, .map_button:hover, .visit_button:hover{
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #c62d1f));
     background:-moz-linear-gradient(top, #f24437 5%, #c62d1f 100%);
     background:-webkit-linear-gradient(top, #f24437 5%, #c62d1f 100%);
