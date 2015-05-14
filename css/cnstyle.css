@@ -1,0 +1,249 @@
+body.contextual_navigation
+{
+    background: #6F737A;
+    margin: 0px;
+}
+
+.menu{
+    position: fixed;
+    width: 20%;
+    top: 15%;
+    z-index: 1000;
+}
+
+#map{
+    position: fixed;
+    width: 25%;
+    height: 38%;
+    right: 0;
+    overflow: hidden;
+    border-color: #6F737A;
+    border-width: 1px;
+    border: solid;
+}
+
+.mapImage{
+    z-index: 5;
+}
+
+.to_athletics, .to_academics {
+    bottom: 20%;
+    left: 75%; 
+}
+
+.to_studentlife, .studentlife_to_athletics {
+    bottom: 20%;
+    left: 23%; 
+}
+
+.contextual_assets{
+    position: fixed;
+    width: 100%;
+    height: 85%;
+    max-height: 85%;
+    max-width: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.contextual_assets img {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    max-height: 85%;
+    overflow: hidden;
+}
+
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+section {
+    position: fixed;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    -o-transition: opacity 1s ease-out;
+    -ms-transition: opacity 1s ease-out;
+    -moz-transition: opacity 1s ease-out;
+    -khtml-transition: opacity 1s ease-out;
+    -webkit-transition: opacity 1s ease-out;
+    height: 0;
+    overflow: hidden;
+}
+
+section:target, .show{
+    opacity: 1;
+    height: 90%;
+    position: fixed;
+}
+
+.show {
+    postion: fixed;
+    left:45%;
+    top: 50%;
+}
+
+
+.arrow, .hotspot {
+    position: fixed;
+    z-index: 1;
+    max-width: 6%;
+    border: 0;
+}
+
+.hotspot:hover {
+    cursor: pointer;
+}
+
+.map_button{
+    position: fixed;
+    z-index: 1;
+    right: 0%;
+    top: 33%;
+    max-height: 7%;
+    z-index: 10;
+}
+
+.switch_button {
+    position: fixed;
+    z-index: 1;
+    right: 1%;
+    top: 65%;
+    max-height: 7%;
+    /*padding:7px 25px;*/
+}
+
+.restart_button {
+    position: fixed;
+    z-index: 1;
+    right: 1%;
+    top: 50%;
+    max-height: 7%;
+    /*padding-top: 7px; */
+    /*padding-bottom: 7px; */
+    /*padding-left: 35px; */
+    /*padding-right: 35px; */
+
+}
+
+.right_offcampus {
+    bottom: 25%;
+    left: 75%;
+}
+
+.left_offcampus {
+    bottom: 25%;
+    left: 25%;
+}
+
+.beginButton {
+    position: relative;
+    padding:7px 25px;
+}
+.beginButton, .switch_button, .restart_button, .map_button {
+    margin-top: 5%;
+    -moz-box-shadow: 3px 4px 0px 0px #8a2a21;
+    -webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
+    box-shadow: 3px 4px 0px 0px #8a2a21;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
+    background:-moz-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+    background:-webkit-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+    background:-o-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+    background:-ms-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+    background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24437',GradientType=0);
+    background-color:#c62d1f;
+    -moz-border-radius:18px;
+    -webkit-border-radius:18px;
+    border-radius:18px;
+    border:1px solid #d02718;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:arial;
+    font-size: 2vw;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #810e05;
+}
+
+.beginButton:hover, .switch_button:hover, .restart_button:hover, .map_button:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #c62d1f));
+    background:-moz-linear-gradient(top, #f24437 5%, #c62d1f 100%);
+    background:-webkit-linear-gradient(top, #f24437 5%, #c62d1f 100%);
+    background:-o-linear-gradient(top, #f24437 5%, #c62d1f 100%);
+    background:-ms-linear-gradient(top, #f24437 5%, #c62d1f 100%);
+    background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24437', endColorstr='#c62d1f',GradientType=0);
+    background-color:#f24437;
+}
+
+.beginButton:active {
+    position:relative;
+    top:1px;
+}
+
+/*************************
+comment out so the map doesn't auto scale
+*************************/
+
+/*@media screen and (max-width: 1024px){*/
+    /*img { max-width: 100% }*/
+/*}*/
+
+.icon-clear {
+
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.tooltip {
+    display:none;
+    position:absolute;
+    border:1px solid #333;
+    background-color:#161616;
+    border-radius:5px;
+    padding:10px;
+    color:#fff;
+    font-size:12px Arial;
+}
+
+.caption_wrapper {
+    width:25%;
+    height:auto;
+    left: 10%;
+    overflow:hidden;
+    position:fixed;
+}
+
+.caption {
+    height:auto;
+    padding-bottom: 5px;
+    width:100%;
+    text-align:center;
+    color:#FFF;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight:bold;
+    position:relative;
+    z-index:2;
+}
+
+#caption_title {
+    font: bold 20px Arial,Verdana,sans-serif;
+    letter-spacing: -1px;
+    font-size: 2vw;
+}
+
+.description {
+    font: 20px Arial,Verdana,sans-serif;
+    letter-spacing: -1px;
+    font-size: 1.25vw;
+}
+
