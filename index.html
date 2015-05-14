@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
+<head>
     <title>Western Virtual Tour</title>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,79 +32,79 @@
     <script src="js/main.js"></script>
 
 
-  </head>
-  <body class="contextual_navigation noselect">
-    <!-- ISSUE: Content width doesn't appear to be responsive in Firefox-->
-    <!-- Div class and id names are important for the JS -->
+</head>
+<body class="contextual_navigation noselect">
+<!-- ISSUE: Content width doesn't appear to be responsive in Firefox-->
+<!-- Div class and id names are important for the JS -->
 
 
-    <div class="contextual_assets">
-      <section class="show" id="start">
-        <a href ="#taylor">
-          <button class="beginButton">Begin Tour</button>
+<div class="contextual_assets">
+    <section class="show" id="start">
+        <a href="#taylor">
+            <button class="beginButton">Begin Tour</button>
         </a>
-      </section>
-      <div id="main_image" class="noselect">
-      </div>
-      <div id="navigation">
-      </div>
-      <div id="hotspots">
-
-      </div>
-      <div id="text_overlay">
-      </div>
+    </section>
+    <div id="main_image" class="noselect">
     </div>
-
-    <div id="map">
-      <img class="mapImage" src="imgs/oncampusmap.jpg">
+    <div id="navigation">
     </div>
+    <div id="hotspots">
 
-    <div class="menu">
-      <div class="wrap">
+    </div>
+    <div id="text_overlay">
+    </div>
+</div>
+
+<div id="map">
+    <img class="mapImage" src="imgs/oncampusmap.jpg">
+</div>
+
+<div class="menu">
+    <div class="wrap">
         <div class="blue menu-container">
-          <ul id="drilldown-1">
-          </ul>
+            <ul id="drilldown-1">
+            </ul>
         </div>
-      </div>
     </div>
+</div>
 
-    <div id="carousel" class="owl-carousel">
-      <div id="owl-demo" class="owl-carousel noselect">
+<div id="carousel" class="owl-carousel">
+    <div id="owl-demo" class="owl-carousel noselect">
 
-      </div>
     </div>
+</div>
 
-    <!--<div>
-      <input type="button" id="recFilter" value="Recreation"/>
-      <input type="button" id="cultFilter" value="Culture"/>
-      <input type="button" id="foodFilter" value="Restaurants"/>
-    </div>
-    -->
-    <div id="video" class="video">
-    </div>
-    <script>
+<!--<div>
+  <input type="button" id="recFilter" value="Recreation"/>
+  <input type="button" id="cultFilter" value="Culture"/>
+  <input type="button" id="foodFilter" value="Restaurants"/>
+</div>
+-->
+<div id="video" class="video">
+</div>
+<script>
 
-      $(document).ready(function($){
+    $(document).ready(function ($) {
         dispMainMenu();
 
         $('#drilldown-1').dcDrilldown({
-          speed : 'fast',
-          saveState : true,
-          showCount : false,
-          linkType : 'link',
-          defaultText: ''
+            speed: 'fast',
+            saveState: true,
+            showCount: false,
+            linkType: 'link',
+            defaultText: ''
         });
         $('#drilldown-2').dcDrilldown({
-          speed : 'fast',
-          saveState : false,
-          showCount : false,
-          linkType : 'link'
+            speed: 'fast',
+            saveState: false,
+            showCount: false,
+            linkType: 'link'
         });
 
-      });
+    });
 
-    </script>
+</script>
 
 
-  </body>
+</body>
 </html>

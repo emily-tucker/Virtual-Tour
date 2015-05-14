@@ -67,10 +67,10 @@ new MenuItem({text: 'Sunshine Appts', icon: 'fa fa-bed', target: 'external', hre
 ]
 
 var subon = [
-new MenuItem({text: 'Escalante', icon: 'fa fa-bed', taget: '#'}),
-new MenuItem({text: 'Mears', icon: 'fa fa-bed', target: 'external', href: "#"}),
-new MenuItem({text: 'Ute', icon: 'fa fa-bed', target: 'external', href: "#"}),
-new MenuItem({text: 'Pinnacles', icon: 'fa fa-bed', target: 'external', href: "#"})
+new MenuItem({text: 'Escalante', icon: 'fa fa-bed', target: "locations", href: '#escalante'}),
+new MenuItem({text: 'Mears', icon: 'fa fa-bed', target: "locations", href: '#mears'}),
+new MenuItem({text: 'Ute', icon: 'fa fa-bed',target: "locations", href: '#ute'}),
+new MenuItem({text: 'Pinnacles', icon: 'fa fa-bed', target: "locations", href: '#pinnacles'})
 ]
 
 
@@ -87,10 +87,11 @@ new MenuItem({text: 'Chemistry Club', icon: 'fa fa-flask', target: 'external', h
 
 
 var subclub = [
-new MenuItem({text: 'Academic Clubs', icon: 'fa fa-university', items: subacademicclub}),
-new MenuItem({text: 'Sports Clubs', icon: 'fa fa-futbol-o', target: 'external', href: "#"}),
-new MenuItem({text: 'Cultural', icon: 'fa fa-euro', target: 'external', href: "#"}),
-new MenuItem({text: 'Special Interests', icon: 'fa fa-university', target: 'external', href: "#"})
+new MenuItem({text: 'Academic Clubs', icon: 'fa fa-university', target: 'external', href: "http://www.western.edu/current-students/student-activities/academic-clubs-and-honor-societies"}),
+new MenuItem({text: 'Club Sports', icon: 'fa fa-futbol-o', target: 'external', href: "http://www.western.edu/current-students/campus-recreation/club-sports"}),
+new MenuItem({text: 'Cultural', icon: 'fa fa-euro', target: 'external', href: "http://www.western.edu/current-students/multicultural-center"}),
+new MenuItem({text: 'Student Government', icon: 'fa fa-university', target: 'external', href: "http://www.western.edu/current-students/student-government-association/sga-documents"}),
+new MenuItem({text: 'KWSB Radio', icon: 'fa fa-university', target: 'external', href: "http://www.western.edu/current-students/other-student-activities/kwsb-911fm"})
 ]
 
 var subactivities = [
@@ -98,19 +99,15 @@ new MenuItem({text: 'Clubs and Organizations', icon: 'fa fa-university', items: 
 new MenuItem({text: 'Recreation', icon: 'fa fa-gamepad', target: 'external', href: "#"})
 ]
 var subvisit = [
-new MenuItem({text: 'Setup Visit', icon: 'fa fa-university', target: 'external', href: "#"}),
-new MenuItem({text: 'Contact Us', icon: 'fa fa-university', target: 'external', href: "#"})
+new MenuItem({text: 'Setup Visit', icon: 'fa fa-university', target: 'external', href: "http://www.western.edu/future-students/visiting-campus/visit-western"}),
+new MenuItem({text: 'Contact Us', icon: 'fa fa-university', target: 'external', href: "http://www.western.edu/future-students/contact-admissions/meet-admissions-counselors"})
 ]
 
-var subtution = [
-new MenuItem({text: 'In State', icon: 'fa fa-university', target: 'external', href: "#"}),
-new MenuItem({text: 'Out of State', icon: 'fa fa-university', target: 'external', href: "#"})
-]
 
 
 var subfuture = [
-new MenuItem({text: 'Apply Now!!', icon: 'fa fa-star ', target: 'external', href: "#"}),
-new MenuItem({text: 'Tution and Fees', icon: 'fa fa-credit-card ', items: subtution}),
+new MenuItem({text: 'Apply Now!', icon: 'fa fa-star ', target: 'external', href: "http://www.western.edu/future-students/apply-now-western"}),
+new MenuItem({text: 'Tution and Fees', icon: 'fa fa-credit-card ',target: 'external', href: "http://www.western.edu/future-students/financing-your-education/tuition-and-fees-western"}),
 new MenuItem({text: 'Visit Campus', icon: 'fa fa-university ', items: subvisit}),
 new MenuItem({text: 'Activities', icon: 'fa fa-smile-o ', items: subactivities}),
 new MenuItem({text: 'Housing', icon: 'fa fa-home ', items: subhousing}),
@@ -129,8 +126,9 @@ new MenuItem({text: 'Monarch', icon: 'fa fa-university', target: 'external', hre
 
 
 var submountain = [
-new MenuItem({text: 'Ski and Snowboard', icon: 'fa fa-tree', items: subski}),
-new MenuItem({text: 'Mountain Biking', icon: 'fa fa-bicycle', items: subbike})
+new MenuItem({text: 'Ski and Snowboard', icon: 'fa fa-tree', target: 'external', href: "http://wscumountainsports.com/come-ski-with-the-team/"}),
+new MenuItem({text: 'Mountain Biking', icon: 'fa fa-bicycle', target: 'external', href: "http://wscumountainsports.com/new-mountain-biking/"}),
+new MenuItem({text: 'Trail Running', icon: 'fa fa-bicycle', target: 'external', href: "http://wscumountainsports.com/trail-running/"})
 ]
 
 var subsoccer = [
@@ -433,20 +431,21 @@ new MenuItem({text: 'Academic Calendar', icon: 'fa fa-calendar ', target: 'exter
 
 
 var subgo = [
-new MenuItem({text: 'Business Building', icon: 'fa fa-university ', target: "locations", href: '#borrick'}),
+new MenuItem({text: 'Borick', icon: 'fa fa-university ', target: "locations", href: '#borick'}),
 new MenuItem({text: 'Chipeta Hall', icon: 'fa fa-university ', target: "locations", href: '#chipeta'}),
-new MenuItem({text: 'Escalante Terrace', icon: 'fa fa-university ', target: '#escalante'}),
+new MenuItem({text: 'Escalante', icon: 'fa fa-university ', target: "locations", href: '#escalante'}),
 new MenuItem({text: 'Hurst Hall', icon: 'fa fa-university ', target:"locations", href: '#hurst'}),
 new MenuItem({text: 'Kelley Hall', icon: 'fa fa-university ', target: "locations", href: '#kelley'}),
 new MenuItem({text: 'Library', icon: 'fa fa-university ', target: "locations", href: '#library'}),
 new MenuItem({text: 'Mears Hall', icon: 'fa fa-university ', target: "locations", href: '#mears'}),
-new MenuItem({text: 'Moffat Hall', icon: 'fa fa-university ', target:"locations", href: '#moffat'}),
 new MenuItem({text: 'Mountaineer Bowl', icon: 'fa fa-university ', target:"locations", href: '#mountaineerbowl'}),
 new MenuItem({text: 'Pinnacles', icon: 'fa fa-university ', target: "locations", href:'#pinnacles'}),
 new MenuItem({text: 'Quigley Hall', icon: 'fa fa-university ', target:"locations", href: '#quigley'})  ,
 new MenuItem({text: 'Taylor Hall', icon: 'fa fa-university ', target: "locations", href:'#taylor'})  ,
 new MenuItem({text: 'University Center', icon: 'fa fa-university ', target:"locations", href: '#universitycenter'})  ,
-new MenuItem({text: 'W Mountain', icon: 'fa fa-university ', target: "locations", href:'#wmountain'})
+    new MenuItem({text: 'Ute Hall', icon: 'fa fa-university ', target: "locations", href:'#ute'}),
+    new MenuItem({text: 'Fieldhouse', icon: 'fa fa-university ', target: "locations", href:'#fieldhouse'})
+
 ]
 
 var submenu = [
