@@ -58,23 +58,40 @@ $(function () {
     /**
      * Location object instances
      */
-    var taylor = new Location("#taylor", "Taylor Hall", "academic",
-            "Home of administrative offices, classrooms, faculty offices, computer labs, as well as an " +
-            "auditorium and theater.", true, 1905, 1200);
-    var quigley = new Location("#quigley", "Quigley Hall", "academic",
-            "Home of the Music and Art departments", true, 2170, 1419);
-    var hurst = new Location("#hurst", "Hurst Hall", "academic",
+	var begin = new Location("#begin", "Welcome to Western", "academic",
+	"Home of administrative offices, classrooms, faculty offices, computer labs, as well as an " +
+            "auditorium and theater.", true, 1801, 1246);
+	var borick = new Location("#borick", "Borick Buisness Building", "academic",
+            "Home of Social Sciences and Environment & Sustainability programs", true, 1582, 1259);
+	var chipeta = new Location("#chipeta", "Chipeta Student Housing", "studentlife",
+            "Home of Social Sciences and Environment & Sustainability programs", true, 345, 1206);	
+	var crawford = new Location("#crawford", "Crawford Hall", "academic",
+            "Home of Social Sciences and Environment & Sustainability programs", true, 1605, 992);	
+	var escalante = new Location("#escalante", "Escalante Housing", "studentlife",
+            "Home of Social Sciences and Environment & Sustainability programs", true, 2305, 888);
+	var fieldhouse = new Location("#fieldhouse", "Mountaineer Field House", "athletic", 
+	 "65,000-square-foot LEED-Gold certified field house.",true, 1313, 869);
+	var hurst = new Location("#hurst", "Hurst Hall", "academic",
             "Home of Science and Mathematics departments", true, 2422, 1227);
-    var kelley = new Location("#kelley", "Kelley Hall", "academic",
+	var kelley = new Location("#kelley", "Kelley Hall", "academic",
             "Home of Social Sciences and Environment & Sustainability programs", true, 2288, 1100);
     var library = new Location("#library", "Leslie J. Savage Library", "studentlife",
             "The research hub for campus and a great study spot", true, 1918, 994);
-    var universitycenter = new Location("#universitycenter", "University Center", "studentlife",
-            "The hub of student life on campus", true, 1849, 887);
-    var fieldhouse = new Location("#fieldhouse", "Mountaineer Field House", "athletic", "65,000-square-foot LEED-Gold certified field house.",
-            true, 1313, 869);
-    var mountaineerbowl = new Location("#mountaineerbowl", "Mountaineer Bowl", "athletic",
-            "The world's highest collegiate football stadium", true, 2023, 644);
+	var mears = new Location("#mears", "Mears Student Housing", "studentlife",
+            "Home of Social Sciences and Environment & Sustainability programs", true, 1109, 1078);
+	var pinnacles = new Location("#pinnacles", "Pinnacles Student Housing", "studentlife",
+            "Home of Social Sciences and Environment & Sustainability programs", true, 765, 997);
+	var mountaineerbowl = new Location("#mountaineerbowl", "Mountaineer Bowl", "athletic",
+            "The world's highest collegiate football stadium", true, 2023, 644);	
+	var quigley = new Location("#quigley", "Quigley Hall", "academic",
+            "Home of the Music and Art departments", true, 2170, 1419);	
+    var taylor = new Location("#taylor", "Taylor Hall", "academic",
+            "Home of administrative offices, classrooms, faculty offices, computer labs, as well as an " +
+            "auditorium and theater.", true, 1905, 1200);
+    var universitycenter = new Location("#universitycenter", "University Center", "studentlife", "The hub of student life on campus", true, 1849, 887);
+	var ute = new Location("#ute", "Ute Student Housing", "studentlife",
+            "Home of Social Sciences and Environment & Sustainability programs", true, 1224, 1275);
+	
 
     var telluride = new Location("#telluride", "Telluride", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", false);
     var taylorcanyon = new Location("#tc", "Taylor Canyon", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", false, 988, 432);
@@ -92,7 +109,7 @@ $(function () {
     var pathway2 = new Location("#pathway2", "Kelley Steps", "walkway", "Pathway to Taylor", true, 2083, 1076);
     var rockymountains = new Location("#rockymountains", "Rocky Mountains", "The Rocky Mounains", false, 0, 0);
 
-    var locations = [taylor, pathway, pathway2, quigley, hurst, kelley, library, universitycenter, mountaineerbowl, telluride,
+    var locations = [begin, borick, chipeta, crawford, escalante, pinnacles, ute, taylor, pathway, pathway2, quigley, hurst, kelley, library, universitycenter, mountaineerbowl, telluride,
         taylorcanyon, crestedbutte, monarchmountain, taylorreservoir, hartmanrocks,gunnison, cbmr, artscenter, wmountain, fieldhouse, rockymountains];
 
 
