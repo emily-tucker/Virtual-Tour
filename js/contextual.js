@@ -1,7 +1,5 @@
 $(function () {
 
-    var map_state = 1;
-
     if (location.hash !== "") {
         $("#start").removeClass("show");
     }
@@ -13,19 +11,13 @@ $(function () {
         $("#carousel").hide('blind');
         $(this).off("click");
         $("#video").click(function () {
-            $("#video").remove();
-            $("#map").show();
-            animate_map(location.hash);
-            $("#carousel").show();
+            video_out(currentLocation, map_slide_time);
         });
 
         $(function () {
             setTimeout(function () {
-                $("#video").remove();
-                $("#map").show();
-                animate_map(currentLocation);
-                $("#carousel").show();
-            }, 11740);
+                video_out(currentLocation, map_slide_time);
+            }, video_time);
         });
    });
 
@@ -119,7 +111,7 @@ $(function () {
                         locations[i].name + "</div><div id='caption_text' class='description'>" + locations[i].description +
                         "</div></div></div>";
                 $('#text_overlay').html(inner_html);
-                $('.description').delay(5000).slideUp("slow");
+                $('.description').delay(description_delay).slideUp("slow");
                 $("#caption_title").click(function () {
                     $(".description").slideToggle("slow");
                 });
@@ -341,14 +333,14 @@ $(function () {
                             width: window.innerWidth * 0.25,
                             height: window.innerHeight * 0.38
                         }, function () {
-                            animate_map(currentLocation);
+                            animate_map(currentLocation, map_slide_time);
                         });
                     });
                     map_state += 1;
                 }
                 else if(map_state === 1) {
                     $("#map").animate({width: window.innerWidth * 0.75, height: window.innerHeight * 0.85}, function() {
-                            animate_map(currentLocation);
+                            animate_map(currentLocation, map_slide_time);
                     });
                     $(".map_button").animate({right: window.innerWidth * 0.75});
                     map_state += 1;
@@ -456,7 +448,7 @@ $(function () {
                 }
                 $('.mapImage').load(function ()
                                     {
-                                       animate_map(currentLocation);
+                                       //animate_map(currentLocation);
                                     });
                                     prevCampus = locations[i].onCampus;
             }
@@ -474,7 +466,7 @@ $(function () {
         getHspots(location.hash);
         loadMap(location.hash);
         getCIs(location.hash);
-        animate_map(currentLocation);
+        animate_map(currentLocation, map_slide_time);
     });
 
     if (window.location.hash) {

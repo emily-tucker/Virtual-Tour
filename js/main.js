@@ -25,6 +25,8 @@
  *
  * TODO: Put all constructors into a master constructor file
  *
+ * TODO: Put all get methods into a master get file
+ *
  *
  */
 
@@ -36,7 +38,7 @@
 
 var video_time = 11740;
 var map_slide_time = 1500;
-var description_hide_delay = 5000;
+var description_delay = 5000;
 var map_state = 1;
 
 
@@ -45,11 +47,22 @@ var map_state = 1;
  *  Current Location            *
  ********************************/
 
-function animate_map(locationTag){
+function animate_map(locationTag, time){
     $('#map').animate({
         scrollLeft: locationTag.x - ($('#map').width() / 2),
         scrollTop: locationTag.y - ($('#map').height() / 2)
-    }, 1500, 'easeInOutQuad');
+    }, time, 'easeInOutQuad');
+}
+
+/**************************
+ *  Video Out Animation   *
+ **************************/
+
+function video_out(location, mapTime) {
+    $("#video").remove();
+    $("#map").show();
+    animate_map(location, mapTime);
+    $("#carousel").show();
 }
 
 
@@ -84,8 +97,6 @@ $(function () {
                 e.preventDefault();
                 var directionX = (previousX - e.clientX) > 0 ? 1 : -1;
                 var directionY = (previousY - e.clientY) > 0 ? 1 : -1;
-                console.log("X" + directionX);
-                console.log("Y" + directionY);
                 $("#map").scrollLeft($("#map").scrollLeft() + 10 * directionX);
                 $("#map").scrollTop($("#map").scrollTop() + 5 * directionY);
                 previousX = e.clientX;

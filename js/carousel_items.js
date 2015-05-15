@@ -296,12 +296,5 @@ function getCIs(tag) /*Carousel Items*/{
     $("#carousel").html(inner);
     $(".citem").css("margin-left", margin);
 
-    for(var i in carouselItems) {
-        console.log($("#citem"+String(i)).position());
-    }
-    for(var i in thumbs) {
-        console.log($("#thumbImage"+String(i)).position());
-    }
-
     return carouselItems;
 }
