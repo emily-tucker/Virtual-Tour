@@ -1,26 +1,3 @@
-$(function () {
-
-    if (location.hash !== "") {
-        $("#start").removeClass("show");
-    }
-    $("#start").find("a").on("click", function () {
-        $("#start").removeClass("show");
-        document.getElementById('video').innerHTML = '<video z-index="10000" width="100%" height="100%"  controls autoplay>' +
-            '<source src="video/output.webm" type="video/webm"></video>';
-        $("#map").hide('blind');
-        $("#carousel").hide('blind');
-        $(this).off("click");
-        $("#video").click(function () {
-            video_out(currentLocation, map_slide_time);
-        });
-
-        $(function () {
-            setTimeout(function () {
-                video_out(currentLocation, map_slide_time);
-            }, video_time);
-        });
-   });
-
     /**
      * Creates an instance of a Location Item
      * @constructor
@@ -296,7 +273,7 @@ $(function () {
             if (currentLocation.onCampus) {
                 if (navs[i].tag === locationTag) {
                     inner_html += "<button class='map_button'>Map</button>" +
-                            "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<a class='visit_button' href = 'http://www.western.edu/future-students/experience-western'>Schedule a Visit</a>" + "<button class='restart_button' onclick=javascript:window.location=''>Restart Tour</button>" +
+                            "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<a class='visit_button' href = 'http://www.western.edu/future-students/experience-western' target = '_blank'>Schedule a Visit</a>" + "<button class='restart_button' onclick=javascript:window.location=''>Restart Tour</button>" +
                             "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                             navs[i].styleClass + " arrow' src='imgs/nav_arrows/" + navs[i].direction + "_white.png'" +
                             "onmouseover=" + "this.src='imgs/nav_arrows/" + navs[i].direction + "_hover.png'" +
@@ -316,7 +293,7 @@ $(function () {
             }
             if (!currentLocation.onCampus){
                 if (navs[i].tag === locationTag) {
-                    inner_html += "<button class='map_button'>Map</button> + <a class='visit_button' href = 'http://www.western.edu/future-students/experience-western'>Schedule a Visit</a> + <button class='switch_button' onclick=javascript:window.location.hash='"+previousLocation.tag+"'>Go On Campus</button><img onclick=javasript:window.location.hash='" + navs[i].dest + "' class='" +
+                    inner_html += "<button class='map_button'>Map</button> + <a class='visit_button' href = 'http://www.western.edu/future-students/experience-western' target = '_blank'>Schedule a Visit</a> + <button class='switch_button' onclick=javascript:window.location.hash='"+previousLocation.tag+"'>Go On Campus</button><img onclick=javasript:window.location.hash='" + navs[i].dest + "' class='" +
                         navs[i].direction + "_offcampus arrow' src='imgs/nav_arrows/" + navs[i].direction + "_offcampus.png'" +
                         "onmouseover=" + "this.src='imgs/nav_arrows/" + navs[i].direction + "_offcampus_hover.png'" +
                         " onmouseout=" + "this.src='imgs/nav_arrows/" + navs[i].direction + "_offcampus.png' " +
@@ -459,26 +436,3 @@ $(function () {
      * Functions above requires the location tag passed in to be # + location tag name. (i.e "#hurst")
      */
 
-    $(window).on('hashchange', function () {
-        getImage(location.hash);
-        getLocation(location.hash);
-        getNavs(location.hash);
-        getHspots(location.hash);
-        loadMap(location.hash);
-        getCIs(location.hash);
-        animate_map(currentLocation, map_slide_time);
-    });
-
-    if (window.location.hash) {
-        dispMainMenu();
-        $('#drilldown-1').dcDrilldown({
-            speed: 'fast',
-            saveState: false,
-            showCount: false,
-            linkType: 'backlink',
-            defaultText: ''
-        });
-        $(window).trigger('hashchange');
-    }
-
-});

@@ -69,6 +69,49 @@ function video_out(location, mapTime) {
 
 $(function () {
 
+    if (location.hash !== "") {
+        $("#start").removeClass("show");
+    }
+    $("#start").find("a").on("click", function () {
+        $("#start").removeClass("show");
+        document.getElementById('video').innerHTML = '<video z-index="10000" width="100%" height="100%"  controls autoplay>' +
+            '<source src="video/output.webm" type="video/webm"></video>';
+        $("#map").hide('blind');
+        $("#carousel").hide('blind');
+        $(this).off("click");
+        $("#video").click(function () {
+            video_out(currentLocation, map_slide_time);
+        });
+
+        $(function () {
+            setTimeout(function () {
+                video_out(currentLocation, map_slide_time);
+            }, video_time);
+        });
+    });
+
+    $(window).on('hashchange', function () {
+        getImage(location.hash);
+        getLocation(location.hash);
+        getNavs(location.hash);
+        getHspots(location.hash);
+        loadMap(location.hash);
+        getCIs(location.hash);
+        animate_map(currentLocation, map_slide_time);
+    });
+
+    if (window.location.hash) {
+        dispMainMenu();
+        $('#drilldown-1').dcDrilldown({
+            speed: 'fast',
+            saveState: false,
+            showCount: false,
+            linkType: 'backlink',
+            defaultText: ''
+        });
+        $(window).trigger('hashchange');
+    }
+
 
     /********************************
      *  Mouse move on Map           *
