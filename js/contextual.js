@@ -304,8 +304,7 @@ $(function () {
             if (currentLocation.onCampus) {
                 if (navs[i].tag === locationTag) {
                     inner_html += "<button class='map_button'>Map</button>" +
-                            "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" +
-                            "<button class='restart_button' onclick=javascript:window.location=''>Restart Tour</button>" +
+                            "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='visit_button'>Schedule a Visit</button>" + "<button class='restart_button' onclick=javascript:window.location=''>Restart Tour</button>" +
                             "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                             navs[i].styleClass + " arrow' src='imgs/nav_arrows/" + navs[i].direction + "_white.png'" +
                             "onmouseover=" + "this.src='imgs/nav_arrows/" + navs[i].direction + "_hover.png'" +
@@ -325,7 +324,7 @@ $(function () {
             }
             if (!currentLocation.onCampus){
                 if (navs[i].tag === locationTag) {
-                    inner_html += "<button class='map_button'>Map</button> + <button class='switch_button' onclick=javascript:window.location.hash='"+previousLocation.tag+"'>Go On Campus</button><img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
+                    inner_html += "<button class='map_button'>Map</button> + <button class='visit_button'>Schedule a Visit</button> + <button class='switch_button' onclick=javascript:window.location.hash='"+previousLocation.tag+"'>Go On Campus</button><img onclick=javasript:window.location.hash='" + navs[i].dest + "' class='" +
                         navs[i].direction + "_offcampus arrow' src='imgs/nav_arrows/" + navs[i].direction + "_offcampus.png'" +
                         "onmouseover=" + "this.src='imgs/nav_arrows/" + navs[i].direction + "_offcampus_hover.png'" +
                         " onmouseout=" + "this.src='imgs/nav_arrows/" + navs[i].direction + "_offcampus.png' " +
