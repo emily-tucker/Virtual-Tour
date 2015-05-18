@@ -25,7 +25,11 @@
  *
  * TODO: Put all constructors into a master constructor file
  *
- * TODO: Put all get methods into a master get file
+ * TODO: Put all get methods into a this file
+ *
+ * TODO: Get a new flyin, crossfade at the end of the video
+ *
+ * TODO: Make the map button a little more apparently associated with the map
  *
  *
  */
@@ -36,9 +40,10 @@
  * Variables for functions      *
  ********************************/
 
-var video_time = 11740;
+var video_time = 12000;
 var map_slide_time = 1500;
 var description_delay = 5000;
+var video_fade = 2500;
 var map_state = 1;
 
 
@@ -73,6 +78,7 @@ $(function () {
         $("#start").removeClass("show");
     }
     $("#start").find("a").on("click", function () {
+        $(".contextual_assets").animate({opacity: 0}, 0);
         $("#start").removeClass("show");
         document.getElementById('video').innerHTML = '<video z-index="10000" width="100%" height="100%"  controls autoplay>' +
             '<source src="video/output.webm" type="video/webm"></video>';
@@ -81,11 +87,14 @@ $(function () {
         $(this).off("click");
         $("#video").click(function () {
             video_out(currentLocation, map_slide_time);
+            $(".contextual_assets").animate({opacity: 1}, 0);
         });
 
         $(function () {
             setTimeout(function () {
-                video_out(currentLocation, map_slide_time);
+                $("#video").animate({opacity: 0}, video_fade, 'easeOutQuart', function(){
+                    video_out(currentLocation, map_slide_time);
+                });
             }, video_time);
         });
     });
@@ -141,7 +150,7 @@ $(function () {
                 var directionX = (previousX - e.clientX) > 0 ? 1 : -1;
                 var directionY = (previousY - e.clientY) > 0 ? 1 : -1;
                 $("#map").scrollLeft($("#map").scrollLeft() + 10 * directionX);
-                $("#map").scrollTop($("#map").scrollTop() + 5 * directionY);
+                $("#map").scrollTop($("#map").scrollTop() + 10 * directionY);
                 previousX = e.clientX;
                 previousY = e.clientY;
             }
