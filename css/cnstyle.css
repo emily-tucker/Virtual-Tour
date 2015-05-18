@@ -1,7 +1,7 @@
 body.contextual_navigation
 {
     background: #6F737A;
-    margin: 0px;
+    margin: 0;
 }
 
 
@@ -10,13 +10,13 @@ body.contextual_navigation
 ***********************/
 
 .dd-wrapper ul, .dd-wrapper ul li, .dd-wrapper li, .dd-wrapper li ul, .dd-wrapper li ul li {
-  margin: 0; padding: 0; list-style: none; top: 0%;
+  margin: 0; padding: 0; list-style: none; top: 0;
   }
 .dd-wrapper .dd-menu {
-  overflow: hidden; position: absolute; width:100%;
+  overflow: auto; position: absolute; width:100%;
   }
 .dd-wrapper  .dd-menu ul {
-  position: absolute; top: 0%; right: 0;
+  position: absolute; top: 0; right: 0;
   }
 
 /***********************
@@ -34,16 +34,16 @@ body.contextual_navigation
   }
 
 .blue .dd-menu ul a {
-  background:rgba(0,0,0,0.1); text-shadow: 2px 2px #000;
+  background:rgba(0,0,0,0.3); text-shadow: 2px 2px #000;
   }
 .blue .dd-menu a:hover {
-  background: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.5);
   }
 .blue .dd-menu li.dd-parent a:hover {
-  color: black; text-shadow: 0px 0px;
+  color: black; text-shadow: 0 0;
   }
 .blue .dd-menu li.dd-parent a.active {
-  color: #ccc; background: rgba(0,0,0,0.5);
+  color: #ccc; background: rgba(0,0,0,0.6);
   }
 
 
