@@ -34,7 +34,11 @@ body.contextual_navigation
   }
 
 .blue .dd-menu ul a {
+<<<<<<< HEAD
   background:rgba(0,0,0,0.3); text-shadow: 2px 2px #000;
+=======
+  background:rgba(0,0,0,0.4); text-shadow: 2px 2px #000;
+>>>>>>> a0631f09fa022e696ac321a028fabe5c8e914efb
   }
 .blue .dd-menu a:hover {
   background: rgba(255,255,255,.5);

@@ -1,5 +1,4 @@
-
-    /**
+/**
      * Location object instances
      */
 	var begin = new Location("#begin", "Welcome to Western", "academic",

@@ -54,11 +54,11 @@ var subcbmr = [
 
 
 var subnear = [
-    new MenuItem({text: 'CBMR', icon: 'fa fa-tree', items: subcbmr}),
-    new MenuItem({text: 'Monarch', icon: 'fa fa-tree', target: 'external', href: "#"}),
-    new MenuItem({text: 'Hartman Rocks', icon: 'fa fa-bicycle', items: subhart}),
-    new MenuItem({text: 'Blue Mesa', icon: 'fa fa-ship', items: subblue}),
-    new MenuItem({text: 'Wanita Hot Springs', icon: 'fa fa-life-ring', items: subwanita})
+new MenuItem({text: 'CBMR', icon: 'fa fa-tree', items: subcbmr}),
+new MenuItem({text: 'Monarch', icon: 'fa fa-tree', target: 'external', href: "#"}),
+new MenuItem({text: 'Hartman Rocks', icon: 'fa fa-bicycle', items: subhart}),
+new MenuItem({text: 'Blue Mesa', icon: 'fa fa-ship', items: subblue}),
+new MenuItem({text: 'Wanita Hot Springs', icon: 'fa fa-life-ring', items: subwanita})
 ]
 
 var subon = [
@@ -479,6 +479,39 @@ var subacademics = [
 ]
 
 
+var subextended = [
+new MenuItem({text: 'Register', icon: 'fa fa-clipboard', items: subregister}),
+new MenuItem({text: 'Access Program', icon: 'fa fa-university', items: subaccess}),
+new MenuItem({text: 'Concurrent Enrollment Programs', icon: 'fa fa-certificate', items: subconcurrent})
+]
+
+
+var subgrad = [
+new MenuItem({text: 'Art', icon: 'fa fa-paint-brush', target: 'external', href: "#"}),
+new MenuItem({text: 'Creative Writing', icon: 'fa fa-pencil', target: 'external', href: "#"}),
+new MenuItem({text: 'Education', icon: 'fa fa-book', target: 'external', href: "#"}),
+new MenuItem({text: 'Environmental Management', icon: 'fa fa-recycle', items: submenu}),
+new MenuItem({text: 'High Altitude Exercise Physiology', icon: 'fa fa-heartbeat', items: submenu}),
+]
+
+var subcs = [
+new MenuItem({text: 'Professors', icon: 'fa fa-male', target: "external", href:"http://www.western.edu/academics/undergraduate/course-catalog/university-catalog-2015-16/academic-programs-undergraduate-16", onclick:"javascript:void window.open('http://www.western.edu/academics/undergraduate/course-catalog/university-catalog-2015-16/academic-programs-undergraduate-16','1430177668613','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=300%,top=75%');return false;"}),
+new MenuItem({text: 'Buildings', icon: 'fa fa-building', target:"external", href: "http://www.western.edu/future-students/visiting-campus/virtual-tour/virtual-tour-western/hurst-hall", onclick:"javascript:void window.open('http://www.western.edu/future-students/visiting-campus/virtual-tour/virtual-tour-western/hurst-hall','1429760435258','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=300%,top=50%');return false;"}),
+new MenuItem({text: 'CS Page', icon: 'fa fa-file', target: "external", href: "http://wiki.western.edu/mcis/index.php/Main_Page", onclick:"javascript:void window.open('http://wiki.western.edu/mcis/index.php/Main_Page','1430177354180','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=300%,top=75%');return false;"}),
+new MenuItem({text: 'Courses', icon: 'fa fa-th', target: "external", href: "http://www.western.edu/academics/undergraduate/computer-information-science/computer-science-course-rotation", onclick:"javascript:void window.open('http://www.western.edu/academics/undergraduate/computer-information-science/computer-science-course-rotation','1430177457006','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=300%,top=75%');return false;"})
+]
+
+
+
+var subacademics = [
+new MenuItem({text: 'Majors', icon: 'fa fa-arrow-right ', target: "external", href: "http://www.western.edu/academics/undergraduate-areas-study", onclick:"javascript:void window.open('http://wiki.western.edu/mcis/index.php/Main_Page','1430177354180','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=300%,top=75%');return false;"}),
+new MenuItem({text: 'Graduate Programs', icon: 'fa fa-graduation-cap ', target: "external", href: "http://www.western.edu/academics/graduate-programs-western", onclick:"javascript:void window.open('http://wiki.western.edu/mcis/index.php/Main_Page','1430177354180','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=300%,top=75%');return false;"}),
+new MenuItem({text: 'Extended Studies', icon: 'fa fa-globe "', target: "external", href: "http://www.western.edu/academics/extended-studies", onclick:"javascript:void window.open('http://wiki.western.edu/mcis/index.php/Main_Page','1430177354180','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=300%,top=75%');return false;"}),
+new MenuItem({text: 'University Catalog', icon: 'fa fa-book "', target: "external", href: "http://www.western.edu/future-students/accepted-students/office-registrar/university-catalog", onclick:"javascript:void window.open('http://wiki.western.edu/mcis/index.php/Main_Page','1430177354180','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=300%,top=75%');return false;"}),
+new MenuItem({text: 'Academic Calendar', icon: 'fa fa-calendar ', target: "external", href: "http://www.western.edu/academics/academic-calendar", onclick:"javascript:void window.open('http://wiki.western.edu/mcis/index.php/Main_Page','1430177354180','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=300%,top=75%');return false;"})
+]
+
+
 var subgo = [
     new MenuItem({text: 'Borick', icon: 'fa fa-university ', target: "locations", href: '#borick'}),
     new MenuItem({text: 'Chipeta Hall', icon: 'fa fa-university ', target: "locations", href: '#chipeta'}),
@@ -515,6 +548,5 @@ var submenu = [
     new MenuItem({text: 'Go To', icon: 'fa fa-street-view', items: subgo})
 ]
 
-var menu = new Menu({text: 'Menu', icon: 'fa fa-list-ul', items: submenu})
 menu.items = submenu;
 
