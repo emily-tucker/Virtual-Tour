@@ -296,7 +296,6 @@ $(function () {
         $("#start").removeClass("show");
     }
     $("#start").find("a").on("click", function () {
-        $(".contextual_assets").animate({opacity: 0}, 0);
         $("#start").removeClass("show");
         document.getElementById('video').innerHTML = '<video z-index="10000" width="100%" height="100%"  controls autoplay>' +
             '<source src="video/output.webm" type="video/webm"></video>';
@@ -305,7 +304,6 @@ $(function () {
         $(this).off("click");
         $("#video").click(function () {
             video_out(currentLocation, map_slide_time);
-            $(".contextual_assets").animate({opacity: 1}, 0);
         });
 
         $(function () {
