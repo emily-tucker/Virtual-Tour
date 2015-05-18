@@ -440,6 +440,7 @@ new MenuItem({text: 'University Center', icon: 'fa fa-university ', target:"loca
 ]
 
 var submenu = [
+new MenuItem({text: 'Schedule a Visit', icon: 'fa fa-bus', target: "external", href: "http://www.western.edu/future-students/experience-western", onclick:"javascript:void window.open('http://wiki.western.edu/mcis/index.php/Main_Page','1430177354180','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=300%,top=75%');return false;"}),
 new MenuItem({text: 'Academics', icon: 'fa fa-book ', items: subacademics}),
 new MenuItem({text: 'Athletics', icon: 'fa fa-bicycle ', items: subathletics}),
 new MenuItem({text: 'Student Life', icon: 'fa fa-mars', items: subfuture}),
