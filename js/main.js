@@ -23,15 +23,9 @@
  *
  * Constructor for MenuItem is in menu_lists
  *
- * TODO: Put all constructors into a master constructor file
- *
- * TODO: Put all get methods into a this file
- *
- * TODO: Get a new flyin, crossfade at the end of the video
+ * TODO: Get a new flyin
  *
  * TODO: Make the map button a little more apparently associated with the map
- *
- *
  */
 
 
@@ -39,12 +33,15 @@
 /********************************
  * Variables for functions      *
  ********************************/
-
+var prevCampus = true;
 var video_time = 12000;
 var map_slide_time = 1500;
 var description_delay = 5000;
 var video_fade = 2500;
 var map_state = 1;
+var map_in_time = 1500;
+var map_button_in_time = 750;
+var first_time = false;
 
 var currentLocation; //used by just about everything, initialized here
 var previousLocation = locations[0]; //used for off campus/on campus switch
@@ -154,7 +151,14 @@ function getNavs(locationTag) {
     for (var i in navs) {
         if (currentLocation.onCampus) {
             if (navs[i].tag === locationTag) {
-                inner_html += "<button class='map_button'>Map</button>" +
+                console.log(first_time);
+                if(first_time){
+                    inner_html += "<button class='map_button_initial'>Map</button>"
+                }
+                else{
+                    inner_html += "<button class='map_button'>Map</button>"
+                }
+                inner_html +=
                     "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<a class='visit_button' href = 'http://www.western.edu/future-students/experience-western' target = '_blank'>Schedule a Visit</a>" + "<button class='restart_button' onclick=javascript:window.location=''>Restart Tour</button>" +
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                     navs[i].styleClass + " arrow' src='imgs/nav_arrows/" + navs[i].direction + "_white.png'" +
@@ -214,6 +218,7 @@ function getNavs(locationTag) {
             }
         });
     }
+    first_time = false;
 }
 
 /**************************************************************
@@ -261,8 +266,6 @@ function getImage(locationTag) {
  * for on and off campus
  *********************************/
 
-var prevCampus = true;
-
 function loadMap(locationTag) {
     for (var i in locations) {
         if (locations[i].tag === locationTag) {
@@ -283,6 +286,18 @@ function loadMap(locationTag) {
     }
 }
 
+/*************************************************
+ * Map and mab_button animate in
+ *************************************************/
+
+function map_in(map_time, button_time){
+    $("#map").animate({right: 0}, map_time, 'easeInOutQuad', function(){
+        $(".map_button_initial").animate({right: 0}, 0, function(){
+            $(".map_button_initial").animate({top: window.innerHeight * 0.31}, button_time, 'easeInOutQuad')
+        });
+    });
+}
+
 
 
 /*************************************************
@@ -291,25 +306,28 @@ function loadMap(locationTag) {
 
 
 $(function () {
-
     if (location.hash !== "") {
         $("#start").removeClass("show");
     }
     $("#start").find("a").on("click", function () {
+        first_time = true;
         $("#start").removeClass("show");
         document.getElementById('video').innerHTML = '<video z-index="10000" width="100%" height="100%"  controls autoplay>' +
             '<source src="video/output.webm" type="video/webm"></video>';
+        $("#map").css({"right" : "-30%"});
         $("#map").hide('blind');
         $("#carousel").hide('blind');
         $(this).off("click");
         $("#video").click(function () {
             video_out(currentLocation, map_slide_time);
+            map_in(map_in_time, map_button_in_time);
         });
 
         $(function () {
             setTimeout(function () {
                 $("#video").animate({opacity: 0}, video_fade, 'easeOutQuart', function(){
                     video_out(currentLocation, map_slide_time);
+                    map_in(map_in_time, map_button_in_time);
                 });
             }, video_time);
         });
@@ -386,11 +404,5 @@ $(function () {
             title: this.title
         })
     });
-
-
-    /******************************************
-     * carousel item scaling code, haven't figured it out quiet yet
-     ******************************************/
-
 
 });
