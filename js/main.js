@@ -407,12 +407,5 @@ $(function () {
             title: this.title
         })
     });
-
-
-    /******************************************
-     * carousel item scaling code, haven't figured it out quiet yet
-     ******************************************/
-
-
 });
 
