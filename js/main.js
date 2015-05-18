@@ -46,6 +46,9 @@ var description_delay = 5000;
 var video_fade = 2500;
 var map_state = 1;
 
+var currentLocation; //used by just about everything, initialized here
+var previousLocation = locations[0]; //used for off campus/on campus switch
+
 
 /********************************
  *  Map Animation Function for  *
@@ -70,6 +73,221 @@ function video_out(location, mapTime) {
     $("#carousel").show();
 }
 
+/******************************************
+ * Get location method which takes a tag from the hash to create the current location
+ *
+ * @param locationTag
+ *******************************************/
+
+function getLocation(locationTag) {
+    $('.caption_wrapper').hide();
+    var inner_html = "";
+    for (var i in locations) {
+        if (locationTag === locations[i].tag) {
+            inner_html = "<div class='caption_wrapper'><div class='caption'><div id='caption_title'>" +
+                locations[i].name + "</div><div id='caption_text' class='description'>" + locations[i].description +
+                "</div></div></div>";
+            $('#text_overlay').html(inner_html);
+            $('.description').delay(description_delay).slideUp("slow");
+            $("#caption_title").click(function () {
+                $(".description").slideToggle("slow");
+            });
+            currentLocation = locations[i];
+            if (currentLocation && currentLocation.onCampus) {
+                previousLocation = currentLocation;
+            }
+            break;
+        }
+    }
+}
+
+
+/*******************************************************
+ *
+ *  Render all navigation items at the current location
+ *
+ *  Including buttons
+ *
+ * @param {string} locationTag Location tag, should be in form "#" + location, i.e. "#hurst"
+ *
+ * ******************************************************/
+
+function getNavs(locationTag) {
+    $('.tipsy:last').remove();
+    if (currentLocation.locationType === "academic" || currentLocation.locationType === "walkway") {
+        var inner_html = "<img onclick=javascript:window.location.hash='#fieldhouse' class='to_athletics " +
+            "arrow' src='imgs/nav_arrows/right_slate.png' " +
+            "onmouseover=this.src='imgs/nav_arrows/right_newtype_hover.png'" +
+            " onmouseout=this.src='imgs/nav_arrows/right_slate.png' " +
+            "title = 'to Athletics' />" +
+            "<img onclick=javascript:window.location.hash='#library' class='to_studentlife " +
+            "arrow' src='imgs/nav_arrows/left_crimson.png' " +
+            "onmouseover=this.src='imgs/nav_arrows/left_newtype_hover.png'" +
+            " onmouseout=this.src='imgs/nav_arrows/left_crimson.png' " +
+            "title = 'to Student Life' />";
+    }
+    if (currentLocation.locationType === "studentlife") {
+        inner_html = "<img onclick=javascript:window.location.hash='#fieldhouse' class='studentlife_to_athletics " +
+            "arrow' src='imgs/nav_arrows/left_slate.png' " +
+            "onmouseover=this.src='imgs/nav_arrows/left_newtype_hover.png'" +
+            " onmouseout=this.src='imgs/nav_arrows/left_slate.png' " +
+            "title = 'to Athletics' />" +
+            "<img onclick=javascript:window.location.hash='#taylor' class='to_academics " +
+            "arrow' src='imgs/nav_arrows/right_blue.png' " +
+            "onmouseover=this.src='imgs/nav_arrows/right_newtype_hover.png'" +
+            " onmouseout=this.src='imgs/nav_arrows/right_blue.png' " +
+            "title = 'to Academics' />";
+    }
+    if (currentLocation.locationType === "athletic") {
+        inner_html = "<img onclick=javascript:window.location.hash='#library' class='to_studentlife " +
+            "arrow' src='imgs/nav_arrows/left_crimson.png' " +
+            "onmouseover=this.src='imgs/nav_arrows/left_newtype_hover.png'" +
+            " onmouseout=this.src='imgs/nav_arrows/left_crimson.png' " +
+            "title = 'to Student Life' />" +
+            "<img onclick=javascript:window.location.hash='#taylor' class='to_academics " +
+            "arrow' src='imgs/nav_arrows/right_blue.png' " +
+            "onmouseover=this.src='imgs/nav_arrows/right_newtype_hover.png'" +
+            " onmouseout=this.src='imgs/nav_arrows/right_blue.png' " +
+            "title = 'to Academics' />";
+    }
+    var items = [];
+    for (var i in navs) {
+        if (currentLocation.onCampus) {
+            if (navs[i].tag === locationTag) {
+                inner_html += "<button class='map_button'>Map</button>" +
+                    "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<a class='visit_button' href = 'http://www.western.edu/future-students/experience-western' target = '_blank'>Schedule a Visit</a>" + "<button class='restart_button' onclick=javascript:window.location=''>Restart Tour</button>" +
+                    "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
+                    navs[i].styleClass + " arrow' src='imgs/nav_arrows/" + navs[i].direction + "_white.png'" +
+                    "onmouseover=" + "this.src='imgs/nav_arrows/" + navs[i].direction + "_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/nav_arrows/" + navs[i].direction + "_white.png' " +
+                    "title='" + navs[i].ttip + "' />";
+                items.push(navs[i].styleClass);
+            }
+            $("#navigation").html(inner_html);
+            $(".arrow").tipsy({gravity: 's', fade: true, html: true});
+            for (var i in items) {
+                for (var j in navs) {
+                    if (items[i] === navs[j].styleClass) {
+                        $("." + navs[j].styleClass).css({bottom: navs[j].y + "%", "left": navs[j].x + "%"});
+                    }
+                }
+            }
+        }
+        if (!currentLocation.onCampus){
+            if (navs[i].tag === locationTag) {
+                inner_html += "<button class='map_button'>Map</button> + <a class='visit_button' href = 'http://www.western.edu/future-students/experience-western' target = '_blank'>Schedule a Visit</a> + <button class='switch_button' onclick=javascript:window.location.hash='"+previousLocation.tag+"'>Go On Campus</button><img onclick=javasript:window.location.hash='" + navs[i].dest + "' class='" +
+                    navs[i].direction + "_offcampus arrow' src='imgs/nav_arrows/" + navs[i].direction + "_offcampus.png'" +
+                    "onmouseover=" + "this.src='imgs/nav_arrows/" + navs[i].direction + "_offcampus_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/nav_arrows/" + navs[i].direction + "_offcampus.png' " +
+                    "title='" + navs[i].ttip + "' />";
+            }
+
+            $("#navigation").html(inner_html);
+            $(".arrow").tipsy({gravity: 's', fade: true, html: true});
+        }
+
+        $(".map_button").click(function(){
+            if(map_state === 0) {
+                $("#map").show(function() {
+                    $("#map").animate({
+                        width: window.innerWidth * 0.25,
+                        height: window.innerHeight * 0.38
+                    }, function () {
+                        animate_map(currentLocation, map_slide_time);
+                    });
+                });
+                map_state += 1;
+            }
+            else if(map_state === 1) {
+                $("#map").animate({width: window.innerWidth * 0.75, height: window.innerHeight * 0.85}, function() {
+                    animate_map(currentLocation, map_slide_time);
+                });
+                $(".map_button").animate({right: window.innerWidth * 0.75});
+                map_state += 1;
+            }
+            else if(map_state === 2) {
+                $("#map").animate({width: '0', height: '0'}, function(){
+                    $("#map").hide('blind');
+                });
+                $(".map_button").animate({right: window.innerWidth * 0.001});
+                map_state = 0;
+            }
+        });
+    }
+}
+
+/**************************************************************
+ * Render all hotspots at the current location
+ * @param {string} locationTag Location tag, should be in form "#" + location, i.e. "#Hurst"
+ *****************************************************************/
+function getHspots(locationTag) {
+    $('.tipsy:last').remove();
+    var inner_html = "";
+    var items = [];
+    for (var i in hotspots) {
+        if (hotspots[i].tag === locationTag) {
+            inner_html += "<a href=" + hotspots[i].dest + " " + "target='_blank'><img class='" +
+                hotspots[i].styleClass + " hotspot' src='imgs/logo_hotspot.png'" +
+                "onmouseover=" + "this.src='imgs/logo_hotspot_hover.png'" +
+                " onmouseout=" + "this.src='imgs/logo_hotspot.png' " +
+                "title='" + hotspots[i].ttip + "' /></a>";
+            items.push(hotspots[i].styleClass);
+        }
+        $("#hotspots").html(inner_html);
+        $(".hotspot").tipsy({gravity: 'sw', fade: true, html: true});
+        for (var i in items) {
+            for (var j in hotspots) {
+                if (items[i] === hotspots[j].styleClass) {
+                    $("." + hotspots[j].styleClass).css({bottom: hotspots[j].y + "%", "left": hotspots[j].x + "%"});
+                }
+            }
+        }
+    }
+}
+
+/******************************************************
+ * Render main image for the current location
+ * @param {string} locationTag Location tag, should be in form "#" + location, i.e. "#hurst"
+ * locationTag should match image file, i.e "hurst_main.jpg" (substring removes "#")
+ *******************************************************/
+function getImage(locationTag) {
+    var mainImageDiv = "#main_image";
+    $(mainImageDiv).html("<img src='imgs/" + locationTag.substring(1) + "_main.jpg'/>");
+}
+
+
+/**********************************
+ * Load static image map screen
+ * for on and off campus
+ *********************************/
+
+var prevCampus = true;
+
+function loadMap(locationTag) {
+    for (var i in locations) {
+        if (locations[i].tag === locationTag) {
+            if (prevCampus != locations[i].onCampus) {
+                if (!locations[i].onCampus) {
+                    document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/offcampusmap.png">';
+                }
+                else{
+                    document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/oncampusmap.jpg">';
+                }
+            }
+            $('.mapImage').load(function ()
+            {
+                //animate_map(currentLocation);
+            });
+            prevCampus = locations[i].onCampus;
+        }
+    }
+}
+
+
+
+/*************************************************
+ * Calling of all functions
+ *************************************************/
 
 
 $(function () {
@@ -157,30 +375,9 @@ $(function () {
         });
     });
 
-    /********************************
-     *  Map Toggle                  *
-     ********************************/
-
-//var mapState = 0;
-//
-//$(".map_button").click(function(){
-//
-//    if(mapState == 0) {
-//        $("#map").animate({width: window.innerWidth * 0.25, height: window.innerHeight * 0.38});
-//        mapState += 1;
-//    }
-//    else if(mapState == 1){
-//        $("#map").animate({width: window.innerWidth * 0.75, height: window.innerHeight * 0.80});
-//        mapState += 1;
-//    }
-//    else if(mapState == 2){
-//        $("#map").animate({width: 0, height: 0});
-//        mapState = 0;
-//    }
-//});
-
     /***********************
      *  fancy box things   *
+     *  for the carousel   *
      ***********************/
 
     $(document).on('click', '.fancybox', function (event) {
