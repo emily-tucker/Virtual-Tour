@@ -165,13 +165,13 @@ function getNavs(locationTag) {
     var items = [];
     for (var i in navs) {
         if (currentLocation.onCampus) {
-            if (navs[i].tag === locationTag)
+            if (navs[i].tag === locationTag){
                 if(first_time){
                     inner_html += "<button class='map_button_initial'>Map</button>"
                 }
                 else{
                     inner_html += "<button class='map_button'>Map</button>"
-                }{
+                }
                 inner_html +=
                     "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='restart_button' onclick=javascript:window.location=''>Restart Tour</button>" +
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
