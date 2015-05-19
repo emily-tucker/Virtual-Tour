@@ -1,11 +1,3 @@
-var Menu = function (opts) {
-    this.name = opts.name ? opts.name : 'main';
-    this.text = opts.text ? opts.text : 'Menu';
-    this.icon = opts.icon;
-    this.items = opts.items;
-    this.target = '';
-};
-
 var MenuItem = function (opts) {
     this.text = opts.text;
     this.icon = opts.icon ? opts.icon : '';
@@ -182,7 +174,7 @@ var submountain = [
         href: "http://wscumountainsports.com/trail-running/"
     })
 ]
-
+/*
 var subsoccer = [
     new MenuItem({text: 'Soccer Field', icon: 'fa fa-futbol-o', target: 'external', href: "#"}),
     new MenuItem({text: 'Staff', icon: 'fa fa-users', target: 'external', href: "#"})
@@ -219,14 +211,15 @@ var subfootball = [
     new MenuItem({text: 'Staff', icon: 'fa fa-users', target: 'external', href: "#"})
 ]
 
+*/
 
 var subncaa = [
-    new MenuItem({text: 'Football', icon: 'fa fa-skyatlas', items: subfootball}),
-    new MenuItem({text: 'Basketball', icon: 'fa fa-trophy', items: subbasketball}),
-    new MenuItem({text: 'Wrestling', icon: 'fa fa-bell', items: subwrestling}),
-    new MenuItem({text: 'Track', icon: 'fa fa-bolt', items: subtrack}),
-    new MenuItem({text: 'Swimming', icon: 'fa fa-life-ring', items: subswimming}),
-    new MenuItem({text: 'Soccer', icon: 'fa fa-futbol-o', items: subsoccer})
+    new MenuItem({text: 'Football', icon: 'fa fa-skyatlas', target:'external', href:'http://www.gomountaineers.com/'}),
+    new MenuItem({text: 'Basketball', icon: 'fa fa-trophy', target:'external', href:'http://www.gomountaineers.com/'}),
+    new MenuItem({text: 'Wrestling', icon: 'fa fa-bell', target:'external', href:'http://www.gomountaineers.com/'}),
+    new MenuItem({text: 'Track', icon: 'fa fa-bolt', target:'external', href:'http://www.gomountaineers.com/'}),
+    new MenuItem({text: 'Swimming', icon: 'fa fa-life-ring', target:'external', href:'http://www.gomountaineers.com/'}),
+    new MenuItem({text: 'Soccer', icon: 'fa fa-futbol-o', target:'external', href:'http://www.gomountaineers.com/'})
 ]
 
 
@@ -548,6 +541,6 @@ var submenu = [
     new MenuItem({text: 'Go To', icon: 'fa fa-street-view', items: subgo})
 ]
 
-var menu = new Menu({text: 'Menu', icon: 'fa fa-bars', items: submenu})
+var menu = new MenuItem({text: 'Menu', icon: 'fa fa-bars', items: submenu})
 menu.items = submenu;
 
