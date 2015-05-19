@@ -134,10 +134,17 @@ section:target, .show{
 }
 
 
-.arrow, .hotspot {
-    position: fixed;
+.arrow {
+	 position: fixed;
     z-index: 1;
     max-width: 6%;
+    border: 0;
+}
+
+.hotspot {
+    position: fixed;
+    z-index: 1;
+    max-width: 12%;
     border: 0;
 }
 

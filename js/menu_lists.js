@@ -540,7 +540,7 @@ var submenu = [
     new MenuItem({text: 'Athletics', icon: 'fa fa-bicycle ', items: subathletics}),
     new MenuItem({
         text: 'Schedule A Visit',
-        icon: 'fa fa-calendar',
+        icon: 'fa fa-suitcase',
         target: 'external',
         href: 'http://www.western.edu/future-students/visiting-campus/visit-western'
     }),
