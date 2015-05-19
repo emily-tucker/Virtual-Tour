@@ -232,6 +232,9 @@ function getNavs(locationTag) {
             }
         });
     }
+    if(!first_time){
+        $(".map_button").animate({top: 0 + ($("#map").height() - ($(".map_button").height() * 2.15))}, 0);
+    }
 }
 
 /**************************************************************

@@ -149,7 +149,6 @@ section:target, .show{
     position: fixed;
     z-index: 1;
     right: 0;
-    top: 31%;
     max-height: 7%;
     z-index: 10;
 }
