@@ -170,10 +170,12 @@ function getNavs(locationTag) {
                     inner_html += "<button class='map_button_initial'>Expand Map</button>"
                 }
                 else{
-                    if(map_state === 0) {
-                        inner_html += "<button class='map_button'>Show Map</button>"
+                    if(map_state === 2) {
+                        inner_html += "<button class='map_button'>Collapse Map</button>"
                     }else if(map_state === 1) {
                         inner_html += "<button class='map_button'>Expand Map</button>"
+                    }else if(map_state === 0) {
+                        inner_html += "<button class='map_button'>Show Map</button>"
                     }
                 }
                 inner_html +=
@@ -279,6 +281,9 @@ function getNavs(locationTag) {
     }
     else if (map_state === 0){
         $(".map_button").animate({top: window.innerHeight * 0.3}, 0);
+    }
+    if(first_time){
+        first_time = false;
     }
 }
 
