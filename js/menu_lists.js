@@ -8,11 +8,6 @@ var MenuItem = function (opts) {
     this.href = opts.href ? opts.href : '';
 };
 
-var subwanita = [
-    new MenuItem({text: 'Location', icon: 'fa fa-map-marker ', target: 'external', href: "#"}),
-    new MenuItem({text: 'Prices', icon: 'fa fa-usd ', target: 'external', href: "#"})
-]
-
 var subfish = [
     new MenuItem({text: 'Ice Fishing', icon: 'fa fa-ship', target: 'external', href: "#"}),
     new MenuItem({text: 'Salmon Fishing', icon: 'fa fa-ship', target: 'external', href: "#"}),
@@ -50,7 +45,6 @@ new MenuItem({text: 'CBMR', icon: 'fa fa-tree', items: subcbmr}),
 new MenuItem({text: 'Monarch', icon: 'fa fa-tree', target: 'external', href: "#"}),
 new MenuItem({text: 'Hartman Rocks', icon: 'fa fa-bicycle', items: subhart}),
 new MenuItem({text: 'Blue Mesa', icon: 'fa fa-ship', items: subblue}),
-new MenuItem({text: 'Wanita Hot Springs', icon: 'fa fa-life-ring', items: subwanita})
 ]
 
 var subon = [
@@ -64,13 +58,13 @@ var subon = [
 var subhousing = [
     new MenuItem({text: 'On Campus', icon: 'fa fa-building', items: subon}),
 ]
-
+/*
 var subacademicclub = [
     new MenuItem({text: 'Math Club', icon: 'fa fa-bar-chart', target: 'external', href: "#"}),
     new MenuItem({text: 'CS Club', icon: 'fa fa-code', target: 'external', href: "#"}),
     new MenuItem({text: 'Chemistry Club', icon: 'fa fa-flask', target: 'external', href: "#"})
 ]
-
+*/
 
 var subclub = [
     new MenuItem({
@@ -442,36 +436,7 @@ var subregister = [
  new MenuItem({text: 'Environment Related', icon: 'fa fa-gavel', items: subenvCat}),
  new MenuItem({text: 'Literature and Language', icon: 'fa fa-pencil', items: sublitandlangCat})
  ]
- */
 
-var subacademics = [
-    new MenuItem({
-        text: 'Areas of Study',
-        icon: 'fa fa-book ',
-        target: 'external',
-        href: 'http://www.western.edu/academics'
-    }),
-    new MenuItem({
-        text: 'Graduate Programs',
-        icon: 'fa fa-graduation-cap ',
-        target: 'external',
-        href: 'http://www.western.edu/academics/graduate-programs-western'
-    }),
-    new MenuItem({
-        text: 'Extended Studies',
-        icon: 'fa fa-file "',
-        target: 'external',
-        href: 'http://www.western.edu/academics/extended-studies'
-    }),
-    new MenuItem({
-        text: 'Academic Calendar',
-        icon: 'fa fa-calendar ',
-        target: 'external',
-        href: "http://www.western.edu/academics/academic-calendar"
-    })
-]
-
-/*
 var subextended = [
 new MenuItem({text: 'Register', icon: 'fa fa-clipboard', items: subregister}),
 new MenuItem({text: 'Access Program', icon: 'fa fa-university', items: subaccess}),
