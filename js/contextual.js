@@ -28,6 +28,8 @@
             "The world's highest collegiate football stadium", true, 2023, 644);	
 	var quigley = new Location("#quigley", "Quigley Hall", "academic",
             "Home of the Music and Art departments", true, 2170, 1419);	
+	var soccerfields = new Location("#soccerfields", "Soccer Fields", "athletic",
+            "The world's highest collegiate football stadium", true, 2023, 644);	
     var taylor = new Location("#taylor", "Taylor Hall", "academic",
             "Home of administrative offices, classrooms, faculty offices, computer labs, as well as an " +
             "auditorium and theater.", true, 1905, 1200);
