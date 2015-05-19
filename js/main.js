@@ -25,8 +25,6 @@
  *
  * TODO: Get a new flyin
  *
- * TODO: Make the map button a little more apparently associated with the map
- *
  *
  */
 
