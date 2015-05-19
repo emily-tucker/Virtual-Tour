@@ -167,10 +167,14 @@ function getNavs(locationTag) {
         if (currentLocation.onCampus) {
             if (navs[i].tag === locationTag){
                 if(first_time){
-                    inner_html += "<button class='map_button_initial'>Map</button>"
+                    inner_html += "<button class='map_button_initial'>Expand Map</button>"
                 }
                 else{
-                    inner_html += "<button class='map_button'>Map</button>"
+                    if(map_state === 0) {
+                        inner_html += "<button class='map_button'>Show Map</button>"
+                    }else if(map_state === 1) {
+                        inner_html += "<button class='map_button'>Expand Map</button>"
+                    }
                 }
                 inner_html +=
                     "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='restart_button' onclick=javascript:window.location=''>Restart Tour</button>" +
@@ -203,37 +207,78 @@ function getNavs(locationTag) {
             $("#navigation").html(inner_html);
             $(".arrow").tipsy({gravity: 's', fade: true, html: true});
         }
-
-        $(".map_button").click(function(){
-            if(map_state === 0) {
-                $("#map").show(function() {
+            $(".map_button_initial").click(function () {
+                if (map_state === 0) {
+                    $(".map_button_initial").text("Expand Map");
+                    $("#map").show(function () {
+                        $("#map").animate({
+                            width: window.innerWidth * 0.25,
+                            height: window.innerHeight * 0.38
+                        }, function () {
+                            animate_map(currentLocation, map_slide_time);
+                        });
+                    });
+                    map_state += 1;
+                }
+                else if (map_state === 1) {
+                    $(".map_button_initial").text("Collapse Map");
                     $("#map").animate({
-                        width: window.innerWidth * 0.25,
-                        height: window.innerHeight * 0.38
+                        width: window.innerWidth * 0.75,
+                        height: window.innerHeight * 0.85
                     }, function () {
                         animate_map(currentLocation, map_slide_time);
                     });
-                });
-                map_state += 1;
-            }
-            else if(map_state === 1) {
-                $("#map").animate({width: window.innerWidth * 0.75, height: window.innerHeight * 0.85}, function() {
-                    animate_map(currentLocation, map_slide_time);
-                });
-                $(".map_button").animate({right: window.innerWidth * 0.75});
-                map_state += 1;
-            }
-            else if(map_state === 2) {
-                $("#map").animate({width: '0', height: '0'}, function(){
-                    $("#map").hide('blind');
-                });
-                $(".map_button").animate({right: window.innerWidth * 0.001});
-                map_state = 0;
-            }
-        });
-    }
-    if(!first_time){
+                    $(".map_button_initial").animate({right: window.innerWidth * 0.75});
+                    map_state += 1;
+                }
+                else if (map_state === 2) {
+                    $(".map_button_initial").text("Show Map");
+                    $("#map").animate({width: '0', height: '0'}, function () {
+                        $("#map").hide('blind');
+                    });
+                    $(".map_button_initial").animate({right: window.innerWidth * 0.001});
+                    map_state = 0;
+                }
+            });
+            $(".map_button").click(function () {
+                if (map_state === 0) {
+                    $(".map_button").text("Expand Map");
+                    $("#map").show(function () {
+                        $("#map").animate({
+                            width: window.innerWidth * 0.25,
+                            height: window.innerHeight * 0.38
+                        }, function () {
+                            animate_map(currentLocation, map_slide_time);
+                        });
+                    });
+                    map_state += 1;
+                }
+                else if (map_state === 1) {
+                    $(".map_button").text("Collapse Map");
+                    $("#map").animate({
+                        width: window.innerWidth * 0.75,
+                        height: window.innerHeight * 0.85
+                    }, function () {
+                        animate_map(currentLocation, map_slide_time);
+                    });
+                    $(".map_button").animate({right: window.innerWidth * 0.75});
+                    map_state += 1;
+                }
+                else if (map_state === 2) {
+                    $(".map_button").text("Show Map");
+                    $("#map").animate({width: '0', height: '0'}, function () {
+                        $("#map").hide('blind');
+                    });
+                    $(".map_button").animate({right: window.innerWidth * 0.001});
+                    map_state = 0;
+                }
+            });
+        }
+    if(!first_time && map_state != 0){
         $(".map_button").animate({top: 0 + ($("#map").height() - ($(".map_button").height() * 2.15))}, 0);
+    }
+    else if (map_state === 0){
+        $(".map_button").animate({top: window.innerHeight * 0.3}, 0);
     }
 }
 
