@@ -79,6 +79,40 @@ function Hspot(tag, styleClass, ttip, dest, x, y) {
     this.dest = dest;
     this.x = x;
     this.y = y;
+};
+
+/******************************************************
+ * Carousel Item Constructor
+ *
+ * @param tags
+ * @param full
+ * @param thumb
+ * @param ttip
+ * @param html
+ * @constructor
+ *****************************************************/
+
+function CarouselItem(tags, full, thumb, ttip, html) {
+    if (html === undefined) {
+        this.video = true;
+        this.html = ttip;
+        this.ttip = thumb;
+        this.thumb = full;
+        this.full = null;
+        this.tags = tags;
+    }
+    else {
+        this.tags = tags;
+        this.full = full;
+        this.thumb = thumb;
+        this.ttip = ttip;
+        this.html = html;
+    }
+}
+
+function Image(name, fname) {
+    this.name = name;
+    this.fname = fname;
 }
 
 

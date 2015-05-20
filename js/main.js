@@ -42,6 +42,7 @@ var map_state = 1;
 var map_in_time = 1500;
 var map_button_in_time = 750;
 var first_time = false;
+var is_mobile = false;
 
 var currentLocation; //used by just about everything, initialized here
 var previousLocation = locations[0]; //used for off campus/on campus switch
@@ -360,6 +361,9 @@ function loadMap(locationTag) {
 
 
 $(function () {
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        is_mobile = true;
+    }
     if (location.hash !== "") {
         $("#start").removeClass("show");
     }
