@@ -135,6 +135,7 @@ section:target, .show{
     postion: fixed;
     left:45%;
     top: 50%;
+	z-index:1000;
 }
 
 

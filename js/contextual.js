@@ -192,7 +192,7 @@
         mountaineerbowl_to_escalante, pathway2_to_kelley, fieldhouse_to_mountaineerbowl, mountaineerbowl_to_fieldhouse,
         pathway2_to_library, fieldhouse_to_pinnacles, pinnacles_to_fieldhouse, pinnacles_to_chipeta, chipeta_to_pinnacles,
         library_to_pathway2, universitycenter_to_library, library_to_escalante, universitycenter_to_fieldhouse, fieldhouse_to_universitycenter,
-        escalante_to_library, chipeta_to_mears, mears_to_ute, crawford_to_library, library_to_crawford, dtToHr, dtTorm, hrToCb, hrTOdt, cbToRm, cbtohr, rmToDt, rmTOCb];
+        escalante_to_library, chipeta_to_mears, mears_to_ute, crawford_to_library, library_to_crawford, dtToHr, dtTorm, hrToCb, hrTOdt, cbToRm, cbtohr, rmToDt, rmTOCb, 		escalante_to_mountaineerbowlAthletics, universitycenter_to_fieldhouseAthletics,  fieldhouse_to_mountaineerbowlAthletics, pinnacles_to_fieldhouseAthletics, mountaineerbowl_to_fieldhouseAthletics, fieldhouse_to_universitycenterSL,  mountaineerbowl_to_escalanteSL, borick_to_uteSL, ute_to_mearsSL, mears_to_uteSL, mears_to_chipetaSL, chipeta_to_mearsSL, chipeta_to_pinnaclesSL, pinnacles_to_chipetaSL, fieldhouse_to_pinnaclesSL, universitycenter_to_librarySL, escalante_to_librarySL, library_to_escalanteSL, crawford_to_universitycenterSL, crawford_to_librarySL, pathway2_to_librarySL, taylor_to_borickAcademic, hurst_to_kelleyAcademic, quigly_to_taylorAcademic, kelley_to_hurstAcademic, kelley_to_libraryAcademic, library_to_kelleyAcademic, library_to_crawfordAcademic, ute_to_borickAcademic, borick_to_taylorAcademic];
     /*
    hr_to_tc, tc_to_hr,cbmr_to_gunnison,
     gunnison_to_cbmr, gunnison_to_elkmountains, elkmountains_to_gunnison, elkmountains_to_hr, hr_to_elkmountains,

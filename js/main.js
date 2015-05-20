@@ -43,6 +43,7 @@ var map_in_time = 1500;
 var map_button_in_time = 750;
 var first_time = false;
 var is_mobile = false;
+var tour_track = 0;
 
 var currentLocation; //used by just about everything, initialized here
 var previousLocation = locations[0]; //used for off campus/on campus switch
@@ -124,6 +125,7 @@ function getLocation(locationTag) {
  * ******************************************************/
 
 function getNavs(locationTag) {
+	console.log(tour_track);
     $('.tipsy:last').remove();
     if (currentLocation.locationType === "academic" || currentLocation.locationType === "walkway") {
         var inner_html = "<img onclick=javascript:window.location.hash='#fieldhouse' class='to_athletics " +
@@ -178,13 +180,18 @@ function getNavs(locationTag) {
                     }
                 }
                 inner_html +=
-                    "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='restart_button' onclick=javascript:window.location=''>Restart Tour</button>" +
+                    "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='restart_button' onclick=javascript:window.location=''>Restart Tour</button>";
+					console.log(tour_track === navs[i].tourTracks);
+					if(tour_track === navs[i].tourTracks){
+						console.log(navs[i].tag);
+						inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/nav_arrows/" + navs[i].direction + "_white.png'" +
-                    "onmouseover=" + "this.src='imgs/nav_arrows/" + navs[i].direction + "_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/nav_arrows/" + navs[i].direction + "_white.png' " +
+                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
+                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
                     "title='" + navs[i].ttip + "' />";
-                items.push(navs[i].styleClass);
+					items.push(navs[i].styleClass);
+					}
             }
             $("#navigation").html(inner_html);
             $(".arrow").tipsy({gravity: 's', fade: true, html: true});
