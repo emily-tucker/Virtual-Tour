@@ -34,7 +34,7 @@
  * Variables for functions      *
  ********************************/
 var prevCampus = true;
-var video_time = 12000;
+var video_time = 21000;
 var map_slide_time = 1500;
 var description_delay = 5000;
 var video_fade = 2500;
@@ -378,7 +378,7 @@ $(function () {
         first_time = true;
         $("#start").removeClass("show");
         document.getElementById('video').innerHTML = '<video z-index="10000" width="100%" height="100%"  controls autoplay>' +
-            '<source src="video/output.webm" type="video/webm"></video>';
+            '<source src="video/output2.webm" type="video/webm"></video>';
         $("#map").css({"right" : "-30%"});
         $("#map").hide('blind');
         $("#carousel").hide('blind');
