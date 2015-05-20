@@ -16,7 +16,7 @@
  * @param {Boolean} onCampus If location is on campus or off campus
  *
  *************************************************/
-function Location(tag, name, locationType, description, onCampus, x, y) {
+function Location(tag, name, locationType, description, onCampus, x, y, locationTrack) {
     this.tag = tag;
     this.name = name;
     this.locationType = locationType;
@@ -24,6 +24,7 @@ function Location(tag, name, locationType, description, onCampus, x, y) {
     this.onCampus = onCampus;
     this.x = x;
     this.y = y;
+	this.locationTrack = locationTrack;
 }
 
 
