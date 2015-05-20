@@ -62,52 +62,86 @@
     /**
      * Navigation object instances
      */
-	/*====================Academic Arrows================== Arrow Color: White*/
-    var taylor_to_pathway = new Navigation("#taylor", "taylor_to_pathway", "to pathway", "#pathway", "right", 58, 27); //
-	var taylor_to_borick = new Navigation("#taylor", "taylor_to_borick", "to Borick", "#borick", "left", 38, 27); //
-    var pathway_to_hurst = new Navigation("#pathway", "pathway_to_hurst", "to Hurst", "#hurst", "forward", 47, 27);
-    var pathway_to_taylor = new Navigation("#pathway", "pathway_to_taylor", "back to Taylor", "#taylor", "back", 50, 17); //
-    var pathway_to_quigly = new Navigation("#pathway", "pathway_to_quigly", "to Quigly", "#quigley", "right", 58, 27);
-    var hurst_to_pathway = new Navigation("#hurst", "hurst_to_pathway", "back to pathway", "#pathway", "back", 50, 17);
-    var hurst_to_kelley = new Navigation("#hurst", "hurst_to_kelley", "to Kelley Hall", "#kelley", "left", 42, 27);
-    var quigly_to_pathway = new Navigation("#quigley", "quigly_to_pathway", "back to pathway", "#pathway", "left", 42, 27);
-	var quigly_to_hurst = new Navigation("#quigley", "quigly_to_hurst", "to Hurst", "#hurst", "right", 58, 27);
-    var kelley_to_hurst = new Navigation("#kelley", "kelley_to_hurst", "to Hurst Hall", "#hurst", "right", 58, 27);
-    var kelley_to_pathway2 = new Navigation("#kelley", "kelley_to_pathway2", "to pathway", "#pathway2", "left", 42, 27);  
-    var pathway2_to_kelley = new Navigation("#pathway2", "pathway2_to_kelley", "to Kelley Hall", "#kelley", "back", 50, 17);
-	var library_to_crawford = new Navigation("#library", "library_to_crawford", "to Crawford", "#crawford", "left", 38, 27);
-	var library_to_pathway2 = new Navigation("#library", "library_to_pathway2", "to Pathway", "#pathway2", "back", 50, 17);
-	var ute_to_borick = new Navigation("#ute", "ute_to_borick", "to Borick", "#borick", "forward", 47, 27);
-	var borick_to_taylor = new Navigation("#borick", "borick_to_taylor", "to Taylor", "#taylor", "forward", 47, 27);
-	
-	
-	/*====================Student Life Arrows================== Arrow Color: Red*/
-	var pathway2_to_library = new Navigation("#pathway2", "pathway2_to_library", "to Library", "#library", "forward", 47, 27);
-	var crawford_to_library = new Navigation("#crawford", "crawford_to_library", "Back to Library", "#library", "back", 50, 17);
-	var crawford_to_universitycenter = new Navigation("#crawford", "crawford_to_universitycenter", "to University Center", "#universitycenter", "forward", 47, 27);
-    var library_to_escalante = new Navigation("#library", "library_to_escalante", "to Escalante Student Housing", "#escalante", "forward", 47, 27);
-	var escalante_to_library = new Navigation("#escalante", "escalante_to_library", "Back to Library", "#library", "back", 50, 17);
-	var escalante_to_universitycenter = new Navigation("#escalante", "escalante_to_universitycenter", "to University Center", "#universitycenter", "left", 38, 27);
+	/*====================Default Arrows================== Arrow Color: White - Default == 0*/
+    var taylor_to_pathway = new Navigation("#taylor", "taylor_to_pathway", "to pathway", "#pathway", "right", 58, 27, 0); //
+	var taylor_to_borick = new Navigation("#taylor", "taylor_to_borick", "to Borick", "#borick", "left", 38, 27, 0); //
+    var pathway_to_hurst = new Navigation("#pathway", "pathway_to_hurst", "to Hurst", "#hurst", "forward", 47, 27, 0);
+    var pathway_to_taylor = new Navigation("#pathway", "pathway_to_taylor", "back to Taylor", "#taylor", "back", 50, 17, 0); //
+    var pathway_to_quigly = new Navigation("#pathway", "pathway_to_quigly", "to Quigly", "#quigley", "right", 58, 27, 0);
+    var hurst_to_pathway = new Navigation("#hurst", "hurst_to_pathway", "back to pathway", "#pathway", "back", 50, 17, 0);
+    var hurst_to_kelley = new Navigation("#hurst", "hurst_to_kelley", "to Kelley Hall", "#kelley", "left", 42, 27, 0);
+    var quigly_to_pathway = new Navigation("#quigley", "quigly_to_pathway", "back to pathway", "#pathway", "left", 42, 27, 0);
+	var quigly_to_hurst = new Navigation("#quigley", "quigly_to_hurst", "to Hurst", "#hurst", "right", 58, 27, 0);
+    var kelley_to_hurst = new Navigation("#kelley", "kelley_to_hurst", "to Hurst Hall", "#hurst", "right", 58, 27, 0);
+    var kelley_to_pathway2 = new Navigation("#kelley", "kelley_to_pathway2", "to pathway", "#pathway2", "left", 42, 27, 0);  
+    var pathway2_to_kelley = new Navigation("#pathway2", "pathway2_to_kelley", "to Kelley Hall", "#kelley", "back", 50, 17, 0);
+	var library_to_crawford = new Navigation("#library", "library_to_crawford", "to Crawford", "#crawford", "left", 38, 27, 0);
+	var library_to_pathway2 = new Navigation("#library", "library_to_pathway2", "to Pathway", "#pathway2", "back", 50, 17, 0);
+	var ute_to_borick = new Navigation("#ute", "ute_to_borick", "to Borick", "#borick", "forward", 47, 27, 0);
+	var borick_to_taylor = new Navigation("#borick", "borick_to_taylor", "to Taylor", "#taylor", "forward", 47, 27, 0);
+	var escalante_to_mountaineerbowl = new Navigation("#escalante", "escalante_to_mountaineerbowl", "to the Mountaineer Bowl", "#mountaineerbowl", "forward", 47, 27, 0);
+    var universitycenter_to_fieldhouse = new Navigation("#universitycenter", "universitycenter_to_fieldhouse", "to Fieldhouse", "#fieldhouse", "forward", 47, 27, 0);
+    var fieldhouse_to_mountaineerbowl = new Navigation("#fieldhouse", "fieldhouse_to_mountaineerbowl", "to Mountaineer Bowl", "#mountaineerbowl", "forward", 47, 27, 0);
+	var pinnacles_to_fieldhouse = new Navigation("#pinnacles", "pinnacles_to_fieldhouse", "back to the Fieldhouse", "#fieldhouse", "back", 50, 17, 0);
+    var mountaineerbowl_to_fieldhouse = new Navigation("#mountaineerbowl", "mountaineerbowl_to_fieldhouse", "to Field House", "#fieldhouse", "left", 38, 27, 0);
+	var pathway2_to_library = new Navigation("#pathway2", "pathway2_to_library", "to Library", "#library", "forward", 47, 27, 0);
+	var crawford_to_library = new Navigation("#crawford", "crawford_to_library", "Back to Library", "#library", "back", 50, 17, 0);
+	var crawford_to_universitycenter = new Navigation("#crawford", "crawford_to_universitycenter", "to University Center", "#universitycenter", "forward", 47, 27, 0);
+    var library_to_escalante = new Navigation("#library", "library_to_escalante", "to Escalante Student Housing", "#escalante", "forward", 47, 27, 0);
+	var escalante_to_library = new Navigation("#escalante", "escalante_to_library", "Back to Library", "#library", "back", 50, 17, 0);
+	var escalante_to_universitycenter = new Navigation("#escalante", "escalante_to_universitycenter", "to University Center", "#universitycenter", "left", 38, 27, 0);
 	var universitycenter_to_library = new Navigation("#universitycenter", "universitycenter_to_library", "to Library", "#library", "back", 50, 17);
-	var fieldhouse_to_pinnacles = new Navigation("#fieldhouse", "fieldhouse_to_pinnacles", "to the Pinaccles", "#pinnacles", "left", 38, 27);
-	var pinnacles_to_chipeta = new Navigation("#pinnacles", "pinnacles_to_chipeta", "to Chipeta", "#chipeta", "forward", 47, 27);
-	var chipeta_to_pinnacles = new Navigation("#chipeta", "chipeta_to_pinnacles", "Back to Pinnacles", "#pinnacles", "back", 50, 17);
-	var chipeta_to_mears = new Navigation("#chipeta", "chipeta_to_mears", "to Mears", "#mears", "forward", 47, 27);
-	var mears_to_chipeta = new Navigation("#mears", "mears_to_chipeta", "back to Chipeta", "#chipeta", "back", 50, 17);
-	var mears_to_ute = new Navigation("#mears", "mears_to_ute", "to Ute", "#ute", "forward", 47, 27);
-	var ute_to_mears = new Navigation("#ute", "ute_to_mears", "Back to Mears", "#mears", "back", 50, 17);
-	var borick_to_ute = new Navigation("#borick", "borick_to_ute", "Back to Ute", "#ute", "back", 50, 17);
-	var mountaineerbowl_to_escalante = new Navigation("#mountaineerbowl", "mountaineerbowl_to_escalante", "to Escalante", "#escalante", "back", 50, 17);
-    var fieldhouse_to_universitycenter = new Navigation("#fieldhouse", "fieldhouse_to_universitycenter", "to University Center", "#universitycenter", "back", 50, 17);
+	var fieldhouse_to_pinnacles = new Navigation("#fieldhouse", "fieldhouse_to_pinnacles", "to the Pinaccles", "#pinnacles", "left", 38, 27, 0);
+	var pinnacles_to_chipeta = new Navigation("#pinnacles", "pinnacles_to_chipeta", "to Chipeta", "#chipeta", "forward", 47, 27, 0);
+	var chipeta_to_pinnacles = new Navigation("#chipeta", "chipeta_to_pinnacles", "Back to Pinnacles", "#pinnacles", "back", 50, 17, 0);
+	var chipeta_to_mears = new Navigation("#chipeta", "chipeta_to_mears", "to Mears", "#mears", "forward", 47, 27, 0);
+	var mears_to_chipeta = new Navigation("#mears", "mears_to_chipeta", "back to Chipeta", "#chipeta", "back", 50, 17, 0);
+	var mears_to_ute = new Navigation("#mears", "mears_to_ute", "to Ute", "#ute", "forward", 47, 27, 0);
+	var ute_to_mears = new Navigation("#ute", "ute_to_mears", "Back to Mears", "#mears", "back", 50, 17, 0);
+	var borick_to_ute = new Navigation("#borick", "borick_to_ute", "Back to Ute", "#ute", "back", 50, 17, 0);
+	var mountaineerbowl_to_escalante = new Navigation("#mountaineerbowl", "mountaineerbowl_to_escalante", "to Escalante", "#escalante", "back", 50, 17, 0);
+    var fieldhouse_to_universitycenter = new Navigation("#fieldhouse", "fieldhouse_to_universitycenter", "to University Center", "#universitycenter", "back", 50, 17, 0);
+	
+	/*====================Academic Arrows================== Arrow Color: Black -Academic Tour = 1*/
+	var taylor_to_borickAcademic = new Navigation("#taylor", "taylor_to_borickAcademic", "to Borick", "#borick", "left", 38, 27, 1); //
+    var hurst_to_kelleyAcademic = new Navigation("#hurst", "hurst_to_kelleyAcademic", "to Kelley Hall", "#kelley", "left", 42, 27, 1);
+    var quigly_to_taylorAcademic = new Navigation("#quigley", "quigley_to_taylorAcademic", "back to Taylor", "#taylor", "left", 42, 27, 1);
+	var quigly_to_hurstAcademic = new Navigation("#quigley", "quigly_to_hurstAcademic", "to Hurst", "#hurst", "right", 58, 27, 1);
+    var kelley_to_hurstAcademic = new Navigation("#kelley", "kelley_to_hurstAcademic", "to Hurst Hall", "#hurst", "right", 58, 27, 1);
+    var kelley_to_libraryAcademic = new Navigation("#kelley", "kelley_to_libraryAcademic", "to pathway", "#pathway2", "left", 42, 27, 1);  
+    var library_to_kelleyAcademic = new Navigation("#library", "library_to_kelleyAcademic", "to Kelley Hall", "#kelley", "back", 50, 17, 1);
+	var library_to_crawfordAcademic = new Navigation("#library", "library_to_crawfordAcademic", "to Crawford", "#crawford", "left", 38, 27, 1);
+	var ute_to_borickAcademic = new Navigation("#ute", "ute_to_borick", "to BorickAcademic", "#borick", "forward", 47, 27, 1);
+	var borick_to_taylorAcademic = new Navigation("#borick", "borick_to_taylorAcademic", "to Taylor", "#taylor", "forward", 47, 27, 1);
+	
+	
+	/*====================Student Life Arrows================== Arrow Color: Red - StudentLife Tour = 2*/
+	var pathway2_to_librarySL = new Navigation("#pathway2", "pathway2_to_librarySL", "to Library", "#library", "forward", 47, 27, 2);
+	var crawford_to_librarySL = new Navigation("#crawford", "crawford_to_librarySL", "Back to Library", "#library", "back", 50, 17, 2);
+	var crawford_to_universitycenterSL = new Navigation("#crawford", "crawford_to_universitycenterSL", "to University Center", "#universitycenter", "forward", 47, 27, 2);
+    var library_to_escalanteSL = new Navigation("#library", "library_to_escalanteSL", "to Escalante Student Housing", "#escalante", "forward", 47, 27, 2);
+	var escalante_to_librarySL = new Navigation("#escalante", "escalante_to_librarySL", "Back to Library", "#library", "back", 50, 17, 2);
+	var escalante_to_universitycenterSL = new Navigation("#escalante", "escalante_to_universitycenterSL", "to University Center", "#universitycenter", "left", 38, 27, 2);
+	var universitycenter_to_librarySL = new Navigation("#universitycenter", "universitycenter_to_librarySL", "to Library", "#library", "back", 50, 17, 2);
+	var fieldhouse_to_pinnaclesSL = new Navigation("#fieldhouse", "fieldhouse_to_pinnaclesSL", "to the Pinaccles", "#pinnacles", "left", 38, 27, 2);
+	var pinnacles_to_chipetaSL = new Navigation("#pinnacles", "pinnacles_to_chipetaSL", "to Chipeta", "#chipeta", "forward", 47, 27, 2);
+	var chipeta_to_pinnaclesSL = new Navigation("#chipeta", "chipeta_to_pinnaclesSL", "Back to Pinnacles", "#pinnacles", "back", 50, 17, 2);
+	var chipeta_to_mearsSL = new Navigation("#chipeta", "chipeta_to_mearsSL", "to Mears", "#mears", "forward", 47, 27, 2);
+	var mears_to_chipetaSL = new Navigation("#mears", "mears_to_chipetaSL", "back to Chipeta", "#chipeta", "back", 50, 17, 2);
+	var mears_to_uteSL = new Navigation("#mears", "mears_to_uteSL", "to Ute", "#ute", "forward", 47, 27, 2);
+	var ute_to_mearsSL = new Navigation("#ute", "ute_to_mearsSL", "Back to Mears", "#mears", "back", 50, 17, 2);
+	var borick_to_uteSL = new Navigation("#borick", "borick_to_uteSL", "Back to Ute", "#ute", "back", 50, 17, 2);
+	var mountaineerbowl_to_escalanteSL = new Navigation("#mountaineerbowl", "mountaineerbowl_to_escalanteSL", "to Escalante", "#escalante", "back", 50, 17, 2);
+    var fieldhouse_to_universitycenterSL = new Navigation("#fieldhouse", "fieldhouse_to_universitycenterSL", "to University Center", "#universitycenter", "back", 50, 17, 2);
 	
 	
 	
-	/*====================Athletics Arrows================== Arrow Color: Slate*/
-	var escalante_to_mountaineerbowl = new Navigation("#escalante", "escalante_to_mountaineerbowl", "to the Mountaineer Bowl", "#mountaineerbowl", "forward", 47, 27);
-    var universitycenter_to_fieldhouse = new Navigation("#universitycenter", "universitycenter_to_fieldhouse", "to Fieldhouse", "#fieldhouse", "forward", 47, 27);
-    var fieldhouse_to_mountaineerbowl = new Navigation("#fieldhouse", "fieldhouse_to_mountaineerbowl", "to Mountaineer Bowl", "#mountaineerbowl", "forward", 47, 27);
-	var pinnacles_to_fieldhouse = new Navigation("#pinnacles", "pinnacles_to_fieldhouse", "back to the Fieldhouse", "#fieldhouse", "back", 50, 17);
-    var mountaineerbowl_to_fieldhouse = new Navigation("#mountaineerbowl", "mountaineerbowl_to_fieldhouse", "to Field House", "#fieldhouse", "left", 38, 27);
+	/*====================Athletics Arrows================== Arrow Color: Slate- Athetic Tour = 3*/
+	var escalante_to_mountaineerbowlAthletics= new Navigation("#escalante", "escalante_to_mountaineerbowl", "to the Mountaineer Bowl", "#mountaineerbowl", "forward", 47, 27, 3);
+    var universitycenter_to_fieldhouseAthletics = new Navigation("#universitycenter", "universitycenter_to_fieldhouse", "to Fieldhouse", "#fieldhouse", "forward", 47, 27, 3);
+    var fieldhouse_to_mountaineerbowlAthletics = new Navigation("#fieldhouse", "fieldhouse_to_mountaineerbowl", "to Mountaineer Bowl", "#mountaineerbowl", "forward", 47, 27, 3);
+	var pinnacles_to_fieldhouseAthletics = new Navigation("#pinnacles", "pinnacles_to_fieldhouse", "back to the Fieldhouse", "#fieldhouse", "back", 50, 17, 3);
+    var mountaineerbowl_to_fieldhouseAthletics = new Navigation("#mountaineerbowl", "mountaineerbowl_to_fieldhouse", "to Field House", "#fieldhouse", "left", 38, 27, 3);
 	
 
 	/*====================Outdoor Arrows==================*/
@@ -158,7 +192,7 @@
         mountaineerbowl_to_escalante, pathway2_to_kelley, fieldhouse_to_mountaineerbowl, mountaineerbowl_to_fieldhouse,
         pathway2_to_library, fieldhouse_to_pinnacles, pinnacles_to_fieldhouse, pinnacles_to_chipeta, chipeta_to_pinnacles,
         library_to_pathway2, universitycenter_to_library, library_to_escalante, universitycenter_to_fieldhouse, fieldhouse_to_universitycenter,
-        escalante_to_library, chipeta_to_mears, mears_to_ute, crawford_to_library, library_to_crawford, dtToHr, dtTorm, hrToCb, hrTOdt, cbToRm, cbtohr, rmToDt, rmTOCb];
+        escalante_to_library, chipeta_to_mears, mears_to_ute, crawford_to_library, library_to_crawford, dtToHr, dtTorm, hrToCb, hrTOdt, cbToRm, cbtohr, rmToDt, rmTOCb, 		escalante_to_mountaineerbowlAthletics, universitycenter_to_fieldhouseAthletics,  fieldhouse_to_mountaineerbowlAthletics, pinnacles_to_fieldhouseAthletics, mountaineerbowl_to_fieldhouseAthletics, fieldhouse_to_universitycenterSL,  mountaineerbowl_to_escalanteSL, borick_to_uteSL, ute_to_mearsSL, mears_to_uteSL, mears_to_chipetaSL, chipeta_to_mearsSL, chipeta_to_pinnaclesSL, pinnacles_to_chipetaSL, fieldhouse_to_pinnaclesSL, universitycenter_to_librarySL, escalante_to_librarySL, library_to_escalanteSL, crawford_to_universitycenterSL, crawford_to_librarySL, pathway2_to_librarySL, taylor_to_borickAcademic, hurst_to_kelleyAcademic, quigly_to_taylorAcademic, kelley_to_hurstAcademic, kelley_to_libraryAcademic, library_to_kelleyAcademic, library_to_crawfordAcademic, ute_to_borickAcademic, borick_to_taylorAcademic];
     /*
    hr_to_tc, tc_to_hr,cbmr_to_gunnison,
     gunnison_to_cbmr, gunnison_to_elkmountains, elkmountains_to_gunnison, elkmountains_to_hr, hr_to_elkmountains,

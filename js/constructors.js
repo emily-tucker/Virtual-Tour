@@ -16,7 +16,7 @@
  * @param {Boolean} onCampus If location is on campus or off campus
  *
  *************************************************/
-function Location(tag, name, locationType, description, onCampus, x, y) {
+function Location(tag, name, locationType, description, onCampus, x, y, locationTrack) {
     this.tag = tag;
     this.name = name;
     this.locationType = locationType;
@@ -24,6 +24,7 @@ function Location(tag, name, locationType, description, onCampus, x, y) {
     this.onCampus = onCampus;
     this.x = x;
     this.y = y;
+	
 }
 
 
@@ -41,7 +42,7 @@ function Location(tag, name, locationType, description, onCampus, x, y) {
  * @param {number} x x coordinate in pixels (for on campus)
  * @param {number} y y coordinate in pixels (for on campus)
  *************************************************************/
-function Navigation(tag, styleClass, ttip, dest, direction, x, y) {
+function Navigation(tag, styleClass, ttip, dest, direction, x, y, tourTracks) {
     this.tag = tag;
     this.styleClass = styleClass;
     this.ttip = ttip;
@@ -49,6 +50,7 @@ function Navigation(tag, styleClass, ttip, dest, direction, x, y) {
     this.direction = direction;
     this.x = x;
     this.y = y;
+	this.tourTracks = tourTracks;
 }
 
 /***************************************************************

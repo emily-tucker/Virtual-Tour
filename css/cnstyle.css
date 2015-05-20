@@ -135,11 +135,12 @@ section:target, .show{
     postion: fixed;
     left:45%;
     top: 50%;
+	z-index:1000;
 }
 
 
 .arrow {
-	 position: fixed;
+	position: fixed;
     z-index: 1;
     max-width: 6%;
     border: 0;
@@ -147,6 +148,7 @@ section:target, .show{
 
 .hotspot {
     position: fixed;
+	height: 85%;
     z-index: 1;
     max-width: 12%;
     border: 0;
