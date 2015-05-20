@@ -7,6 +7,7 @@ var MenuItem = function (opts) {
     this.items = opts.items ? opts.items : [];
     this.href = opts.href ? opts.href : '';
 };
+/*
 
 var subfish = [
     new MenuItem({text: 'Ice Fishing', icon: 'fa fa-ship', target: 'external', href: "#"}),
@@ -38,13 +39,13 @@ var subcbmr = [
     new MenuItem({text: 'Ski Pass', icon: 'fa fa-tree', items: subpass}),
     new MenuItem({text: 'Free Shuttle', icon: 'fa fa-bus', items: subfree})
 ]
-
+*/
 
 var subnear = [
-new MenuItem({text: 'CBMR', icon: 'fa fa-tree', items: subcbmr}),
-new MenuItem({text: 'Monarch', icon: 'fa fa-tree', target: 'external', href: "#"}),
-new MenuItem({text: 'Hartman Rocks', icon: 'fa fa-bicycle', items: subhart}),
-new MenuItem({text: 'Blue Mesa', icon: 'fa fa-ship', items: subblue}),
+new MenuItem({text: 'CBMR', icon: 'fa fa-tree', target: 'locations', href: '#cb'}),
+new MenuItem({text: 'Downtown Gunnison', icon: 'fa fa-building', target: 'locations', href: "#mainstreet"}),
+new MenuItem({text: 'Hartman Rocks', icon: 'fa fa-bicycle', target: 'locations', href: '#hartmans'}),
+new MenuItem({text: 'Rocky Mountains', icon: 'fa fa-ship', target: 'locations', href: '#rockymountains'}),
 ]
 
 var subon = [
