@@ -47,8 +47,6 @@ body.contextual_navigation
   color: #ccc; background: rgba(0,0,0,0.6);
   }
 
-
-
 .menu{
     position: fixed;
     width: 20%;
@@ -56,6 +54,12 @@ body.contextual_navigation
     z-index: 1000;
 }
 
+#main_image{
+    position: fixed;
+    height: 85%;
+    max-height: 85%;
+    width: 100%;
+}
 
 #map{
     position: fixed;

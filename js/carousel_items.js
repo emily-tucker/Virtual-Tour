@@ -1,29 +1,3 @@
-// JavaScript Document
-function CarouselItem(tags, full, thumb, ttip, html) {
-    if (html === undefined) {
-        this.video = true;
-        this.html = ttip;
-        this.ttip = thumb;
-        this.thumb = full;
-        this.full = null;
-        this.tags = tags;
-    }
-    else {
-        this.tags = tags;
-        this.full = full;
-        this.thumb = thumb;
-        this.ttip = ttip;
-        this.html = html;
-    }
-}
-
-function Image(name, fname) {
-    this.name = name;
-    this.fname = fname;
-}
-
-
-
 var Taylor_WMountainFull = new Image("Taylor_WMountainFull", "imgs/Taylor_WMountainFull.jpg");
 var Taylor_WMountainThumb = new Image("Taylor_WMountainThumb", "imgs/Taylor_WMountainThumb.jpg");
 var Taylor_WMountain = new CarouselItem(["#taylor"], Taylor_WMountainFull, Taylor_WMountainThumb, "W Mountain", '<b>Student Testimonials - Tim Timderson</b><br />W Mountain, hosting the largest collegiate letter in the world, is one of the many reasons Tim Timderson decided to go to western. He says he came to Western from his home of Milliken, Colo., to indulge his fascination with people. He had been a state officer in the Family, Career and Community Leaders of America, as well as an active citizen in the Potawatomi Nation of American Indians.<br /></br>&lt;a target="_self" onClick=&quot;window.location.href=&#x27;http://www.western.edu/future-students/student-testimonials-and-profiles&#x27;&quot;   href="http://www.western.edu/future-students/student-testimonials-and-profiles"&gt;Click here to read more...&lt;/a&gt;">');
