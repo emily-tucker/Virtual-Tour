@@ -474,6 +474,7 @@ new MenuItem({text: 'Academic Calendar', icon: 'fa fa-calendar ', target: "exter
 var subgo = [
     new MenuItem({text: 'Borick', icon: 'fa fa-university ', target: "locations", href: '#borick'}),
     new MenuItem({text: 'Chipeta Hall', icon: 'fa fa-university ', target: "locations", href: '#chipeta'}),
+	new MenuItem({text: 'Crawford Hall', icon: 'fa fa-university ', target: "locations", href: '#crawford'}),
     new MenuItem({text: 'Escalante', icon: 'fa fa-university ', target: "locations", href: '#escalante'}),
     new MenuItem({text: 'Hurst Hall', icon: 'fa fa-university ', target: "locations", href: '#hurst'}),
     new MenuItem({text: 'Kelley Hall', icon: 'fa fa-university ', target: "locations", href: '#kelley'}),
