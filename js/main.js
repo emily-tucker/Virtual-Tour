@@ -382,29 +382,35 @@ $(function () {
         is_mobile = true;
     }
 	
-	/******
-	Arrow testing
-	******/
+/*****************************
+		Tour Instances
+*****************************/
 	console.log(tour_track);
 	
 	$('body').on('click', '.to_default', function () {
 		tour_track = 0;
-		console.log(tour_track);
+		/*console.log(tour_track);*/
 	});
 	
 	$('body').on('click', '.to_academics', function () {
 		tour_track = 1;
-		console.log(tour_track);
+		/*console.log(tour_track);*/
+			"<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
+                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_red.png'" +
+                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_red_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_red.png' " +
+                    "title='" + navs[i].ttip + "' />";
+					items.push(navs[i].styleClass);
 	});
 	
 	$('body').on('click', '.to_studentlife', function () {
 		tour_track = 2;
-		console.log(tour_track);
+		/*console.log(tour_track);*/
 	});
 	
 	$('body').on('click', '.to_athletics', function () {
 		tour_track = 3;
-		console.log(tour_track);
+		/*console.log(tour_track);*/
 	});
 	
 	
