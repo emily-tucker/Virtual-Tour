@@ -444,16 +444,19 @@ $(function () {
         });
 
         $('body').on('mousemove', '#map', function (e) {
+            setTimeout(function(){
             if (clicking) {
                 e.preventDefault();
-                var directionX = (previousX - e.clientX) > 0 ? 1 : -1;
-                var directionY = (previousY - e.clientY) > 0 ? 1 : -1;
+                var directionX = (previousX - e.clientX) > 2 ? 1 : (previousX - e.clientX) < -2 ? -1 : 0;
+                var directionY = (previousY - e.clientY) > 2 ? 1 : (previousY - e.clientY) < -2 ? -1 : 0;
                 $("#map").scrollLeft($("#map").scrollLeft() + 10 * directionX);
                 $("#map").scrollTop($("#map").scrollTop() + 10 * directionY);
                 previousX = e.clientX;
-                previousY = e.clientY;
+                previousY = e.clientY
+                console.log(previousX);
+
             }
-        });
+        }, 1000/24)});
     });
 
     /***********************
