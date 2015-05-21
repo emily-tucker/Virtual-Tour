@@ -192,7 +192,7 @@ function getNavs(locationTag) {
                     }
                 }
                 inner_html +=
-                    "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='restart_button' onclick=javascript:window.location=''>Restart Tour</button>";
+                    "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='restart_button' onclick=javascript:window.location='#begin'>Restart Tour</button>";
 					if(tour_track === navs[i].tourTracks){
 						inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
@@ -490,8 +490,6 @@ $(function () {
                 $("#map").scrollTop($("#map").scrollTop() + 10 * directionY);
                 previousX = e.clientX;
                 previousY = e.clientY
-                console.log(previousX);
-
             }
         }, 1000/24)});
     });
