@@ -10,14 +10,22 @@ body.contextual_navigation
 ***********************/
 
 .dd-wrapper ul, .dd-wrapper ul li, .dd-wrapper li, .dd-wrapper li ul, .dd-wrapper li ul li {
-  margin: 0; padding: 0; list-style: none; top: 0;
+  margin: 0; padding: 0; list-style: none; top: 90%; color: black;
   }
+
 .dd-wrapper .dd-menu {
   overflow: auto; position: absolute; width:100%;
   }
 .dd-wrapper  .dd-menu ul {
   position: absolute; top: 0; right: 0;
   }
+.first{
+    color: black;
+    text-decoration: none;
+}
+.fa-times{
+    color: white;
+}
 
 /***********************
 * Blue Menu CSS
