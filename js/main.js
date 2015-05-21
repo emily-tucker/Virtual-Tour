@@ -193,7 +193,7 @@ function getNavs(locationTag) {
                 }
                 inner_html +=
                     "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='restart_button' onclick=javascript:window.location=''>Restart Tour</button>";
-					if(tour_track === navs[i].tourTracks){
+					if(tour_track === navs[i].tourTracks && tour_track === 0){
 						inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                     navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
@@ -202,6 +202,36 @@ function getNavs(locationTag) {
                     "title='" + navs[i].ttip + "' />";
 					items.push(navs[i].styleClass);
 					}
+					if(tour_track === navs[i].tourTracks && tour_track === 1){
+						inner_html +=
+                    "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
+                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
+                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
+                    "title='" + navs[i].ttip + "' />";
+					items.push(navs[i].styleClass);
+					}
+					if(tour_track === navs[i].tourTracks && tour_track === 2){
+						inner_html +=
+                  	"<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
+                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_red.png'" +
+                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_red_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_red.png' " +
+                    "title='" + navs[i].ttip + "' />";
+					items.push(navs[i].styleClass);
+					}
+					if(tour_track === navs[i].tourTracks && tour_track === 3){
+						inner_html +=
+                    "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
+                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_slate.png'" +
+                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_slate_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_slate.png' " +
+                    "title='" + navs[i].ttip + "' />";
+					items.push(navs[i].styleClass);
+					}
+					
+					
+					
             }
             $("#navigation").html(inner_html);
             $(".arrow").tipsy({gravity: 's', fade: true, html: true});
@@ -395,12 +425,7 @@ $(function () {
 	$('body').on('click', '.to_academics', function () {
 		tour_track = 1;
 		/*console.log(tour_track);*/
-			"<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_red.png'" +
-                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_red_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_red.png' " +
-                    "title='" + navs[i].ttip + "' />";
-					items.push(navs[i].styleClass);
+	
 	});
 	
 	$('body').on('click', '.to_studentlife', function () {
@@ -487,16 +512,19 @@ $(function () {
         });
 
         $('body').on('mousemove', '#map', function (e) {
+            setTimeout(function(){
             if (clicking) {
                 e.preventDefault();
-                var directionX = (previousX - e.clientX) > 0 ? 1 : -1;
-                var directionY = (previousY - e.clientY) > 0 ? 1 : -1;
+                var directionX = (previousX - e.clientX) > 2 ? 1 : (previousX - e.clientX) < -2 ? -1 : 0;
+                var directionY = (previousY - e.clientY) > 2 ? 1 : (previousY - e.clientY) < -2 ? -1 : 0;
                 $("#map").scrollLeft($("#map").scrollLeft() + 10 * directionX);
                 $("#map").scrollTop($("#map").scrollTop() + 10 * directionY);
                 previousX = e.clientX;
-                previousY = e.clientY;
+                previousY = e.clientY
+                console.log(previousX);
+
             }
-        });
+        }, 1000/24)});
     });
 
     /***********************
