@@ -127,6 +127,18 @@ function getLocation(locationTag) {
 function getNavs(locationTag) {
 	console.log(tour_track);
     $('.tipsy:last').remove();
+	 if (currentLocation.locationType === "default") {
+        var inner_html = "<img onclick=javascript:window.location.hash='#begin' class='to_begin " +
+            "arrow' src='imgs/nav_arrows/right_slate.png' " +
+            "onmouseover=this.src='imgs/nav_arrows/right_newtype_hover.png'" +
+            " onmouseout=this.src='imgs/nav_arrows/right_slate.png' " +
+            "title = 'to Athletics' />" +
+            "<img onclick=javascript:window.location.hash='#library' class='to_studentlife " +
+            "arrow' src='imgs/nav_arrows/left_crimson.png' " +
+            "onmouseover=this.src='imgs/nav_arrows/left_newtype_hover.png'" +
+            " onmouseout=this.src='imgs/nav_arrows/left_crimson.png' " +
+            "title = 'to the Default tour' />";
+	 }
     if (currentLocation.locationType === "academic" || currentLocation.locationType === "walkway") {
         var inner_html = "<img onclick=javascript:window.location.hash='#fieldhouse' class='to_athletics " +
             "arrow' src='imgs/nav_arrows/right_slate.png' " +
@@ -181,9 +193,7 @@ function getNavs(locationTag) {
                 }
                 inner_html +=
                     "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='restart_button' onclick=javascript:window.location=''>Restart Tour</button>";
-					console.log(tour_track === navs[i].tourTracks);
 					if(tour_track === navs[i].tourTracks){
-						console.log(navs[i].tag);
 						inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                     navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
@@ -371,6 +381,33 @@ $(function () {
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         is_mobile = true;
     }
+	
+	/******
+	Arrow testing
+	******/
+	console.log(tour_track);
+	
+	$('body').on('click', '.to_default', function () {
+		tour_track = 0;
+		console.log(tour_track);
+	});
+	
+	$('body').on('click', '.to_academics', function () {
+		tour_track = 1;
+		console.log(tour_track);
+	});
+	
+	$('body').on('click', '.to_studentlife', function () {
+		tour_track = 2;
+		console.log(tour_track);
+	});
+	
+	$('body').on('click', '.to_athletics', function () {
+		tour_track = 3;
+		console.log(tour_track);
+	});
+	
+	
     if (location.hash !== "") {
         $("#start").removeClass("show");
     }
