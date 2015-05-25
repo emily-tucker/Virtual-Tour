@@ -2,8 +2,7 @@
      * Location object instances
      */
 	var begin = new Location("#begin", "Welcome to Western", "academic",
-	"Home of administrative offices, classrooms, faculty offices, computer labs, as well as an " +
-            "auditorium and theater.", true, 1801, 1246);
+	"Western offers a private college experience at a public university cost," + "deep in the heart of the Rockies.", true, 1801, 1246);
 	var borick = new Location("#borick", "Borick Buisness Building", "academic",
             "Home of Social Sciences and Environment & Sustainability programs", true, 1582, 1259);
 	var chipeta = new Location("#chipeta", "Chipeta Student Housing", "studentlife",
@@ -15,7 +14,7 @@
 	var fieldhouse = new Location("#fieldhouse", "Mountaineer Field House", "athletic", 
 	 "65,000-square-foot LEED-Gold certified field house.",true, 1313, 869);
 	var gatewayfield = new Location("#gatewayfield", "Gateway Soccer Fields", "athletic", 
-	 "65,000-square-foot LEED-Gold certified field house.",true, 1313, 869);
+	 "65,000-square-foot LEED-Gold certified field house.",true, 1315, 869);
 	var hurst = new Location("#hurst", "Hurst Hall", "academic",
             "Home of Science and Mathematics departments", true, 2422, 1227);
 	var kelley = new Location("#kelley", "Kelley Hall", "academic",
@@ -31,9 +30,7 @@
 	var mountaineerbowl = new Location("#mountaineerbowl", "Mountaineer Bowl", "athletic",
             "The world's highest collegiate football stadium", true, 2023, 644);	
 	var quigley = new Location("#quigley", "Quigley Hall", "academic",
-            "Home of the Music and Art departments", true, 2170, 1419);	
-	var soccerfields = new Location("#soccerfields", "Soccer Fields", "athletic",
-            "The world's highest collegiate football stadium", true, 2023, 644);	
+            "Home of the Music and Art departments", true, 2170, 1419);		
     var taylor = new Location("#taylor", "Taylor Hall", "academic",
             "Home of administrative offices, classrooms, faculty offices, computer labs, as well as an " +
             "auditorium and theater.", true, 1905, 1200);
@@ -113,17 +110,18 @@
 	/*====================Academic Arrows================== Arrow Color: Black -Academic Tour = 1*/
 	var taylor_to_borickAcademic = new Navigation("#taylor", "taylor_to_borickAcademic", "to Borick", "#borick", "left", 38, 27, 1);
 	var taylor_to_quigleyAcademic = new Navigation("#taylor", "taylor_to_quigleyAcademic", "to Quigley", "#quigley", "right", 58, 27, 1); //
+	var hurst_to_quigleyAcademic = new Navigation("#hurst", "hurst_to_quigleyAcademic", "Back to Quigley Hall", "#quigley", "back", 50, 17, 1);
 	var hurst_to_kelleyAcademic = new Navigation("#hurst", "hurst_to_kelleyAcademic", "to Kelley Hall", "#kelley", "left", 42, 27, 1);
-	var hurst_to_quigleyAcademic = new Navigation("#hurst", "hurst_to_kelleyAcademic", "Back to Quigley Hall", "#quigley", "back", 50, 17, 1);
-    var quigly_to_taylorAcademic = new Navigation("#quigley", "quigley_to_taylorAcademic", "back to Taylor", "#taylor", "left", 42, 27, 1);
-	var quigly_to_hurstAcademic = new Navigation("#quigley", "quigly_to_hurstAcademic", "to Hurst", "#hurst", "right", 58, 27, 1);
-    var kelley_to_hurstAcademic = new Navigation("#kelley", "kelley_to_hurstAcademic", "to Hurst Hall", "#hurst", "right", 58, 27, 1);
-    var kelley_to_libraryAcademic = new Navigation("#kelley", "kelley_to_libraryAcademic", "to pathway", "#pathway2", "left", 42, 27, 1);  
-    var library_to_kelleyAcademic = new Navigation("#library", "library_to_kelleyAcademic", "Back to Kelley Hall", "#kelley", "back", 50, 17, 1);
+    var quigley_to_taylorAcademic = new Navigation("#quigley", "quigley_to_taylorAcademic", "back to Taylor", "#taylor", "left", 42, 27, 1);
+	var quigley_to_hurstAcademic = new Navigation("#quigley", "quigly_to_hurstAcademic", "to Hurst", "#hurst", "right", 58, 27, 1);
+    var kelley_to_hurstAcademic = new Navigation("#kelley", "kelley_to_hurstAcademic", "Back to Hurst Hall", "#hurst", "back", 50, 17, 1);
+    var kelley_to_libraryAcademic = new Navigation("#kelley", "kelley_to_libraryAcademic", "To the library", "#library", "left", 42, 27, 1);  
+    var library_to_kelleyAcademic = new Navigation("#library", "library_to_kelleyAcademic", "Back to Kelley Hall ", "#kelley", "back", 50, 17, 1);
 	var library_to_crawfordAcademic = new Navigation("#library", "library_to_crawfordAcademic", "to Crawford", "#crawford", "left", 38, 27, 1);
 	var crawford_to_libraryAcademic = new Navigation("#crawford", "crawford_to_libraryAcademic", "to the Library", "#library", "back", 50, 17, 1);
 	var crawford_to_borickAcademic = new Navigation("#crawford", "crawford_to_borickAcademic", "to Borick", "#borick", "left", 38, 27, 1);
-	var borick_to_taylorAcademic = new Navigation("#borick", "borick_to_taylorAcademic", "to Taylor", "#taylor", "forward", 47, 27, 1);
+	var borick_to_taylorAcademic = new Navigation("#borick", "borick_to_taylorAcademic", "to Taylor", "#taylor", "right", 58, 27, 1);
+	var borick_to_crawfordAcademic = new Navigation("#borick", "borick_to_crawfordAcademic", "Back to Crawford", "#crawford", "back", 50, 17, 1);
 	
 	
 	/*====================Student Life Arrows================== Arrow Color: Red - StudentLife Tour = 2*/
@@ -151,15 +149,15 @@
 	
 	
 	/*====================Athletics Arrows================== Arrow Color: Slate- Athetic Tour = 3*/
-	var gatewayfield_to_mountaineerbowlAthletics= new Navigation("#gatewayfield", "gatewayfield_to_mountaineerbowl", "to the Mountaineer Bowl", "#mountaineerbowl", "forward", 47, 27, 3);
-	var gatewayfield_to_fieldhouseAthletics = new Navigation("#gatewayfield", "gatewayfield_to_fieldhouse", "Back to the Field House", "#fieldhouse", "back", 50, 17, 3);
-	var fieldhouse_to_paulwrightgymAthletics = new Navigation("#fieldhouse", "fieldhouse_to_paulwrightgym", "Back to Paul Wright gym", "#paulwrightgym", "back", 50, 17, 3);
-    var fieldhouse_to_gatewayfieldAthletics = new Navigation("#fieldhouse", "fieldhouse_to_mountaineerbowl", "to Gateway Field", "#gatewayfield", "forward", 47, 27, 3);
-	var paulwrightgym_to_fieldhouseAthletics = new Navigation("#paulwrightgym", "paulwrightgym_to_fieldhouse", "To the Fieldhouse", "#fieldhouse", "forward", 50, 17, 3);
-	var paulwrightgym_to_mountaineerbowlAthletics = new Navigation("#paulwrightgym", "paulwrightgym_to_mountaineerbowl", 
-													"Back to the mountaineerbowl", "#mountaineerbowl", "back", 50, 17, 3);
-    var mountaineerbowl_to_paulwrightgymAthletic = new Navigation("#mountaineerbowl", "mountaineerbowl_to_paulwrightgymAthletic", "to Paul Wright Gym", "#paulwrightgym", "left", 38, 27, 3);
-	var mountaineerbowl_to_paulwrightgymAthletic = new Navigation("#mountaineerbowl", "mountaineerbowl_to_paulwrightgymAthletic", "to Paul Wright Gym", "#paulwrightgym", "right", 58, 27, 3);
+	var gatewayfield_to_mountaineerbowlAthletics= new Navigation("#gatewayfield", "gatewayfield_to_mountaineerbowlAthletics", "to the Mountaineer Bowl", "#mountaineerbowl", "forward", 47, 27, 3);
+	var gatewayfield_to_fieldhouseAthletics = new Navigation("#gatewayfield", "gatewayfield_to_fieldhouseAthletics", "Back to the Field House", "#fieldhouse", "forward", 47, 27, 3);
+	var fieldhouse_to_paulwrightgymAthletics = new Navigation("#fieldhouse", "fieldhouse_to_paulwrightgymAthletics", "Back to Paul Wright gym", "#paulwrightgym", "forward", 47, 27, 3);
+    var fieldhouse_to_gatewayfieldAthletics = new Navigation("#fieldhouse", "fieldhouse_to_gatewayfieldAthletics", "to Gateway Field", "#gatewayfield", "back", 50, 17, 3);
+	var paulwrightgym_to_fieldhouseAthletics = new Navigation("#paulwrightgym", "paulwrightgym_to_fieldhouseAthletics", "Back to the Fieldhouse", "#fieldhouse", "back", 50, 17, 3);
+	var paulwrightgym_to_mountaineerbowlAthletics = new Navigation("#paulwrightgym", "paulwrightgym_to_mountaineerbowlAthletics", 
+													"To the mountaineerbowl", "#mountaineerbowl", "forward", 47, 27, 3);
+    var mountaineerbowl_to_paulwrightgymAthletic = new Navigation("#mountaineerbowl", "mountaineerbowl_to_paulwrightgymAthletic", "to Paul Wright Gym", "#paulwrightgym", "back", 50, 17, 3);
+	
 	
 
 	/*====================Outdoor Arrows==================*/
@@ -213,15 +211,15 @@
         escalante_to_library, chipeta_to_mears, mears_to_ute, crawford_to_library, library_to_crawford, dtToHr, dtTorm, hrToCb, hrTOdt, cbToRm, cbtohr, rmToDt, rmTOCb, gatewayfield_to_begin, begin_to_gatewayfield, taylor_to_begin, begin_to_taylor,
 		
 		/*======Academics Array=====*/
-		taylor_to_borickAcademic, taylor_to_quigleyAcademic, hurst_to_kelleyAcademic, quigly_to_taylorAcademic, quigly_to_hurstAcademic, kelley_to_hurstAcademic, kelley_to_libraryAcademic, hurst_to_quigleyAcademic, library_to_kelleyAcademic, library_to_crawfordAcademic, crawford_to_libraryAcademic, crawford_to_borickAcademic, borick_to_taylorAcademic, escalante_to_librarySL,
-		escalante_to_universitycenterSL, universitycenter_to_librarySL, universitycenter_to_uteSL,
+		taylor_to_borickAcademic, taylor_to_quigleyAcademic, hurst_to_kelleyAcademic, quigley_to_taylorAcademic, quigley_to_hurstAcademic, kelley_to_hurstAcademic, kelley_to_libraryAcademic, hurst_to_quigleyAcademic, library_to_kelleyAcademic, library_to_crawfordAcademic, crawford_to_libraryAcademic, crawford_to_borickAcademic, borick_to_taylorAcademic, escalante_to_librarySL,
+		escalante_to_universitycenterSL, universitycenter_to_librarySL, universitycenter_to_uteSL, borick_to_crawfordAcademic,
 		
 		/*======Student Life Array=====*/
 		crawford_to_librarySL, crawford_to_universitycenterSL, library_to_escalanteSL, escalante_to_fieldhouseSL, library_to_universitycenterSL, fieldhouse_to_pinnaclesSL, pinnacles_to_chipetaSL, pinnacles_to_fieldhouseSL, chipeta_to_pinnaclesSL, chipeta_to_mearsSL, mears_to_chipetaSL, mears_to_uteSL, ute_to_mearsSL, borick_to_uteSL, mountaineerbowl_to_escalanteSL, fieldhouse_to_universitycenterSL,
 		
 		
 		/*======Athletics Array=====*/
-		gatewayfield_to_mountaineerbowlAthletics, gatewayfield_to_fieldhouseAthletics, fieldhouse_to_paulwrightgymAthletics, fieldhouse_to_gatewayfieldAthletics, 										        paulwrightgym_to_fieldhouseAthletics, paulwrightgym_to_mountaineerbowlAthletics, mountaineerbowl_to_paulwrightgymAthletic 	
+		gatewayfield_to_mountaineerbowlAthletics, gatewayfield_to_fieldhouseAthletics,fieldhouse_to_paulwrightgymAthletics, fieldhouse_to_gatewayfieldAthletics, 										        paulwrightgym_to_fieldhouseAthletics, paulwrightgym_to_mountaineerbowlAthletics, mountaineerbowl_to_paulwrightgymAthletic 	
 		];
     /*
    hr_to_tc, tc_to_hr,cbmr_to_gunnison,

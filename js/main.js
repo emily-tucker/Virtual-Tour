@@ -129,9 +129,9 @@ function getNavs(locationTag) {
     $('.tipsy:last').remove();
 	 if (currentLocation.locationType === "default") {
         var inner_html = "<img onclick=javascript:window.location.hash='#begin' class='to_begin " +
-            "arrow' src='imgs/nav_arrows/right_slate.png' " +
-            "onmouseover=this.src='imgs/nav_arrows/right_newtype_hover.png'" +
-            " onmouseout=this.src='imgs/nav_arrows/right_slate.png' " +
+            "arrow' src='imgs/right_slate.png' " +
+            "onmouseover=this.src='imgs/nav_arrows/right_offcampus_hover.png'" +
+            " onmouseout=this.src='imgs/nav_arrows/right_offcampus.png " +
             "title = 'to Athletics' />" +
             "<img onclick=javascript:window.location.hash='#library' class='to_studentlife " +
             "arrow' src='imgs/nav_arrows/left_crimson.png' " +
@@ -141,38 +141,38 @@ function getNavs(locationTag) {
 	 }
     if (currentLocation.locationType === "academic" || currentLocation.locationType === "walkway") {
         var inner_html = "<img onclick=javascript:window.location.hash='#fieldhouse' class='to_athletics " +
-            "arrow' src='imgs/nav_arrows/right_slate.png' " +
-            "onmouseover=this.src='imgs/nav_arrows/right_newtype_hover.png'" +
-            " onmouseout=this.src='imgs/nav_arrows/right_slate.png' " +
+            "arrow' src='imgs/right_slate2.png' " +
+            "onmouseover=this.src='imgs/right_newtype_hover2.png'" +
+            " onmouseout=this.src='imgs/right_slate2.png' " +
             "title = 'to Athletics' />" +
             "<img onclick=javascript:window.location.hash='#library' class='to_studentlife " +
-            "arrow' src='imgs/nav_arrows/left_crimson.png' " +
-            "onmouseover=this.src='imgs/nav_arrows/left_newtype_hover.png'" +
-            " onmouseout=this.src='imgs/nav_arrows/left_crimson.png' " +
+            "arrow' src='imgs/left_crimson.png' " +
+            "onmouseover=this.src='imgs/left_newtype_hover.png'" +
+            " onmouseout=this.src='imgs/left_crimson.png' " +
             "title = 'to Student Life' />";
     }
     if (currentLocation.locationType === "studentlife") {
         inner_html = "<img onclick=javascript:window.location.hash='#fieldhouse' class='studentlife_to_athletics " +
-            "arrow' src='imgs/nav_arrows/left_slate.png' " +
-            "onmouseover=this.src='imgs/nav_arrows/left_newtype_hover.png'" +
-            " onmouseout=this.src='imgs/nav_arrows/left_slate.png' " +
+            "arrow' src='imgs/left_slate2.png' " +
+            "onmouseover=this.src='imgs/left_newtype_hover2.png'" +
+            " onmouseout=this.src='imgs/left_slate2.png' " +
             "title = 'to Athletics' />" +
             "<img onclick=javascript:window.location.hash='#taylor' class='to_academics " +
-            "arrow' src='imgs/nav_arrows/right_blue.png' " +
-            "onmouseover=this.src='imgs/nav_arrows/right_newtype_hover.png'" +
-            " onmouseout=this.src='imgs/nav_arrows/right_blue.png' " +
+            "arrow' src='imgs/right_whiteSL.png' " +
+            "onmouseover=this.src='imgs/right_whiteSL_hover.png'" +
+            " onmouseout=this.src='imgs/right_whiteSL.png' " +
             "title = 'to Academics' />";
     }
     if (currentLocation.locationType === "athletic") {
         inner_html = "<img onclick=javascript:window.location.hash='#library' class='to_studentlife " +
-            "arrow' src='imgs/nav_arrows/left_crimson.png' " +
-            "onmouseover=this.src='imgs/nav_arrows/left_newtype_hover.png'" +
-            " onmouseout=this.src='imgs/nav_arrows/left_crimson.png' " +
+            "arrow' src='imgs/left_crimson.png' " +
+            "onmouseover=this.src='imgs/left_newtype_hover.png'" +
+            " onmouseout=this.src='imgs/left_crimson.png' " +
             "title = 'to Student Life' />" +
             "<img onclick=javascript:window.location.hash='#taylor' class='to_academics " +
-            "arrow' src='imgs/nav_arrows/right_blue.png' " +
-            "onmouseover=this.src='imgs/nav_arrows/right_newtype_hover.png'" +
-            " onmouseout=this.src='imgs/nav_arrows/right_blue.png' " +
+            "arrow' src='imgs/right_whiteSL.png' " +
+            "onmouseover=this.src='imgs/right_whiteSL_hover.png'" +
+            " onmouseout=this.src='imgs/right_whiteSL.png' " +
             "title = 'to Academics' />";
     }
     var items = [];
@@ -247,9 +247,9 @@ function getNavs(locationTag) {
         if (!currentLocation.onCampus){
             if (navs[i].tag === locationTag) {
                 inner_html += "<button class='map_button'>Map</button> +  <button class='switch_button' onclick=javascript:window.location.hash='"+previousLocation.tag+"'>Go On Campus</button><img onclick=javasript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].direction + "_offcampus arrow' src='imgs/nav_arrows/" + navs[i].direction + "_offcampus.png'" +
-                    "onmouseover=" + "this.src='imgs/nav_arrows/" + navs[i].direction + "_offcampus_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/nav_arrows/" + navs[i].direction + "_offcampus.png' " +
+                    navs[i].direction + "_offcampus arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
+                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_offcampus.png' " +
                     "title='" + navs[i].ttip + "' />";
             }
 
