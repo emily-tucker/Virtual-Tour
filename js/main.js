@@ -149,19 +149,19 @@ function getNavs(locationTag) {
             "arrow' src='imgs/left_crimson.png' " +
             "onmouseover=this.src='imgs/left_newtype_hover.png'" +
             " onmouseout=this.src='imgs/left_crimson.png' " +
-            "title = 'to Student Life' />";
+            "title = 'To Student Life' />";
     }
     if (currentLocation.locationType === "studentlife") {
         inner_html = "<img onclick=javascript:window.location.hash='#fieldhouse' class='studentlife_to_athletics " +
             "arrow' src='imgs/left_slate2.png' " +
-            "onmouseover=this.src='imgs/left_newtype_hover2.png'" +
+            "onmouseover=this.src='imgs/left_slate2_hover.png'" +
             " onmouseout=this.src='imgs/left_slate2.png' " +
             "title = 'to Athletics' />" +
             "<img onclick=javascript:window.location.hash='#taylor' class='to_academics " +
             "arrow' src='imgs/right_whiteSL.png' " +
             "onmouseover=this.src='imgs/right_whiteSL_hover.png'" +
             " onmouseout=this.src='imgs/right_whiteSL.png' " +
-            "title = 'to Academics' />";
+            "title = 'To Academics' />";
     }
     if (currentLocation.locationType === "athletic") {
         inner_html = "<img onclick=javascript:window.location.hash='#library' class='to_studentlife " +
@@ -173,7 +173,7 @@ function getNavs(locationTag) {
             "arrow' src='imgs/right_whiteSL.png' " +
             "onmouseover=this.src='imgs/right_whiteSL_hover.png'" +
             " onmouseout=this.src='imgs/right_whiteSL.png' " +
-            "title = 'to Academics' />";
+            "title = 'To Athletics' />";
     }
     var items = [];
     for (var i in navs) {
@@ -294,7 +294,7 @@ function getNavs(locationTag) {
                     $(".map_button").text("Expand Map");
                     $("#map").show(function () {
                         $("#map").animate({
-                            width: window.innerWidth * 0.25,
+                            width: window.innerWidth * 0.,
                             height: window.innerHeight * 0.38
                         }, function () {
                             animate_map(currentLocation, map_slide_time);
@@ -411,6 +411,7 @@ function loadMap(locationTag) {
 $(function () {
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         is_mobile = true;
+		    $(loadMap).hide();
     }
 	
 /*****************************
@@ -544,3 +545,61 @@ $(function () {
         })
     });
 });
+
+ /***********************
+     *  Carousel Items generator   *
+	     ***********************/
+
+ $(document).ready(function(){
+    $("#hide").click(function(){
+        $("carousel").hide();
+    });
+    $("#show").click(function(){
+        $("p").show();
+    });
+});
+		 
+var ciCount = 0;
+
+var carouselItems = [];
+var thumbs = [];
+
+function getCIs(tag) /*Carousel Items*/{
+    caouselItems = [];
+    thumbs = [];
+    var inner, ci, i, j, a;
+    ciCount = 0;
+    inner = "";
+    for(i in CIs) {
+        ci = CIs[i];
+        for (j in ci.tags) {
+            if (ci.tags[j] === tag) {
+                //build carousel item
+                a = "<div class='citem' id='citem" + ciCount + "'>";
+                if (ci.video) {
+                    a += ci.html;
+                } else {
+                    a += "<a class='fancybox' data-fancybox-group='gallery' href = '"+ci.full.fname+"' title='"+ci.html+"' rel='gallery'>";
+                }
+                a += "<div class='Thumbimage' id='thumbImage" + ciCount + "'>";
+                a += "<img id='image 'src='"+ci.thumb.fname+"' alt=''>";
+                a += "<div class='Thumbcaption'>";
+                a += "<p>'"+ci.ttip+"'</p>";
+                a += "</div></div></a></div>";
+                inner += a;
+                carouselItems.push('citem' + String(ciCount));
+                thumbs.push('thumbImage' + String(ciCount));
+                ciCount += 1;
+                break;
+            }
+        }
+    }
+    width = window.innerWidth - (ciCount * 160);
+    margin = width / (ciCount-1) * .75;
+	
+    $("#carousel").html(inner);
+    $(".citem").css("margin-left", margin);
+
+    return carouselItems;
+}
+
