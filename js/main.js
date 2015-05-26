@@ -552,10 +552,12 @@ $(function () {
 
  $(document).ready(function(){
     $("#hide").click(function(){
-        $("carousel").hide();
-    });
-    $("#show").click(function(){
-        $("p").show();
+		/*alert("Clicked")*/
+			if ( display === true ) {
+		  $( "#carousel" ).show();
+		} else if ( display === false ) {
+		  $( "#carousel" ).hide();
+		}
     });
 });
 		 
