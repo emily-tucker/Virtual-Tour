@@ -577,6 +577,7 @@ function detectIE() {
 	     ***********************/
             
             /**Functions that shows or hides Carousel based on mobility**/
+
 var is_mobile=false;
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  is_mobile=true;
@@ -587,6 +588,7 @@ if(is_mobile){
 }else{
     /*alert("Showhide: "+showHide);*/
 }
+
  $(document).ready(function(){
     $("#hide").click(function(){
 		/*alert("Clicked");*/
