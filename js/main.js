@@ -195,7 +195,7 @@ function getNavs(locationTag) {
                 }
                 inner_html +=
 
-                    "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='restart_button' onclick=javascript:window.location='#begin'>Restart Tour</button>";
+                    "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='hide_button' id='hide'>x</button>" + "<button class='restart_button' onclick=javascript:window.location='#begin'>Restart Tour</button>";
 					if(tour_track === navs[i].tourTracks && tour_track === 0){
 						inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
@@ -571,6 +571,81 @@ function detectIE() {
         })
     });
 });
+
+/***********************
+     *  Carousel Items generator   *
+	     ***********************/
+            
+            /**Functions that shows or hides Carousel based on mobility**/
+var is_mobile=false;
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ is_mobile=true;
+}
+var showHide = true;
+if(is_mobile){
+    showHide = false;
+}else{
+    /*alert("Showhide: "+showHide);*/
+}
+ $(document).ready(function(){
+    $("#hide").click(function(){
+		/*alert("Clicked");*/
+		if(showHide){
+	
+		document.getElementById('carousel').style.display = 'none';
+		showHide = false;
+		document.getElementById("myImg").style.height = "300px";
+
+}	
+		else{
+		document.getElementById('carousel').style.display = 'block';
+		showHide = true;}
+    });
+});
+	
+var ciCount = 0;
+
+var carouselItems = [];
+var thumbs = [];
+
+function getCIs(tag) /*Carousel Items*/{
+    caouselItems = [];
+    thumbs = [];
+    var inner, ci, i, j, a;
+    ciCount = 0;
+    inner = "";
+    for(i in CIs) {
+        ci = CIs[i];
+        for (j in ci.tags) {
+            if (ci.tags[j] === tag) {
+                //build carousel item
+                a = "<div class='citem' id='citem" + ciCount + "'>";
+                if (ci.video) {
+                    a += ci.html;
+                } else {
+                    a += "<a class='fancybox' data-fancybox-group='gallery' href = '"+ci.full.fname+"' title='"+ci.html+"' rel='gallery'>";
+                }
+                a += "<div class='Thumbimage' id='thumbImage" + ciCount + "'>";
+                a += "<img id='image 'src='"+ci.thumb.fname+"' alt=''>";
+                a += "<div class='Thumbcaption'>";
+                a += "<p>'"+ci.ttip+"'</p>";
+                a += "</div></div></a></div>";
+                inner += a;
+                carouselItems.push('citem' + String(ciCount));
+                thumbs.push('thumbImage' + String(ciCount));
+                ciCount += 1;
+                break;
+            }
+        }
+    }
+    width = window.innerWidth - (ciCount * 160);
+    margin = width / (ciCount-1) * .75;
+	
+    $("#carousel").html(inner);
+    $(".citem").css("margin-left", margin);
+
+    return carouselItems;
+}
 
 
  
