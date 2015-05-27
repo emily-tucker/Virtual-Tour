@@ -303,6 +303,7 @@ comment out so the map doesn't auto scale
     left: 21%;
     overflow:hidden;
     position:fixed;
+	top:0px;
 }
 
 .caption {
