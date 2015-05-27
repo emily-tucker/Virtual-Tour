@@ -14,7 +14,7 @@ function dispMenu(items) {
         }
 
         if (mi.target === "locations") {
-            a = "<a href='"+mi.href+"'>" + icon + "&nbsp;"+mi.text+"</a>";
+            a ="<a href='"+mi.href+"'>" + icon + "&nbsp;"+mi.text+"</a>";
         } else if (mi.target === "external") {
             a = "<a href='"+mi.href+"' target='_blank'>" + icon + "&nbsp;"+mi.text+"</a>";
         } else if (mi.target === "ci") {
