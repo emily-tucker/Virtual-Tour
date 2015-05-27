@@ -139,6 +139,7 @@ function getNavs(locationTag) {
             " onmouseout=this.src='imgs/nav_arrows/left_crimson.png' " +
             "title = 'to the Default tour' />";
 	 }
+    /*
     if (currentLocation.locationType === "academic" || currentLocation.locationType === "walkway") {
         var inner_html = "<img onclick=javascript:window.location.hash='#fieldhouse' class='to_athletics " +
             "arrow' src='imgs/right_slate2.png' " +
@@ -175,6 +176,7 @@ function getNavs(locationTag) {
             " onmouseout=this.src='imgs/right_whiteSL.png' " +
             "title = 'to Academics' />";
     }
+    */
     var items = [];
     for (var i in navs) {
         if (currentLocation.onCampus) {
