@@ -145,8 +145,8 @@
 	var borick_to_uteSL = new Navigation("#borick", "borick_to_uteSL", "Back to Ute", "#ute", "back", 50, 17, 2);
 	var mountaineerbowl_to_escalanteSL = new Navigation("#mountaineerbowl", "mountaineerbowl_to_escalanteSL", "to Escalante", "#escalante", "back", 50, 17, 2);
     var fieldhouse_to_universitycenterSL = new Navigation("#fieldhouse", "fieldhouse_to_universitycenterSL", "to University Center", "#universitycenter", "back", 50, 17, 2);
-	
-	
+
+
 	
 	/*====================Athletics Arrows================== Arrow Color: Slate- Athetic Tour = 3*/
 	var gatewayfield_to_mountaineerbowlAthletics= new Navigation("#gatewayfield", "gatewayfield_to_mountaineerbowlAthletics", "to the Mountaineer Bowl", "#mountaineerbowl", "forward", 47, 27, 3);
@@ -216,10 +216,10 @@
 		
 		/*======Student Life Array=====*/
 		crawford_to_librarySL, crawford_to_universitycenterSL, library_to_escalanteSL, escalante_to_fieldhouseSL, library_to_universitycenterSL, fieldhouse_to_pinnaclesSL, pinnacles_to_chipetaSL, pinnacles_to_fieldhouseSL, chipeta_to_pinnaclesSL, chipeta_to_mearsSL, mears_to_chipetaSL, mears_to_uteSL, ute_to_mearsSL, borick_to_uteSL, mountaineerbowl_to_escalanteSL, fieldhouse_to_universitycenterSL,
-		
+
 		
 		/*======Athletics Array=====*/
-		gatewayfield_to_mountaineerbowlAthletics, gatewayfield_to_fieldhouseAthletics,fieldhouse_to_paulwrightgymAthletics, fieldhouse_to_gatewayfieldAthletics, 										        paulwrightgym_to_fieldhouseAthletics, paulwrightgym_to_mountaineerbowlAthletics, mountaineerbowl_to_paulwrightgymAthletic 	
+		gatewayfield_to_mountaineerbowlAthletics, gatewayfield_to_fieldhouseAthletics,fieldhouse_to_paulwrightgymAthletics, fieldhouse_to_gatewayfieldAthletics, 										        paulwrightgym_to_fieldhouseAthletics, paulwrightgym_to_mountaineerbowlAthletics, mountaineerbowl_to_paulwrightgymAthletic
 		];
     /*
    hr_to_tc, tc_to_hr,cbmr_to_gunnison,
