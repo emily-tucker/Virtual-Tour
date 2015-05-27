@@ -412,6 +412,8 @@ $(function () {
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         is_mobile = true;
     }
+
+    detectIE();
 	
 /*****************************
 		Tour Instances
@@ -438,34 +440,57 @@ $(function () {
 		tour_track = 3;
 		/*console.log(tour_track);*/
 	});
-	
-	
-    if (location.hash !== "") {
-        $("#start").removeClass("show");
+function detectIE() {
+    var ms_ie = false;
+    var ua = window.navigator.userAgent;
+    var old_ie = ua.indexOf('MSIE ');
+    var new_ie = ua.indexOf('Trident/');
+
+    if ((old_ie > -1) || (new_ie > -1)) {
+        ms_ie = true;
     }
-    $("#start").find("a").on("click", function () {
-        first_time = true;
-        $("#start").removeClass("show");
-        document.getElementById('video').innerHTML = '<video z-index="10000" width="100%" height="100%"  controls autoplay>' +
-            '<source src="video/fly-in2.webm" type="video/webm"></video>';
-        $("#map").css({"right" : "-30%"});
-        $("#map").hide('blind');
-        $("#carousel").hide('blind');
-        $(this).off("click");
-        $("#video").click(function () {
-            video_out(currentLocation, map_slide_time);
-            map_in(map_in_time, map_button_in_time);
+
+    if (ms_ie) {
+        $(function(){
+            $("#start").removeClass("show");
+            window.location.hash='#begin'
+
         });
 
-        $(function () {
-            setTimeout(function () {
-                $("#video").animate({opacity: 0}, video_fade, 'easeOutQuart', function(){
-                    video_out(currentLocation, map_slide_time);
-                    map_in(map_in_time, map_button_in_time);
-                });
-            }, video_time);
+    }
+    else{
+        $("#start").find("a").on("click", function () {
+            first_time = true;
+            $("#start").removeClass("show");
+            document.getElementById('video').innerHTML = '<video z-index="10000" width="100%" height="100%"  controls autoplay>' +
+                '<source src="video/fly-in2.webm" type="video/webm"></video>';
+            $("#map").css({"right" : "-30%"});
+            $("#map").hide('blind');
+            $("#carousel").hide('blind');
+            $(this).off("click");
+            $("#video").click(function () {
+                video_out(currentLocation, map_slide_time);
+                map_in(map_in_time, map_button_in_time);
+            });
+
+            $(function () {
+                setTimeout(function () {
+                    $("#video").animate({opacity: 0}, video_fade, 'easeOutQuart', function(){
+                        video_out(currentLocation, map_slide_time);
+                        map_in(map_in_time, map_button_in_time);
+                    });
+                }, video_time);
+            });
         });
-    });
+        if (location.hash !== "") {
+            $("#start").removeClass("show");
+        }
+    }
+}
+
+
+
+
 
     $(window).on('hashchange', function () {
         getImage(location.hash);
