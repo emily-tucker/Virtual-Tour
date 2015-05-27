@@ -169,39 +169,20 @@ section:target, .show{
 .map_button{
     position: fixed;
     z-index: 1;
-    right: 25%;
-    max-height: 9%;
-    z-index: 10;
-}
-
-.map_button2{
-    position: fixed;
-    z-index: 1;
-	background-image: url(imgs/mapButton.png);
-	background-repeat: no-repeat;
-	background-position:right;
-	padding-<left|right>: 40px;
-    right: 25%;
+    right: 0;
     max-height: 7%;
     z-index: 10;
 }
-.map_button2_initial{
+
+.map_button_initial{
     position: fixed;
-	background-image: url(imgs/mapButton.png);
     z-index: 1;
     right: -20%;
     top: 0;
     max-height: 7%;
     z-index: 10;
 }
-.map_button_initial{
-    position: fixed;
-    z-index: 1;
-    right: -10%;
-    top: 20;
-    max-height: 7%;
-    z-index: 10;
-}
+
 .visit_button{
     position: fixed;
     z-index: 1;
@@ -322,7 +303,6 @@ comment out so the map doesn't auto scale
     left: 21%;
     overflow:hidden;
     position:fixed;
-	top: 0px;
 }
 
 .caption {

@@ -40,7 +40,7 @@ var description_delay = 5000;
 var video_fade = 2500;
 var map_state = 1;
 var map_in_time = 1500;
-var map_button2_in_time = 750;
+var map_button_in_time = 750;
 var first_time = false;
 var is_mobile = false;
 var tour_track = 0;
@@ -74,13 +74,13 @@ function video_out(location, mapTime) {
 }
 
 /*************************************************
- * Map and map_button2 animate in
+ * Map and map_button animate in
  *************************************************/
 
 function map_in(map_time, button_time){
     $("#map").animate({right: 0}, map_time, 'easeInOutQuad', function(){
-        $(".map_button2_initial").animate({right: 0}, 0, function(){
-            $(".map_button2_initial").animate({top: 0 + ($("#map").height() - ($(".map_button2_initial").height() * 2.15))}, button_time, 'easeInOutQuad')
+        $(".map_button_initial").animate({right: 0}, 0, function(){
+            $(".map_button_initial").animate({top: 0 + ($("#map").height() - ($(".map_button_initial").height() * 2.15))}, button_time, 'easeInOutQuad')
         });
     });
 }
@@ -180,15 +180,15 @@ function getNavs(locationTag) {
         if (currentLocation.onCampus) {
             if (navs[i].tag === locationTag){
                 if(first_time){
-                    inner_html += "<button class='map_button2'></button>"
+                    inner_html += "<button class='map_button_initial'>Expand Map</button>"
                 }
                 else{
                     if(map_state === 2) {
-                        inner_html += "<button class='map_button2'>Collapse Map</button>"
+                        inner_html += "<button class='map_button'>Collapse Map</button>"
                     }else if(map_state === 1) {
-                        inner_html += "<button class='map_button2'>Map</button>"
+                        inner_html += "<button class='map_button'>Expand Map</button>"
                     }else if(map_state === 0) {
-                        inner_html += "<button class='map_button2'>Show Map</button>"
+                        inner_html += "<button class='map_button'>Show Map</button>"
                     }
                 }
                 inner_html +=
@@ -246,7 +246,7 @@ function getNavs(locationTag) {
         }
         if (!currentLocation.onCampus){
             if (navs[i].tag === locationTag) {
-                inner_html += "<button class='map_button2'>Map</button> +  <button class='switch_button' onclick=javascript:window.location.hash='"+previousLocation.tag+"'>Go On Campus</button><img onclick=javasript:window.location.hash='" + navs[i].dest + "' class='" +
+                inner_html += "<button class='map_button'>Map</button> +  <button class='switch_button' onclick=javascript:window.location.hash='"+previousLocation.tag+"'>Go On Campus</button><img onclick=javasript:window.location.hash='" + navs[i].dest + "' class='" +
                     navs[i].direction + "_offcampus arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
                     "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
                     " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_offcampus.png' " +
@@ -256,9 +256,9 @@ function getNavs(locationTag) {
             $("#navigation").html(inner_html);
             $(".arrow").tipsy({gravity: 's', fade: true, html: true});
         }
-            $(".map_button2_initial").click(function () {
+            $(".map_button_initial").click(function () {
                 if (map_state === 0) {
-                    $(".map_button2_initial").text("Map");
+                    $(".map_button_initial").text("Expand Map");
                     $("#map").show(function () {
                         $("#map").animate({
                             width: window.innerWidth * 0.25,
@@ -270,28 +270,28 @@ function getNavs(locationTag) {
                     map_state += 1;
                 }
                 else if (map_state === 1) {
-                    $(".map_button2_initial").text("Collapse Map");
+                    $(".map_button_initial").text("Collapse Map");
                     $("#map").animate({
                         width: window.innerWidth * 0.75,
                         height: window.innerHeight * 0.85
                     }, function () {
                         animate_map(currentLocation, map_slide_time);
                     });
-                    $(".map_button2_initial").animate({right: window.innerWidth * 0.75});
+                    $(".map_button_initial").animate({right: window.innerWidth * 0.75});
                     map_state += 1;
                 }
                 else if (map_state === 2) {
-                    $(".map_button2_initial").text("Show Map");
+                    $(".map_button_initial").text("Show Map");
                     $("#map").animate({width: '0', height: '0'}, function () {
                         $("#map").hide('blind');
                     });
-                    $(".map_button2_initial").animate({right: window.innerWidth * 0.001});
+                    $(".map_button_initial").animate({right: window.innerWidth * 0.001});
                     map_state = 0;
                 }
             });
-            $(".map_button2").click(function () {
+            $(".map_button").click(function () {
                 if (map_state === 0) {
-                    $(".map_button2").text("Map");
+                    $(".map_button").text("Expand Map");
                     $("#map").show(function () {
                         $("#map").animate({
                             width: window.innerWidth * 0.25,
@@ -303,31 +303,31 @@ function getNavs(locationTag) {
                     map_state += 1;
                 }
                 else if (map_state === 1) {
-                    $(".map_button2").text("Collapse Map");
+                    $(".map_button").text("Collapse Map");
                     $("#map").animate({
                         width: window.innerWidth * 0.75,
                         height: window.innerHeight * 0.85
                     }, function () {
                         animate_map(currentLocation, map_slide_time);
                     });
-                    $(".map_button2").animate({right: window.innerWidth * 0.75});
+                    $(".map_button").animate({right: window.innerWidth * 0.75});
                     map_state += 1;
                 }
                 else if (map_state === 2) {
-                    $(".map_button2").text("Show Map");
+                    $(".map_button").text("Show Map");
                     $("#map").animate({width: '0', height: '0'}, function () {
                         $("#map").hide('blind');
                     });
-                    $(".map_button2").animate({right: window.innerWidth * 0.001});
+                    $(".map_button").animate({right: window.innerWidth * 0.001});
                     map_state = 0;
                 }
             });
         }
     if(!first_time && map_state != 0){
-        $(".map_button2").animate({top: 0 + ($("#map").height() - ($(".map_button2").height() * 2.15))}, 0);
+        $(".map_button").animate({top: 0 + ($("#map").height() - ($(".map_button").height() * 2.15))}, 0);
     }
     else if (map_state === 0){
-        $(".map_button2").animate({top: window.innerHeight * 0.3}, 0);
+        $(".map_button").animate({top: window.innerHeight * 0.3}, 0);
     }
     if(first_time){
         first_time = false;
@@ -470,14 +470,14 @@ function detectIE() {
             $(this).off("click");
             $("#video").click(function () {
                 video_out(currentLocation, map_slide_time);
-                map_in(map_in_time, map_button2_in_time);
+                map_in(map_in_time, map_button_in_time);
             });
 
             $(function () {
                 setTimeout(function () {
                     $("#video").animate({opacity: 0}, video_fade, 'easeOutQuart', function(){
                         video_out(currentLocation, map_slide_time);
-                        map_in(map_in_time, map_button2_in_time);
+                        map_in(map_in_time, map_button_in_time);
                     });
                 }, video_time);
             });
