@@ -54,11 +54,11 @@ var showHide = true;
 if(is_mobile){
     showHide = false;
 }else{
-    alert("Showhide: "+showHide);
+    /*alert("Showhide: "+showHide);*/
 }
  $(document).ready(function(){
     $("#hide").click(function(){
-		alert("Clicked");
+		/*alert("Clicked");*/
 		if(showHide){
 	
 		document.getElementById('carousel').style.display = 'none';

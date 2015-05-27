@@ -179,7 +179,7 @@ section:target, .show{
     z-index: 1;
 	background-image: url(imgs/mapButton.png);
 	background-repeat: no-repeat;
-	background-position: right;
+	background-position:right;
 	padding-<left|right>: 40px;
     right: 25%;
     max-height: 7%;
