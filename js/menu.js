@@ -1,3 +1,4 @@
+
 function dispMenu(items) {
     var i;
     var inner = "";
@@ -43,10 +44,21 @@ function dispMainMenu() {
 /***********************
      *  Carousel Items generator   *
 	     ***********************/
+            
+            /**Functions that shows or hides Carousel based on mobility**/
+var is_mobile=false;
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ is_mobile=true;
+}
 var showHide = true;
+if(is_mobile){
+    showHide = false;
+}else{
+    alert("Showhide: "+showHide);
+}
  $(document).ready(function(){
     $("#hide").click(function(){
-		/*alert("Clicked")*/
+		alert("Clicked");
 		if(showHide){
 	
 		document.getElementById('carousel').style.display = 'none';
@@ -103,4 +115,3 @@ function getCIs(tag) /*Carousel Items*/{
 
     return carouselItems;
 }
-
