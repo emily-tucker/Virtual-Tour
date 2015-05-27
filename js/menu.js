@@ -43,18 +43,23 @@ function dispMainMenu() {
 /***********************
      *  Carousel Items generator   *
 	     ***********************/
-
+var showHide = true;
  $(document).ready(function(){
     $("#hide").click(function(){
 		/*alert("Clicked")*/
-			if ( display === true ) {
-		  $( "#carousel" ).show();
-		} else if ( display === false ) {
-		  $( "#carousel" ).hide();
-		}
+		if(showHide){
+	
+		document.getElementById('carousel').style.display = 'none';
+		showHide = false;
+		document.getElementById("myImg").style.height = "300px";
+
+}	
+		else{
+		document.getElementById('carousel').style.display = 'block';
+		showHide = true;}
     });
 });
-		 
+	
 var ciCount = 0;
 
 var carouselItems = [];
