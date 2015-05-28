@@ -128,24 +128,24 @@ function getNavs(locationTag) {
 	console.log(tour_track);
     $('.tipsy:last').remove();
 	 if (currentLocation.locationType === "default") {
-        var inner_html = "<img onclick=javascript:window.location.hash='#begin' class='to_begin " +
-            "arrow' src='imgs/right_slate.png' " +
-            "onmouseover=this.src='imgs/nav_arrows/right_offcampus_hover.png'" +
-            " onmouseout=this.src='imgs/nav_arrows/right_offcampus.png " +
-            "title = 'to Athletics' />" +
+        var inner_html = "<img onclick=javascript:window.location.hash='#fieldhouse' class='to_athletics " +
+            "arrow' src='imgs/athTour.png' " +
+            "onmouseover=this.src='imgs/athTour.png'" +
+            " onmouseout=this.src='imgs/athTour_hover.png' " +
+            "title = '' />" +
             "<img onclick=javascript:window.location.hash='#library' class='to_studentlife " +
             "arrow' src='imgs/nav_arrows/left_crimson.png' " +
             "onmouseover=this.src='imgs/nav_arrows/left_newtype_hover.png'" +
             " onmouseout=this.src='imgs/nav_arrows/left_crimson.png' " +
             "title = 'to the Default tour' />";
 	 }
-    /*
+    
     if (currentLocation.locationType === "academic" || currentLocation.locationType === "walkway") {
         var inner_html = "<img onclick=javascript:window.location.hash='#fieldhouse' class='to_athletics " +
-            "arrow' src='imgs/right_slate2.png' " +
-            "onmouseover=this.src='imgs/right_newtype_hover2.png'" +
-            " onmouseout=this.src='imgs/right_slate2.png' " +
-            "title = 'to Athletics' />" +
+            "arrow' src='imgs/athTour.png' " +
+            "onmouseover=this.src='imgs/athTour.png'" +
+            " onmouseout=this.src='imgs/athTour_hover.png' " +
+            "title = '' />" +
             "<img onclick=javascript:window.location.hash='#library' class='to_studentlife " +
             "arrow' src='imgs/left_crimson.png' " +
             "onmouseover=this.src='imgs/left_newtype_hover.png'" +
@@ -176,7 +176,7 @@ function getNavs(locationTag) {
             " onmouseout=this.src='imgs/right_whiteSL.png' " +
             "title = 'to Academics' />";
     }
-    */
+    
     var items = [];
     for (var i in navs) {
         if (currentLocation.onCampus) {
