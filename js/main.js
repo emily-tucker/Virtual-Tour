@@ -45,8 +45,16 @@ var first_time = false;
 var is_mobile = false;
 var tour_track = 0;
 var showHide = true; /*bool to determine weather to show or hide the carousel.
+<<<<<<< HEAD
 var currentLocation; //used by just about everything, initialized here
 var previousLocation = locations[0]; //used for off campus/on campus switch
+=======
+
+var currentLocation; //used by just about everything, initialized here
+var previousLocation = locations[0]; //used for off campus/on campus switch
+
+
+>>>>>>> origin/master
 /********************************
 *  Test for Mobility            *
 *********************************/
