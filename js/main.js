@@ -210,7 +210,30 @@ function getNavs(locationTag) {
                 }
                 inner_html +=
 
-                    "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='hide_button' id='hide'>x</button>" + "<button class='restart_button' onclick=javascript:window.location='#begin'>Restart Tour</button>";
+                    "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='hide_button' id='hide'>x</button>" + 
+					"<button class='restart_button' onclick=javascript:window.location='#begin'>Restart Tour</button>" +
+					
+					
+					/*Athletic Button______________________________________________*/
+					"<button class ='athletic_button' img onclick=javascript:window.location.hash='#fieldhouse' class='to_athletics " +
+            		"arrow' src='imgs/athTour.png' " +
+            		"onmouseover=this.src='imgs/athTour.png'" +
+           			"onmouseout=this.src='imgs/athTour_hover.png'>Athletic Tour</button>" +
+					 
+					 /*Academic Button______________________________________________*/
+					 "<button class ='academic_button' img onclick=javascript:window.location.hash='#taylor' class='to_academics " +
+            		"arrow' src='imgs/acadTour.png' " +
+            		"onmouseover=this.src='imgs/acadTour.png'" +
+           			"onmouseout=this.src='imgs/acadTour_hover.png'>Academic Tour</button>" +
+					
+					/*Student Life Button______________________________________________*/
+					 "<button class ='sl_button' img onclick=javascript:window.location.hash='#library' class='to_studentlife " +
+            		"arrow' src='imgs/acadTour.png' " +
+            		"onmouseover=this.src='imgs/acadTour.png'" +
+           			"onmouseout=this.src='imgs/acadTour_hover.png'>Student Life Tour</button>" ;
+					
+					
+					
 					if(tour_track === navs[i].tourTracks && tour_track === 0){
 						inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
