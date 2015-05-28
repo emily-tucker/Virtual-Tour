@@ -181,14 +181,10 @@ function getNavs(locationTag) {
                 }
                 inner_html +=
 
-<<<<<<< Updated upstream
+
                     "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='hide_button' onclick='hideShowCarousel();'>Show/Hide Stories</button>" + 
-					"<button class='restart_button' onclick=javascript:window.location='#begin'>Restart Tour</button>" +
-=======
-                    "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='hide_button' id='hide'>x</button>" + 
 					"<button class='restart_button' onclick=javascript:window.location='#begin'>Restart Tour</button>";
->>>>>>> Stashed changes
-					
+
 					
 					/*Athletic Button______________________________________________*/
 					/*"<button class ='athletic_button' img onclick=javascript:window.location.hash='#fieldhouse' class='.to_athletics' " +
