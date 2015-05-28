@@ -89,8 +89,8 @@ function video_out(location, mapTime) {
 
 function map_in(map_time, button_time){
     $("#map").animate({right: 0}, map_time, 'easeInOutQuad', function(){
+        $(".map_button_initial").animate({top: 0 + ($("#map").height() - ($(".map_button_initial").height() * 2.15))}, button_time, 'easeInOutQuad')
         $(".map_button_initial").animate({right: 0}, 0, function(){
-            $(".map_button_initial").animate({top: 0 + ($("#map").height() - ($(".map_button_initial").height() * 2.15))}, button_time, 'easeInOutQuad')
         });
     });
 }
@@ -242,7 +242,7 @@ function getNavs(locationTag) {
                     "title='" + navs[i].ttip + "' />";
 					items.push(navs[i].styleClass);
 					}
-					
+
 					
 					
             }
@@ -452,6 +452,12 @@ $(function () {
 		tour_track = 3;
 		/*console.log(tour_track);*/
 	});
+
+    /*****************************
+     * Determines if Internet Explorer is being used
+     *
+     * 
+     ******************************/
 function detectIE() {
     var ms_ie = false;
     var ua = window.navigator.userAgent;
