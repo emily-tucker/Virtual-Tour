@@ -192,6 +192,9 @@ function getNavs(locationTag) {
             "title = 'to Academics' />";
     }
     */
+	
+	
+
     var items = [];
     for (var i in navs) {
         if (currentLocation.onCampus) {
@@ -215,22 +218,16 @@ function getNavs(locationTag) {
 					
 					
 					/*Athletic Button______________________________________________*/
-					"<button class ='athletic_button' img onclick=javascript:window.location.hash='#fieldhouse' class='to_athletics " +
-            		"arrow' src='imgs/athTour.png' " +
-            		"onmouseover=this.src='imgs/athTour.png'" +
-           			"onmouseout=this.src='imgs/athTour_hover.png'>Athletic Tour</button>" +
+					"<button class ='athletic_button' img onclick=javascript:window.location.hash='#fieldhouse' class='.to_athletics' " +
+            		"arrow'>Athletic Tour</button>" +
 					 
 					 /*Academic Button______________________________________________*/
-					 "<button class ='academic_button' img onclick=javascript:window.location.hash='#taylor' class='to_academics " +
-            		"arrow' src='imgs/acadTour.png' " +
-            		"onmouseover=this.src='imgs/acadTour.png'" +
-           			"onmouseout=this.src='imgs/acadTour_hover.png'>Academic Tour</button>" +
+					 "<button class ='academic_button' img onclick=javascript:window.location.hash='#taylor' class='.to_academics'" +
+            		"arrow'>Academic Tour</button>" +
 					
 					/*Student Life Button______________________________________________*/
-					 "<button class ='sl_button' img onclick=javascript:window.location.hash='#library' class='to_studentlife " +
-            		"arrow' src='imgs/acadTour.png' " +
-            		"onmouseover=this.src='imgs/acadTour.png'" +
-           			"onmouseout=this.src='imgs/acadTour_hover.png'>Student Life Tour</button>" ;
+					 "<button class ='sl_button' img onclick=javascript:window.location.hash='#library' class='.to_studentlife' " +
+            		"arrow'>Student Life Tour</button>" ;
 					
 					
 					
@@ -271,6 +268,9 @@ function getNavs(locationTag) {
 					items.push(navs[i].styleClass);
 					}
 
+$( "#target" ).click(function() {
+  alert( "Handler for .click() called." );
+});
 					
 					
             }
@@ -478,7 +478,7 @@ $(function () {
 	
 	$('body').on('click', '.to_athletics', function () {
 		tour_track = 3;
-		/*console.log(tour_track);*/
+		console.log(tour_track);
 	});
 
     /*****************************

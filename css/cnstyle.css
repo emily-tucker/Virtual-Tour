@@ -224,7 +224,7 @@ section:target, .show{
 .athletic_button {
     position: fixed;
     z-index:2000;
-	left: 30%;
+	left: 20%;
     top: 64%;
     max-height: 5%;
 
@@ -232,7 +232,7 @@ section:target, .show{
 .academic_button {
   position: fixed;
     z-index:2000;
-	left: 30%;
+	left: 20%;
     top: 57%;
     max-height: 5%;
 
@@ -240,7 +240,7 @@ section:target, .show{
 .sl_button {
     position: fixed;
     z-index:2000;
-	left: 30%;
+	left: 20%;
     top: 50%;
     max-height: 5%;
 
