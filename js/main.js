@@ -146,23 +146,17 @@ function getNavs(locationTag) {
         var inner_html = "<img onclick=javascript:window.location.hash='#fieldhouse' class='to_athletics " +
             "arrow' src='imgs/athTour.png' " +
             "onmouseover=this.src='imgs/athTour_hover.png'" +
-            " onmouseout=this.src='imgs/athTour.png' " +
-            "title = 'to Athletics' />" +
+            " onmouseout=this.src='imgs/athTour.png' />" +
             "<img onclick=javascript:window.location.hash='#library' class='to_studentlife " +
             "arrow' src='imgs/stuLifeTour.png' " +
             "onmouseover=this.src='imgs/stuLifeTour_hover.png'" +
-            " onmouseout=this.src='imgs/stuLifeTour.png' " +
-            "title = 'to Student Life' />"
+            " onmouseout=this.src='imgs/stuLifeTour.png' />" +
 			"<img onclick=javascript:window.location.hash='#taylor' class='to_academics " +
             "arrow' src='imgs/acadTour.png' " +
             "onmouseover=this.src='imgs/acadTour_hover.png'" +
-            " onmouseout=this.src='imgs/right_whiteSL.png' />";
-	 
+            " onmouseout=this.src='imgs/acadTour.png' />";
     }
     
-	
-	
-
     var items = [];
     for (var i in navs) {
         if (currentLocation.onCampus) {
@@ -182,21 +176,9 @@ function getNavs(locationTag) {
                 inner_html +=
 
 
-                    "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='hide_button' onclick='hideShowCarousel();'>Show/Hide Stories</button>" + 
+                    "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + 
+					"<button class='hide_button' onclick='hideShowCarousel();'>Show/Hide Stories</button>" + 
 					"<button class='restart_button' onclick=javascript:window.location='#begin'>Restart Tour</button>";
-
-					
-					/*Athletic Button______________________________________________*/
-					/*"<button class ='athletic_button' img onclick=javascript:window.location.hash='#fieldhouse' class='.to_athletics' " +
-            		"arrow'>Athletic Tour</button>" +
-					 
-					 /*Academic Button______________________________________________*/
-					/* "<button class ='academic_button' img onclick=javascript:window.location.hash='#taylor' class='.to_academics'" +
-            		"arrow'>Academic Tour</button>" +
-					
-					/*Student Life Button______________________________________________*/
-					/* "<button class ='sl_button' img onclick=javascript:window.location.hash='#library' class='to_studentlife' " +
-            		"arrow'>Student Life Tour</button>" ;*/
 					
 					
 					
