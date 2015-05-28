@@ -1,7 +1,7 @@
 /**
      * Location object instances
      */
-	var begin = new Location("#begin", "Welcome to Western", "academic",
+	var begin = new Location("#begin", "Welcome to Western", "defualt",
 	"Western offers a private college experience at a public university cost," + "deep in the heart of the Rockies.", true, 1801, 1246);
 	var borick = new Location("#borick", "Borick Buisness Building", "academic",
             "Home of Social Sciences and Environment & Sustainability programs", true, 1582, 1259);

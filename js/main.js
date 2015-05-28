@@ -142,56 +142,24 @@ function getLocation(locationTag) {
 function getNavs(locationTag) {
 	console.log(tour_track);
     $('.tipsy:last').remove();
-	 if (currentLocation.locationType === "default") {
-        var inner_html = "<img onclick=javascript:window.location.hash='#begin' class='to_begin " +
-            "arrow' src='imgs/right_slate.png' " +
-            "onmouseover=this.src='imgs/nav_arrows/right_offcampus_hover.png'" +
-            " onmouseout=this.src='imgs/nav_arrows/right_offcampus.png " +
-            "title = 'to Athletics' />" +
-            "<img onclick=javascript:window.location.hash='#library' class='to_studentlife " +
-            "arrow' src='imgs/nav_arrows/left_crimson.png' " +
-            "onmouseover=this.src='imgs/nav_arrows/left_newtype_hover.png'" +
-            " onmouseout=this.src='imgs/nav_arrows/left_crimson.png' " +
-            "title = 'to the Default tour' />";
-	 }
-    /*
-    if (currentLocation.locationType === "academic" || currentLocation.locationType === "walkway") {
+	 if (currentLocation.locationType === "defualt") {
         var inner_html = "<img onclick=javascript:window.location.hash='#fieldhouse' class='to_athletics " +
-            "arrow' src='imgs/right_slate2.png' " +
-            "onmouseover=this.src='imgs/right_newtype_hover2.png'" +
-            " onmouseout=this.src='imgs/right_slate2.png' " +
+            "arrow' src='imgs/athTour.png' " +
+            "onmouseover=this.src='imgs/athTour_hover.png'" +
+            " onmouseout=this.src='imgs/athTour.png' " +
             "title = 'to Athletics' />" +
             "<img onclick=javascript:window.location.hash='#library' class='to_studentlife " +
-            "arrow' src='imgs/left_crimson.png' " +
-            "onmouseover=this.src='imgs/left_newtype_hover.png'" +
-            " onmouseout=this.src='imgs/left_crimson.png' " +
-            "title = 'to Student Life' />";
+            "arrow' src='imgs/stuLifeTour.png' " +
+            "onmouseover=this.src='imgs/stuLifeTour_hover.png'" +
+            " onmouseout=this.src='imgs/stuLifeTour.png' " +
+            "title = 'to Student Life' />"
+			"<img onclick=javascript:window.location.hash='#taylor' class='to_academics " +
+            "arrow' src='imgs/acadTour.png' " +
+            "onmouseover=this.src='imgs/acadTour_hover.png'" +
+            " onmouseout=this.src='imgs/right_whiteSL.png' />";
+	 
     }
-    if (currentLocation.locationType === "studentlife") {
-        inner_html = "<img onclick=javascript:window.location.hash='#fieldhouse' class='studentlife_to_athletics " +
-            "arrow' src='imgs/left_slate2.png' " +
-            "onmouseover=this.src='imgs/left_newtype_hover2.png'" +
-            " onmouseout=this.src='imgs/left_slate2.png' " +
-            "title = 'to Athletics' />" +
-            "<img onclick=javascript:window.location.hash='#taylor' class='to_academics " +
-            "arrow' src='imgs/right_whiteSL.png' " +
-            "onmouseover=this.src='imgs/right_whiteSL_hover.png'" +
-            " onmouseout=this.src='imgs/right_whiteSL.png' " +
-            "title = 'to Academics' />";
-    }
-    if (currentLocation.locationType === "athletic") {
-        inner_html = "<img onclick=javascript:window.location.hash='#library' class='to_studentlife " +
-            "arrow' src='imgs/left_crimson.png' " +
-            "onmouseover=this.src='imgs/left_newtype_hover.png'" +
-            " onmouseout=this.src='imgs/left_crimson.png' " +
-            "title = 'to Student Life' />" +
-            "<img onclick=javascript:window.location.hash='#taylor' class='to_academics " +
-            "arrow' src='imgs/right_whiteSL.png' " +
-            "onmouseover=this.src='imgs/right_whiteSL_hover.png'" +
-            " onmouseout=this.src='imgs/right_whiteSL.png' " +
-            "title = 'to Academics' />";
-    }
-    */
+    
 	
 	
 
@@ -213,21 +181,26 @@ function getNavs(locationTag) {
                 }
                 inner_html +=
 
+<<<<<<< Updated upstream
                     "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='hide_button' onclick='hideShowCarousel();'>Show/Hide Stories</button>" + 
 					"<button class='restart_button' onclick=javascript:window.location='#begin'>Restart Tour</button>" +
+=======
+                    "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + "<button class='hide_button' id='hide'>x</button>" + 
+					"<button class='restart_button' onclick=javascript:window.location='#begin'>Restart Tour</button>";
+>>>>>>> Stashed changes
 					
 					
 					/*Athletic Button______________________________________________*/
-					"<button class ='athletic_button' img onclick=javascript:window.location.hash='#fieldhouse' class='.to_athletics' " +
+					/*"<button class ='athletic_button' img onclick=javascript:window.location.hash='#fieldhouse' class='.to_athletics' " +
             		"arrow'>Athletic Tour</button>" +
 					 
 					 /*Academic Button______________________________________________*/
-					 "<button class ='academic_button' img onclick=javascript:window.location.hash='#taylor' class='.to_academics'" +
+					/* "<button class ='academic_button' img onclick=javascript:window.location.hash='#taylor' class='.to_academics'" +
             		"arrow'>Academic Tour</button>" +
 					
 					/*Student Life Button______________________________________________*/
-					 "<button class ='sl_button' img onclick=javascript:window.location.hash='#library' class='.to_studentlife' " +
-            		"arrow'>Student Life Tour</button>" ;
+					/* "<button class ='sl_button' img onclick=javascript:window.location.hash='#library' class='to_studentlife' " +
+            		"arrow'>Student Life Tour</button>" ;*/
 					
 					
 					

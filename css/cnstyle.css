@@ -82,14 +82,18 @@ body.contextual_navigation
     z-index: 5;
 }
 
-.to_athletics, .to_academics {
-    bottom: 20%;
-    left: 75%; 
+.to_athletics  {
+    bottom: 30%;
+    left: 20%; 
+}
+.to_academics {
+	bottom: 25%;
+    left: 20%; 
 }
 
 .to_studentlife, .studentlife_to_athletics {
     bottom: 20%;
-    left: 23%; 
+    left: 20%; 
 }
 
 .contextual_assets{
