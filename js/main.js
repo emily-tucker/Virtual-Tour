@@ -144,18 +144,19 @@ function getNavs(locationTag) {
     $('.tipsy:last').remove();
 	 if (currentLocation.locationType === "defualt") {
         var inner_html = "<img onclick=javascript:window.location.hash='#fieldhouse' class='to_athletics " +
-            "arrow' src='imgs/athTour.png' " +
+            "arrow2' src='imgs/athTour.png' " +
             "onmouseover=this.src='imgs/athTour_hover.png'" +
             " onmouseout=this.src='imgs/athTour.png' />" +
             "<img onclick=javascript:window.location.hash='#library' class='to_studentlife " +
-            "arrow' src='imgs/stuLifeTour.png' " +
+            "arrow2' src='imgs/stuLifeTour.png' " +
             "onmouseover=this.src='imgs/stuLifeTour_hover.png'" +
             " onmouseout=this.src='imgs/stuLifeTour.png' />" +
 			"<img onclick=javascript:window.location.hash='#taylor' class='to_academics " +
-            "arrow' src='imgs/acadTour.png' " +
+            "arrow2' src='imgs/acadTour.png' " +
             "onmouseover=this.src='imgs/acadTour_hover.png'" +
             " onmouseout=this.src='imgs/acadTour.png' />";
     }
+
     
     var items = [];
     for (var i in navs) {

@@ -83,12 +83,12 @@ body.contextual_navigation
 }
 
 .to_athletics {
-    bottom: 25%;
+    bottom: 30%;
     left: 20%; 
 	
 }
 .to_academics  {
-	bottom: 30%;
+	bottom: 40%;
     left: 20%; 
 }
 
@@ -113,6 +113,7 @@ body.contextual_navigation
 
 .contextual_assets img {
     position: fixed;
+	display:block;
     width: 100%;
     height: auto;
     max-height: 85%;
@@ -163,6 +164,12 @@ section:target, .show{
     border: 0;
 }
 
+.arrow2 {
+	position: fixed;
+    z-index: 1;
+    max-width: 15%;
+    border: 0;
+}
 .hotspot {
     position: fixed;
 	height: 85%;
@@ -322,9 +329,6 @@ comment out so the map doesn't auto scale
 
 }
 
-.arrow:hover {
-    cursor: pointer;
-}
 
 .tooltip {
     display:none;
