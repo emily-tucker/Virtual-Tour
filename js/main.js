@@ -187,7 +187,7 @@ function getNavs(locationTag) {
 
 
                     "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" +
-					"<button class='hide_button' onclick='hideShowCarousel();'>Show/Hide Stories</button>" +
+					"<button class='hide_button' onclick='hideShowCarousel();'>H <br>I <br>D <br>E <br></button>" +
                     "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
 					"<button class='restart_button' onclick=javascript:window.location='#begin'>Restart Tour</button>";
 

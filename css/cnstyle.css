@@ -210,14 +210,7 @@ section:target, .show{
 
 
 
-.hide_button {
-    position: fixed;
-    z-index: 10;
-	right: 1%;
-    top: 69%;
-    max-height: 5%;
 
-}
 .athletic_button {
     position: fixed;
     z-index:2000;
@@ -256,8 +249,17 @@ section:target, .show{
     position: relative;
     padding:7px 25px;
 }
+/*******************
+* Show Hide Carousel
+*******************/
+.hide_button {
+    position: fixed;
+    z-index: 3000;
+    right: 0;
+    top: 77%;
+    max-height: 12%;
 
-
+}
 /**********************
 * Restart Tour Button
 *********************/
@@ -265,7 +267,7 @@ section:target, .show{
     position: fixed;
     z-index: 1;
     right: 1%;
-    top: 51%;
+    top: 57%;
     max-height: 7%;
     /*padding-top: 7px; */
     /*padding-bottom: 7px; */
@@ -279,7 +281,7 @@ section:target, .show{
     position: fixed;
     z-index: 1;
     right: 1%;
-    top: 57%;
+    top: 63%;
     max-height: 7%;
     /*padding:7px 25px;*/
 }
@@ -290,11 +292,11 @@ section:target, .show{
     position: fixed;
     z-index: 1;
     right: 1%;
-    top: 63%;
+    top: 69%;
     max-height: 7%;
 }
 
-.beginButton, .switch_button, .hide_button, .restart_button, .map_button, .map_button_initial,  .visit_button, .athletic_button, .academic_button, .sl_button, .schedule_button{
+.beginButton, .switch_button, .restart_button, .map_button, .map_button_initial,  .visit_button, .athletic_button, .academic_button, .sl_button, .schedule_button{
     margin-top: 5%;
     -moz-box-shadow: 3px 4px 0px 0px #8a2a21;
     -webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
@@ -317,7 +319,7 @@ section:target, .show{
     text-shadow:0px 1px 0px #810e05;
 }
 
-.beginButton:hover, .switch_button:hover, .restart_button:hover, .map_button:hover, .map_button_initial, .visit_button:hover, .hide_button:hover, .athletic_button:hover, .academic_button:hover, .sl_button:hover, .schedule_button:hover{
+.beginButton:hover, .switch_button:hover, .restart_button:hover, .map_button:hover, .map_button_initial, .visit_button:hover, .athletic_button:hover, .academic_button:hover, .sl_button:hover, .schedule_button:hover{
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #c62d1f));
     background:-moz-linear-gradient(top, #f24437 5%, #c62d1f 100%);
     background:-webkit-linear-gradient(top, #f24437 5%, #c62d1f 100%);
@@ -327,6 +329,42 @@ section:target, .show{
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24437', endColorstr='#c62d1f',GradientType=0);
     background-color:#f24437;
 }
+
+.hide_button{
+    margin-top: 5%;
+    -moz-box-shadow: 3px 4px 0px 0px #8a2a21;
+    -webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
+    box-shadow: 3px 4px 0px 0px #8a2a21;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
+    background:-moz-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+    background:-webkit-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+    background:-o-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+    background:-ms-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+    background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24437',GradientType=0);
+    background-color:#c62d1f;
+    border:1px solid #d02718;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:arial;
+    font-size: 1vw;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #810e05;
+    width: 2%;
+    height: 12%;
+}
+.hide_button:hover{
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #c62d1f));
+    background:-moz-linear-gradient(top, #f24437 5%, #c62d1f 100%);
+    background:-webkit-linear-gradient(top, #f24437 5%, #c62d1f 100%);
+    background:-o-linear-gradient(top, #f24437 5%, #c62d1f 100%);
+    background:-ms-linear-gradient(top, #f24437 5%, #c62d1f 100%);
+    background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24437', endColorstr='#c62d1f',GradientType=0);
+    background-color:#f24437;
+}
+
 
 .beginButton:active {
     position:relative;
