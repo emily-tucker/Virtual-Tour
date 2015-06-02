@@ -88,6 +88,15 @@ function video_out(location, mapTime) {
     $("#carousel").show();
 }
 
+/**********************
+ * URL for schedule a visit button
+ **********************/
+function visitURL(){
+    window.open("http://www.western.edu/future-students/visiting-campus/visit-western", "_blank");
+}
+
+
+
 /*************************************************
  * Map and map_button animate in
  *************************************************/
@@ -177,12 +186,14 @@ function getNavs(locationTag) {
                 inner_html +=
 
 
-                    "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" + 
-					"<button class='hide_button' onclick='hideShowCarousel();'>Show/Hide Stories</button>" + 
+                    "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" +
+					"<button class='hide_button' onclick='hideShowCarousel();'>Show/Hide Stories</button>" +
+                    "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
 					"<button class='restart_button' onclick=javascript:window.location='#begin'>Restart Tour</button>";
-					
-					
-					
+
+
+
+
 					if(tour_track === navs[i].tourTracks && tour_track === 0){
 						inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
@@ -223,8 +234,8 @@ function getNavs(locationTag) {
 $( "#target" ).click(function() {
   alert( "Handler for .click() called." );
 });
-					
-					
+
+
             }
             $("#navigation").html(inner_html);
             $(".arrow").tipsy({gravity: 's', fade: true, html: true});
@@ -438,6 +449,8 @@ $(function () {
      *
      * 
      ******************************/
+
+
 function detectIE() {
     var ms_ie = false;
     var ua = window.navigator.userAgent;
