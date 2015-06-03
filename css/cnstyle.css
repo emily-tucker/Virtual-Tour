@@ -119,6 +119,12 @@ body.contextual_navigation
     max-height: 85%;
     overflow: hidden;
 }
+
+/*************************
+* Class changes the styling
+* of the main_image when you click
+* hide carousel
+*************************/
 .c2 img{
     position: fixed;
     display:block;
@@ -260,7 +266,7 @@ section:target, .show{
 .hide_button {
     position: fixed;
     z-index: 3000;
-    right: 1%;
+    right: 26%;
     top: 72%;
     max-height: 5%;
 
@@ -272,7 +278,7 @@ section:target, .show{
     position: fixed;
     z-index: 1;
     right: 1%;
-    top: 54%;
+    top: 61%;
     max-height: 7%;
     /*padding-top: 7px; */
     /*padding-bottom: 7px; */
@@ -286,7 +292,7 @@ section:target, .show{
     position: fixed;
     z-index: 1;
     right: 1%;
-    top: 60%;
+    top: 66%;
     max-height: 7%;
     /*padding:7px 25px;*/
 }
@@ -297,7 +303,7 @@ section:target, .show{
     position: fixed;
     z-index: 1;
     right: 1%;
-    top: 66%;
+    top: 71%;
     max-height: 7%;
 }
 
@@ -319,7 +325,7 @@ section:target, .show{
     cursor:pointer;
     color:#ffffff;
     font-family:arial;
-    font-size: 2vw;
+    font-size: 1.5vw;
     text-decoration:none;
     text-shadow:0px 1px 0px #810e05;
 }
@@ -397,7 +403,7 @@ comment out so the map doesn't auto scale
     border-radius:5px;
     padding:10px;
     color:#fff;
-    font-size:12px Helvetica;
+    font-size:12px;
 }
 
 .caption_wrapper {
