@@ -189,16 +189,6 @@ function getNavs(locationTag) {
                     "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
                     "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>";
 
-
-					if(tour_track === navs[i].tourTracks && tour_track === 0){
-						inner_html +=
-                    "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
-                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
-                    "title='" + navs[i].ttip + "' />";
-					items.push(navs[i].styleClass);
-					}
 					if(tour_track === navs[i].tourTracks && tour_track === 1){
 						inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
@@ -210,19 +200,19 @@ function getNavs(locationTag) {
 					}
 					if(tour_track === navs[i].tourTracks && tour_track === 2){
 						inner_html +=
-                  	"<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_red.png'" +
-                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_red_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_red.png' " +
+                  	 "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
+                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
+                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
                     "title='" + navs[i].ttip + "' />";
 					items.push(navs[i].styleClass);
 					}
 					if(tour_track === navs[i].tourTracks && tour_track === 3){
 						inner_html +=
-                    "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_slate.png'" +
-                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_slate_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_slate.png' " +
+                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
+                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
+                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
                     "title='" + navs[i].ttip + "' />";
 					items.push(navs[i].styleClass);
 					}
@@ -421,10 +411,6 @@ $(function () {
 *****************************/
 	console.log(tour_track);
 	
-	$('body').on('click', '.to_default', function () {
-		tour_track = 0;
-		/*console.log(tour_track);*/
-	});
 	
 	$('body').on('click', '.to_academics', function () {
 		tour_track = 1;
