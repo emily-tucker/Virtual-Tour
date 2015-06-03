@@ -23,7 +23,6 @@
  *
  * Constructor for MenuItem is in menu_lists
  *
- * TODO: Get a new flyin
  *
  *
  */
@@ -44,18 +43,14 @@ var map_button_in_time = 750;
 var first_time = false;
 var is_mobile = false;
 var tour_track = 0;
-var showHide = true; /*bool to determine weather to show or hide the carousel.
-
-<<<<<<< HEAD
-var currentLocation; //used by just about everything, initialized here
-var previousLocation = locations[0]; //used for off campus/on campus switch
-=======
-
+var showHide = true; /*bool to determine weather to show or hide the carousel.*/
+var show = 0;
 var currentLocation; //used by just about everything, initialized here
 var previousLocation = locations[0]; //used for off campus/on campus switch
 
 
->>>>>>> origin/master
+
+
 /********************************
 *  Test for Mobility            *
 *********************************/
@@ -139,6 +134,8 @@ function getLocation(locationTag) {
 }
 
 
+
+
 /*******************************************************
  *
  *  Render all navigation items at the current location
@@ -178,15 +175,13 @@ function getNavs(locationTag) {
                         inner_html += "<button class='map_button'>Show Map</button>"
                     }
                 }
+
+
                 inner_html +=
-
-
                     "<button class='switch_button' onclick=window.location.hash='#mainstreet'>Go Off Campus</button>" +
-					"<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
                     "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
-					"<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>";
-
-
+                    "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
+                    "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>";
 
 					if(tour_track === navs[i].tourTracks && tour_track === 1){
 						inner_html +=
@@ -623,16 +618,15 @@ function getCIs(tag) /*Carousel Items*/{
 /**Functions that shows or hides Carousel based button click and mobility**/
 function hideShowCarousel(){
     if(showHide){
-      document.getElementById('carousel').style.display = 'none';
+        document.getElementById('carousel').style.display = 'none';
         document.getElementById('main_image').className = "c2";
-
+        //document.getElementById('hide').style.top = "87%";
         showHide = false;
   }
   else{
-      document.getElementById('carousel').style.display = 'block';
+        document.getElementById('carousel').style.display = 'block';
         document.getElementById('main_image').className = "main_image";
         document.getElementById('hide').style.top = "72%";
-
         showHide = true;
     }
 
