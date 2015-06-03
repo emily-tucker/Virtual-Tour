@@ -119,6 +119,14 @@ body.contextual_navigation
     max-height: 85%;
     overflow: hidden;
 }
+.c2 img{
+    position: fixed;
+    display:block;
+    width: 110%;
+    height: auto;
+    max-height: 100%;
+    overflow: hidden;
+}
 
 
 .noselect {
@@ -184,7 +192,6 @@ section:target, .show{
 
 .map_button{
     position: fixed;
-    z-index: 1;
     right: 0;
     max-height: 7%;
     z-index: 10;
@@ -192,7 +199,6 @@ section:target, .show{
 
 .map_button_initial{
     position: fixed;
-    z-index: 1;
     right: -20%;
     top: 0;
     max-height: 7%;
@@ -201,7 +207,6 @@ section:target, .show{
 
 .visit_button{
     position: fixed;
-    z-index: 1;
     right: 30%;
     top: -8%;
     max-height: 7%;
@@ -255,9 +260,9 @@ section:target, .show{
 .hide_button {
     position: fixed;
     z-index: 3000;
-    right: 0;
-    top: 77%;
-    max-height: 12%;
+    right: 1%;
+    top: 72%;
+    max-height: 5%;
 
 }
 /**********************
@@ -267,7 +272,7 @@ section:target, .show{
     position: fixed;
     z-index: 1;
     right: 1%;
-    top: 57%;
+    top: 54%;
     max-height: 7%;
     /*padding-top: 7px; */
     /*padding-bottom: 7px; */
@@ -281,7 +286,7 @@ section:target, .show{
     position: fixed;
     z-index: 1;
     right: 1%;
-    top: 63%;
+    top: 60%;
     max-height: 7%;
     /*padding:7px 25px;*/
 }
@@ -292,7 +297,7 @@ section:target, .show{
     position: fixed;
     z-index: 1;
     right: 1%;
-    top: 69%;
+    top: 66%;
     max-height: 7%;
 }
 
@@ -351,8 +356,8 @@ section:target, .show{
     font-size: 1vw;
     text-decoration:none;
     text-shadow:0px 1px 0px #810e05;
-    width: 2%;
-    height: 12%;
+    width: 5%;
+    height: 3%;
 }
 .hide_button:hover{
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #c62d1f));

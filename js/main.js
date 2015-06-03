@@ -45,6 +45,7 @@ var first_time = false;
 var is_mobile = false;
 var tour_track = 0;
 var showHide = true; /*bool to determine weather to show or hide the carousel.
+
 <<<<<<< HEAD
 var currentLocation; //used by just about everything, initialized here
 var previousLocation = locations[0]; //used for off campus/on campus switch
@@ -186,10 +187,10 @@ function getNavs(locationTag) {
                 inner_html +=
 
 
-                    "<button class='switch_button' onclick=javascript:window.location.hash='#mainstreet'>Go Off Campus</button>" +
-					"<button class='hide_button' onclick='hideShowCarousel();'>H <br>I <br>D <br>E <br></button>" +
+                    "<button class='switch_button' onclick=window.location.hash='#mainstreet'>Go Off Campus</button>" +
+					"<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
                     "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
-					"<button class='restart_button' onclick=javascript:window.location='#begin'>Restart Tour</button>";
+					"<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>";
 
 
 
@@ -249,7 +250,9 @@ $( "#target" ).click(function() {
         }
         if (!currentLocation.onCampus){
             if (navs[i].tag === locationTag) {
-                inner_html += "<button class='map_button'>Map</button> +  <button class='switch_button' onclick=javascript:window.location.hash='"+previousLocation.tag+"'>Go On Campus</button><img onclick=javasript:window.location.hash='" + navs[i].dest + "' class='" +
+                inner_html += "<button class='map_button'>Map</button> +   <button class='switch_button' onclick=window.location.hash='"+previousLocation.tag+"'>Go On Campus</button><img onclick=window.location.hash='" + navs[i].dest + "' class='" + "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" + "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>" +
+
+                "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
                     navs[i].direction + "_offcampus arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
                     "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
                     " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_offcampus.png' " +
@@ -639,15 +642,22 @@ function getCIs(tag) /*Carousel Items*/{
 
 /**Functions that shows or hides Carousel based button click and mobility**/
 function hideShowCarousel(){
-  /*alert("Clicked");*/
-  if(showHide){
+    if(showHide){
       document.getElementById('carousel').style.display = 'none';
-      showHide = false;
-  } 
+        document.getElementById('main_image').className = "c2";
+
+        showHide = false;
+  }
   else{
       document.getElementById('carousel').style.display = 'block';
-      showHide = true;}
+        document.getElementById('main_image').className = "main_image";
+        document.getElementById('hide').style.top = "72%";
+
+        showHide = true;
+    }
+
 }
+
 
 
  
