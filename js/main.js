@@ -154,7 +154,7 @@ function getNavs(locationTag) {
 		
 			"<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
 			"<button class='to_studentlife sl_button' onclick=window.location='#library'>Student Life Tour</button>" +
-			"<button class='to_academics academics_button ' onclick=window.location='#taylor'>Academic Tour</button>" +
+			"<button class='to_academics academics_button ' onclick=window.location='#taylor'>Academics Tour</button>" +
 			"<button class='to_offcampus offcampus_button' onclick=window.location='#fieldhouse'>Off Campus Tour</button>" 
     }
 
