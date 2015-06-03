@@ -82,14 +82,34 @@ body.contextual_navigation
     z-index: 5;
 }
 
+/******************************************
+ * 
+ * Tour Buttons - Appear on the first page only
+ * 
+ *******************************************/
+
 .to_athletics {
-    bottom: 30%;
-    left: 20%; 
+    bottom: 40%;
+    right: 20%; 
+	display: block;
+    width: auto;
+    height: 100%;
+	
+}
+.to_offcampus {
+    bottom: 20%;
+    right: 20%; 
+	display: block;
+    width: auto;
+    height: 100%; 
 	
 }
 .to_academics  {
-	bottom: 40%;
+	top: 20%;
     left: 20%; 
+	display: block;
+    width: auto;
+    height: 100%;
 }
 
 .to_studentlife  {
@@ -100,6 +120,75 @@ body.contextual_navigation
     height: 100%;
 
 }
+.offcampus_button {
+    position: fixed;
+    z-index:2000;
+	right: 20%;
+    top: 64%;
+    max-height: 5%;
+
+}
+.athletics_button {
+    position: fixed;
+    z-index:2000;
+	 bottom: 40%;
+    right: 20%; 
+    max-height: 5%;
+
+}
+.academics_button {
+   position: fixed;
+    z-index:2000;
+	left: 30%;
+    top: 26%;
+	padding-right:10px;
+	padding-right:20px;
+    max-height: 8%;
+
+}
+.sl_button {
+    position: fixed;
+    z-index:2000;
+	left: 30%;
+    top: 35%;
+    max-height: 8%;
+
+
+}
+
+.athletics_button, .academics_button, .sl_button, .offcampus_button {
+	text-align:center;
+	background-color: rgba(0,0,0,.40);
+	border:1px solid #000;
+    display:inline-block;
+    cursor:pointer;
+    color:#FFF;
+   font: bold 20px Arial,Verdana,sans-serif;
+    letter-spacing: -.1px;
+    font-size: 1.7vw;	
+}
+.athletics_button:hover, .academics_button:hover, .sl_button:hover, .schedule_button:hover{
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:20px;
+	padding-bottom:20px;
+	text-align:center;
+	background-color: rgba(0,0,0,.20);
+	border:1px solid #000;
+    display:inline-block;
+    cursor:pointer;
+    color:#FFF;
+   font: bold 20px Arial,Verdana,sans-serif;
+    letter-spacing: -.1px;
+    font-size: 1.7vw;	
+
+	
+}
+
+
+
+
+
 
 .contextual_assets{
     position: fixed;
@@ -214,32 +303,6 @@ section:target, .show{
 }
 
 
-
-
-.athletic_button {
-    position: fixed;
-    z-index:2000;
-	left: 20%;
-    top: 64%;
-    max-height: 5%;
-
-}
-.academic_button {
-  position: fixed;
-    z-index:2000;
-	left: 20%;
-    top: 57%;
-    max-height: 5%;
-
-}
-.sl_button {
-    position: fixed;
-    z-index:2000;
-	left: 20%;
-    top: 50%;
-    max-height: 5%;
-
-}
 .right_offcampus {
     bottom: 25%;
     left: 75%;
@@ -302,7 +365,11 @@ section:target, .show{
     max-height: 7%;
 }
 
-.beginButton, .switch_button, .map_button, .map_button_initial, .restart_button, .visit_button, .athletic_button, .academic_button, .sl_button, .schedule_button {
+	
+	
+	
+
+.beginButton, .switch_button, .map_button, .map_button_initial, .restart_button, .visit_button, .schedule_button {
 	margin-top: 5%;
 	background-color: rgba(0,0,0,.40);
 	border:1px solid #000;
@@ -315,7 +382,7 @@ section:target, .show{
 	
 	
 }
-.beginButton:hover, .switch_button:hover, .restart_button:hover, .map_button:hover, .map_button_initial, .visit_button:hover, .athletic_button:hover, .academic_button:hover, .sl_button:hover, .schedule_button:hover{
+.beginButton:hover, .switch_button:hover, .restart_button:hover, .map_button:hover, .map_button_initial, .visit_button:hover,  .schedule_button:hover{
 	margin-top: 5%;
 	background-color: rgba(0,0,0,.20);
 	border:1px solid #000;

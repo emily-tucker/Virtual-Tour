@@ -153,18 +153,12 @@ function getNavs(locationTag) {
 	console.log(tour_track);
     $('.tipsy:last').remove();
 	 if (currentLocation.locationType === "defualt") {
-        var inner_html = "<img onclick=javascript:window.location.hash='#fieldhouse' class='to_athletics " +
-            "arrow2' src='imgs/athTour.png' " +
-            "onmouseover=this.src='imgs/athTour_hover.png'" +
-            " onmouseout=this.src='imgs/athTour.png' />" +
-            "<img onclick=javascript:window.location.hash='#library' class='to_studentlife " +
-            "arrow2' src='imgs/stuLifeTour.png' " +
-            "onmouseover=this.src='imgs/stuLifeTour_hover.png'" +
-            " onmouseout=this.src='imgs/stuLifeTour.png' />" +
-			"<img onclick=javascript:window.location.hash='#taylor' class='to_academics " +
-            "arrow2' src='imgs/acadTour.png' " +
-            "onmouseover=this.src='imgs/acadTour_hover.png'" +
-            " onmouseout=this.src='imgs/acadTour.png' />";
+        var inner_html = 
+		
+			"<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
+			"<button class='to_studentlife sl_button' onclick=window.location='#library'>Student Life Tour</button>" +
+			"<button class='to_academics academics_button ' onclick=window.location='#taylor'>Academic Tour</button>" +
+			"<button class='to_offcampus offcampus_button' onclick=window.location='#fieldhouse'>Off Campus Tour</button>" 
     }
 
     
