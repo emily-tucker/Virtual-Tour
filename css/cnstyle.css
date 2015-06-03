@@ -274,6 +274,7 @@ section:target, .show{
     right: 1%;
     top: 54%;
     max-height: 7%;
+	
     /*padding-top: 7px; */
     /*padding-bottom: 7px; */
     /*padding-left: 35px; */
@@ -301,38 +302,31 @@ section:target, .show{
     max-height: 7%;
 }
 
-.beginButton, .switch_button, .restart_button, .map_button, .map_button_initial,  .visit_button, .athletic_button, .academic_button, .sl_button, .schedule_button{
-    margin-top: 5%;
-    -moz-box-shadow: 3px 4px 0px 0px #8a2a21;
-    -webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
-    box-shadow: 3px 4px 0px 0px #8a2a21;
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
-    background:-moz-linear-gradient(top, #c62d1f 5%, #f24437 100%);
-    background:-webkit-linear-gradient(top, #c62d1f 5%, #f24437 100%);
-    background:-o-linear-gradient(top, #c62d1f 5%, #f24437 100%);
-    background:-ms-linear-gradient(top, #c62d1f 5%, #f24437 100%);
-    background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24437',GradientType=0);
-    background-color:#c62d1f;
-    border:1px solid #d02718;
+.beginButton, .switch_button, .map_button, .map_button_initial, .restart_button, .visit_button, .athletic_button, .academic_button, .sl_button, .schedule_button {
+	margin-top: 5%;
+	background-color: rgba(0,0,0,.40);
+	border:1px solid #000;
     display:inline-block;
     cursor:pointer;
-    color:#ffffff;
-    font-family:arial;
-    font-size: 2vw;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #810e05;
+    color:#FFF;
+   font: bold 20px Arial,Verdana,sans-serif;
+    letter-spacing: -.1px;
+    font-size: 1.7vw;	
+	
+	
 }
-
 .beginButton:hover, .switch_button:hover, .restart_button:hover, .map_button:hover, .map_button_initial, .visit_button:hover, .athletic_button:hover, .academic_button:hover, .sl_button:hover, .schedule_button:hover{
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #c62d1f));
-    background:-moz-linear-gradient(top, #f24437 5%, #c62d1f 100%);
-    background:-webkit-linear-gradient(top, #f24437 5%, #c62d1f 100%);
-    background:-o-linear-gradient(top, #f24437 5%, #c62d1f 100%);
-    background:-ms-linear-gradient(top, #f24437 5%, #c62d1f 100%);
-    background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24437', endColorstr='#c62d1f',GradientType=0);
-    background-color:#f24437;
+	margin-top: 5%;
+	background-color: rgba(0,0,0,.20);
+	border:1px solid #000;
+    display:inline-block;
+    cursor:pointer;
+    color:#FFF;
+   font: bold 20px Arial,Verdana,sans-serif;
+    letter-spacing: -.1px;
+    font-size: 1.7vw;	
+
+	
 }
 
 .hide_button{
@@ -380,13 +374,6 @@ section:target, .show{
 comment out so the map doesn't auto scale
 *************************/
 
-/*@media screen and (max-width: 1024px){*/
-    /*img { max-width: 100% }*/
-/*}*/
-
-.icon-clear {
-
-}
 
 
 .tooltip {
