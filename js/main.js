@@ -155,7 +155,7 @@ function getNavs(locationTag) {
 			"<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
 			"<button class='to_studentlife sl_button' onclick=window.location='#library'>Student Life Tour</button>" +
 			"<button class='to_academics academics_button ' onclick=window.location='#taylor'>Academics Tour</button>" +
-			"<button class='to_offcampus offcampus_button' onclick=window.location='#fieldhouse'>Off Campus Tour</button>" 
+			"<button class='to_offcampus offcampus_button' onclick=window.location='#mainstreet'>Off Campus Tour</button>" 
     }
 
     
@@ -170,7 +170,7 @@ function getNavs(locationTag) {
                     if(map_state === 2) {
                         inner_html += "<button class='map_button'>Collapse Map</button>"
                     }else if(map_state === 1) {
-                        inner_html += "<button class='map_button'>Expand Map</button>"
+                        inner_html += "<button class='map_button2'>Expand Map</button>"
                     }else if(map_state === 0) {
                         inner_html += "<button class='map_button'>Show Map</button>"
                     }
@@ -178,7 +178,7 @@ function getNavs(locationTag) {
 
 
                 inner_html +=
-                    "<button class='switch_button' onclick=window.location.hash='#mainstreet'>Go Off Campus</button>" +
+                    //"<button class='switch_button' onclick=window.location.hash='#mainstreet'>Go Off Campus</button>" +
                     "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
                     "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
                     "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>";

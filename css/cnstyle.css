@@ -64,8 +64,8 @@ body.contextual_navigation
 
 #main_image{
     position: fixed;
-    height: 85%;
-    max-height: 85%;
+    height: 100%;
+    max-height: 100%;
     width: 100%;
 }
 
@@ -178,12 +178,11 @@ body.contextual_navigation
 	
 }
 
-
 .contextual_assets{
     position: fixed;
     width: 100%;
-    height: 85%;
-    max-height: 85%;
+    height: 100%;
+    max-height: 100%;
     max-width: 100%;
     z-index: -1;
     overflow: hidden;
@@ -274,21 +273,6 @@ section:target, .show{
     cursor: pointer;
 }
 
-.map_button{
-    position: fixed;
-    right: 0;
-    max-height: 7%;
-    z-index: 10;
-}
-
-.map_button_initial{
-    position: fixed;
-    right: -20%;
-    top: 0;
-    max-height: 7%;
-    z-index: 10;
-}
-
 .visit_button{
     position: fixed;
     right: 30%;
@@ -318,11 +302,40 @@ section:target, .show{
 .hide_button {
     position: fixed;
     z-index: 3000;
-    right: 26%;
-    top: 72%;
-    max-height: 5%;
+    right: -5%;
+    bottom: 10%;
+    max-height: 8%;
 
 }
+.hide_button{
+	transform: rotate(90deg);
+	transform-origin: left top 0;
+  	float: left;
+  	float: right;
+    width: 8%;
+    height: 5%;
+	margin-top: 5%;
+	background-color: rgba(0,0,0,.40);
+	border:1px solid #000;
+    display:inline-block;
+    cursor:pointer;
+    text-decoration:none;
+    color:#FFF;
+    font: bold 20px Arial,Verdana,sans-serif;
+    letter-spacing: -.1px;
+    font-size: 1.7vw;	
+}
+.hide_button:hover{
+	background-color: rgba(0,0,0,.20);
+	border:1px solid #000;
+    display:inline-block;
+    cursor:pointer;
+    color:#FFF;
+   	font: bold 18px Arial,Verdana,sans-serif;
+    letter-spacing: -.1px;
+    font-size: 1.7vw;	
+}
+
 /**********************
 * Restart Tour Button
 *********************/
@@ -361,10 +374,78 @@ section:target, .show{
 }
 
 	
-	
+/******************************************
+ * 
+ * Map Buttons
+ * 
+ *******************************************/	
+ .map_button{
+    position: fixed;
+    right: 14%;
+    max-height: 7%;
+    z-index: 500000;
+}
+ .map_button2{
+    position: fixed;
+   	right: 10%;
+    max-height: 7%;
+    z-index: 5000000;
+}
+ .map_button3{
+    position: fixed;
+    right: 14%;
+    max-height: 7%;
+    z-index: 10;
+}
+
+.map_button_initial{
+    position: fixed;
+    right: -20%;
+    top: 0;
+    max-height: 7%;
+    z-index: 10;
+}
+.map_button_initial2{
+    position: fixed;
+    right: -20%;
+    top: 0;
+    max-height: 7%;
+    z-index: 3000000;
+}
+
+ .map_button, .map_button_initial{
+	transform: rotate(90deg);
+	transform-origin: left top 0;
+	margin-top: 5%;
+	background-color: rgba(0,0,0,.40);
+	border:1px solid #000;
+    display:inline-block;
+    cursor:pointer;
+    text-decoration:none;
+    color:#FFF;
+    font: bold 20px Arial,Verdana,sans-serif;
+    letter-spacing: -.1px;
+    font-size: 1.7vw;		  	 
+ }
+ 
+.map_button:hover, .map_button_initial:hover{
+	background-color: rgba(0,0,0,.20);
+	border:1px solid #000;
+    display:inline-block;
+    cursor:pointer;
+    color:#FFF;
+   	font: bold 18px Arial,Verdana,sans-serif;
+    letter-spacing: -.1px;
+    font-size: 1.7vw;	  	 
+ }
+/******************************************
+ * 
+ * Other Buttons
+ * 
+ *******************************************/		
 	
 
-.beginButton, .switch_button, .map_button, .map_button_initial, .restart_button, .visit_button, .schedule_button {
+.beginButton, .switch_button, .restart_button, .visit_button, .schedule_button {
 	margin-top: 5%;
 	background-color: rgba(0,0,0,.40);
 	border:1px solid #000;
@@ -379,7 +460,7 @@ section:target, .show{
 	
 
 }
-.beginButton:hover, .switch_button:hover, .restart_button:hover, .map_button:hover, .map_button_initial, .visit_button:hover,  .schedule_button:hover{
+.beginButton:hover, .switch_button:hover, .restart_button:hover, .visit_button:hover,  .schedule_button:hover{
 	margin-top: 5%;
 	background-color: rgba(0,0,0,.20);
 	border:1px solid #000;
@@ -391,41 +472,6 @@ section:target, .show{
     font-size: 1.7vw;	
 
 	
-}
-
-.hide_button{
-    margin-top: 5%;
-    -moz-box-shadow: 3px 4px 0px 0px #8a2a21;
-    -webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
-    box-shadow: 3px 4px 0px 0px #8a2a21;
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
-    background:-moz-linear-gradient(top, #c62d1f 5%, #f24437 100%);
-    background:-webkit-linear-gradient(top, #c62d1f 5%, #f24437 100%);
-    background:-o-linear-gradient(top, #c62d1f 5%, #f24437 100%);
-    background:-ms-linear-gradient(top, #c62d1f 5%, #f24437 100%);
-    background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24437',GradientType=0);
-    background-color:#c62d1f;
-    border:1px solid #d02718;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:arial;
-    font-size: 1vw;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #810e05;
-    width: 5%;
-    height: 3%;
-}
-.hide_button:hover{
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #c62d1f));
-    background:-moz-linear-gradient(top, #f24437 5%, #c62d1f 100%);
-    background:-webkit-linear-gradient(top, #f24437 5%, #c62d1f 100%);
-    background:-o-linear-gradient(top, #f24437 5%, #c62d1f 100%);
-    background:-ms-linear-gradient(top, #f24437 5%, #c62d1f 100%);
-    background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24437', endColorstr='#c62d1f',GradientType=0);
-    background-color:#f24437;
 }
 
 

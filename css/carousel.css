@@ -1,9 +1,9 @@
 #carousel {
     position: fixed;
     top: 85%;
-    height: 15%;
+    height: 5%;
     width: 100%;
-	z-index:2000;
+	z-index:5;
 }
 
 .citem {

@@ -1,17 +1,17 @@
 
 /*Customisable Carousel Attributes */
-/*
+
 $(document).ready(function() {
 
     $("#owl-demo").owlCarousel({
         autoPlay: 2000,
         itemsDesktop : [1250,6],
         itemsDesktopSmall : [979,4],
-        items : 9
+        items : 10
     });
 
 
-});*/
+});
 /*JS Lint helpers: */
 /*global dragMove: false, dragEnd: false, $, jQuery, alert, window, document */
 /*jslint nomen: true, continue:true */
