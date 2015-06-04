@@ -299,19 +299,14 @@ section:target, .show{
 /*******************
 * Show Hide Carousel
 *******************/
-.hide_button {
+.hide_button{
     position: fixed;
     z-index: 3000;
-    right: -5%;
+    right: -8%;
     bottom: 10%;
     max-height: 8%;
-
-}
-.hide_button{
 	transform: rotate(90deg);
-	transform-origin: left top 0;
-  	float: left;
-  	float: right;
+    transform-origin: left top 0;
     width: 8%;
     height: 5%;
 	margin-top: 5%;

@@ -178,12 +178,13 @@ function getNavs(locationTag) {
 
 
                 inner_html +=
-                    //"<button class='switch_button' onclick=window.location.hash='#mainstreet'>Go Off Campus</button>" +
                     "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
                     "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
                     "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>";
+                    //"<button class='switch_button' onclick=window.location.hash='#mainstreet'>Go Off Campus</button>" +
 
-					if(tour_track === navs[i].tourTracks && tour_track === 1){
+
+                if(tour_track === navs[i].tourTracks && tour_track === 1){
 						inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                     navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
@@ -229,7 +230,7 @@ $( "#target" ).click(function() {
         }
         if (!currentLocation.onCampus){
             if (navs[i].tag === locationTag) {
-                inner_html += "<button class='map_button'>Map</button> +   <button class='switch_button' onclick=window.location.hash='"+previousLocation.tag+"'>Go On Campus</button><img onclick=window.location.hash='" + navs[i].dest + "' class='" + "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" + "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>" +
+                inner_html += "<button class='map_button'>Map</button> +   <button class='switch_button' onclick=window.location.hash='"+previousLocation.tag+"'>Go On Campus</button><img onclick=window.location.hash='" + navs[i].dest + "' class='"  + "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>" +
 
                 "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
                     navs[i].direction + "_offcampus arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
@@ -626,7 +627,6 @@ function hideShowCarousel(){
   else{
         document.getElementById('carousel').style.display = 'block';
         document.getElementById('main_image').className = "main_image";
-        document.getElementById('hide').style.top = "72%";
         showHide = true;
     }
 
