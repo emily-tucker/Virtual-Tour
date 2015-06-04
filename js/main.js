@@ -33,7 +33,7 @@
  * Variables for functions      *
  ********************************/
 var video_time = 15000;
-var map_slide_time = 1500;
+var map_slide_time = 1200;
 var description_delay = 5000;
 var video_fade = 2500;
 var map_state = 1;
@@ -98,8 +98,8 @@ function visitURL(){
 
 function map_in(map_time, button_time){
     $("#map").animate({right: 0}, map_time, 'easeInOutQuad', function(){
-        $(".map_button_initial").animate({top: 0 + ($("#map").height() - ($(".map_button_initial").height() * 2.15))}, button_time, 'easeInOutQuad')
-        $(".map_button_initial").animate({right: 0}, 0, function(){
+        $(".map_button_initial").animate({top: 0 + ($("#map").height() - ($(".map_button_initial").height() * 8.15))}, button_time, 'easeInOutQuad')
+        $(".map_button_initial").animate({right: 180}, 0, function(){
         });
     });
 }
@@ -224,6 +224,10 @@ $( "#target" ).click(function() {
             $("#navigation").html(inner_html);
             $(".arrow").tipsy({gravity: 's', fade: true, html: true});
         }
+        /************************
+         * Code to animate the map button
+         * at the very start of the tour
+         **************************/
             $(".map_button_initial").click(function () {
                 if (map_state === 0) {
                     $(".map_button_initial").text("Expand Map");
@@ -234,6 +238,8 @@ $( "#target" ).click(function() {
                         }, function () {
                             animate_map(currentLocation, map_slide_time);
                         });
+                        $(".map_button_initial").animate({right: window.innerWidth * 0.14});
+
                     });
                     map_state += 1;
                 }
@@ -245,7 +251,7 @@ $( "#target" ).click(function() {
                     }, function () {
                         animate_map(currentLocation, map_slide_time);
                     });
-                    $(".map_button_initial").animate({right: window.innerWidth * 0.75});
+                    $(".map_button_initial").animate({right: window.innerWidth * 0.63});
                     map_state += 1;
                 }
                 else if (map_state === 2) {
@@ -253,10 +259,17 @@ $( "#target" ).click(function() {
                     $("#map").animate({width: '0', height: '0'}, function () {
                         $("#map").hide('blind');
                     });
-                    $(".map_button_initial").animate({right: window.innerWidth * 0.001});
+                    $(".map_button_initial").animate({right: window.innerWidth * -0.099});
                     map_state = 0;
                 }
             });
+
+        /*****************************
+         * Code to animate the map button
+         * after the start of the tour
+         ********************************/
+
+
             $(".map_button").click(function () {
                 if (map_state === 0) {
                     $(".map_button").text("Expand Map");
