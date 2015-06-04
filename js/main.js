@@ -99,10 +99,11 @@ function visitURL(){
 function map_in(map_time, button_time){
     $("#map").animate({right: 0}, map_time, 'easeInOutQuad', function(){
         $(".map_button_initial").animate({top: 0 + ($("#map").height() - ($(".map_button_initial").height() * 8.15))}, button_time, 'easeInOutQuad')
-        $(".map_button_initial").animate({right: 180}, 0, function(){
+        $(".map_button_initial").animate({right: window.innerWidth * 0.14}, 0, function(){
         });
     });
 }
+
 
 /******************************************
  * Get location method which takes a tag from the hash to create the current location
