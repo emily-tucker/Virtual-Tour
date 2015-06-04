@@ -32,7 +32,6 @@ body.contextual_navigation
 ************************/
 
 .blue .dd-wrapper {
-  font: bold;
   font-family: Helvetica;
   font-size: 1.25vw;
   }
@@ -389,7 +388,7 @@ section:target, .show{
  *******************************************/		
 	
 
-.beginButton, .restart_button, .visit_button, .schedule_button, .contact_button, .map_button, .map_button_initial {
+.beginButton, .restart_button, .visit_button, .schedule_button, .contact_button, .map_button, .map_button_initial, .map_button2 {
 	margin-top: 5%;
 	background-color: rgba(0,0,0,.50);
 	border:1.3px solid #C00;
@@ -405,7 +404,7 @@ section:target, .show{
 	
 
 }
-.beginButton:hover, .restart_button:hover, .visit_button:hover,  .schedule_button:hover, .contact_button:hover, .map_button, .map_button_initial{
+.beginButton:hover, .restart_button:hover, .visit_button:hover,  .schedule_button:hover, .contact_button:hover, .map_button2:hover, .map_button:hover, .map_button_initial:hover{
 	margin-top: 5%;
 	background-color: rgba(0,0,0,.50);
 	border:1.5px solid #C00;
