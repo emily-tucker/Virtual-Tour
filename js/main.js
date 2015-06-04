@@ -226,10 +226,11 @@ $( "#target" ).click(function() {
         }
         if (!currentLocation.onCampus){
             if (navs[i].tag === locationTag) {
-                inner_html += "<button class='map_button'>Map</button>" 
-				+ "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>" +
-				"<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
-                "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
+                inner_html += "<button class='map_button'>Map</button>" +
+                    "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>" +
+                    "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
+                    "<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
+                    "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
                     navs[i].direction + "_offcampus arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
                     "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
                     " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_offcampus.png' " +
