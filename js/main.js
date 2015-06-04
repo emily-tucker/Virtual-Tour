@@ -183,33 +183,16 @@ function getNavs(locationTag) {
                     //"<button class='switch_button' onclick=window.location.hash='#mainstreet'>Go Off Campus</button>" +
 
 
-                if(tour_track === navs[i].tourTracks && tour_track === 1){
+                if(tour_track === navs[i].tourTracks && tour_track === 1 || tour_track === navs[i].tourTracks && tour_track === 2 || tour_track === navs[i].tourTracks && tour_track === 3){
 						inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
-                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
+                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white2.png'" +
+                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover2.png'" +
+                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white2.png' " +
                     "title='" + navs[i].ttip + "' />";
 					items.push(navs[i].styleClass);
 					}
-					if(tour_track === navs[i].tourTracks && tour_track === 2){
-						inner_html +=
-                  	 "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
-                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
-                    "title='" + navs[i].ttip + "' />";
-					items.push(navs[i].styleClass);
-					}
-					if(tour_track === navs[i].tourTracks && tour_track === 3){
-						inner_html +=
-                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
-                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
-                    "title='" + navs[i].ttip + "' />";
-					items.push(navs[i].styleClass);
-					}
+
 
 $( "#target" ).click(function() {
   alert( "Handler for .click() called." );
