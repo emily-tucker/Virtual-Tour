@@ -184,7 +184,7 @@ function getNavs(locationTag) {
 					"<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
                     "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
                     "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>";
-                    "<button class='switch_button' onclick=window.location.hash='#mainstreet'>Go Off Campus</button>" 
+                    //"<button class='switch_button' onclick=window.location.hash='#mainstreet'>Go Off Campus</button>" 
 
 
                 if(tour_track === navs[i].tourTracks && tour_track === 1 || tour_track === navs[i].tourTracks && tour_track === 2 || tour_track === navs[i].tourTracks && tour_track === 3){
