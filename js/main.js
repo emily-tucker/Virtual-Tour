@@ -170,7 +170,7 @@ function getNavs(locationTag) {
                     if(map_state === 2) {
                         inner_html += "<button class='map_button'>Collapse Map</button>"
                     }else if(map_state === 1) {
-                        inner_html += "<button class='map_button2'>Expand Map</button>"
+                        inner_html += "<button class='map_button'>Expand Map</button>"
                     }else if(map_state === 0) {
                         inner_html += "<button class='map_button'>Show Map</button>"
                     }
