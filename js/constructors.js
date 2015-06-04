@@ -114,5 +114,19 @@ function Image(name, fname) {
     this.fname = fname;
 }
 
+/******************************************************
+ * HowTo  Constructor
 
+ * @param info
+ * @param data-postion
+ * @param data-toggle
+
+ *****************************************************/
+function howTo(info, datapostion, datatoggle) {
+    this.info = info;
+    this.datapostion = datapostion;
+    this.datatoggle = datatoggle;
+   
+	
+}
 
