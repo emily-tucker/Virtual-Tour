@@ -373,24 +373,15 @@ section:target, .show{
  * 
  * Map Buttons
  * 
- *******************************************/	
- .map_button{
-    position: fixed;
-    right: 14%;
-    max-height: 7%;
-    z-index: 500000;
-}
- .map_button2{
-    position: fixed;
-   	right: 10%;
-    max-height: 7%;
-    z-index: 5000000;
-}
- .map_button3{
+ *******************************************/
+
+.map_button{
     position: fixed;
     right: 14%;
     max-height: 7%;
     z-index: 10;
+    transform: rotate(90deg);
+    transform-origin: left top 0;
 }
 
 .map_button_initial{
@@ -399,40 +390,11 @@ section:target, .show{
     top: 0;
     max-height: 7%;
     z-index: 10;
-}
-.map_button_initial2{
-    position: fixed;
-    right: -20%;
-    top: 0;
-    max-height: 7%;
-    z-index: 3000000;
+    transform: rotate(90deg);
+    transform-origin: left top 0;
 }
 
- .map_button, .map_button_initial{
-	transform: rotate(90deg);
-	transform-origin: left top 0;
-	margin-top: 5%;
-	background-color: rgba(0,0,0,.40);
-	border:1px solid #000;
-    display:inline-block;
-    cursor:pointer;
-    text-decoration:none;
-    color:#FFF;
-    font: bold 20px Arial,Verdana,sans-serif;
-    letter-spacing: -.1px;
-    font-size: 1.7vw;		  	 
- }
- 
-.map_button:hover, .map_button_initial:hover{
-	background-color: rgba(0,0,0,.20);
-	border:1px solid #000;
-    display:inline-block;
-    cursor:pointer;
-    color:#FFF;
-   	font: bold 18px Arial,Verdana,sans-serif;
-    letter-spacing: -.1px;
-    font-size: 1.7vw;	  	 
- }
+
 /******************************************
  * 
  * Other Buttons
@@ -440,7 +402,7 @@ section:target, .show{
  *******************************************/		
 	
 
-.beginButton, .switch_button, .restart_button, .visit_button, .schedule_button {
+.beginButton, .switch_button, .restart_button, .visit_button, .schedule_button, .map_button, .map_button_initial {
 	margin-top: 5%;
 	background-color: rgba(0,0,0,.40);
 	border:1px solid #000;
@@ -455,7 +417,7 @@ section:target, .show{
 	
 
 }
-.beginButton:hover, .switch_button:hover, .restart_button:hover, .visit_button:hover,  .schedule_button:hover{
+.beginButton:hover, .switch_button:hover, .restart_button:hover, .visit_button:hover,  .schedule_button:hover, .map_button, .map_button_initial{
 	margin-top: 5%;
 	background-color: rgba(0,0,0,.20);
 	border:1px solid #000;

@@ -32,7 +32,6 @@
 /********************************
  * Variables for functions      *
  ********************************/
-var prevCampus = true;
 var video_time = 15000;
 var map_slide_time = 1500;
 var description_delay = 5000;
@@ -285,6 +284,7 @@ $( "#target" ).click(function() {
                         }, function () {
                             animate_map(currentLocation, map_slide_time);
                         });
+                        $(".map_button").animate({right: window.innerWidth * 0.14});
                     });
                     map_state += 1;
                 }
@@ -296,7 +296,7 @@ $( "#target" ).click(function() {
                     }, function () {
                         animate_map(currentLocation, map_slide_time);
                     });
-                    $(".map_button").animate({right: window.innerWidth * 0.75});
+                    $(".map_button").animate({right: window.innerWidth * 0.63});
                     map_state += 1;
                 }
                 else if (map_state === 2) {
@@ -304,13 +304,13 @@ $( "#target" ).click(function() {
                     $("#map").animate({width: '0', height: '0'}, function () {
                         $("#map").hide('blind');
                     });
-                    $(".map_button").animate({right: window.innerWidth * 0.001});
+                    $(".map_button").animate({right: window.innerWidth * -0.099});
                     map_state = 0;
                 }
             });
         }
     if(!first_time && map_state != 0){
-        $(".map_button").animate({top: 0 + ($("#map").height() - ($(".map_button").height() * 2.15))}, 0);
+        $(".map_button").animate({top: 0 + ($("#map").height() - ($(".map_button").height() * 8.15))}, 0);
     }
     else if (map_state === 0){
         $(".map_button").animate({top: window.innerHeight * 0.3}, 0);
