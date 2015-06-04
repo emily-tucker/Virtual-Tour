@@ -42,8 +42,8 @@ body.contextual_navigation
   }
 
 .blue .dd-menu ul a {
-    background: rgba(0, 0, 0, 0.3);
-    text-shadow: 2px 2px #000;
+    background: rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px #000;
 }
 .blue .dd-menu a:hover {
   background: rgba(255,255,255,.5);
@@ -118,7 +118,7 @@ body.contextual_navigation
 .offcampus_button {
     position: fixed;
     z-index:2000;
-	right: 37.6%;
+	right: 34.6%;
     top: 30%;
     max-height: 8%;
 
@@ -129,14 +129,14 @@ body.contextual_navigation
 	padding-left:11px;
 	padding-right:28px;
 	top: 20%;
-    right: 37.6%; 
+    right: 34.6%; 
     max-height: 8%;
 
 }
 .academics_button {
    position: fixed;
     z-index:2000;
-	left: 30%;
+	left: 33%;
     top: 20%;
 	padding-left:11px;
 	padding-right:11px;
@@ -146,7 +146,7 @@ body.contextual_navigation
 .sl_button {
     position: fixed;
     z-index:2000;
-	left: 30%;
+	left: 33%;
     top: 30%;
     max-height: 8%;
 
@@ -155,25 +155,28 @@ body.contextual_navigation
 
 .athletics_button, .academics_button, .sl_button, .offcampus_button {
 	text-align:center;
-	background-color: rgba(0,0,0,.60);
-	border:1px solid #000;
+	background-color: rgba(0,0,0,.75);
+	
+	border:1.5px solid #C00;
     display:inline-block;
     cursor:pointer;
     color:#FFF;
    font: bold 20px Arial,Verdana,sans-serif;
     letter-spacing: -.1px;
     font-size: 1.7vw;
+	text-shadow: 1px 1px #000;
 }
 .athletics_button:hover, .academics_button:hover, .sl_button:hover, .offcampus_button:hover{
 	text-align:center;
-	background-color: rgba(0,0,0,.20);
-	border:1px solid #000;
+	background-color: rgba(0,0,0,.75);
+	border:3px solid #C00;
     display:inline-block;
     cursor:pointer;
     color:#FFF;
    font: bold 20px Arial,Verdana,sans-serif;
     letter-spacing: -.1px;
     font-size: 1.7vw;	
+	text-shadow: 1px 1px #000;
 
 	
 }
@@ -311,7 +314,7 @@ section:target, .show{
     height: 5%;
 	margin-top: 5%;
 	background-color: rgba(0,0,0,.40);
-	border:1px solid #000;
+	border:1.3px solid #C00;
     display:inline-block;
     cursor:pointer;
     text-decoration:none;
@@ -319,16 +322,18 @@ section:target, .show{
     font: bold 20px Arial,Verdana,sans-serif;
     letter-spacing: -.1px;
     font-size: 1.7vw;	
+	text-shadow: 1px 1px #000;
 }
 .hide_button:hover{
 	background-color: rgba(0,0,0,.20);
-	border:1px solid #000;
+	border:1.5px solid #C00;
     display:inline-block;
     cursor:pointer;
     color:#FFF;
    	font: bold 18px Arial,Verdana,sans-serif;
     letter-spacing: -.1px;
     font-size: 1.7vw;	
+	text-shadow: 1px 1px #000;
 }
 
 /**********************
@@ -338,7 +343,7 @@ section:target, .show{
     position: fixed;
     z-index: 1;
     right: 1%;
-    top: 61%;
+    top: 40%;
     max-height: 7%;
 	
     /*padding-top: 7px; */
@@ -364,7 +369,15 @@ section:target, .show{
     position: fixed;
     z-index: 1;
     right: 1%;
-    top: 71%;
+    top:35%;
+    max-height: 7%;
+}
+
+.contact_button {
+    position: fixed;
+    z-index: 1;
+    right: 1%;
+    top:30%;
     max-height: 7%;
 }
 
@@ -402,10 +415,10 @@ section:target, .show{
  *******************************************/		
 	
 
-.beginButton, .switch_button, .restart_button, .visit_button, .schedule_button, .map_button, .map_button_initial {
+.beginButton, .switch_button, .restart_button, .visit_button, .schedule_button, .contact_button, .map_button, .map_button_initial {
 	margin-top: 5%;
-	background-color: rgba(0,0,0,.40);
-	border:1px solid #000;
+	background-color: rgba(0,0,0,.50);
+	border:1.3px solid #C00;
     display:inline-block;
     cursor:pointer;
     text-decoration:none;
@@ -413,22 +426,17 @@ section:target, .show{
     font: bold 20px Arial,Verdana,sans-serif;
     letter-spacing: -.1px;
     font-size: 1.7vw;	
+	text-shadow: 1px 1px #000;
 	
 	
 
 }
-.beginButton:hover, .switch_button:hover, .restart_button:hover, .visit_button:hover,  .schedule_button:hover, .map_button, .map_button_initial{
+.beginButton:hover, .switch_button:hover, .restart_button:hover, .visit_button:hover,  .schedule_button:hover, .contact_button:hover, .map_button, .map_button_initial{
 	margin-top: 5%;
-	background-color: rgba(0,0,0,.20);
-	border:1px solid #000;
+	background-color: rgba(0,0,0,.50);
+	border:1.5px solid #C00;
     display:inline-block;
     cursor:pointer;
-    color:#FFF;
-   font: bold 20px Arial,Verdana,sans-serif;
-    letter-spacing: -.1px;
-    font-size: 1.7vw;	
-
-	
 }
 
 
@@ -469,7 +477,7 @@ comment out so the map doesn't auto scale
     width:100%;
     text-align:center;
     color:#FFF;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     font-weight:bold;
     position:relative;
     z-index:2;

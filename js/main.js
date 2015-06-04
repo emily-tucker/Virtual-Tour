@@ -164,13 +164,13 @@ function getNavs(locationTag) {
         if (currentLocation.onCampus) {
             if (navs[i].tag === locationTag){
                 if(first_time){
-                    inner_html += "<button class='map_button_initial'>Expand Map</button>"
+                    inner_html += "<button class='map_button_initial'>Enlarge Map</button>"
                 }
                 else{
                     if(map_state === 2) {
                         inner_html += "<button class='map_button'>Collapse Map</button>"
                     }else if(map_state === 1) {
-                        inner_html += "<button class='map_button'>Expand Map</button>"
+                        inner_html += "<button class='map_button'>Enlarge Map</button>"
                     }else if(map_state === 0) {
                         inner_html += "<button class='map_button'>Show Map</button>"
                     }
@@ -179,6 +179,7 @@ function getNavs(locationTag) {
 
                 inner_html +=
                     "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
+					"<button class='contact_button' onclick='visitURL();'>Contact Admissions</button>" +
                     "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
                     "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>";
                     //"<button class='switch_button' onclick=window.location.hash='#mainstreet'>Go Off Campus</button>" +
@@ -231,7 +232,7 @@ $( "#target" ).click(function() {
          **************************/
             $(".map_button_initial").click(function () {
                 if (map_state === 0) {
-                    $(".map_button_initial").text("Expand Map");
+                    $(".map_button_initial").text("Enlarge Map");
                     $("#map").show(function () {
                         $("#map").animate({
                             width: window.innerWidth * 0.25,
@@ -273,7 +274,7 @@ $( "#target" ).click(function() {
 
             $(".map_button").click(function () {
                 if (map_state === 0) {
-                    $(".map_button").text("Expand Map");
+                    $(".map_button").text("Enlarge Map");
                     $("#map").show(function () {
                         $("#map").animate({
                             width: window.innerWidth * 0.25,
