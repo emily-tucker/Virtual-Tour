@@ -45,7 +45,6 @@ var tour_track = 0;
 var showHide = true; /*bool to determine weather to show or hide the carousel.*/
 var show = 0;
 var currentLocation; //used by just about everything, initialized here
-var previousLocation = locations[0]; //used for off campus/on campus switch
 
 
 
@@ -88,6 +87,9 @@ function video_out(location, mapTime) {
  **********************/
 function visitURL(){
     window.open("http://www.western.edu/future-students/visiting-campus/visit-western", "_blank");
+}
+function visitURL2(){
+    window.open("http://www.western.edu/future-students/contact-admissions", "_blank");
 }
 
 
@@ -155,7 +157,7 @@ function getNavs(locationTag) {
 			"<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
 			"<button class='to_studentlife sl_button' onclick=window.location='#library'>Student Life Tour</button>" +
 			"<button class='to_academics academics_button ' onclick=window.location='#taylor'>Academics Tour</button>" +
-			"<button class='to_offcampus offcampus_button' onclick=window.location='#mainstreet'>Off Campus Tour</button>" 
+			"<button class='switch_button ' onclick=window.location='#mainstreet'>Off Campus Tour</button>" 
     }
 
     
@@ -179,10 +181,10 @@ function getNavs(locationTag) {
 
                 inner_html +=
                     "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
-					"<button class='contact_button' onclick='visitURL();'>Contact Admissions</button>" +
+					"<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
                     "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
                     "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>";
-                    //"<button class='switch_button' onclick=window.location.hash='#mainstreet'>Go Off Campus</button>" +
+                    "<button class='switch_button' onclick=window.location.hash='#mainstreet'>Go Off Campus</button>" 
 
 
                 if(tour_track === navs[i].tourTracks && tour_track === 1 || tour_track === navs[i].tourTracks && tour_track === 2 || tour_track === navs[i].tourTracks && tour_track === 3){
@@ -195,6 +197,16 @@ function getNavs(locationTag) {
 					items.push(navs[i].styleClass);
 					}
 
+				 if(tour_track === navs[i].tourTracks && tour_track === 4){
+					 inner_html +=
+                    "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
+                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white2.png'" +
+                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover2.png'" +
+                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white2.png' " +
+                    "title='" + navs[i].ttip + "' />";
+					items.push(navs[i].styleClass);
+					 
+				 }
 
 $( "#target" ).click(function() {
   alert( "Handler for .click() called." );
@@ -214,8 +226,9 @@ $( "#target" ).click(function() {
         }
         if (!currentLocation.onCampus){
             if (navs[i].tag === locationTag) {
-                inner_html += "<button class='map_button'>Map</button> +   <button class='switch_button' onclick=window.location.hash='"+previousLocation.tag+"'>Go On Campus</button><img onclick=window.location.hash='" + navs[i].dest + "' class='"  + "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>" +
-
+                inner_html += "<button class='map_button'>Map</button>" 
+				+ "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>" +
+				"<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
                 "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
                     navs[i].direction + "_offcampus arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
                     "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
@@ -420,6 +433,7 @@ $(function () {
 		tour_track = 3;
 		console.log(tour_track);
 	});
+	
 
     /*****************************
      * Determines if Internet Explorer is being used
@@ -580,6 +594,7 @@ function getCIs(tag) /*Carousel Items*/{
     for(i in CIs) {
         ci = CIs[i];
         for (j in ci.tags) {
+		
             if (ci.tags[j] === tag) {
                 //build carousel item
                 a = "<div class='citem' id='citem" + ciCount + "'>";
@@ -599,6 +614,7 @@ function getCIs(tag) /*Carousel Items*/{
                 ciCount += 1;
                 break;
             }
+		
         }
     }
     width = window.innerWidth - (ciCount * 160);
@@ -616,6 +632,8 @@ function getCIs(tag) /*Carousel Items*/{
 
 /**Functions that shows or hides Carousel based button click and mobility**/
 function hideShowCarousel(){
+	
+	
     if(showHide){
         document.getElementById('carousel').style.display = 'none';
         document.getElementById('main_image').className = "c2";

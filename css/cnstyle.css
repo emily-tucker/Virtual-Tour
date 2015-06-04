@@ -87,40 +87,15 @@ body.contextual_navigation
  * Tour Buttons - Appear on the first page only
  * 
  *******************************************/
-
-.to_athletics {
- 
-	display: block;
-    width: auto;
-    height: 100%;
-	
-}
-.to_offcampus {
-    
-	display: block;
-    width: auto;
-    height: 100%; 
-	
-}
-.to_academics  {
-	
-	display: block;
-    width: auto;
-    height: 100%;
-}
-
-.to_studentlife  {
-	display: block;
-    width: auto;
-    height: 100%;
-
-}
-.offcampus_button {
+.switch_button  {
     position: fixed;
     z-index:2000;
 	right: 34.6%;
     top: 30%;
     max-height: 8%;
+	display: block;
+    width: auto;
+    height: 100%;
 
 }
 .athletics_button {
@@ -131,6 +106,9 @@ body.contextual_navigation
 	top: 20%;
     right: 34.6%; 
     max-height: 8%;
+	display: block;
+    width: auto;
+    height: 100%;
 
 }
 .academics_button {
@@ -141,6 +119,9 @@ body.contextual_navigation
 	padding-left:11px;
 	padding-right:11px;
     max-height: 8%;
+	display: block;
+    width: auto;
+    height: 100%;
 
 }
 .sl_button {
@@ -149,11 +130,14 @@ body.contextual_navigation
 	left: 33%;
     top: 30%;
     max-height: 8%;
+	display: block;
+    width: auto;
+    height: 100%;
 
 
 }
 
-.athletics_button, .academics_button, .sl_button, .offcampus_button {
+.athletics_button, .academics_button, .sl_button, .switch_button  {
 	text-align:center;
 	background-color: rgba(0,0,0,.75);
 	
@@ -166,7 +150,7 @@ body.contextual_navigation
     font-size: 1.7vw;
 	text-shadow: 1px 1px #000;
 }
-.athletics_button:hover, .academics_button:hover, .sl_button:hover, .offcampus_button:hover{
+.athletics_button:hover, .academics_button:hover, .sl_button:hover, .switch_button:hover{
 	text-align:center;
 	background-color: rgba(0,0,0,.75);
 	border:3px solid #C00;
@@ -351,17 +335,7 @@ section:target, .show{
     /*padding-left: 35px; */
     /*padding-right: 35px; */
 }
-/***********************
-* Go Off Campus Button
-***********************/
-.switch_button {
-    position: fixed;
-    z-index: 1;
-    right: 1%;
-    top: 66%;
-    max-height: 7%;
-    /*padding:7px 25px;*/
-}
+
 /*******************
 * Schedule A Visit Button
 *******************/
@@ -415,7 +389,7 @@ section:target, .show{
  *******************************************/		
 	
 
-.beginButton, .switch_button, .restart_button, .visit_button, .schedule_button, .contact_button, .map_button, .map_button_initial {
+.beginButton, .restart_button, .visit_button, .schedule_button, .contact_button, .map_button, .map_button_initial {
 	margin-top: 5%;
 	background-color: rgba(0,0,0,.50);
 	border:1.3px solid #C00;
@@ -431,7 +405,7 @@ section:target, .show{
 	
 
 }
-.beginButton:hover, .switch_button:hover, .restart_button:hover, .visit_button:hover,  .schedule_button:hover, .contact_button:hover, .map_button, .map_button_initial{
+.beginButton:hover, .restart_button:hover, .visit_button:hover,  .schedule_button:hover, .contact_button:hover, .map_button, .map_button_initial{
 	margin-top: 5%;
 	background-color: rgba(0,0,0,.50);
 	border:1.5px solid #C00;
