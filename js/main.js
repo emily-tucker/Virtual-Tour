@@ -184,7 +184,6 @@ function getNavs(locationTag) {
 					"<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
                     "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
                     "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>";
-                    //"<button class='switch_button' onclick=window.location.hash='#mainstreet'>Go Off Campus</button>" 
 
 
                 if(tour_track === navs[i].tourTracks && tour_track === 1 || tour_track === navs[i].tourTracks && tour_track === 2 || tour_track === navs[i].tourTracks && tour_track === 3){
@@ -232,9 +231,17 @@ $( "#target" ).click(function() {
         }
         if (!currentLocation.onCampus){
             if (navs[i].tag === locationTag) {
+                    if(map_state === 2) {
+                        inner_html += "<button class='map_button'>Collapse Map</button>"
+                    }else if(map_state === 1) {
+                        inner_html += "<button class='map_button'>Enlarge Map</button>"
+                    }else if(map_state === 0) {
+                        inner_html += "<button class='map_button'>Show Map</button>"
+                    }
 
-                inner_html += "<button class='map_button'>Map</button>" 
-				+ "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>" +
+
+                inner_html +=
+				"<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>" +
 				"<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
                 "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
 				"<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" 
@@ -244,7 +251,7 @@ $( "#target" ).click(function() {
             $(".arrow").tipsy({gravity: 's', fade: true, html: true});
         }
         /************************
-         * Code to animate the map button
+         * Code to animate the map/map button
          * at the very start of the tour
          **************************/
             $(".map_button_initial").click(function () {
@@ -257,7 +264,7 @@ $( "#target" ).click(function() {
                         }, function () {
                             animate_map(currentLocation, map_slide_time);
                         });
-                        $(".map_button_initial").animate({right: window.innerWidth * 0.14});
+                       // $(".map_button_initial").animate({right: window.innerWidth * 0.14});
 
                     });
                     map_state += 1;
@@ -325,10 +332,10 @@ $( "#target" ).click(function() {
             });
         }
     if(!first_time && map_state != 0){
-        $(".map_button").animate({top: 0 + ($("#map").height() - ($(".map_button").height() * 6.15))}, 0);
+        $(".map_button").animate({top: -10 + ($("#map").height() - ($(".map_button").height() * 8.15))}, 0);
     }
     else if (map_state === 0){
-        $(".map_button").animate({top: window.innerHeight * 0.3}, 0);
+        $(".map_button").animate({top: window.innerHeight * 0.1, right: -125}, 0);
     }
     if(first_time){
         first_time = false;
