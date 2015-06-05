@@ -91,6 +91,18 @@ function visitURL(){
 function visitURL2(){
     window.open("http://www.western.edu/future-students/contact-admissions", "_blank");
 }
+function visitURLTwitter(){
+    window.open("http://www.twitter.com", "_blank");
+}
+
+function visitURLFB(){
+    window.open("http://www.facebook.com", "_blank");
+}
+
+function visitURLInstagram(){
+    window.open("http://www.instagram.com", "_blank");
+}
+
 
 
 
@@ -579,10 +591,12 @@ function detectIE() {
 
     $(document).on('click', '.fancybox', function (event) {
         event.preventDefault();
+		
         $.fancybox.open({
             type: 'iframe',
             href: this.href,
             title: this.title
+			
         })
     });
 });
@@ -616,7 +630,7 @@ function getCIs(tag) /*Carousel Items*/{
                 if (ci.video) {
                     a += ci.html;
                 } else {
-                    a += "<a class='fancybox' data-fancybox-group='gallery' href = '"+ci.full.fname+"' title='"+ci.html+"' rel='gallery'>";
+                    a += "<a class='fancybox' data-fancybox-group='media-gallery' href = '"+ci.full.fname+"' title='"+ci.html+"' rel='gallery'>";
                 }
                 a += "<div class='Thumbimage' id='thumbImage" + ciCount + "'>";
                 a += "<img id='image 'src='"+ci.thumb.fname+"' alt=''>";
@@ -624,8 +638,6 @@ function getCIs(tag) /*Carousel Items*/{
                 a += "<p>'"+ci.ttip+"'</p>";
                 a += "</div></div></a></div>";
                 inner += a;
-                carouselItems.push('citem' + String(ciCount));
-                thumbs.push('thumbImage' + String(ciCount));
                 ciCount += 1;
                 break;
             }

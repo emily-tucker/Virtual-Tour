@@ -9,6 +9,36 @@
  * Copyright 2012 Janis Skarnelis - janis@fancyapps.com
  *
  */
+/*$(document).ready(function() {
+
+			$('.fancybox').fancybox();
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+				
+				closeBtn  : true,
+				arrows    : true,
+				nextClick : true,
+				
+
+				helpers : {
+					title : {
+						thumbs : {
+						width  : 100,
+						height : 100
+						},
+						type : 'over'
+					}
+				}
+			});
+
+
+		});*/
 
 (function (window, document, $, undefined) {
 	"use strict";
@@ -57,7 +87,7 @@
 			margin  : 20,
 
 			width     : 800,
-			height    : 600,
+			height    : 800,
 			minWidth  : 100,
 			minHeight : 100,
 			maxWidth  : 9999,
@@ -148,35 +178,54 @@
 
 			// Properties for each animation type
 			// Opening fancyBox
-			openEffect  : 'fade', // 'elastic', 'fade' or 'none'
+			
+			
+			openEffect  : 'elastic', // 'elastic', 'fade' or 'none'
 			openSpeed   : 250,
 			openEasing  : 'swing',
 			openOpacity : true,
 			openMethod  : 'zoomIn',
+			nextClick : true,
+			
 
 			// Closing fancyBox
-			closeEffect  : 'fade', // 'elastic', 'fade' or 'none'
+			closeEffect  : 'elastic', // 'elastic', 'fade' or 'none'
 			closeSpeed   : 250,
 			closeEasing  : 'swing',
 			closeOpacity : true,
 			closeMethod  : 'zoomOut',
+			nextClick : true,
+		
 
 			// Changing next gallery item
 			nextEffect : 'elastic', // 'elastic', 'fade' or 'none'
 			nextSpeed  : 250,
 			nextEasing : 'swing',
 			nextMethod : 'changeIn',
+			nextClick : true,
+			
 
 			// Changing previous gallery item
-			prevEffect : 'elastic', // 'elastic', 'fade' or 'none'
+			prevEffect : 'fade', // 'elastic', 'fade' or 'none'
 			prevSpeed  : 250,
 			prevEasing : 'swing',
 			prevMethod : 'changeOut',
+			nextClick : true,
+
 
 			// Enable default helpers
 			helpers : {
 				overlay : true,
-				title   : true
+				autoSize: true, // shouldn't be true ?
+    			fitToView: true,
+    			minWidth: 940,
+				title : {
+						thumbs : {
+						width  : 160,
+						height : 160
+						},
+						type : 'over'}
+			
 			},
 
 			// Callbacks

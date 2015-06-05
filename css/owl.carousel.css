@@ -57,7 +57,7 @@
   /* position relative and z-index fix webkit rendering fonts issue */
   position: relative;
   z-index: 1;
-  height: 100px;
+  height: 80px;
 }
 .owl-carousel .owl-stage {
   position: relative;
