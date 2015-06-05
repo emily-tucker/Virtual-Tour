@@ -232,6 +232,7 @@ $( "#target" ).click(function() {
         }
         if (!currentLocation.onCampus){
             if (navs[i].tag === locationTag) {
+
                 inner_html += "<button class='map_button'>Map</button>" 
 				+ "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>" +
 				"<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
@@ -324,7 +325,7 @@ $( "#target" ).click(function() {
             });
         }
     if(!first_time && map_state != 0){
-        $(".map_button").animate({top: 0 + ($("#map").height() - ($(".map_button").height() * 8.15))}, 0);
+        $(".map_button").animate({top: 0 + ($("#map").height() - ($(".map_button").height() * 6.15))}, 0);
     }
     else if (map_state === 0){
         $(".map_button").animate({top: window.innerHeight * 0.3}, 0);
