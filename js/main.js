@@ -157,7 +157,7 @@ function getNavs(locationTag) {
 			"<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
 			"<button class='to_studentlife sl_button' onclick=window.location='#library'>Student Life Tour</button>" +
 			"<button class='to_academics academics_button ' onclick=window.location='#taylor'>Academics Tour</button>" +
-			"<button class='switch_button ' onclick=window.location='#mainstreet'>Off Campus Tour</button>" 
+			"<button class='.to_offcampus switch_button ' onclick=window.location='#mainstreet'>Off Campus Tour</button>" 
     }
 
     
@@ -199,12 +199,18 @@ function getNavs(locationTag) {
 
 				 if(tour_track === navs[i].tourTracks && tour_track === 4){
 					 inner_html +=
-                    "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white2.png'" +
-                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover2.png'" +
-                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white2.png' " +
+                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
+                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
+                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_offcampus.png' " +
                     "title='" + navs[i].ttip + "' />";
 					items.push(navs[i].styleClass);
+					
+					
+					/*navs[i].direction + "_offcampus arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
+                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_offcampus.png' " +
+                    "title='" + navs[i].ttip + "' />";*/
 					 
 				 }
 
@@ -230,10 +236,7 @@ $( "#target" ).click(function() {
 				+ "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>" +
 				"<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
                 "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
-                    navs[i].direction + "_offcampus arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
-                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_offcampus.png' " +
-                    "title='" + navs[i].ttip + "' />";
+				"<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" 
             }
 
             $("#navigation").html(inner_html);
@@ -431,6 +434,10 @@ $(function () {
 	
 	$('body').on('click', '.to_athletics', function () {
 		tour_track = 3;
+		console.log(tour_track);
+	});
+	$('body').on('click', '.to_offcampus', function () {
+		tour_track = 4;
 		console.log(tour_track);
 	});
 	

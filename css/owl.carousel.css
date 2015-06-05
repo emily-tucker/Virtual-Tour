@@ -57,6 +57,7 @@
   /* position relative and z-index fix webkit rendering fonts issue */
   position: relative;
   z-index: 1;
+  height: 100px;
 }
 .owl-carousel .owl-stage {
   position: relative;
@@ -104,6 +105,7 @@
   position: relative;
   min-height: 1px;
   float: left;
+  float:right;
   -webkit-backface-visibility: hidden;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
