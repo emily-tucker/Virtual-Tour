@@ -645,7 +645,7 @@ function getCIs(tag) /*Carousel Items*/{
         }
     }
     width = window.innerWidth - (ciCount * 160);
-    margin = width / (ciCount-1) * .75;
+    margin = width / (ciCount-1) * .50;
 	
     $("#carousel").html(inner);
     $(".citem").css("margin-left", margin);
