@@ -188,15 +188,6 @@ body.contextual_navigation
 * of the main_image when you click
 * hide carousel
 *************************/
-.c2 img{
-    position: fixed;
-    display:block;
-    width: 110%;
-    height: auto;
-    max-height: 100%;
-    overflow: hidden;
-}
-
 
 .noselect {
     -webkit-touch-callout: none;
