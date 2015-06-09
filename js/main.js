@@ -35,6 +35,8 @@
 var video_time = 15000;
 var map_slide_time = 1200;
 var description_delay = 5000;
+var carousel_speed = 5000;
+var moveLeft = -170;
 var video_fade = 2500;
 var map_state = 1;
 var map_in_time = 1500;
@@ -146,6 +148,73 @@ function getLocation(locationTag) {
         }
     }
 }
+function stopAnimation(){
+    $("#carousel").mouseenter(function(){
+        moveLeft = 0;
+    })
+}
+
+function moveCarousel() {
+    $("#carousel").delay(5000).animate({
+        left: moveLeft
+    }, carousel_speed, "linear", function() {
+        moveLeft -= 170;
+        $("#thumbImage0").css({
+            left: 1040
+        }, carousel_speed, "linear").queue( function () {
+            $("#carousel").animate({
+                left: moveLeft
+            }, carousel_speed, "linear", function(){
+                moveLeft -= 170;
+                $("#thumbImage1").css({
+                    left: 1040
+                }, carousel_speed, "linear").queue( function () {
+                    $("#carousel").animate({
+                        left: moveLeft
+                    }, carousel_speed, "linear", function () {
+                        moveLeft -= 170;
+                        $("#thumbImage2").css({
+                            left: 1040
+                        }, carousel_speed, "linear").queue(function () {
+                            $("#carousel").animate({
+                                left: moveLeft
+                            }, carousel_speed, "linear", function () {
+                                moveLeft -= 170;
+                                $("#thumbImage3").css({
+                                    left: 1040
+                                }, carousel_speed, "linear").queue(function () {
+                                    $("#carousel").animate({
+                                        left: moveLeft
+                                    }, carousel_speed, "linear", function () {
+                                        moveLeft -= 170;
+                                        $("#thumbImage4").css({
+                                            left: 1040
+                                        }, carousel_speed, "linear").queue(function () {
+                                            $("#carousel").animate({
+                                                left: moveLeft
+                                            }, carousel_speed, "linear", function () {
+                                                $("#thumbImage5").css({
+                                                    left: 1040
+                                                }, carousel_speed, "linear")
+                                            })
+                                        })
+                                    })
+                                })
+                            })
+                        })
+                    })
+                })
+            })
+        })
+    })
+
+
+}
+
+$(document).ready(function() {
+    moveCarousel();
+
+});
 
 
 
