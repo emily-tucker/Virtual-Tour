@@ -644,8 +644,8 @@ function getCIs(tag) /*Carousel Items*/{
 		
         }
     }
-    width = window.innerWidth - (ciCount * 150);
-    margin = width / (ciCount-1) * .10;
+    var width = window.innerWidth - (ciCount * 100);
+    var margin = width / (ciCount-1) * .10;
 
     $("#carousel").html(inner);
     $(".citem").css("margin-left", margin);
@@ -664,7 +664,6 @@ function hideShowCarousel(){
     if(showHide){
         document.getElementById('carousel').style.display = 'none';
         document.getElementById('main_image').className = "c2";
-        //document.getElementById('hide').style.top = "87%";
         showHide = false;
   }
   else{
