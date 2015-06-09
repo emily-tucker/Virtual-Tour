@@ -663,12 +663,13 @@ function hideShowCarousel(){
 	
     if(showHide){
         document.getElementById('carousel').style.display = 'none';
-        document.getElementById('main_image').className = "c2";
+        $(".hide_button").text("Show");
         showHide = false;
   }
   else{
         document.getElementById('carousel').style.display = 'block';
         document.getElementById('main_image').className = "main_image";
+        $(".hide_button").text("Hide");
         showHide = true;
     }
 
