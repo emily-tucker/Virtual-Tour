@@ -205,6 +205,7 @@ function getNavs(locationTag) {
                     "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
                     " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
                     "title='" + navs[i].ttip + "' />";
+					console.log(tour_track);
 					items.push(navs[i].styleClass);
 					}
 
@@ -215,15 +216,16 @@ function getNavs(locationTag) {
                     "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
                     " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_offcampus.png' " +
                     "title='" + navs[i].ttip + "' />";
+					console.log(tour_track);
 					items.push(navs[i].styleClass);
-					
+					}
 					
 					/*navs[i].direction + "_offcampus arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
                     "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
                     " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_offcampus.png' " +
                     "title='" + navs[i].ttip + "' />";*/
 					 
-				 }
+				 
 
 $( "#target" ).click(function() {
   alert( "Handler for .click() called." );
@@ -443,13 +445,13 @@ $(function () {
 	
 	$('body').on('click', '.to_academics', function () {
 		tour_track = 1;
-		/*console.log(tour_track);*/
+		console.log(tour_track);
 	
 	});
 	
 	$('body').on('click', '.to_studentlife', function () {
 		tour_track = 2;
-		/*console.log(tour_track);*/
+		console.log(tour_track);
 	});
 	
 	$('body').on('click', '.to_athletics', function () {
