@@ -55,8 +55,9 @@
     var pathway2 = new Location("#pathway2", "Kelley Steps", "walkway", "Pathway to Taylor", true, 2083, 1076);
     var rockymountains = new Location("#rockymountains", "Rocky Mountains", "The Rocky Mounains", false, 0, 0);
 
-    var locations = [begin, borick, chipeta, crawford, escalante, pinnacles, ute, mears, taylor, pathway, pathway2, quigley, hurst, kelley, library, universitycenter, mountaineerbowl, telluride,
-        taylorcanyon, crestedbutte, monarchmountain, taylorreservoir, hartmanrocks,gunnison, cbmr, artscenter, wmountain, fieldhouse, rockymountains];
+    var locations = [begin, borick, chipeta, crawford, escalante, pinnacles, ute, mears, taylor, pathway, pathway2, quigley, hurst, kelley, library, universitycenter, mountaineerbowl, 
+	
+	telluride, taylorcanyon, crestedbutte, monarchmountain, taylorreservoir, hartmanrocks,gunnison, cbmr, artscenter, wmountain, fieldhouse, rockymountains];
 
 
 
@@ -222,7 +223,7 @@
 		gatewayfield_to_mountaineerbowlAthletics, gatewayfield_to_fieldhouseAthletics,fieldhouse_to_paulwrightgymAthletics, fieldhouse_to_gatewayfieldAthletics, 										        paulwrightgym_to_fieldhouseAthletics, paulwrightgym_to_mountaineerbowlAthletics, mountaineerbowl_to_paulwrightgymAthletic,
 		
 		/*======Athletics Array=====*/
-		cbmr_to_telluride, telluride_to_cbmr];
+		gunnison_to_cbmr, gunnison_to_elkmountains];
     /*
    hr_to_tc, tc_to_hr,cbmr_to_gunnison,
     gunnison_to_cbmr, gunnison_to_elkmountains, elkmountains_to_gunnison, elkmountains_to_hr, hr_to_elkmountains,

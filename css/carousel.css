@@ -6,12 +6,20 @@
 	z-index:5;
 }
 
+/******************
+* Change Carousel Image size
+******************/
+#carousel img{
+    height: 80%;
+    width: 80%;
+}
+
 .citem {
     float: left;
 }
 
 .Thumbimage { 
-   position: relative; 
+   position: relative;
 }
 
 .Thumbcaption
@@ -20,12 +28,11 @@
   color:#FFF;
   text-align:center;
   float: left;
-  float: right;
   font-size:12px;
   text-shadow: 1px 1px #000;
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0%;
-  width: 100%;
+  width: 80%;
   
 }
