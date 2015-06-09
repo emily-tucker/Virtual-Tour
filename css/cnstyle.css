@@ -100,8 +100,8 @@ body.contextual_navigation
 .athletics_button {
     position: fixed;
     z-index:2000;
-	padding-left:11px;
-	padding-right:28px;
+	padding-left:18px;
+	padding-right:20px;
 	top: 20%;
     right: 34.6%; 
     max-height: 8%;

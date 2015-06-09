@@ -201,9 +201,9 @@ function getNavs(locationTag) {
                 if(tour_track === navs[i].tourTracks && tour_track === 1 || tour_track === navs[i].tourTracks && tour_track === 2 || tour_track === navs[i].tourTracks && tour_track === 3){
 						inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white2.png'" +
-                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover2.png'" +
-                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white2.png' " +
+                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
+                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
                     "title='" + navs[i].ttip + "' />";
 					items.push(navs[i].styleClass);
 					}
@@ -644,9 +644,9 @@ function getCIs(tag) /*Carousel Items*/{
 		
         }
     }
-    width = window.innerWidth - (ciCount * 160);
-    margin = width / (ciCount-1) * .50;
-	
+    width = window.innerWidth - (ciCount * 150);
+    margin = width / (ciCount-1) * .10;
+
     $("#carousel").html(inner);
     $(".citem").css("margin-left", margin);
     if(is_mobile){
