@@ -665,12 +665,17 @@ function hideShowCarousel(){
 	
     if(showHide){
         document.getElementById('carousel').style.display = 'none';
+<<<<<<< HEAD
         document.getElementById('main_image').className = "c2";
+=======
+        $(".hide_button").text("Show");
+>>>>>>> 359a7b2aa077fd706c9ca4aefec55dee48f67a98
         showHide = false;
   }
   else{
         document.getElementById('carousel').style.display = 'block';
         document.getElementById('main_image').className = "main_image";
+        $(".hide_button").text("Hide");
         showHide = true;
     }
 
