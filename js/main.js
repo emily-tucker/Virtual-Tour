@@ -234,8 +234,8 @@ function getNavs(locationTag) {
 		
 			"<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
 			"<button class='to_studentlife sl_button' onclick=window.location='#library'>Student Life Tour</button>" +
-			"<button class='to_academics academics_button ' onclick=window.location='#taylor'>Academics Tour</button>" +
-			"<button class='.to_offcampus switch_button ' onclick=window.location='#mainstreet'>Off Campus Tour</button>" 
+			"<button class='to_academics academics_button' onclick=window.location='#taylor'>Academics Tour</button>" +
+			"<button class='to_offcampus switch_button' onclick=window.location='#mainstreet'>Off Campus Tour</button>" 
     }
 
     
@@ -275,10 +275,25 @@ function getNavs(locationTag) {
 					console.log(tour_track);
 					items.push(navs[i].styleClass);
 					}
-
-				 if(tour_track === navs[i].tourTracks && tour_track === 4){
-                     moveCarousel();
+					
+				if(tour_track === navs[i].tourTracks && tour_track === 4){
 					 inner_html +=
+                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
+                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
+                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
+                    "title='" + navs[i].ttip + "' />";
+					console.log(tour_track);
+					items.push(navs[i].styleClass);
+					}
+
+				 if(tour_track === navs[i].tourTracks && tour_track === 4) {
+                     moveCarousel();
+                 }
+				/* if(tour_track === navs[i].tourTracks && tour_track === 4){
+>>>>>>> 924767feecf55cedb8fefee37f35691b795f354e
+					 inner_html +=
+
                      "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                     navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
                     "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
