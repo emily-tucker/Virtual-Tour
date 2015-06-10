@@ -109,9 +109,9 @@
     var fieldhouse_to_universitycenter = new Navigation("#fieldhouse", "fieldhouse_to_universitycenter", "to University Center", "#universitycenter", "back", 50, 17, 0);
 	
 	/*====================Academic Arrows================== Arrow Color: Black -Academic Tour = 1*/
-	var taylor_to_borickAcademic = new Navigation("#taylor", "taylor_to_borickAcademic", "to Borick", "#borick", "left", 38, 27, 1);
+	var taylor_to_borickAcademic = new Navigation("#taylor", "taylor_to_borickAcademic", "to Borick", "#borick", "leftback", 38, 27, 1);
 	var taylor_to_quigleyAcademic = new Navigation("#taylor", "taylor_to_quigleyAcademic", "to Quigley", "#quigley", "right", 58, 27, 1); //
-	var hurst_to_quigleyAcademic = new Navigation("#hurst", "hurst_to_quigleyAcademic", "Back to Quigley Hall", "#quigley", "back", 50, 17, 1);
+	var hurst_to_quigleyAcademic = new Navigation("#hurst", "hurst_to_quigleyAcademic", "Back to Quigley Hall", "#quigley", "right", 50, 17, 1);
 	var hurst_to_kelleyAcademic = new Navigation("#hurst", "hurst_to_kelleyAcademic", "to Kelley Hall", "#kelley", "left", 42, 27, 1);
     var quigley_to_taylorAcademic = new Navigation("#quigley", "quigley_to_taylorAcademic", "back to Taylor", "#taylor", "left", 42, 27, 1);
 	var quigley_to_hurstAcademic = new Navigation("#quigley", "quigly_to_hurstAcademic", "to Hurst", "#hurst", "right", 58, 27, 1);
