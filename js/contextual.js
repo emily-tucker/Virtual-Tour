@@ -162,35 +162,6 @@
 	
 
 	/*====================Outdoor Arrows==================*/
-    var cbmr_to_telluride = new Navigation("#cbmr", "cbmr_to_telluride", "to Telluride", "#telluride", "right", 75, 50, 4);
-    var telluride_to_cbmr = new Navigation("#telluride", "telluride_to_cbmr", "to CBMR", "#cbmr", "left", 0, 50, 4);
-    var telluride_to_cb = new Navigation("#telluride", "telluride_to_cb", "to Crested Butte", "#cb", "right", 75, 50, 4);
-    var cb_to_telluride = new Navigation("#cb", "cb_to_telluride", "to Telluride", "#telluride", "left", 0, 50, 4);
-    var cb_to_mm = new Navigation("#cb", "cb_to_mm", "to Monarch Mountain", "#mm", "right", 75, 50, 4);
-    var mm_to_cb = new Navigation("#mm", "mm_to_cb", "to Crested Butte", "#cb", "left", 0, 50, 4);
-    var mm_to_tr = new Navigation("#mm", "mm_to_tr", "to Taylor Resevoir", "#tr", "right", 75, 50, 4);
-    var tr_to_mm = new Navigation("#tr", "tr_to_mm", "to Monarch Mountain", "#mm", "left", 0, 50, 4);
-    var tr_to_hr = new Navigation("#tr", "tr_to_hr", "to Hartman's Rocks", "#hartmans", "right", 75, 50, 4);
-    var hr_to_tr = new Navigation("#hartmans", "hr_to_tr", "to Taylor Resevoir", "#tr", "left", 0, 50, 4);
-    var hr_to_tc = new Navigation("#hartmans", "hr_to_tc", "to Taylor Canyon", "#tc", "right", 75, 50, 4);
-    var tc_to_hr = new Navigation("#tc", "tc_to_hr", "to Hartman's Rocks", "#hartmans", "left", 0, 50, 4);
-    var tc_to_wmountain = new Navigation("#tc", "tc_to_wmountain", "to W Mountain", "#wmountain", "right", 75, 50, 4);
-    var wmountain_to_tc = new Navigation("#wmountain", "wmountain_to_tc", "to Taylor Canyon", "#tc", "left", 0, 50, 4);
-    var wmountain_to_artscenter = new Navigation("#wmountain", "wmountain_to_artscenter", "to Arts Center", "#artscenter", "right", 75, 50, 4);
-    var artscenter_to_wmountain = new Navigation("#artscenter", "artscenter_to_wmountain", "to W Mountain", "#wmountain", "left", 0, 50, 4);
-    var artscenter_to_cbmr = new Navigation("#artscenter", "artscenter_to_cbmr", "to CBMR", "#cbmr", "right", 75, 50, 4);
-    var cbmr_to_artscenter = new Navigation("#cbmr", "cbmr_to_artscenter", "to Arts Center", "#artscenter", "left", 0, 50, 4);
-    var cbmr_to_gunnison = new Navigation("#cbmr", "cbmr_to_gunnison", "to Gunnison", "#mainstreet", "right", 75, 50, 4);
-    var gunnison_to_cbmr = new Navigation("#mainstreet", "telluride_to_gunnison", "to CBMR", "#cbmr", "left", 0, 50, 4);
-    var gunnison_to_elkmountains = new Navigation("#mainstreet", "gunnison_to_elkmountains", "to Elk Mountains", "#elkmountains", "right", 75, 50, 4);
-    var elkmountains_to_gunnison = new Navigation("#elkmountains", "elkmountains_to_gunnison", "to Gunnison", "#mainstreet", "left", 0, 50, 4);
-    var elkmountains_to_hr = new Navigation("#elkmountains", "elkmountains_to_hr", "to Hartman's Rocks", "#hartmans", "right", 75, 50, 4);
-    var hr_to_elkmountains = new Navigation("#hartmans", "hr_to_elkmountains", "to Elk Mountains", "#elkmountains", "left", 0, 50, 4);
-    var tc_to_sanjuan = new Navigation("#tc", "tc_to_sanjuan", "to San Juan Mountains", "#sanjuan", "right", 75, 50, 4);
-    var sanjuan_to_tc = new Navigation("#sanjuan", "sanjuan_to_tc", "to Taylor Canyon", "#tc", "left", 0, 50, 4);
-    var sanjuan_to_cbmr = new Navigation("#sanjuan", "sanjuan_to_cbmr", "to CBMR", "#cbmr", "right", 75, 50, 4);
-    var cbmr_to_sanjuan = new Navigation("#cbmr", "cbmr_to_sanjuan", "to San Juan Mountains", "#sanjuan", "left", 0, 50, 4);
-
     var dtToHr = new Navigation("#mainstreet", "dt_to_hr", "to Hartmans", "#hartmans", "left", 0, 50, 4);
     var dtTorm = new Navigation("#mainstreet", "dttorm", " to Rocky Mountains", "#rockymountains", "right", 75, 50, 4);
 
@@ -209,7 +180,7 @@
         mountaineerbowl_to_escalante, pathway2_to_kelley, fieldhouse_to_mountaineerbowl, mountaineerbowl_to_fieldhouse,
         pathway2_to_library, fieldhouse_to_pinnacles, pinnacles_to_fieldhouse, pinnacles_to_chipeta, chipeta_to_pinnacles,
         library_to_pathway2, universitycenter_to_library, library_to_escalante, universitycenter_to_fieldhouse, fieldhouse_to_universitycenter,
-        escalante_to_library, chipeta_to_mears, mears_to_ute, crawford_to_library, library_to_crawford, dtToHr, dtTorm, hrToCb, hrTOdt, cbToRm, cbtohr, rmToDt, rmTOCb, gatewayfield_to_begin, begin_to_gatewayfield, taylor_to_begin, begin_to_taylor,
+        escalante_to_library, chipeta_to_mears, mears_to_ute, crawford_to_library, library_to_crawford, gatewayfield_to_begin, begin_to_gatewayfield, taylor_to_begin, begin_to_taylor,
 		
 		/*======Academics Array=====*/
 		taylor_to_borickAcademic, taylor_to_quigleyAcademic, hurst_to_kelleyAcademic, quigley_to_taylorAcademic, quigley_to_hurstAcademic, kelley_to_hurstAcademic, kelley_to_libraryAcademic, hurst_to_quigleyAcademic, library_to_kelleyAcademic, library_to_crawfordAcademic, crawford_to_libraryAcademic, crawford_to_borickAcademic, borick_to_taylorAcademic, escalante_to_librarySL,
@@ -222,17 +193,9 @@
 		/*======Athletics Array=====*/
 		gatewayfield_to_mountaineerbowlAthletics, gatewayfield_to_fieldhouseAthletics,fieldhouse_to_paulwrightgymAthletics, fieldhouse_to_gatewayfieldAthletics, 										        paulwrightgym_to_fieldhouseAthletics, paulwrightgym_to_mountaineerbowlAthletics, mountaineerbowl_to_paulwrightgymAthletic,
 		
-		/*======Athletics Array=====*/
-		gunnison_to_cbmr, gunnison_to_elkmountains];
-    /*
-   hr_to_tc, tc_to_hr,cbmr_to_gunnison,
-    gunnison_to_cbmr, gunnison_to_elkmountains, elkmountains_to_gunnison, elkmountains_to_hr, hr_to_elkmountains,
-    tc_to_sanjuan, sanjuan_to_tc, sanjuan_to_cbmr, cbmr_to_sanjuan, cb_to_telluride, cb_to_mm,cbmr_to_telluride,telluride_to_cbmr,
-        mm_to_cb, mm_to_tr,tr_to_mm, tr_to_hr,hr_to_tr,hr_to_tc,tc_to_hr,tc_to_wmountain,wmountain_to_tc,wmountain_to_artscenter,
-        artscenter_to_wmountain,artscenter_to_cbmr,cbmr_to_artscenter,fieldhouse_to_mountaineerbowl, mountaineerbowl_to_fieldhouse, pathway2_to_library,
-        library_to_pathway2, universitycenter_to_library, universitycenter_to_fieldhouse, fieldhouse_to_universitycenter,
-        telluride_to_cb, dtToHr, hrToCb, cbToRm, rmToDt
-    ];*/
+		/*======Outdoor Array=====*/
+		dtToHr, dtTorm, hrToCb,hrTOdt,cbToRm, cbtohr, rmToDt, rmTOCb ];
+ 
 
 
 
