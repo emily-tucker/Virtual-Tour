@@ -277,8 +277,27 @@ function getNavs(locationTag) {
 					}
 					
 				if(tour_track === navs[i].tourTracks && tour_track === 4){
+<<<<<<< HEAD
 			
+=======
 					 inner_html +=
+                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
+                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
+                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
+                    "title='" + navs[i].ttip + "' />";
+					console.log(tour_track);
+					items.push(navs[i].styleClass);
+					}
+
+				 if(tour_track === navs[i].tourTracks && tour_track === 4) {
+                     moveCarousel();
+                 }
+				/* if(tour_track === navs[i].tourTracks && tour_track === 4){
+>>>>>>> 924767feecf55cedb8fefee37f35691b795f354e
+>>>>>>> 4cb68b927699b26840a991a5aea3aef8e9fe0584
+					 inner_html +=
+
                      "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                     navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
                     "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
