@@ -36,7 +36,8 @@ var video_time = 15000;
 var map_slide_time = 1200;
 var description_delay = 5000;
 var carousel_speed = 5000;
-var moveLeft = -170;
+var moveLeft = window.innerWidth * -0.1;
+var ciLeft = 1040;
 var video_fade = 2500;
 var map_state = 1;
 var map_in_time = 1500;
@@ -148,54 +149,54 @@ function getLocation(locationTag) {
         }
     }
 }
-function stopAnimation(){
-    $("#carousel").mouseenter(function(){
-        moveLeft = 0;
-    })
-}
+
 
 function moveCarousel() {
-    $("#carousel").delay(5000).animate({
-        left: moveLeft
-    }, carousel_speed, "linear", function() {
-        moveLeft -= 170;
-        $("#thumbImage0").css({
-            left: 1040
-        }, carousel_speed, "linear").queue( function () {
-            $("#carousel").animate({
-                left: moveLeft
-            }, carousel_speed, "linear", function(){
-                moveLeft -= 170;
-                $("#thumbImage1").css({
-                    left: 1040
-                }, carousel_speed, "linear").queue( function () {
-                    $("#carousel").animate({
-                        left: moveLeft
-                    }, carousel_speed, "linear", function () {
-                        moveLeft -= 170;
-                        $("#thumbImage2").css({
-                            left: 1040
-                        }, carousel_speed, "linear").queue(function () {
-                            $("#carousel").animate({
-                                left: moveLeft
-                            }, carousel_speed, "linear", function () {
-                                moveLeft -= 170;
-                                $("#thumbImage3").css({
-                                    left: 1040
-                                }, carousel_speed, "linear").queue(function () {
-                                    $("#carousel").animate({
-                                        left: moveLeft
-                                    }, carousel_speed, "linear", function () {
-                                        moveLeft -= 170;
-                                        $("#thumbImage4").css({
-                                            left: 1040
-                                        }, carousel_speed, "linear").queue(function () {
-                                            $("#carousel").animate({
-                                                left: moveLeft
-                                            }, carousel_speed, "linear", function () {
-                                                $("#thumbImage5").css({
-                                                    left: 1040
-                                                }, carousel_speed, "linear")
+        $("#carousel").delay(1000).animate({
+            left: moveLeft
+        }, carousel_speed, "linear", function () {
+            moveLeft -= 170;
+            $("#thumbImage0").css({
+                left: ciLeft
+            }, carousel_speed, "linear").queue(function () {
+                $("#carousel").animate({
+                    left: moveLeft
+                }, carousel_speed, "linear", function () {
+                    moveLeft -= 170;
+                    $("#thumbImage1").css({
+                        left: ciLeft
+                    }, carousel_speed, "linear").queue(function () {
+                        $("#carousel").animate({
+                            left: moveLeft
+                        }, carousel_speed, "linear", function () {
+                            moveLeft -= 170;
+                            $("#thumbImage2").css({
+                                left: ciLeft
+                            }, carousel_speed, "linear").queue(function () {
+                                $("#carousel").animate({
+                                    left: moveLeft
+                                }, carousel_speed, "linear", function () {
+                                    moveLeft -= 170;
+                                    $("#thumbImage3").css({
+                                        left: ciLeft
+                                    }, carousel_speed, "linear").queue(function () {
+                                        $("#carousel").animate({
+                                            left: moveLeft
+                                        }, carousel_speed, "linear", function () {
+                                            moveLeft -= 170;
+                                            $("#thumbImage4").css({
+                                                left: ciLeft
+                                            }, carousel_speed, "linear").queue(function () {
+                                                $("#carousel").animate({
+                                                    left: moveLeft
+                                                }, carousel_speed, "linear", function () {
+                                                    moveLeft -= 170;
+                                                    ciLeft += 1040;
+                                                    $("#thumbImage5").css({
+                                                        left: 1040
+                                                    }, carousel_speed, "linear", moveCarousel())
+                                                    })
+                                                })
                                             })
                                         })
                                     })
@@ -205,16 +206,12 @@ function moveCarousel() {
                     })
                 })
             })
-        })
-    })
+
+
 
 
 }
 
-$(document).ready(function() {
-    moveCarousel();
-
-});
 
 
 
@@ -268,6 +265,7 @@ function getNavs(locationTag) {
 
 
                 if(tour_track === navs[i].tourTracks && tour_track === 1 || tour_track === navs[i].tourTracks && tour_track === 2 || tour_track === navs[i].tourTracks && tour_track === 3){
+                    moveCarousel();
 						inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                     navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
@@ -279,17 +277,7 @@ function getNavs(locationTag) {
 					}
 					
 				if(tour_track === navs[i].tourTracks && tour_track === 4){
-					 inner_html +=
-                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
-                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
-                    "title='" + navs[i].ttip + "' />";
-					console.log(tour_track);
-					items.push(navs[i].styleClass);
-					}
-
-				/* if(tour_track === navs[i].tourTracks && tour_track === 4){
+			
 					 inner_html +=
                      "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                     navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
@@ -299,12 +287,6 @@ function getNavs(locationTag) {
 					console.log(tour_track);
 					items.push(navs[i].styleClass);
 					}
-					
-					/*navs[i].direction + "_offcampus arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
-                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_offcampus.png' " +
-                    "title='" + navs[i].ttip + "' />";*/
-					 
 				 
 
 $( "#target" ).click(function() {
