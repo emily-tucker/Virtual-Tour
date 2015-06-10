@@ -277,25 +277,7 @@ function getNavs(locationTag) {
 					}
 					
 				if(tour_track === navs[i].tourTracks && tour_track === 4){
-<<<<<<< HEAD
-			
-=======
-					 inner_html +=
-                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
-                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
-                    "title='" + navs[i].ttip + "' />";
-					console.log(tour_track);
-					items.push(navs[i].styleClass);
-					}
 
-				 if(tour_track === navs[i].tourTracks && tour_track === 4) {
-                     moveCarousel();
-                 }
-				/* if(tour_track === navs[i].tourTracks && tour_track === 4){
->>>>>>> 924767feecf55cedb8fefee37f35691b795f354e
->>>>>>> 4cb68b927699b26840a991a5aea3aef8e9fe0584
 					 inner_html +=
 
                      "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
@@ -487,19 +469,20 @@ var prevCampus = true;
 function loadMap(locationTag) {
     for (var i in locations) {
         if (locations[i].tag === locationTag) {
-            if (prevCampus != locations[i].onCampus) {
-                if (!locations[i].onCampus) {
+          if(tour_track === 4){
                     document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/offcampusmap.png">';
-                }
-                else{
+					}
+                
+                else if(tour_track === 1 || tour_track === 2 || tour_track === 3){
                     document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/oncampusmap.jpg">';
+			
                 }
-            }
+            
             $('.mapImage').load(function ()
             {
                 //animate_map(currentLocation);
             });
-            prevCampus = locations[i].onCampus;
+            
         }
     }
 }
