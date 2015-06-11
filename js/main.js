@@ -48,6 +48,7 @@ var tour_track = 0;
 var showHide = true; /*bool to determine weather to show or hide the carousel.*/
 var show = 0;
 var currentLocation; //used by just about everything, initialized here
+var off_campus = false;
 
 
 
@@ -221,6 +222,16 @@ function load(){
     tour_track = 1;
     window.location = '#begin'
 }
+/*
+function warning(){
+    if(d){
+    }
+}
+
+<<<<<<< HEAD
+=======
+window.onbeforeunload = warning();
+*/
 
 /*******************************************************
  *
