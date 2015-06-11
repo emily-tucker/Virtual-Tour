@@ -222,16 +222,13 @@ function load(){
     tour_track = 1;
     window.location = '#begin'
 }
-/*
-function warning(){
-    if(d){
-    }
+
+function reloadMap(){
+    tour_track = 4;
+
 }
 
-<<<<<<< HEAD
-=======
-window.onbeforeunload = warning();
-*/
+window.onbeforeunload = reloadMap();
 
 /*******************************************************
  *
@@ -520,7 +517,7 @@ function loadMap(locationTag) {
                     document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/offcampusmap.png">';
 
 		  }
-            
+
         }
     }
     console.log(tour_track);
