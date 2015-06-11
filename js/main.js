@@ -227,7 +227,7 @@ function moveCarousel() {
  * ******************************************************/
 
 function getNavs(locationTag) {
-	console.log(tour_track);
+	//console.log(tour_track);
     $('.tipsy:last').remove();
 	 if (currentLocation.locationType === "defualt") {
         var inner_html = 
@@ -263,7 +263,7 @@ function getNavs(locationTag) {
                     "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
                     "<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>";
 
-
+				
                 if(tour_track === navs[i].tourTracks && tour_track === 1 || tour_track === navs[i].tourTracks && tour_track === 2 || tour_track === navs[i].tourTracks && tour_track === 3){
                     moveCarousel();
 						inner_html +=
@@ -272,7 +272,7 @@ function getNavs(locationTag) {
                     "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
                     " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
                     "title='" + navs[i].ttip + "' />";
-					console.log(tour_track);
+					//console.log(tour_track);
 					items.push(navs[i].styleClass);
 					}
 					
@@ -285,7 +285,7 @@ function getNavs(locationTag) {
                     "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
                     " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_offcampus.png' " +
                     "title='" + navs[i].ttip + "' />";
-					console.log(tour_track);
+					//console.log(tour_track);
 					items.push(navs[i].styleClass);
 					}
 				 
@@ -318,6 +318,7 @@ $( "#target" ).click(function() {
 
 
                 inner_html +=
+				tourKeeper = current.tour_track;
 				"<button class='restart_button' onclick=window.location='#begin'>Restart Tour</button>" +
 				"<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
                 "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
@@ -469,14 +470,19 @@ var prevCampus = true;
 function loadMap(locationTag) {
     for (var i in locations) {
         if (locations[i].tag === locationTag) {
-          if(tour_track === 4){
-                    document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/offcampusmap.png">';
-					}
-                
-                else if(tour_track === 1 || tour_track === 2 || tour_track === 3){
+           if(tour_track === 1 || tour_track === 2 || tour_track === 3){
                     document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/oncampusmap.jpg">';
 			
                 }
+		  else if(tour_track === 4){
+                    document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/offcampusmap.png">';
+					if(document.getElementById('restart_button').clicked === true){
+					document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/oncampusmap.jpg">';
+					}   
+					
+		  }
+             
+          
             
             $('.mapImage').load(function ()
             {
@@ -504,8 +510,11 @@ $(function () {
 /*****************************
 		Tour Instances
 *****************************/
-	console.log(tour_track);
+	//console.log(tour_track);
 	
+	
+	
+	var currentTrack = this.currentTrack;
 	
 	$('body').on('click', '.to_academics', function () {
 		tour_track = 1;
@@ -520,10 +529,12 @@ $(function () {
 	
 	$('body').on('click', '.to_athletics', function () {
 		tour_track = 3;
+		
 		console.log(tour_track);
 	});
 	$('body').on('click', '.to_offcampus', function () {
 		tour_track = 4;
+	
 		console.log(tour_track);
 	});
 	
