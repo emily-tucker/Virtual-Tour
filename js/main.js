@@ -44,7 +44,7 @@ var map_in_time = 1500;
 var map_button_in_time = 750;
 var first_time = false;
 var is_mobile = false;
-var tour_track = 0;
+var tour_track = 1;
 var showHide = true; /*bool to determine weather to show or hide the carousel.*/
 var show = 0;
 var currentLocation; //used by just about everything, initialized here
@@ -222,14 +222,14 @@ function load(){
     tour_track = 1;
     window.location = '#begin'
 }
-
+/*
 function reloadMap(){
     tour_track = 4;
 
 }
 
 window.onbeforeunload = reloadMap();
-
+*/
 /*******************************************************
  *
  *  Render all navigation items at the current location
