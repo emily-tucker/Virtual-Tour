@@ -227,7 +227,7 @@ function moveCarousel() {
  * ******************************************************/
 
 function getNavs(locationTag) {
-	//console.log(tour_track);
+	console.log(tour_track);
     $('.tipsy:last').remove();
 	 if (currentLocation.locationType === "defualt") {
         var inner_html = 
@@ -272,7 +272,7 @@ function getNavs(locationTag) {
                     "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
                     " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
                     "title='" + navs[i].ttip + "' />";
-					//console.log(tour_track);
+					console.log(tour_track);
 					items.push(navs[i].styleClass);
 					}
 					
@@ -285,7 +285,7 @@ function getNavs(locationTag) {
                     "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
                     " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_offcampus.png' " +
                     "title='" + navs[i].ttip + "' />";
-					//console.log(tour_track);
+					console.log(tour_track);
 					items.push(navs[i].styleClass);
 					}
 				 
@@ -510,33 +510,28 @@ $(function () {
 /*****************************
 		Tour Instances
 *****************************/
-	//console.log(tour_track);
+	console.log(tour_track);
 	
-	
-	
-	var currentTrack = this.currentTrack;
 	
 	$('body').on('click', '.to_academics', function () {
 		tour_track = 1;
 		console.log(tour_track);
 	
-	});
+	})
 	
 	$('body').on('click', '.to_studentlife', function () {
 		tour_track = 2;
 		console.log(tour_track);
-	});
+	})
 	
 	$('body').on('click', '.to_athletics', function () {
 		tour_track = 3;
-		
 		console.log(tour_track);
-	});
+	})
 	$('body').on('click', '.to_offcampus', function () {
 		tour_track = 4;
-	
 		console.log(tour_track);
-	});
+	})
 	
 
     /*****************************
