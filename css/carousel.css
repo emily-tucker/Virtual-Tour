@@ -2,9 +2,9 @@
     position: fixed;
     top: 85%;
     height: -10%;
-    width: 85%;
-    left: 10%;
-	z-index:5;
+    width:auto;
+    left: 20%;
+	z-index:0;
 }
 
 /******************
@@ -17,10 +17,12 @@
 
 .citem {
     float: left;
+	padding: -10%;
 }
 
 .Thumbimage { 
    position: relative;
+   margin-left: -50px;
 }
 
 .Thumbcaption

@@ -222,7 +222,6 @@ function load(){
     window.location = '#begin'
 }
 
-
 /*******************************************************
  *
  *  Render all navigation items at the current location
@@ -261,6 +260,26 @@ function getNavs(locationTag) {
                         inner_html += "<button class='map_button'>Show Map</button>"
                     }
                 }
+				
+				$('body').on('click', '.to_academics', function () {
+		tour_track = 1;
+		console.log(tour_track);
+	
+	});
+	
+	$('body').on('click', '.to_studentlife', function () {
+		tour_track = 2;
+		console.log(tour_track);
+	});
+	
+	$('body').on('click', '.to_athletics', function () {
+		tour_track = 3;
+		console.log(tour_track);
+	});
+	$('body').on('click', '.to_offcampus', function () {
+		tour_track = 4;
+
+	});
 
 
 
@@ -294,6 +313,11 @@ function getNavs(locationTag) {
 
 					items.push(navs[i].styleClass);
 					}
+					
+/*****************************
+		Tour Instances
+*****************************/
+
 				 
 
 $( "#target" ).click(function() {
@@ -506,33 +530,6 @@ $(function () {
 
     detectIE();
 	
-/*****************************
-		Tour Instances
-*****************************/
-$('body').on('click', '.to_academics', function () {
-		tour_track = 1;
-		console.log(tour_track);
-	
-	});
-	
-	$('body').on('click', '.to_studentlife', function () {
-		tour_track = 2;
-		console.log(tour_track);
-	});
-	
-	$('body').on('click', '.to_athletics', function () {
-		tour_track = 3;
-		console.log(tour_track);
-	});
-	$('body').on('click', '.to_offcampus', function () {
-		tour_track = 4;
-
-	});
-	
-	
-	
-	
-
 
     /*****************************
      * Determines if Internet Explorer is being used
