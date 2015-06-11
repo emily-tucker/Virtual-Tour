@@ -276,6 +276,7 @@ function getNavs(locationTag) {
                     "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
                     " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
                     "title='" + navs[i].ttip + "' />";
+
 					items.push(navs[i].styleClass);
 					}
 					
@@ -288,6 +289,7 @@ function getNavs(locationTag) {
                     "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
                     " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_offcampus.png' " +
                     "title='" + navs[i].ttip + "' />";
+
 					items.push(navs[i].styleClass);
 					}
 				 
@@ -479,6 +481,7 @@ function loadMap(locationTag) {
                 }
 		  else if(tour_track === 4){
                     document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/offcampusmap.png">';
+
 		  }
             
         }
@@ -507,7 +510,6 @@ $(function () {
 
 	
 	
-	var currentTrack = this.currentTrack;
 	
 	$('body').on('click', '.to_academics', function () {
 		tour_track = 1;
@@ -522,12 +524,11 @@ $(function () {
 	
 	$('body').on('click', '.to_athletics', function () {
 		tour_track = 3;
-		
 		console.log(tour_track);
 	});
 	$('body').on('click', '.to_offcampus', function () {
 		tour_track = 4;
-	
+
 	});
 
 

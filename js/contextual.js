@@ -64,14 +64,19 @@
     /**
      * Navigation object instances
      */
+	/*====================Default Arrows================== Arrow Color: White - Default == 0*/
+   
+	var begin_to_gatewayfield = new Navigation("#begin", "begin_to_gatewayfield", "to Gateway Soccer Fields", "#gatewayfield", "back", 48, 15, 0); 
+	var begin_to_taylor = new Navigation("#begin", "begin_to_taylor", "to Taylor Hall", "#taylor","forward", 47, 38, 0);//
+	
 	
 	/*====================Academic Arrows================== Arrow Color: Black -Academic Tour = 1*/
 	var taylor_to_borickAcademic = new Navigation("#taylor", "taylor_to_borickAcademic", "to Borick", "#borick", "leftback", 38, 27, 1);
 	var taylor_to_quigleyAcademic = new Navigation("#taylor", "taylor_to_quigleyAcademic", "to Quigley", "#quigley", "right", 58, 27, 1); //
 	var hurst_to_quigleyAcademic = new Navigation("#hurst", "hurst_to_quigleyAcademic", "Back to Quigley Hall", "#quigley", "right", 50, 17, 1);
-	var hurst_to_kelleyAcademic = new Navigation("#hurst", "hurst_to_kelleyAcademic", "to Kelley Hall", "#kelley", "left", 42, 27, 1);
-    var quigley_to_taylorAcademic = new Navigation("#quigley", "quigley_to_taylorAcademic", "back to Taylor", "#taylor", "left", 42, 27, 1);
-	var quigley_to_hurstAcademic = new Navigation("#quigley", "quigly_to_hurstAcademic", "to Hurst", "#hurst", "right", 58, 27, 1);
+	var hurst_to_kelleyAcademic = new Navigation("#hurst", "hurst_to_kelleyAcademic", "to Kelley Hall", "#kelley", "left", 42, 20, 1);
+    var quigley_to_taylorAcademic = new Navigation("#quigley", "quigley_to_taylorAcademic", "back to Taylor", "#taylor", "backleft", 42, 18, 1);
+	var quigley_to_hurstAcademic = new Navigation("#quigley", "quigly_to_hurstAcademic", "to Hurst", "#hurst", "right", 50, 27, 1);
     var kelley_to_hurstAcademic = new Navigation("#kelley", "kelley_to_hurstAcademic", "Back to Hurst Hall", "#hurst", "back", 50, 17, 1);
     var kelley_to_libraryAcademic = new Navigation("#kelley", "kelley_to_libraryAcademic", "To the library", "#library", "left", 42, 27, 1);  
     var library_to_kelleyAcademic = new Navigation("#library", "library_to_kelleyAcademic", "Back to Kelley Hall ", "#kelley", "back", 50, 17, 1);
@@ -131,7 +136,7 @@
     var rmToDt = new Navigation("#rockymountains", "rmtodt", "to Downtown", "#mainstreet", "left", 25, 20, 4);
     var rmTOCb = new Navigation("#rockymountains", "rmtocb", "to Crested Butte", "#cb", "right", 65, 20, 4);
 
-    var navs = [
+    var navs = [ begin_to_gatewayfield, begin_to_taylor,
 		
 		/*======Academics Array=====*/
 		taylor_to_borickAcademic, taylor_to_quigleyAcademic, hurst_to_kelleyAcademic, quigley_to_taylorAcademic, quigley_to_hurstAcademic, kelley_to_hurstAcademic, kelley_to_libraryAcademic, hurst_to_quigleyAcademic, library_to_kelleyAcademic, library_to_crawfordAcademic, crawford_to_libraryAcademic, crawford_to_borickAcademic, borick_to_taylorAcademic, escalante_to_librarySL,
