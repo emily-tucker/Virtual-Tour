@@ -509,7 +509,25 @@ $(function () {
 /*****************************
 		Tour Instances
 *****************************/
+$('body').on('click', '.to_academics', function () {
+		tour_track = 1;
+		console.log(tour_track);
+	
+	});
+	
+	$('body').on('click', '.to_studentlife', function () {
+		tour_track = 2;
+		console.log(tour_track);
+	});
+	
+	$('body').on('click', '.to_athletics', function () {
+		tour_track = 3;
+		console.log(tour_track);
+	});
+	$('body').on('click', '.to_offcampus', function () {
+		tour_track = 4;
 
+	});
 	
 	
 	
