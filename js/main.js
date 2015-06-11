@@ -213,12 +213,14 @@ function moveCarousel() {
 }
 
 */
+/**************************
+ * Function to keep tour track
+ * from off campus to on campus
+ ***************************/
 function load(){
     tour_track = 1;
-    console.log(tour_track);
     window.location = '#begin'
 }
-
 
 
 /*******************************************************
