@@ -35,7 +35,7 @@
 var video_time = 15000;
 var map_slide_time = 1200;
 var description_delay = 5000;
-var carousel_speed = 5000;
+var carousel_speed = 3000;
 var moveLeft = window.innerWidth * -0.1;
 var ciLeft = 1040;
 var video_fade = 2500;
@@ -44,7 +44,7 @@ var map_in_time = 1500;
 var map_button_in_time = 750;
 var first_time = false;
 var is_mobile = false;
-var tour_track = 1;
+var tour_track = 0;
 var showHide = true; /*bool to determine weather to show or hide the carousel.*/
 var show = 0;
 var currentLocation; //used by just about everything, initialized here
@@ -150,69 +150,143 @@ function getLocation(locationTag) {
         }
     }
 }
-
 /*
-function moveCarousel() {
-        $("#carousel").delay(1000).animate({
-            left: moveLeft
-        }, carousel_speed, "linear", function () {
-            moveLeft -= 170;
-            $("#thumbImage0").css({
-                left: ciLeft
-            }, carousel_speed, "linear").queue(function () {
-                $("#carousel").animate({
-                    left: moveLeft
-                }, carousel_speed, "linear", function () {
-                    moveLeft -= 170;
-                    $("#thumbImage1").css({
-                        left: ciLeft
-                    }, carousel_speed, "linear").queue(function () {
-                        $("#carousel").animate({
-                            left: moveLeft
-                        }, carousel_speed, "linear", function () {
-                            moveLeft -= 170;
-                            $("#thumbImage2").css({
-                                left: ciLeft
-                            }, carousel_speed, "linear").queue(function () {
-                                $("#carousel").animate({
-                                    left: moveLeft
-                                }, carousel_speed, "linear", function () {
-                                    moveLeft -= 170;
-                                    $("#thumbImage3").css({
-                                        left: ciLeft
-                                    }, carousel_speed, "linear").queue(function () {
-                                        $("#carousel").animate({
-                                            left: moveLeft
+function move(){
+    var zero = $("#thumbImage0");
+    var one = $("#thumbImage1");
+    var two = $("#thumbImage2");
+    var three = $("#thumbImage3");
+    var four = $("#thumbImage4");
+    var five = $("#thumbImage5");
+    var car = $("#carousel");
+
+    car.css({
+        left: '20%'
+    });
+
+    if(tour_track >= 0){
+        zero.delay(3000).animate({
+            left: -500
+        }, carousel_speed, "linear", function(){
+            zero.hide();
+            if(zero.is(':hidden')){
+                zero.css({
+                    left: 1000
+                });
+                zero.show();
+                zero.animate({
+                    left: 740
+                }, carousel_speed, "linear", function(){
+                    car.animate({
+                        left: 160
+                    },1000, "linear", function(){
+                        one.animate({
+                            left: -380
+                        },carousel_speed, "linear", function(){
+                            one.hide();
+                            if(one.is(':hidden')){
+                                one.css({
+                                    left: 1000
+                                });
+                                one.show();
+                                one.animate({
+                                    left: 740
+                                }, carousel_speed, "linear", function() {
+                                    car.animate({
+                                        left: 40
+                                    }, 1000, "linear", function () {
+                                        two.animate({
+                                            left: -380
                                         }, carousel_speed, "linear", function () {
-                                            moveLeft -= 170;
-                                            $("#thumbImage4").css({
-                                                left: ciLeft
-                                            }, carousel_speed, "linear").queue(function () {
-                                                $("#carousel").animate({
-                                                    left: moveLeft
+                                            two.hide();
+                                            if (two.is(':hidden')) {
+                                                two.css({
+                                                    left: 1000
+                                                });
+                                                two.show();
+                                                two.animate({
+                                                    left: 740
                                                 }, carousel_speed, "linear", function () {
-                                                    moveLeft -= 170;
-                                                    ciLeft += 1040;
-                                                    $("#thumbImage5").css({
-                                                        left: 1040
-                                                    }, carousel_speed, "linear", moveCarousel())
+                                                    car.animate({
+                                                        left: -80
+                                                    }, 1000, "linear", function () {
+                                                        three.animate({
+                                                            left: -380
+                                                        }, carousel_speed, "linear", function () {
+                                                            three.hide();
+                                                            if (three.is(':hidden')) {
+                                                                three.css({
+                                                                    left: 1000
+                                                                });
+                                                                three.show();
+                                                                three.animate({
+                                                                    left: 740
+                                                                }, carousel_speed, "linear", function () {
+                                                                    car.animate({
+                                                                        left: -200
+                                                                    }, 1000, "linear", function(){
+                                                                        four.animate({
+                                                                            left: -380
+                                                                        },carousel_speed, "linear", function(){
+                                                                            four.hide();
+                                                                            if(four.is(':hidden')){
+                                                                                four.css({
+                                                                                    left: 1000
+                                                                                });
+                                                                                four.show();
+                                                                                four.animate({
+                                                                                    left: 740
+                                                                                }, carousel_speed, "linear", function(){
+                                                                                    car.animate({
+                                                                                        left: -320
+                                                                                    }, 1000, "linear", function(){
+                                                                                        five.animate({
+                                                                                            left: -350
+                                                                                        },carousel_speed, "linear", function(){
+                                                                                            five.hide();
+                                                                                            if(five.is(':hidden')){
+                                                                                                five.css({
+                                                                                                    left: 1000
+                                                                                                });
+                                                                                                five.show();
+                                                                                                five.animate({
+                                                                                                    left: 740
+                                                                                                }, carousel_speed, "linear", function(){
+                                                                                                    car.animate({
+                                                                                                        left: -440
+                                                                                                    }, 1000, "linear", function(){
+                                                                                                        car.css({
+
+                                                                                                        })
+                                                                                                    })
+                                                                                                })
+                                                                                            }
+                                                                                        })
+                                                                                    })
+                                                                                })
+                                                                            }
+                                                                        })
+                                                                    })
+                                                                })
+                                                            }
+                                                        })
                                                     })
                                                 })
-                                            })
+                                            }
                                         })
                                     })
+
                                 })
-                            })
+                            }
                         })
                     })
                 })
-            })
+            }
+        });
 
-
-
+    }
 
 }
-
 */
 /**************************
  * Function to keep tour track
@@ -605,6 +679,7 @@ function detectIE() {
         getHspots(location.hash);
         loadMap(location.hash);
         getCIs(location.hash);
+        //move();
         animate_map(currentLocation, map_slide_time);
     });
 
