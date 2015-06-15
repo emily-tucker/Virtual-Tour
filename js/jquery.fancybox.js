@@ -185,8 +185,7 @@
 			openEasing  : 'swing',
 			openOpacity : true,
 			openMethod  : 'zoomIn',
-			nextClick : true,
-			
+
 
 			// Closing fancyBox
 			closeEffect  : 'elastic', // 'elastic', 'fade' or 'none'
@@ -194,23 +193,20 @@
 			closeEasing  : 'swing',
 			closeOpacity : true,
 			closeMethod  : 'zoomOut',
-			nextClick : true,
-		
+
 
 			// Changing next gallery item
 			nextEffect : 'elastic', // 'elastic', 'fade' or 'none'
 			nextSpeed  : 250,
 			nextEasing : 'swing',
 			nextMethod : 'changeIn',
-			nextClick : true,
-			
+
 
 			// Changing previous gallery item
 			prevEffect : 'fade', // 'elastic', 'fade' or 'none'
 			prevSpeed  : 250,
 			prevEasing : 'swing',
 			prevMethod : 'changeOut',
-			nextClick : true,
 
 
 			// Enable default helpers
