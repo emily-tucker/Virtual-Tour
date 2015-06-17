@@ -43,7 +43,7 @@ var map_in_time = 1500;
 var map_button_in_time = 750;
 var first_time = false;
 var is_mobile = false;
-var tour_track = 1;
+var tour_track = 0;
 var showHide = true;
 /*bool to determine weather to show or hide the carousel.*/
 var show = 0;
@@ -153,7 +153,7 @@ function getLocation(locationTag) {
  * from off campus to on campus
  ***************************/
 function load() {
-    tour_track = 1;
+    tour_track = 0;
     window.location = '#begin'
 }
 
@@ -169,8 +169,7 @@ function load() {
  * ******************************************************/
 
 function getNavs(locationTag) {
-    $('.tipsy:last').remove();
-    if (currentLocation.locationType === "default") {
+    if (tour_track === 0) {
         var inner_html =
 
             "<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
