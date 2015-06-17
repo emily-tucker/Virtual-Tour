@@ -180,7 +180,7 @@ window.onbeforeunload = reloadMap();
 
 function getNavs(locationTag) {
     $('.tipsy:last').remove();
-	 if (currentLocation.locationType === "defualt") {
+	 if (currentLocation.locationType === "default") {
         var inner_html =
 
 			"<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
@@ -189,7 +189,7 @@ function getNavs(locationTag) {
 			"<button class='to_offcampus switch_button' onclick=window.location='#mainstreet'>Off Campus Tour</button>"
     }
 
-    
+
     var items = []; /* Do we need this*/
     for (var i in navs) {
         if (currentLocation.onCampus) {
@@ -206,7 +206,7 @@ function getNavs(locationTag) {
                         inner_html += "<button class='map_button'>Show Map</button>"
                     }
                 }
-				
+
 				$('body').on('click', '.to_academics', function () {
 		tour_track = 1;
 		console.log(tour_track);
