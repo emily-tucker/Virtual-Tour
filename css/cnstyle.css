@@ -139,7 +139,6 @@ body.contextual_navigation
 .athletics_button, .academics_button, .sl_button, .switch_button  {
 	text-align:center;
 	background-color: rgba(0,0,0,.75);
-	
 	border:1.5px solid #C00;
     display:inline-block;
     cursor:pointer;

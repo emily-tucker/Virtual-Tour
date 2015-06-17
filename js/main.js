@@ -143,9 +143,7 @@ function getLocation(locationTag) {
                 $(".description").slideToggle("slow");
             });
             currentLocation = locations[i];
-            if (currentLocation && currentLocation.onCampus) {
-                previousLocation = currentLocation;
-            }
+         
             break;
         }
     }
@@ -316,34 +314,16 @@ window.onbeforeunload = reloadMap();
 
 function getNavs(locationTag) {
     $('.tipsy:last').remove();
+	var inner_html = ""
 	 if (currentLocation.locationType === "defualt") {
-        var inner_html = 
+       inner_html = 
 		
 			"<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
 			"<button class='to_studentlife sl_button' onclick=window.location='#library'>Student Life Tour</button>" +
 			"<button class='to_academics academics_button' onclick=window.location='#taylor'>Academics Tour</button>" +
 			"<button class='to_offcampus switch_button' onclick=window.location='#mainstreet'>Off Campus Tour</button>" 
     }
-
-    
-    var items = [];
-    for (var i in navs) {
-        if (currentLocation.onCampus) {
-            if (navs[i].tag === locationTag){
-                if(first_time){
-                    inner_html += "<button class='map_button_initial'>Enlarge Map</button>"
-                }
-                else{
-                    if(map_state === 2) {
-                        inner_html += "<button class='map_button'>Collapse Map</button>"
-                    }else if(map_state === 1) {
-                        inner_html += "<button class='map_button'>Enlarge Map</button>"
-                    }else if(map_state === 0) {
-                        inner_html += "<button class='map_button'>Show Map</button>"
-                    }
-                }
-				
-				$('body').on('click', '.to_academics', function () {
+	$('body').on('click', '.to_academics', function () {
 		tour_track = 1;
 		console.log(tour_track);
 	
@@ -364,6 +344,25 @@ function getNavs(locationTag) {
 	});
 
 
+    
+    var items = [];
+    for (var i in navs) {
+            if (navs[i].tag === locationTag){
+                if(first_time){
+                    inner_html += "<button class='map_button_initial'>Enlarge Map</button>"
+                }
+                else{
+                    if(map_state === 2) {
+                        inner_html += "<button class='map_button'>Collapse Map</button>"
+                    }else if(map_state === 1) {
+                        inner_html += "<button class='map_button'>Enlarge Map</button>"
+                    }else if(map_state === 0) {
+                        inner_html += "<button class='map_button'>Show Map</button>"
+                    
+                }
+				
+	
+
 
                 inner_html +=
                     "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
@@ -371,7 +370,7 @@ function getNavs(locationTag) {
                     "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
                     "<button class='restart_button' id = 'rb' onclick=load()>Restart Tour</button>";
 
-				
+				/*Fix here*/
                 if(tour_track === navs[i].tourTracks && tour_track === 1 || tour_track === navs[i].tourTracks && tour_track === 2 || tour_track === navs[i].tourTracks && tour_track === 3){
 						inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
@@ -418,7 +417,7 @@ $( "#target" ).click(function() {
                 }
             }
         }
-        if (!currentLocation.onCampus){
+        
             if (navs[i].tag === locationTag) {
                     if(map_state === 2) {
                         inner_html += "<button class='map_button'>Collapse Map</button>"
@@ -426,7 +425,7 @@ $( "#target" ).click(function() {
                         inner_html += "<button class='map_button'>Enlarge Map</button>"
                     }else if(map_state === 0) {
                         inner_html += "<button class='map_button'>Show Map</button>"
-                    }
+                    
 
 
                 inner_html +=
