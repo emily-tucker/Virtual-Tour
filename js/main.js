@@ -1,3 +1,4 @@
+
 /*******************************************
  * This file contains all general functions that are called throughout the tour
  * as well as our main calls to functions in other classes the user progresses through the tour
@@ -44,7 +45,7 @@ var map_in_time = 1500;
 var map_button_in_time = 750;
 var first_time = false;
 var is_mobile = false;
-var tour_track = 0;
+var tour_track = 1;
 var showHide = true; /*bool to determine weather to show or hide the carousel.*/
 var show = 0;
 var currentLocation; //used by just about everything, initialized here
@@ -122,6 +123,29 @@ function map_in(map_time, button_time){
     });
 }
 
+/*****************************
+		Tour Instances
+*****************************/              
+
+	$('body').on('click', '.to_academics', function () {
+		tour_track = 1;
+		//console.log(tour_track);
+
+	});
+
+	$('body').on('click', '.to_studentlife', function () {
+		tour_track = 2;
+		//console.log(tour_track);
+	});
+
+	$('body').on('click', '.to_athletics', function () {
+		tour_track = 3;
+		//console.log(tour_track);
+	});
+	$('body').on('click', '.to_offcampus', function () {
+		tour_track = 4;
+
+	});
 
 /******************************************
  * Get location method which takes a tag from the hash to create the current location
@@ -143,149 +167,15 @@ function getLocation(locationTag) {
                 $(".description").slideToggle("slow");
             });
             currentLocation = locations[i];
-         
+            if (currentLocation && currentLocation.onCampus) {
+                previousLocation = currentLocation;
+            }
             break;
         }
     }
 }
-/*
-function move(){
-    var zero = $("#thumbImage0");
-    var one = $("#thumbImage1");
-    var two = $("#thumbImage2");
-    var three = $("#thumbImage3");
-    var four = $("#thumbImage4");
-    var five = $("#thumbImage5");
-    var car = $("#carousel");
 
-    car.css({
-        left: '20%'
-    });
 
-    if(tour_track >= 0){
-        zero.delay(3000).animate({
-            left: -500
-        }, carousel_speed, "linear", function(){
-            zero.hide();
-            if(zero.is(':hidden')){
-                zero.css({
-                    left: 1000
-                });
-                zero.show();
-                zero.animate({
-                    left: 740
-                }, carousel_speed, "linear", function(){
-                    car.animate({
-                        left: 160
-                    },1000, "linear", function(){
-                        one.animate({
-                            left: -380
-                        },carousel_speed, "linear", function(){
-                            one.hide();
-                            if(one.is(':hidden')){
-                                one.css({
-                                    left: 1000
-                                });
-                                one.show();
-                                one.animate({
-                                    left: 740
-                                }, carousel_speed, "linear", function() {
-                                    car.animate({
-                                        left: 40
-                                    }, 1000, "linear", function () {
-                                        two.animate({
-                                            left: -380
-                                        }, carousel_speed, "linear", function () {
-                                            two.hide();
-                                            if (two.is(':hidden')) {
-                                                two.css({
-                                                    left: 1000
-                                                });
-                                                two.show();
-                                                two.animate({
-                                                    left: 740
-                                                }, carousel_speed, "linear", function () {
-                                                    car.animate({
-                                                        left: -80
-                                                    }, 1000, "linear", function () {
-                                                        three.animate({
-                                                            left: -380
-                                                        }, carousel_speed, "linear", function () {
-                                                            three.hide();
-                                                            if (three.is(':hidden')) {
-                                                                three.css({
-                                                                    left: 1000
-                                                                });
-                                                                three.show();
-                                                                three.animate({
-                                                                    left: 740
-                                                                }, carousel_speed, "linear", function () {
-                                                                    car.animate({
-                                                                        left: -200
-                                                                    }, 1000, "linear", function(){
-                                                                        four.animate({
-                                                                            left: -380
-                                                                        },carousel_speed, "linear", function(){
-                                                                            four.hide();
-                                                                            if(four.is(':hidden')){
-                                                                                four.css({
-                                                                                    left: 1000
-                                                                                });
-                                                                                four.show();
-                                                                                four.animate({
-                                                                                    left: 740
-                                                                                }, carousel_speed, "linear", function(){
-                                                                                    car.animate({
-                                                                                        left: -320
-                                                                                    }, 1000, "linear", function(){
-                                                                                        five.animate({
-                                                                                            left: -350
-                                                                                        },carousel_speed, "linear", function(){
-                                                                                            five.hide();
-                                                                                            if(five.is(':hidden')){
-                                                                                                five.css({
-                                                                                                    left: 1000
-                                                                                                });
-                                                                                                five.show();
-                                                                                                five.animate({
-                                                                                                    left: 740
-                                                                                                }, carousel_speed, "linear", function(){
-                                                                                                    car.animate({
-                                                                                                        left: -440
-                                                                                                    }, 1000, "linear", function(){
-                                                                                                        car.css({
-
-                                                                                                        })
-                                                                                                    })
-                                                                                                })
-                                                                                            }
-                                                                                        })
-                                                                                    })
-                                                                                })
-                                                                            }
-                                                                        })
-                                                                    })
-                                                                })
-                                                            }
-                                                        })
-                                                    })
-                                                })
-                                            }
-                                        })
-                                    })
-
-                                })
-                            }
-                        })
-                    })
-                })
-            }
-        });
-
-    }
-
-}
-*/
 /**************************
  * Function to keep tour track
  * from off campus to on campus
@@ -294,14 +184,9 @@ function load(){
     tour_track = 1;
     window.location = '#begin'
 }
-/*
-function reloadMap(){
-    tour_track = 4;
 
-}
 
-window.onbeforeunload = reloadMap();
-*/
+
 /*******************************************************
  *
  *  Render all navigation items at the current location
@@ -314,220 +199,220 @@ window.onbeforeunload = reloadMap();
 
 function getNavs(locationTag) {
     $('.tipsy:last').remove();
-	var inner_html = ""
-	 if (currentLocation.locationType === "defualt") {
-       inner_html = 
-		
-			"<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
-			"<button class='to_studentlife sl_button' onclick=window.location='#library'>Student Life Tour</button>" +
-			"<button class='to_academics academics_button' onclick=window.location='#taylor'>Academics Tour</button>" +
-			"<button class='to_offcampus switch_button' onclick=window.location='#mainstreet'>Off Campus Tour</button>" 
-    }
-	$('body').on('click', '.to_academics', function () {
-		tour_track = 1;
-		console.log(tour_track);
-	
-	});
-	
-	$('body').on('click', '.to_studentlife', function () {
-		tour_track = 2;
-		console.log(tour_track);
-	});
-	
-	$('body').on('click', '.to_athletics', function () {
-		tour_track = 3;
-		console.log(tour_track);
-	});
-	$('body').on('click', '.to_offcampus', function () {
-		tour_track = 4;
+if (currentLocation.locationType === "default") {
+    var inner_html =
 
-	});
+        "<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
+        "<button class='to_studentlife sl_button' onclick=window.location='#library'>Student Life Tour</button>" +
+        "<button class='to_academics academics_button' onclick=window.location='#taylor'>Academics Tour</button>" +
+        "<button class='to_offcampus switch_button' onclick=window.location='#mainstreet'>Off Campus Tour</button>"
+}
 
 
-    
-    var items = [];
-    for (var i in navs) {
-            if (navs[i].tag === locationTag){
-                if(first_time){
-                    inner_html += "<button class='map_button_initial'>Enlarge Map</button>"
+var items = [];
+for (var i in navs) {
+    if (currentLocation.onCampus) {
+        if (navs[i].tag === locationTag) {
+            if (first_time) {
+                inner_html += "<button class='map_button_initial'>Enlarge Map</button>"
+            } else {
+                if (map_state === 2) {
+                    inner_html += "<button class='map_button'>Collapse Map</button>"
+                } else if (map_state === 1) {
+                    inner_html += "<button class='map_button'>Enlarge Map</button>"
+                } else if (map_state === 0) {
+                    inner_html += "<button class='map_button'>Show Map</button>"
                 }
-                else{
-                    if(map_state === 2) {
-                        inner_html += "<button class='map_button'>Collapse Map</button>"
-                    }else if(map_state === 1) {
-                        inner_html += "<button class='map_button'>Enlarge Map</button>"
-                    }else if(map_state === 0) {
-                        inner_html += "<button class='map_button'>Show Map</button>"
-                    
-                }
-				
-	
+            }
 
 
+
+
+
+            inner_html +=
+                "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
+                "<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
+                "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
+                "<button class='restart_button' id = 'rb' onclick=load()>Restart Tour</button>";
+
+
+            if (navs[i].tourTracks === 1 && tour_track === 1 || navs[i].tourTracks === 2 && tour_track === 2 || navs[i].tourTracks === 3 && tour_track === 3) {
                 inner_html +=
-                    "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
-					"<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
-                    "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
-                    "<button class='restart_button' id = 'rb' onclick=load()>Restart Tour</button>";
-
-				/*Fix here*/
-                if(tour_track === navs[i].tourTracks && tour_track === 1 || tour_track === navs[i].tourTracks && tour_track === 2 || tour_track === navs[i].tourTracks && tour_track === 3){
-						inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                     navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
                     "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
                     " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
                     "title='" + navs[i].ttip + "' />";
+                items.push(navs[i].styleClass);
+            }
 
-					items.push(navs[i].styleClass);
-					}
-					
-				if(tour_track === navs[i].tourTracks && tour_track === 4){
-
-					 inner_html +=
-
-                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
+            if (navs[i].tourTracks === 4 && tour_track === 4) {
+                inner_html +=
+                    "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                     navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
                     "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
                     " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_offcampus.png' " +
                     "title='" + navs[i].ttip + "' />";
-
-					items.push(navs[i].styleClass);
-					}
-					
-/*****************************
-		Tour Instances
-*****************************/
-
-				 
-
-$( "#target" ).click(function() {
-  alert( "Handler for .click() called." );
-});
-
-
+                items.push(navs[i].styleClass);
             }
-            $("#navigation").html(inner_html);
-            $(".arrow").tipsy({gravity: 's', fade: true, html: true});
-            for (var i in items) {
-                for (var j in navs) {
-                    if (items[i] === navs[j].styleClass) {
-                        $("." + navs[j].styleClass).css({bottom: navs[j].y + "%", "left": navs[j].x + "%"});
-                    }
+
+
+
+
+            $("#target").click(function () {
+                alert("Handler for .click() called.");
+            });
+
+
+        }
+        $("#navigation").html(inner_html);
+        $(".arrow").tipsy({
+            gravity: 's',
+            fade: true,
+            html: true
+        });
+        for (var i in items) {
+            for (var j in navs) {
+                if (items[i] === navs[j].styleClass) {
+                    $("." + navs[j].styleClass).css({
+                        bottom: navs[j].y + "%",
+                        "left": navs[j].x + "%"
+                    });
                 }
             }
         }
-        
-            if (navs[i].tag === locationTag) {
-                    if(map_state === 2) {
-                        inner_html += "<button class='map_button'>Collapse Map</button>"
-                    }else if(map_state === 1) {
-                        inner_html += "<button class='map_button'>Enlarge Map</button>"
-                    }else if(map_state === 0) {
-                        inner_html += "<button class='map_button'>Show Map</button>"
-                    
+    }
+    if (!currentLocation.onCampus) {
+        if (navs[i].tag === locationTag) {
+            if (map_state === 2) {
+                inner_html += "<button class='map_button'>Collapse Map</button>"
+            } else if (map_state === 1) {
+                inner_html += "<button class='map_button'>Enlarge Map</button>"
+            } else if (map_state === 0) {
+                inner_html += "<button class='map_button'>Show Map</button>"
+            }
 
 
-                inner_html +=
-				"<button class='restart_button' id='rb' onclick=load()>Restart Tour</button>" +
-				"<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
+            inner_html +=
+                "<button class='restart_button' id='rb' onclick=load()>Restart Tour</button>" +
+                "<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
                 "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
-				"<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" 
-            }
-
-            $("#navigation").html(inner_html);
-            $(".arrow").tipsy({gravity: 's', fade: true, html: true});
+                "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>"
         }
-        /************************
-         * Code to animate the map/map button
-         * at the very start of the tour
-         **************************/
-            $(".map_button_initial").click(function () {
-                if (map_state === 0) {
-                    $(".map_button_initial").text("Enlarge Map");
-                    $("#map").show(function () {
-                        $("#map").animate({
-                            width: window.innerWidth * 0.25,
-                            height: window.innerHeight * 0.38
-                        }, function () {
-                            animate_map(currentLocation, map_slide_time);
-                        });
-                       // $(".map_button_initial").animate({right: window.innerWidth * 0.14});
 
-                    });
-                    map_state += 1;
-                }
-                else if (map_state === 1) {
-                    $(".map_button_initial").text("Collapse Map");
-                    $("#map").animate({
-                        width: window.innerWidth * 0.75,
-                        height: window.innerHeight * 0.85
-                    }, function () {
-                        animate_map(currentLocation, map_slide_time);
-                    });
-                    $(".map_button_initial").animate({right: window.innerWidth * 0.63});
-                    map_state += 1;
-                }
-                else if (map_state === 2) {
-                    $(".map_button_initial").text("Show Map");
-                    $("#map").animate({width: '0', height: '0'}, function () {
-                        $("#map").hide('blind');
-                    });
-                    $(".map_button_initial").animate({right: window.innerWidth * -0.099});
-                    map_state = 0;
-                }
+        $("#navigation").html(inner_html);
+        $(".arrow").tipsy({
+            gravity: 's',
+            fade: true,
+            html: true
+        });
+    }
+    /************************
+     * Code to animate the map/map button
+     * at the very start of the tour
+     **************************/
+    $(".map_button_initial").click(function () {
+        if (map_state === 0) {
+            $(".map_button_initial").text("Enlarge Map");
+            $("#map").show(function () {
+                $("#map").animate({
+                    width: window.innerWidth * 0.25,
+                    height: window.innerHeight * 0.38
+                }, function () {
+                    animate_map(currentLocation, map_slide_time);
+                });
+                // $(".map_button_initial").animate({right: window.innerWidth * 0.14});
+
             });
-
-        /*****************************
-         * Code to animate the map button
-         * after the start of the tour
-         ********************************/
-
-
-            $(".map_button").click(function () {
-                if (map_state === 0) {
-                    $(".map_button").text("Enlarge Map");
-                    $("#map").show(function () {
-                        $("#map").animate({
-                            width: window.innerWidth * 0.25,
-                            height: window.innerHeight * 0.38
-                        }, function () {
-                            animate_map(currentLocation, map_slide_time);
-                        });
-                        $(".map_button").animate({right: window.innerWidth * 0.14});
-                    });
-                    map_state += 1;
-                }
-                else if (map_state === 1) {
-                    $(".map_button").text("Collapse Map");
-                    $("#map").animate({
-                        width: window.innerWidth * 0.75,
-                        height: window.innerHeight * 0.85
-                    }, function () {
-                        animate_map(currentLocation, map_slide_time);
-                    });
-                    $(".map_button").animate({right: window.innerWidth * 0.63});
-                    map_state += 1;
-                }
-                else if (map_state === 2) {
-                    $(".map_button").text("Show Map");
-                    $("#map").animate({width: '0', height: '0'}, function () {
-                        $("#map").hide('blind');
-                    });
-                    $(".map_button").animate({right: window.innerWidth * -0.099});
-                    map_state = 0;
-                }
+            map_state += 1;
+        } else if (map_state === 1) {
+            $(".map_button_initial").text("Collapse Map");
+            $("#map").animate({
+                width: window.innerWidth * 0.75,
+                height: window.innerHeight * 0.85
+            }, function () {
+                animate_map(currentLocation, map_slide_time);
             });
+            $(".map_button_initial").animate({
+                right: window.innerWidth * 0.63
+            });
+            map_state += 1;
+        } else if (map_state === 2) {
+            $(".map_button_initial").text("Show Map");
+            $("#map").animate({
+                width: '0',
+                height: '0'
+            }, function () {
+                $("#map").hide('blind');
+            });
+            $(".map_button_initial").animate({
+                right: window.innerWidth * -0.099
+            });
+            map_state = 0;
         }
-    if(!first_time && map_state != 0){
-        $(".map_button").animate({top: -10 + ($("#map").height() - ($(".map_button").height() * 8.15))}, 0);
-    }
-    else if (map_state === 0){
-        $(".map_button").animate({top: window.innerHeight * 0.1, right: -125}, 0);
-    }
-    if(first_time){
-        first_time = false;
-    }
+    });
+
+    /*****************************
+     * Code to animate the map button
+     * after the start of the tour
+     ********************************/
+
+
+    $(".map_button").click(function () {
+        if (map_state === 0) {
+            $(".map_button").text("Enlarge Map");
+            $("#map").show(function () {
+                $("#map").animate({
+                    width: window.innerWidth * 0.25,
+                    height: window.innerHeight * 0.38
+                }, function () {
+                    animate_map(currentLocation, map_slide_time);
+                });
+                $(".map_button").animate({
+                    right: window.innerWidth * 0.14
+                });
+            });
+            map_state += 1;
+        } else if (map_state === 1) {
+            $(".map_button").text("Collapse Map");
+            $("#map").animate({
+                width: window.innerWidth * 0.75,
+                height: window.innerHeight * 0.85
+            }, function () {
+                animate_map(currentLocation, map_slide_time);
+            });
+            $(".map_button").animate({
+                right: window.innerWidth * 0.63
+            });
+            map_state += 1;
+        } else if (map_state === 2) {
+            $(".map_button").text("Show Map");
+            $("#map").animate({
+                width: '0',
+                height: '0'
+            }, function () {
+                $("#map").hide('blind');
+            });
+            $(".map_button").animate({
+                right: window.innerWidth * -0.099
+            });
+            map_state = 0;
+        }
+    });
+}
+if (!first_time && map_state != 0) {
+    $(".map_button").animate({
+        top: -10 + ($("#map").height() - ($(".map_button").height() * 8.15))
+    }, 0);
+} else if (map_state === 0) {
+    $(".map_button").animate({
+        top: window.innerHeight * 0.1,
+        right: -125
+    }, 0);
+}
+if (first_time) {
+    first_time = false;
+}
 
 }
 
@@ -537,7 +422,6 @@ $( "#target" ).click(function() {
  * @param {string} locationTag Location tag, should be in form "#" + location, i.e. "#Hurst"
  *****************************************************************/
 function getHspots(locationTag) {
-    $('.tipsy:last').remove();
     var inner_html = "";
     var items = [];
     for (var i in hotspots) {
@@ -550,11 +434,18 @@ function getHspots(locationTag) {
             items.push(hotspots[i].styleClass);
         }
         $("#hotspots").html(inner_html);
-        $(".hotspot").tipsy({gravity: 'sw', fade: true, html: true});
+        $(".hotspot").tipsy({
+            gravity: 'sw',
+            fade: true,
+            html: true
+        });
         for (var i in items) {
             for (var j in hotspots) {
                 if (items[i] === hotspots[j].styleClass) {
-                    $("." + hotspots[j].styleClass).css({bottom: hotspots[j].y + "%", "left": hotspots[j].x + "%"});
+                    $("." + hotspots[j].styleClass).css({
+                        bottom: hotspots[j].y + "%",
+                        "left": hotspots[j].x + "%"
+                    });
                 }
             }
         }
@@ -576,129 +467,90 @@ function getImage(locationTag) {
  * Load static image map screen
  * for on and off campus
  *********************************/
-
-var prevCampus = true;
-
 function loadMap(locationTag) {
     for (var i in locations) {
         if (locations[i].tag === locationTag) {
-           if(tour_track === 1 || tour_track === 2 || tour_track === 3){
-                    document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/oncampusmap.jpg">';
-			
-                }
-		  else if(tour_track === 4){
-                    document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/offcampusmap.png">';
+            if (tour_track === 4) {
+                document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/offcampusmap.png">';
 
-		  }
+            } else {
+                document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/oncampusmap.jpg">';
+
+            }
 
         }
     }
-    console.log(tour_track);
-
 }
-
-
 
 /*************************************************
  * Calling of all functions
  *************************************************/
-
-
 $(function () {
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         is_mobile = true;
     }
 
     detectIE();
-	
 
-    /*****************************
+    /***********************************************************
      * Determines if Internet Explorer is being used
      *
-     * 
-     ******************************/
+     *
+     ************************************************************/
+    function detectIE() {
+        var ms_ie = false;
+        var ua = window.navigator.userAgent;
+        var old_ie = ua.indexOf('MSIE ');
+        var new_ie = ua.indexOf('Trident/');
 
+        if ((old_ie > -1) || (new_ie > -1)) {
+            ms_ie = true;
+        }
 
-function detectIE() {
-    var ms_ie = false;
-    var ua = window.navigator.userAgent;
-    var old_ie = ua.indexOf('MSIE ');
-    var new_ie = ua.indexOf('Trident/');
-
-    if ((old_ie > -1) || (new_ie > -1)) {
-        ms_ie = true;
-    }
-
-    if (ms_ie) {
-        $(function(){
-            $("#start").removeClass("show");
-            window.location.hash='#begin'
-
-        });
-
-    }
-    else{
-        $("#start").find("a").on("click", function () {
-            first_time = true;
-            $("#start").removeClass("show");
-            document.getElementById('video').innerHTML = '<video z-index="10000" width="100%" height="100%"  controls autoplay>' +
-                '<source src="video/fly-in2.webm" type="video/webm"></video>';
-            $("#map").css({"right" : "-30%"});
-            $("#map").hide('blind');
-            $("#carousel").hide('blind');
-            $(this).off("click");
-            $("#video").click(function () {
-                video_out(currentLocation, map_slide_time);
-                map_in(map_in_time, map_button_in_time);
-            });
-
+        if (ms_ie) {
             $(function () {
-                setTimeout(function () {
-                    $("#video").animate({opacity: 0}, video_fade, 'easeOutQuart', function(){
-                        video_out(currentLocation, map_slide_time);
-                        map_in(map_in_time, map_button_in_time);
-                    });
-                }, video_time);
+                $("#start").removeClass("show");
+                window.location.hash = '#begin'
+
             });
-        });
-        if (location.hash !== "") {
-            $("#start").removeClass("show");
+
+        } else {
+            $("#start").find("a").on("click", function () {
+                first_time = true;
+                $("#start").removeClass("show");
+                document.getElementById('video').innerHTML = '<video z-index="10000" width="100%" height="100%"  controls autoplay>' +
+                    '<source src="video/fly-in2.webm" type="video/webm"></video>';
+                $("#map").css({
+                    "right": "-30%"
+                });
+                $("#map").hide('blind');
+                $("#carousel").hide('blind');
+                $(this).off("click");
+                $("#video").click(function () {
+                    video_out(currentLocation, map_slide_time);
+                    map_in(map_in_time, map_button_in_time);
+                });
+
+                $(function () {
+                    setTimeout(function () {
+                        $("#video").animate({
+                            opacity: 0
+                        }, video_fade, 'easeOutQuart', function () {
+                            video_out(currentLocation, map_slide_time);
+                            map_in(map_in_time, map_button_in_time);
+                        });
+                    }, video_time);
+                });
+            });
+            if (location.hash !== "") {
+                $("#start").removeClass("show");
+            }
         }
     }
-}
-
-
-
-
-
-    $(window).on('hashchange', function () {
-        getImage(location.hash);
-        getLocation(location.hash);
-        getNavs(location.hash);
-        getHspots(location.hash);
-        loadMap(location.hash);
-        getCIs(location.hash);
-        //move();
-        animate_map(currentLocation, map_slide_time);
-    });
-
-    if (window.location.hash) {
-        dispMainMenu();
-        $('#drilldown-1').dcDrilldown({
-            speed: 'fast',
-            saveState: false,
-            showCount: false,
-            linkType: 'backlink',
-            defaultText: ''
-        });
-        $(window).trigger('hashchange');
-    }
-
 
     /********************************
      *  Mouse move on Map           *
      ********************************/
-
     var clicking = false;
     var previousX;
     var previousY;
@@ -718,109 +570,130 @@ function detectIE() {
         });
 
         $('body').on('mousemove', '#map', function (e) {
-            setTimeout(function(){
-            if (clicking) {
-                e.preventDefault();
-                var directionX = (previousX - e.clientX) > 2 ? 1 : (previousX - e.clientX) < -2 ? -1 : 0;
-                var directionY = (previousY - e.clientY) > 2 ? 1 : (previousY - e.clientY) < -2 ? -1 : 0;
-                $("#map").scrollLeft($("#map").scrollLeft() + 10 * directionX);
-                $("#map").scrollTop($("#map").scrollTop() + 10 * directionY);
-                previousX = e.clientX;
-                previousY = e.clientY
+            setTimeout(function () {
+                if (clicking) {
+                    e.preventDefault();
+                    var directionX = (previousX - e.clientX) > 2 ? 1 : (previousX - e.clientX) < -2 ? -1 : 0;
+                    var directionY = (previousY - e.clientY) > 2 ? 1 : (previousY - e.clientY) < -2 ? -1 : 0;
+                    $("#map").scrollLeft($("#map").scrollLeft() + 10 * directionX);
+                    $("#map").scrollTop($("#map").scrollTop() + 10 * directionY);
+                    previousX = e.clientX;
+                    previousY = e.clientY
 
-                console.log(previousX);
+                    console.log(previousX);
 
 
-            }
-        }, 1000/24)});
+                }
+            }, 1000 / 24)
+        });
     });
 
+    /*****************************************************
+     *  Hash Changes   *
+     *****************************************************/
+    $(window).on('hashchange', function () {
+        getImage(location.hash);
+        getLocation(location.hash);
+        getNavs(location.hash);
+        getHspots(location.hash);
+        loadMap(location.hash);
+        getCIs(location.hash);
+        animate_map(currentLocation, map_slide_time);
+    });
+
+    if (window.location.hash) {
+        dispMainMenu();
+        $('#drilldown-1').dcDrilldown({
+            speed: 'fast',
+            saveState: false,
+            showCount: false,
+            linkType: 'backlink',
+            defaultText: ''
+        });
+        $(window).trigger('hashchange');
+    }
+
     /***********************
-     *  fancy box things   *
+     *  Fancy box things   *
      *  for the carousel   *
      ***********************/
-
     $(document).on('click', '.fancybox', function (event) {
         event.preventDefault();
-		
+
         $.fancybox.open({
             type: 'iframe',
             href: this.href,
             title: this.title
-			
+
         })
     });
 });
 
 /***********************
-     *  Carousel Items generator   *
-	     ***********************/
-            
-            /**Functions that shows or hides Carousel based on mobility**/
+ *  Carousel Items generator   *
+ ***********************/
 
-
-	
+/**Functions that shows or hides Carousel based on mobility**/
 var ciCount = 0;
 
 var carouselItems = [];
 var thumbs = [];
 
-function getCIs(tag) /*Carousel Items*/{
+function getCIs(tag) /*Carousel Items*/ {
     caouselItems = [];
     thumbs = [];
     var inner, ci, i, j, a;
     ciCount = 0;
     inner = "";
-    for(i in CIs) {
+    for (i in CIs) {
         ci = CIs[i];
         for (j in ci.tags) {
-		
+
             if (ci.tags[j] === tag) {
                 //build carousel item
                 a = "<div class='citem' id='citem" + ciCount + "'>";
                 if (ci.video) {
                     a += ci.html;
                 } else {
-                    a += "<a class='fancybox' data-fancybox-group='media-gallery' href = '"+ci.full.fname+"' title='"+ci.html+"' rel='gallery'>";
+                    a += "<a class='fancybox' data-fancybox-group='media-gallery' href = '" + ci.full.fname + "' title='" + ci.html + "' rel='gallery'>";
                 }
                 a += "<div class='Thumbimage' id='thumbImage" + ciCount + "'>";
-                a += "<img id='image 'src='"+ci.thumb.fname+"' alt=''>";
+                a += "<img id='image 'src='" + ci.thumb.fname + "' alt=''>";
                 a += "<div class='Thumbcaption'>";
-                a += "<p>'"+ci.ttip+"'</p>";
+                a += "<p>'" + ci.ttip + "'</p>";
                 a += "</div></div></a></div>";
                 inner += a;
                 ciCount += 1;
                 break;
             }
-		
+
         }
     }
     var width = window.innerWidth - (ciCount * 100);
-    var margin = width / (ciCount-1) * .10;
+    var margin = width / (ciCount - 1) * .10;
 
     $("#carousel").html(inner);
     $(".citem").css("margin-left", margin);
-    if(is_mobile){
-      document.getElementById('carousel').style.display = 'none';
-      showHide = false;
+    if (is_mobile) {
+        document.getElementById('carousel').style.display = 'none';
+        showHide = false;
     }
 
     return carouselItems;
 }
 
 /**Functions that shows or hides Carousel based button click and mobility**/
-function hideShowCarousel(){
-	
-	
-    if(showHide){
+function hideShowCarousel() {
+
+
+    if (showHide) {
         document.getElementById('carousel').style.display = 'none';
 
         document.getElementById('main_image').className = "c2";
 
         $(".hide_button").text("Show");
         showHide = false;
-  }
-  else{
+    } else {
         document.getElementById('carousel').style.display = 'block';
         document.getElementById('main_image').className = "main_image";
         $(".hide_button").text("Hide");
@@ -828,7 +701,3 @@ function hideShowCarousel(){
     }
 
 }
-
-
-
- 
