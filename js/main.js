@@ -180,8 +180,10 @@ function getLocation(locationTag) {
  * Function to keep tour track
  * from off campus to on campus
  ***************************/
-function load(){
-    tour_track = 1;
+
+
+function load() {
+    tour_track = 0;
     window.location = '#begin'
 }
 
@@ -198,10 +200,10 @@ function load(){
  * ******************************************************/
 
 function getNavs(locationTag) {
+
     $('.tipsy:last').remove();
 if (currentLocation.locationType === "default") {
     var inner_html =
-
         "<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
         "<button class='to_studentlife sl_button' onclick=window.location='#library'>Student Life Tour</button>" +
         "<button class='to_academics academics_button' onclick=window.location='#taylor'>Academics Tour</button>" +
