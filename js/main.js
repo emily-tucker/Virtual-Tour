@@ -188,8 +188,6 @@ function load(){
     window.location = '#begin'
 }
 
-
-
 /*******************************************************
  *
  *  Render all navigation items at the current location
@@ -227,8 +225,6 @@ for (var i in navs) {
                     inner_html += "<button class='map_button'>Show Map</button>"
                 }
             }
-
-
 
 
 
