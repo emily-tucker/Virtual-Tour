@@ -32,7 +32,7 @@ function getHowTo(tag) /*Carousel Items*/{
                 } else {
                     a += "<a class='fancybox' data-fancybox-group='gallery' href = '"+ci.full.fname+"' title='"+ci.html+"' rel='gallery'>";
                 }
-                a += "<a href;
+                a += "<a href";
                 a += "<img id='image 'src='"+ci.thumb.fname+"' alt=''>";
                 a += "<div class='Thumbcaption'>";
                 a += "<p>'"+ci.ttip+"'</p>";
