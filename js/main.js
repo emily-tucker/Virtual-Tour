@@ -47,6 +47,8 @@ var first_time = false;
 var is_mobile = false;
 var tour_track = 1;
 var showHide = true; /*bool to determine weather to show or hide the carousel.*/
+
+
 var show = 0;
 var currentLocation; //used by just about everything, initialized here
 var off_campus = false;
@@ -181,9 +183,8 @@ function getLocation(locationTag) {
  * from off campus to on campus
  ***************************/
 
-
-function load() {
-    tour_track = 0;
+function load(){
+    tour_track = 1;
     window.location = '#begin'
 }
 
@@ -200,10 +201,10 @@ function load() {
  * ******************************************************/
 
 function getNavs(locationTag) {
-
     $('.tipsy:last').remove();
 if (currentLocation.locationType === "default") {
     var inner_html =
+
         "<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
         "<button class='to_studentlife sl_button' onclick=window.location='#library'>Student Life Tour</button>" +
         "<button class='to_academics academics_button' onclick=window.location='#taylor'>Academics Tour</button>" +
