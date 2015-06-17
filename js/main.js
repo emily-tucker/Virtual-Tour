@@ -35,6 +35,9 @@
 var video_time = 15000;
 var map_slide_time = 1200;
 var description_delay = 5000;
+var carousel_speed = 3000;
+var moveLeft = window.innerWidth * -0.1;
+var ciLeft = 1040;
 var video_fade = 2500;
 var map_state = 1;
 var map_in_time = 1500;
@@ -45,6 +48,7 @@ var tour_track = 1;
 var showHide = true; /*bool to determine weather to show or hide the carousel.*/
 var show = 0;
 var currentLocation; //used by just about everything, initialized here
+var off_campus = false;
 
 
 
@@ -57,6 +61,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 showHide = false;
  is_mobile = true;
  map_state = 0;
+ /*alert("Mobile Device Detected: "+is_mobile+map_state);*/
 }
 /********************************
  *  Map Animation Function for  *
@@ -156,17 +161,7 @@ function load(){
     window.location = '#begin'
 }
 
-function reloadMap(){
-    if(tour_track <= 3) {
-        tour_track = 1;
-    }
-    else if(tour_track > 3){
-        tour_track = 4;
-    }
 
-}
-
-window.onbeforeunload = reloadMap();
 
 /*******************************************************
  *
@@ -190,7 +185,7 @@ function getNavs(locationTag) {
     }
 
 
-    var items = []; /* Do we need this*/
+    var items = [];
     for (var i in navs) {
         if (currentLocation.onCampus) {
             if (navs[i].tag === locationTag){
@@ -274,7 +269,6 @@ $( "#target" ).click(function() {
             }
             $("#navigation").html(inner_html);
             $(".arrow").tipsy({gravity: 's', fade: true, html: true});
-            //review
             for (var i in items) {
                 for (var j in navs) {
                     if (items[i] === navs[j].styleClass) {
@@ -535,7 +529,7 @@ function detectIE() {
 
 
 
-//move to front
+
 
     $(window).on('hashchange', function () {
         getImage(location.hash);
