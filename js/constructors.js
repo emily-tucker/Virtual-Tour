@@ -116,11 +116,9 @@ function Image(name, fname) {
 
 /******************************************************
  * HowTo  Constructor
-
  * @param info
  * @param data-postion
  * @param data-toggle
-
  *****************************************************/
 function howTo(info, datapostion, datatoggle) {
     this.info = info;
@@ -129,4 +127,5 @@ function howTo(info, datapostion, datatoggle) {
    
 	
 }
+
 
