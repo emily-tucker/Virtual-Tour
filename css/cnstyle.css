@@ -176,7 +176,7 @@ body.contextual_navigation
 .contextual_assets img {
     position: fixed;
 	display:block;
-    width: 140%;
+    width: 110%;
     height: auto;
     max-height: 100%;
     overflow: hidden;
