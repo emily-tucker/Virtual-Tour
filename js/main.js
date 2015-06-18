@@ -72,6 +72,7 @@ function animate_map(locationTag, time){
         scrollLeft: locationTag.x - ($('#map').width() / 2),
         scrollTop: locationTag.y - ($('#map').height() / 2)
     }, time, 'easeInOutQuad');
+
 }
 
 /**************************
@@ -138,8 +139,9 @@ function getLocation(locationTag) {
  * from off campus to on campus
  ***************************/
 function load(){
-    tour_track = academics;
+    tour_track = 0;
     window.location = '#begin'
+    console.log("tour track: " + tour_track);
 }
 
 /***********************************
@@ -159,7 +161,6 @@ function loadMainButtons(){
             "<button class='to_offcampus switch_button' onclick=window.location='#mainstreet'>Off Campus Tour</button>" +
             "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
             "<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
-            "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
             "<button class='restart_button' id = 'rb' onclick=load()>Restart Tour</button>";
 
     }
@@ -608,22 +609,18 @@ function getCIs(tag) /*Carousel Items*/ {
 
 /**Functions that shows or hides Carousel based button click and mobility**/
 function hideShowCarousel() {
-    if (tour_track >= 0) {
-
-        if (showHide) {
+    if(showHide) {
             document.getElementById('carousel').style.display = 'none';
-
-            document.getElementById('main_image').className = "c2";
-
             $(".hide_button").text("Show");
             showHide = false;
-        } else {
+        }
+    else
+        {
             document.getElementById('carousel').style.display = 'block';
-            document.getElementById('main_image').className = "main_image";
             $(".hide_button").text("Hide");
             showHide = true;
         }
 
-    }
+
 }
 
