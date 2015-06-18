@@ -36,25 +36,14 @@
 var video_time = 14000;
 var map_slide_time = 1200;
 var description_delay = 5000;
-//var carousel_speed = 3000;
-//var moveLeft = window.innerWidth * -0.1;
-//var ciLeft = 1040;
 var video_fade = 2000;
 var map_state = 1;
-//var map_in_time = 1500;
-//var map_button_in_time = 750;
 var first_time = false;
 var is_mobile = false;
-
 var showHide = true; /*bool to determine weather to show or hide the carousel.*/
-
-
 var show = 0;
 var currentLocation; //used by just about everything, initialized here
-
-
 var tour_track = 0;
-var off_campus = false;
 var academics = 1;
 var studentLife = 2;
 var athletics = 3;
@@ -72,7 +61,6 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 showHide = false;
  is_mobile = true;
  map_state = 0;
- /*alert("Mobile Device Detected: "+is_mobile+map_state);*/
 }
 /********************************
  *  Map Animation Function for  *
@@ -118,22 +106,6 @@ function visitURLInstagram(){
     window.open("http://www.instagram.com", "_blank");
 }
 
-
-
-
-/*************************************************
- * Map and map_button animate in
- *************************************************/
-/*
-function map_in(map_time, button_time){
-    $("#map").animate({right: 0}, map_time, 'easeInOutQuad', function(){
-        $(".map_button_initial").animate({top: 0 + ($("#map").height() - ($(".map_button_initial").height() * 8.15))}, button_time, 'easeInOutQuad')
-        $(".map_button_initial").animate({right: window.innerWidth * 0.14}, 0, function(){
-        });
-    });
-}
-*/
-
 /******************************************
  * Get location method which takes a tag from the hash to create the current location
  *
@@ -178,7 +150,8 @@ function load(){
 function loadMainButtons(){
     var inner_html = "";
     if (currentLocation.locationType === "default") {
-         inner_html +=
+        // If the current location of the tour is on the begin page (#begin)
+        inner_html +=
 
             "<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
             "<button class='to_studentlife sl_button' onclick=window.location='#library'>Student Life Tour</button>" +
@@ -255,7 +228,7 @@ function mapButtonLoad() {
 
 
     /*****************************
-     * Code to move the map button
+     * functions to move the map button
      * on click
      ********************************/
 
@@ -317,9 +290,7 @@ function mapButtonLoad() {
 }
 /*******************************************************
  *
- *  Render all navigation localNavs at the current location
- *
- *  Including buttons
+ *  Render all navigation items at the current location
  *
  * @param {string} locationTag Location tag, should be in form "#" + location, i.e. "#hurst"
  *
@@ -404,8 +375,7 @@ function getHspots(locationTag) {
         }
     }
 }
-console.log("tour track: " + tour_track);
-console.log("map state: " + map_state);
+
 /******************************************************
  * Render main image for the current location
  * @param {string} locationTag Location tag, should be in form "#" + location, i.e. "#hurst"
