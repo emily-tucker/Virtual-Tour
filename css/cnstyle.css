@@ -319,10 +319,6 @@ section:target, .show{
     top: 40%;
     max-height: 7%;
 	
-    /*padding-top: 7px; */
-    /*padding-bottom: 7px; */
-    /*padding-left: 35px; */
-    /*padding-right: 35px; */
 }
 
 /*******************
@@ -426,7 +422,7 @@ comment out so the map doesn't auto scale
 }
 
 .caption_wrapper {
-    width:25%;
+    width:33.33%;
     height:auto;
     left: 21%;
     overflow:hidden;
