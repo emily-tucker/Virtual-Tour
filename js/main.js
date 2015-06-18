@@ -33,16 +33,16 @@
 /********************************
  * Variables for functions      *
  ********************************/
-var video_time = 15000;
+var video_time = 14000;
 var map_slide_time = 1200;
 var description_delay = 5000;
-var carousel_speed = 3000;
-var moveLeft = window.innerWidth * -0.1;
-var ciLeft = 1040;
-var video_fade = 2500;
+//var carousel_speed = 3000;
+//var moveLeft = window.innerWidth * -0.1;
+//var ciLeft = 1040;
+var video_fade = 2000;
 var map_state = 1;
-var map_in_time = 1500;
-var map_button_in_time = 750;
+//var map_in_time = 1500;
+//var map_button_in_time = 750;
 var first_time = false;
 var is_mobile = false;
 
@@ -53,7 +53,7 @@ var show = 0;
 var currentLocation; //used by just about everything, initialized here
 
 
-var tour_track = 1;
+var tour_track = 0;
 var off_campus = false;
 var academics = 1;
 var studentLife = 2;
@@ -124,7 +124,7 @@ function visitURLInstagram(){
 /*************************************************
  * Map and map_button animate in
  *************************************************/
-
+/*
 function map_in(map_time, button_time){
     $("#map").animate({right: 0}, map_time, 'easeInOutQuad', function(){
         $(".map_button_initial").animate({top: 0 + ($("#map").height() - ($(".map_button_initial").height() * 8.15))}, button_time, 'easeInOutQuad')
@@ -132,7 +132,7 @@ function map_in(map_time, button_time){
         });
     });
 }
-
+*/
 
 /******************************************
  * Get location method which takes a tag from the hash to create the current location
@@ -170,171 +170,93 @@ function load(){
     window.location = '#begin'
 }
 
-	
-
-/*******************************************************
- *
- *  Render all navigation items at the current location
- *
- *  Including buttons
- *
- * @param {string} locationTag Location tag, should be in form "#" + location, i.e. "#hurst"
- *
- * ******************************************************/
-
-function getNavs(locationTag) {
-    $('.tipsy:last').remove();
-if (currentLocation.locationType === "default") {
-    var inner_html =
-
-        "<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
-        "<button class='to_studentlife sl_button' onclick=window.location='#library'>Student Life Tour</button>" +
-        "<button class='to_academics academics_button' onclick=window.location='#taylor'>Academics Tour</button>" +
-        "<button class='to_offcampus switch_button' onclick=window.location='#mainstreet'>Off Campus Tour</button>"
-}
-/*****************************
-		Tour Instances
-*****************************/              
-
-	$('body').on('click', '.to_academics', function () {
-		tour_track = academics;
-		//console.log(tour_track);
-	});
-
-	$('body').on('click', '.to_studentlife', function () {
-		tour_track = studentLife;
-		//console.log(tour_track);
-	});
-
-	$('body').on('click', '.to_athletics', function () {
-		tour_track = athletics;
-		//console.log(tour_track);
-	});
-	$('body').on('click', '.to_offcampus', function () {
-		tour_track = offCampus;
-		//console.log(tour_track);
-
-	});
+/***********************************
+ * Function to load the main buttons
+ ***********************************/
 
 
-var items = [];
-for (var i in navs) {
-        if (navs[i].tag === locationTag) {
-            if (first_time) {
-                inner_html += "<button class='map_button_initial'>Enlarge Map</button>"
-            } else {
-                if (map_state === 2) {
-                    inner_html += "<button class='map_button'>Collapse Map</button>"
-                } else if (map_state === 1) {
-                    inner_html += "<button class='map_button'>Enlarge Map</button>"
-                } else if (map_state === 0) {
-                    inner_html += "<button class='map_button'>Show Map</button>"
-                }
-            }
+function loadMainButtons(){
+    var inner_html = "";
+    if (currentLocation.locationType === "default") {
+         inner_html +=
+
+            "<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
+            "<button class='to_studentlife sl_button' onclick=window.location='#library'>Student Life Tour</button>" +
+            "<button class='to_academics academics_button' onclick=window.location='#taylor'>Academics Tour</button>" +
+            "<button class='to_offcampus switch_button' onclick=window.location='#mainstreet'>Off Campus Tour</button>" +
+            "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
+            "<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
+            "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
+            "<button class='restart_button' id = 'rb' onclick=load()>Restart Tour</button>";
+
+    }
+
+    else{
+        inner_html +=
+
+            "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
+            "<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
+            "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
+            "<button class='restart_button' id = 'rb' onclick=load()>Restart Tour</button>";
 
 
-
-            inner_html +=
-                "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
-                "<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
-                "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
-                "<button class='restart_button' id = 'rb' onclick=load()>Restart Tour</button>";
+    }
+    $("#buttons").html(inner_html);
 
 
-            if (navs[i].tourTracks === academics && tour_track === academics || navs[i].tourTracks === studentLife && tour_track === studentLife || navs[i].tourTracks === athletics && tour_track === athletics) {
-                inner_html +=
-                    "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
-                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
-                    "title='" + navs[i].ttip + "' />";
-                items.push(navs[i].styleClass);
-            }
-
-            if (navs[i].tourTracks === offCampus && tour_track === offCampus) {
-                inner_html +=
-                    "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
-                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_offcampus.png' " +
-                    "title='" + navs[i].ttip + "' />";
-                items.push(navs[i].styleClass);
-            }
-
-
-
-
-            $("#target").click(function () {
-                alert("Handler for .click() called.");
-            });
-
-
-        }
-        $("#navigation").html(inner_html);
-        $(".arrow").tipsy({
-            gravity: 's',
-            fade: true,
-            html: true
-        });
-        for (var i in items) {
-            for (var j in navs) {
-                if (items[i] === navs[j].styleClass) {
-                    $("." + navs[j].styleClass).css({
-                        bottom: navs[j].y + "%",
-                        "left": navs[j].x + "%"
-                    });
-                }
-            }
-        }
-
-    /************************
-     * Code to animate the map/map button
-     * at the very start of the tour
+    /*************************
+     * Tour Instance functionality
      **************************/
-    $(".map_button_initial").click(function () {
-        if (map_state === 0) {
-            $(".map_button_initial").text("Enlarge Map");
-            $("#map").show(function () {
-                $("#map").animate({
-                    width: window.innerWidth * 0.25,
-                    height: window.innerHeight * 0.38
-                }, function () {
-                    animate_map(currentLocation, map_slide_time);
-                });
-                // $(".map_button_initial").animate({right: window.innerWidth * 0.14});
 
-            });
-            map_state += 1;
-        } else if (map_state === 1) {
-            $(".map_button_initial").text("Collapse Map");
-            $("#map").animate({
-                width: window.innerWidth * 0.75,
-                height: window.innerHeight * 0.85
-            }, function () {
-                animate_map(currentLocation, map_slide_time);
-            });
-            $(".map_button_initial").animate({
-                right: window.innerWidth * 0.63
-            });
-            map_state += 1;
-        } else if (map_state === 2) {
-            $(".map_button_initial").text("Show Map");
-            $("#map").animate({
-                width: '0',
-                height: '0'
-            }, function () {
-                $("#map").hide('blind');
-            });
-            $(".map_button_initial").animate({
-                right: window.innerWidth * -0.099
-            });
-            map_state = 0;
-        }
+    $('body').on('click', '.to_academics', function () {
+        tour_track = academics;
+        console.log(tour_track);
     });
 
+    $('body').on('click', '.to_studentlife', function () {
+        tour_track = studentLife;
+        console.log(tour_track);
+    });
+
+    $('body').on('click', '.to_athletics', function () {
+        tour_track = athletics;
+        console.log(tour_track);
+    });
+    $('body').on('click', '.to_offcampus', function () {
+        tour_track = offCampus;
+        console.log(tour_track);
+
+    });
+
+}
+
+/**********************************************
+ * Function to load the map buttons and add
+ *
+ * click functions to the buttons
+ **********************************************/
+
+function mapButtonLoad() {
+    var inner_html = "";
+    if(first_time){
+        inner_html += "<button class='map_button_initial'>Expand Map</button>"
+    }
+        if (map_state === 2) {
+            inner_html += "<button class='map_button'>Collapse Map</button>"
+        }
+        else if (map_state === 1) {
+            inner_html += "<button class='map_button'>Enlarge Map</button>"
+        }
+        else if (map_state === 0) {
+            inner_html += "<button class='map_button'>Show Map</button>"
+        }
+    $("#mapbuttons").html(inner_html);
+
+
+
     /*****************************
-     * Code to animate the map button
-     * after the start of the tour
+     * Code to move the map button
+     * on click
      ********************************/
 
 
@@ -379,21 +301,72 @@ for (var i in navs) {
             map_state = 0;
         }
     });
-}
-if (!first_time && map_state != 0) {
-    $(".map_button").animate({
-        top: -10 + ($("#map").height() - ($(".map_button").height() * 8.15))
-    }, 0);
-} else if (map_state === 0) {
-    $(".map_button").animate({
-        top: window.innerHeight * 0.1,
-        right: -125
-    }, 0);
-}
-if (first_time) {
-    first_time = false;
-}
 
+    if (!first_time && map_state != 0) {
+        $(".map_button").animate({
+            top: -10 + ($("#map").height() - ($(".map_button").height() * 8.15))
+        }, 0);
+    } else if (map_state === 0) {
+        $(".map_button").animate({
+            top: window.innerHeight * 0.1,
+            right: -125
+        }, 0);
+    }
+
+
+}
+/*******************************************************
+ *
+ *  Render all navigation localNavs at the current location
+ *
+ *  Including buttons
+ *
+ * @param {string} locationTag Location tag, should be in form "#" + location, i.e. "#hurst"
+ *
+ * ******************************************************/
+
+function getNavs(locationTag) {
+    var inner_html = "";
+    var localNavs = [];
+    for (var i in navs) {
+        if (navs[i].tag === locationTag) {
+            if (navs[i].tourTracks === academics && tour_track === academics || navs[i].tourTracks === studentLife && tour_track === studentLife || navs[i].tourTracks === athletics && tour_track === athletics) {
+                inner_html +=
+                    "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
+                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
+                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
+                    "title='" + navs[i].ttip + "' />";
+                localNavs.push(navs[i].styleClass);
+            }
+
+            if (navs[i].tourTracks === offCampus && tour_track === offCampus) {
+                inner_html +=
+                    "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
+                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
+                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_offcampus_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_offcampus.png' " +
+                    "title='" + navs[i].ttip + "' />";
+                localNavs.push(navs[i].styleClass);
+            }
+        }
+        $("#navigation").html(inner_html);
+        $(".arrow").tipsy({
+            gravity: 's',
+            fade: true,
+            html: true
+        });
+        for (var i in localNavs) {
+            for (var j in navs) {
+                if (localNavs[i] === navs[j].styleClass) {
+                    $("." + navs[j].styleClass).css({
+                        bottom: navs[j].y + "%",
+                        left: navs[j].x + "%"
+                    });
+                }
+            }
+        }
+    }
 }
 
 
@@ -431,7 +404,8 @@ function getHspots(locationTag) {
         }
     }
 }
-
+console.log("tour track: " + tour_track);
+console.log("map state: " + map_state);
 /******************************************************
  * Render main image for the current location
  * @param {string} locationTag Location tag, should be in form "#" + location, i.e. "#hurst"
@@ -501,14 +475,13 @@ $(function () {
                 document.getElementById('video').innerHTML = '<video z-index="10000" width="100%" height="100%"  controls autoplay>' +
                     '<source src="video/fly-in2.webm" type="video/webm"></video>';
                 $("#map").css({
-                    "right": "-30%"
+                    "right": "0"
                 });
-                $("#map").hide('blind');
+                $("#map").hide();
                 $("#carousel").hide('blind');
                 $(this).off("click");
                 $("#video").click(function () {
                     video_out(currentLocation, map_slide_time);
-                    map_in(map_in_time, map_button_in_time);
                 });
 
                 $(function () {
@@ -517,7 +490,6 @@ $(function () {
                             opacity: 0
                         }, video_fade, 'easeOutQuart', function () {
                             video_out(currentLocation, map_slide_time);
-                            map_in(map_in_time, map_button_in_time);
                         });
                     }, video_time);
                 });
@@ -578,7 +550,9 @@ $(function () {
         getHspots(location.hash);
         loadMap(location.hash);
         getCIs(location.hash);
+        mapButtonLoad();
         animate_map(currentLocation, map_slide_time);
+        loadMainButtons();
     });
 
     if (window.location.hash) {
@@ -664,20 +638,21 @@ function getCIs(tag) /*Carousel Items*/ {
 
 /**Functions that shows or hides Carousel based button click and mobility**/
 function hideShowCarousel() {
+    if (tour_track >= 0) {
 
+        if (showHide) {
+            document.getElementById('carousel').style.display = 'none';
 
-    if (showHide) {
-        document.getElementById('carousel').style.display = 'none';
+            document.getElementById('main_image').className = "c2";
 
-        document.getElementById('main_image').className = "c2";
+            $(".hide_button").text("Show");
+            showHide = false;
+        } else {
+            document.getElementById('carousel').style.display = 'block';
+            document.getElementById('main_image').className = "main_image";
+            $(".hide_button").text("Hide");
+            showHide = true;
+        }
 
-        $(".hide_button").text("Show");
-        showHide = false;
-    } else {
-        document.getElementById('carousel').style.display = 'block';
-        document.getElementById('main_image').className = "main_image";
-        $(".hide_button").text("Hide");
-        showHide = true;
     }
-
 }
