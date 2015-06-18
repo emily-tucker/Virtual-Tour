@@ -154,9 +154,7 @@ function getLocation(locationTag) {
                 $(".description").slideToggle("slow");
             });
             currentLocation = locations[i];
-            if (currentLocation && currentLocation.onCampus) {
-                previousLocation = currentLocation;
-            }
+      
             break;
         }
     }
@@ -167,13 +165,12 @@ function getLocation(locationTag) {
  * Function to keep tour track
  * from off campus to on campus
  ***************************/
-
 function load(){
     tour_track = academics;
     window.location = '#begin'
 }
 
-
+	
 
 /*******************************************************
  *
@@ -222,7 +219,6 @@ if (currentLocation.locationType === "default") {
 
 var items = [];
 for (var i in navs) {
-    if (currentLocation.onCampus) {
         if (navs[i].tag === locationTag) {
             if (first_time) {
                 inner_html += "<button class='map_button_initial'>Enlarge Map</button>"
@@ -290,32 +286,7 @@ for (var i in navs) {
                 }
             }
         }
-    }
-    if (!currentLocation.onCampus) {
-        if (navs[i].tag === locationTag) {
-            if (map_state === 2) {
-                inner_html += "<button class='map_button'>Collapse Map</button>"
-            } else if (map_state === 1) {
-                inner_html += "<button class='map_button'>Enlarge Map</button>"
-            } else if (map_state === 0) {
-                inner_html += "<button class='map_button'>Show Map</button>"
-            }
 
-
-            inner_html +=
-                "<button class='restart_button' id='rb' onclick=load()>Restart Tour</button>" +
-                "<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
-                "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
-                "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>"
-        }
-
-        $("#navigation").html(inner_html);
-        $(".arrow").tipsy({
-            gravity: 's',
-            fade: true,
-            html: true
-        });
-    }
     /************************
      * Code to animate the map/map button
      * at the very start of the tour
