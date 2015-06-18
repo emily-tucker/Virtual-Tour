@@ -45,13 +45,21 @@ var map_in_time = 1500;
 var map_button_in_time = 750;
 var first_time = false;
 var is_mobile = false;
-var tour_track = 1;
+
 var showHide = true; /*bool to determine weather to show or hide the carousel.*/
 
 
 var show = 0;
 var currentLocation; //used by just about everything, initialized here
+
+
+var tour_track = 1;
 var off_campus = false;
+var academics = 1;
+var studentLife = 2;
+var athletics = 3;
+var offCampus = 4;
+
 
 
 
@@ -125,29 +133,6 @@ function map_in(map_time, button_time){
     });
 }
 
-/*****************************
-		Tour Instances
-*****************************/              
-
-	$('body').on('click', '.to_academics', function () {
-		tour_track = 1;
-		//console.log(tour_track);
-
-	});
-
-	$('body').on('click', '.to_studentlife', function () {
-		tour_track = 2;
-		//console.log(tour_track);
-	});
-
-	$('body').on('click', '.to_athletics', function () {
-		tour_track = 3;
-		//console.log(tour_track);
-	});
-	$('body').on('click', '.to_offcampus', function () {
-		tour_track = 4;
-
-	});
 
 /******************************************
  * Get location method which takes a tag from the hash to create the current location
@@ -184,7 +169,7 @@ function getLocation(locationTag) {
  ***************************/
 
 function load(){
-    tour_track = 1;
+    tour_track = academics;
     window.location = '#begin'
 }
 
@@ -210,6 +195,29 @@ if (currentLocation.locationType === "default") {
         "<button class='to_academics academics_button' onclick=window.location='#taylor'>Academics Tour</button>" +
         "<button class='to_offcampus switch_button' onclick=window.location='#mainstreet'>Off Campus Tour</button>"
 }
+/*****************************
+		Tour Instances
+*****************************/              
+
+	$('body').on('click', '.to_academics', function () {
+		tour_track = academics;
+		//console.log(tour_track);
+	});
+
+	$('body').on('click', '.to_studentlife', function () {
+		tour_track = studentLife;
+		//console.log(tour_track);
+	});
+
+	$('body').on('click', '.to_athletics', function () {
+		tour_track = athletics;
+		//console.log(tour_track);
+	});
+	$('body').on('click', '.to_offcampus', function () {
+		tour_track = offCampus;
+		//console.log(tour_track);
+
+	});
 
 
 var items = [];
@@ -237,7 +245,7 @@ for (var i in navs) {
                 "<button class='restart_button' id = 'rb' onclick=load()>Restart Tour</button>";
 
 
-            if (navs[i].tourTracks === 1 && tour_track === 1 || navs[i].tourTracks === 2 && tour_track === 2 || navs[i].tourTracks === 3 && tour_track === 3) {
+            if (navs[i].tourTracks === academics && tour_track === academics || navs[i].tourTracks === studentLife && tour_track === studentLife || navs[i].tourTracks === athletics && tour_track === athletics) {
                 inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                     navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
@@ -247,7 +255,7 @@ for (var i in navs) {
                 items.push(navs[i].styleClass);
             }
 
-            if (navs[i].tourTracks === 4 && tour_track === 4) {
+            if (navs[i].tourTracks === offCampus && tour_track === offCampus) {
                 inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                     navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_offcampus.png'" +
@@ -471,7 +479,7 @@ function getImage(locationTag) {
 function loadMap(locationTag) {
     for (var i in locations) {
         if (locations[i].tag === locationTag) {
-            if (tour_track === 4) {
+            if (tour_track === offCampus) {
                 document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/offcampusmap.png">';
 
             } else {
