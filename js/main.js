@@ -188,6 +188,8 @@ function load(){
     window.location = '#begin'
 }
 
+
+
 /*******************************************************
  *
  *  Render all navigation items at the current location
