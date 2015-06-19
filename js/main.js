@@ -33,8 +33,8 @@
 /********************************
  * Variables for functions      *
  ********************************/
-var video_time = 14000;
-var map_slide_time = 1200;
+var video_time = 15000;
+var map_slide_time = 1500;
 var description_delay = 5000;
 var video_fade = 2000;
 var map_state = 1;
@@ -443,6 +443,7 @@ $(function () {
         } else {
             $("#start").find("a").on("click", function () {
                 first_time = true;
+                $(".menu").hide();
                 $("#start").removeClass("show");
                 document.getElementById('video').innerHTML = '<video z-index="10000" width="100%" height="100%"  controls autoplay>' +
                     '<source src="video/fly-in2.webm" type="video/webm"></video>';
@@ -454,10 +455,13 @@ $(function () {
                 $(this).off("click");
                 $("#video").click(function () {
                     video_out(currentLocation, map_slide_time);
+                    $(".menu").show();
                 });
 
                 $(function () {
                     setTimeout(function () {
+                        $(".menu").show();
+                        $("#map").show();
                         $("#video").animate({
                             opacity: 0
                         }, video_fade, 'easeOutQuart', function () {
