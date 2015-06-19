@@ -41,6 +41,7 @@
 <!-- ISSUE: Content width doesn't appear to be responsive in Firefox-->
 <!-- Div class and id names are important for the JS -->
 
+<div data-intro="Choose different tours to go on" data-postition='top' style="width: 30%; height: 1%; left: 34%; bottom: 60%; position: absolute"></div>
 
 <div class="contextual_assets">
     <section class="show" id="start">
@@ -63,7 +64,7 @@
     </div>
 </div>
 
-<div id="map">
+<div id="map", data-intro="Use the map to help you navigate around campus" data-postition="left">
     <img class="mapImage" src="imgs/oncampusmap.jpg">
 </div>
 
@@ -75,7 +76,6 @@
         </div>
     </div>
 </div>
-
 <div id="carousel" class="owl-carousel">
     <div id="owl-demo" class="owl-carousel noselect">
 
@@ -86,7 +86,6 @@
 <div id="video" class="video">
 </div>
 <script>
-
     $(document).ready(function ($) {
         dispMainMenu();
 

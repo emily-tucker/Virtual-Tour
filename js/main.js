@@ -203,7 +203,14 @@ function loadMainButtons(){
     });
 
 }
-
+/*
+function instructions(){
+    $("#buttons").html="<div id ='buttons', data-intro='The Best Virtual Tour You Will Ever See!!', data-position='top'></div>";
+    $("#navigation").innerHTML="<div id ='navigation', data-intro='The Best Will Ever See!!', data-position='bottom'></div>";
+    $(".menu").innerHTML="<div class='menu', data-intro='The Best Virtual Tour You Will Ever See!!', data-position='left'></div>";
+    $("#mapbuttons").innerHTML="<div id ='buttons', data-intro='The Best Virtual Tour You Will Ever See!!', data-position='right'></div>";
+}
+*/
 /**********************************************
  * Function to load the map buttons and add
  *
@@ -456,12 +463,15 @@ $(function () {
                 $("#video").click(function () {
                     video_out(currentLocation, map_slide_time);
                     $(".menu").show();
+                    $('body').chardinJs('start');
+
                 });
 
                 $(function () {
                     setTimeout(function () {
                         $(".menu").show();
                         $("#map").show();
+                        $('body').chardinJs('start');
                         $("#video").animate({
                             opacity: 0
                         }, video_fade, 'easeOutQuart', function () {
