@@ -364,6 +364,7 @@ function getHspots(locationTag) {
             fade: true,
             html: true
         });
+        $(".tipsy").remove();
         for (var i in items) {
             for (var j in hotspots) {
                 if (items[i] === hotspots[j].styleClass) {
