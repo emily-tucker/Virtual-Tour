@@ -139,8 +139,8 @@ function getLocation(locationTag) {
  * from off campus to on campus
  ***************************/
 function load(){
-    tour_track = 0;
-    window.location = '#begin'
+    window.location = '#begin';
+	localNavs.push(navs[i].styleClass);
     console.log("tour track: " + tour_track);
 }
 
@@ -161,8 +161,7 @@ function loadMainButtons(){
             "<button class='to_offcampus switch_button' onclick=window.location='#mainstreet'>Off Campus Tour</button>" +
             "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
             "<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
-            "<button class='restart_button' id = 'rb' onclick=load()>Restart Tour</button>";
-
+            "<button class='restart_button' id = 'rb' onclick=load()>Restart Tour</button>";	
     }
 
     else{
@@ -176,6 +175,7 @@ function loadMainButtons(){
 
     }
     $("#buttons").html(inner_html);
+
 
 
     /*************************
@@ -312,9 +312,9 @@ function getNavs(locationTag) {
             if (navs[i].tourTracks === academics && tour_track === academics || navs[i].tourTracks === studentLife && tour_track === studentLife || navs[i].tourTracks === athletics && tour_track === athletics) {
                 inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/" + navs[i].direction + "_white.png'" +
-                    "onmouseover=" + "this.src='imgs/" + navs[i].direction + "_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/" + navs[i].direction + "_white.png' " +
+                    navs[i].styleClass + " arrow' src='imgs/navs/" + navs[i].direction + "_white.png'" +
+                    "onmouseover=" + "this.src='imgs/navs/" + navs[i].direction + "_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/navs/" + navs[i].direction + "_white.png' " +
                     "title='" + navs[i].ttip + "' />";
                 localNavs.push(navs[i].styleClass);
             }
@@ -335,6 +335,9 @@ function getNavs(locationTag) {
             fade: true,
             html: true
         });
+/**************************************************************
+*Positioning for naviagtion arrows
+ *****************************************************************/
         for (var i in localNavs) {
             for (var j in navs) {
                 if (localNavs[i] === navs[j].styleClass) {
