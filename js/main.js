@@ -142,7 +142,6 @@ function load(){
     tour_track = 0;
     window.location = '#begin'
     console.log("tour track: " + tour_track);
-	
 }
 
 /***********************************

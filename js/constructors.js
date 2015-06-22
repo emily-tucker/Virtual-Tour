@@ -20,7 +20,6 @@ function Location(tag, name, locationType, description, x, y, locationTrack) {
     this.description = description;
     this.x = x;
     this.y = y;
-	this.locationTrack = locationTrack;
 	
 }
 
