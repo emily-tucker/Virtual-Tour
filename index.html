@@ -1,34 +1,35 @@
 <!DOCTYPE HTML>
-<html><head>
+<html>
+
+<head>
     <title>Western Virtual Tour</title>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="css/cnstyle.css">
     <link type="text/css" rel="stylesheet" href="css/tipsy.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
-    
+
     <link href="css/chardinjs.css" rel="stylesheet">
-    
+
     <!-- Owl Carousel Assets -->
     <link href="css/carousel.css" rel="stylesheet">
-	
+
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
 
- 	<script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/constructors.js"></script>
     <script src="js/jquery.fancybox.js"></script>
     <script src="js/carousel_items.js"></script>
     <script src="js/jquery.tipsy.js"></script>
     <script src="js/menu_lists.js"></script>
-    <script src="js/menu.js"></script>
     <script src="js/jquery.dcdrilldown.1.2.min.js"></script>
     <script src="js/jquery.cookie.js"></script>
     <script src="js/contextual.js"></script>
-    
-<script src="js/chardinjs.min.js"></script>
+
+    <script src="js/chardinjs.min.js"></script>
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg3suBVsTjew0sCBoqHHBF2cy2UOI4dYk"></script>-->
     <!--<script src="js/lib/gmapScript.js"></script>-->
     <!--<script>google.maps.event.addDomListener(window,'load',initialize);</script>-->
@@ -37,77 +38,78 @@
 
 
 </head>
+
 <body class="contextual_navigation noselect">
-<!-- ISSUE: Content width doesn't appear to be responsive in Firefox-->
-<!-- Div class and id names are important for the JS -->
+    <!-- ISSUE: Content width doesn't appear to be responsive in Firefox-->
+    <!-- Div class and id names are important for the JS -->
 
-<div data-intro="Choose different tours to go on" data-postition='top' style="width: 30%; height: 1%; left: 34%; bottom: 60%; position: absolute"></div>
+    <div data-intro="Choose different tours to go on" data-postition='top' style="width: 30%; height: 1%; left: 34%; bottom: 60%; position: absolute"></div>
 
-<div class="contextual_assets">
-    <section class="show" id="start">
-        <a href="#begin">
-            <button class="beginButton">Begin Tour</button>
-        </a>
-    </section>
-    <div id="main_image" >
-    </div>
-    
-    <div id ="buttons">
-    </div>
-    <div id="mapbuttons">
-    </div>
-    <div id="hotspots">
+    <div class="contextual_assets">
+        <section class="show" id="start">
+            <a href="#begin">
+                <button class="beginButton">Begin Tour</button>
+            </a>
+        </section>
+        <div id="main_image">
+        </div>
 
-    </div>
-    <div id="text_overlay">
-    </div>
-</div>
-<div id="navigation">
-    </div>
+        <div id="buttons">
+        </div>
+        <div id="mapbuttons">
+        </div>
 
-<div id="map", data-intro="Use the map to help you navigate around campus" data-postition="left">
-    <img class="mapImage" src="imgs/oncampusmap.jpg">
-</div>
-
-<div class="menu col-sm-1">
-    <div class="wrap">
-        <div class="blue menu-container">
-            <ul id="drilldown-1">
-            </ul>
+        <div id="text_overlay">
         </div>
     </div>
-</div>
-<div id="carousel" class="owl-carousel">
-    <div id="owl-demo" class="owl-carousel noselect">
-
+    <div id="navigation">
     </div>
-</div>
+    <div id="hotspots">
+    </div>
+
+    <div id="map" , data-intro="Use the map to help you navigate around campus" data-postition="left">
+        <img class="mapImage" src="imgs/oncampusmap.jpg">
+    </div>
+
+    <div class="menu">
+        <div class="wrap">
+            <div class="blue menu-container">
+                <ul id="drilldown-1">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="carousel" class="owl-carousel">
+        <div id="owl-demo" class="owl-carousel noselect">
+
+        </div>
+    </div>
 
 
-<div id="video" class="video">
-</div>
-<script>
-    $(document).ready(function ($) {
-        dispMainMenu();
+    <div id="video" class="video">
+    </div>
+    <script>
+        $(document).ready(function ($) {
+            dispMainMenu();
 
-        $('#drilldown-1').dcDrilldown({
-            speed: 'fast',
-            saveState: true,
-            showCount: false,
-            linkType: 'link',
-            defaultText: ''
+            $('#drilldown-1').dcDrilldown({
+                speed: 'fast',
+                saveState: true,
+                showCount: false,
+                linkType: 'link',
+                defaultText: ''
+            });
+            $('#drilldown-2').dcDrilldown({
+                speed: 'fast',
+                saveState: false,
+                showCount: false,
+                linkType: 'link'
+            });
+
         });
-        $('#drilldown-2').dcDrilldown({
-            speed: 'fast',
-            saveState: false,
-            showCount: false,
-            linkType: 'link'
-        });
-
-    });
-
-</script>
+    </script>
 
 
 </body>
+
 </html>

@@ -20,7 +20,7 @@ function Location(tag, name, locationType, description, x, y, locationTrack) {
     this.description = description;
     this.x = x;
     this.y = y;
-	
+
 }
 
 
@@ -46,7 +46,7 @@ function Navigation(tag, styleClass, ttip, dest, direction, x, y, tourTracks) {
     this.direction = direction;
     this.x = x;
     this.y = y;
-	this.tourTracks = tourTracks;
+    this.tourTracks = tourTracks;
 }
 
 /***************************************************************
@@ -98,8 +98,7 @@ function CarouselItem(tags, full, thumb, ttip, html) {
         this.thumb = full;
         this.full = null;
         this.tags = tags;
-    }
-    else {
+    } else {
         this.tags = tags;
         this.full = full;
         this.thumb = thumb;
@@ -119,12 +118,13 @@ function Image(name, fname) {
  * @param data-postion
  * @param data-toggle
  *****************************************************/
-function howTo(info, datapostion, datatoggle) {
-    this.info = info;
-    this.datapostion = datapostion;
-    this.datatoggle = datatoggle;
-   
-	
-}
-
+var MenuItem = function (opts) {
+    this.text = opts.text;
+    this.icon = opts.icon ? opts.icon : '';
+    this.target = opts.target ? opts.target : '';
+    this.onclk = opts.onclick ? opts.onclick : '';
+    this.rel = opts.rel ? opts.rel : '';
+    this.items = opts.items ? opts.items : [];
+    this.href = opts.href ? opts.href : '';
+};
 

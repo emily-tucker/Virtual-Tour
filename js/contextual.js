@@ -152,11 +152,3 @@
 		/*======Outdoor Array=====*/
 		dtToHr, dtTorm, hrToCb,hrTOdt,cbToRm, cbtohr, rmToDt, rmTOCb ];
  
-
-
-
-    /**
-     * Hspot object instances
-     */
-    var taylor_hotspot = new Hspot("#taylor", "taylor_panorama_hs", "view Panorama", "panoramas/taylor_panorama/Taylor_Panorama.html", 60, 75);
-    var hotspots = [taylor_hotspot];
