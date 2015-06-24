@@ -106,14 +106,14 @@
 
 	
 	/*====================Athletics Arrows================== Arrow Color: Slate- Athetic Tour = 3*/
-	var gatewayfield_to_mountaineerbowlAthletics= new Navigation("#gatewayfield", "gatewayfield_to_mountaineerbowlAthletics", "to the Mountaineer Bowl", "#mountaineerbowl", "forward", 47, 27, 3);
-	var gatewayfield_to_fieldhouseAthletics = new Navigation("#gatewayfield", "gatewayfield_to_fieldhouseAthletics", "Back to the Field House", "#fieldhouse", "forward", 47, 27, 3);
-	var fieldhouse_to_paulwrightgymAthletics = new Navigation("#fieldhouse", "fieldhouse_to_paulwrightgymAthletics", "Back to Paul Wright gym", "#paulwrightgym", "forward", 47, 27, 3);
-    var fieldhouse_to_gatewayfieldAthletics = new Navigation("#fieldhouse", "fieldhouse_to_gatewayfieldAthletics", "to Gateway Field", "#gatewayfield", "back", 50, 17, 3);
-	var paulwrightgym_to_fieldhouseAthletics = new Navigation("#paulwrightgym", "paulwrightgym_to_fieldhouseAthletics", "Back to the Fieldhouse", "#fieldhouse", "back", 50, 17, 3);
-	var paulwrightgym_to_mountaineerbowlAthletics = new Navigation("#paulwrightgym", "paulwrightgym_to_mountaineerbowlAthletics", 
-													"To the mountaineerbowl", "#mountaineerbowl", "forward", 47, 27, 3);
-    var mountaineerbowl_to_paulwrightgymAthletic = new Navigation("#mountaineerbowl", "mountaineerbowl_to_paulwrightgymAthletic", "to Paul Wright Gym", "#paulwrightgym", "back", 50, 17, 3);
+	var fieldhouse_to_practicefield= new Navigation("#fieldhouse", "fieldhouse_to_practicefield", "to the Practice Field", "#practicefield", "forward", 47, 27, 3);
+	var fieldhouse_to_begin= new Navigation("#fieldhouse", "fieldhouse_to_begin", "Back to the Welcome Center", "#begin", "back",50, 17, 3);
+	var practicefield_to_fieldhouse= new Navigation("#practicefield", "practicefield_to_fieldhouse", "Back to the Field House", "#fieldhouse", "back", 50, 17, 3);
+	var practicefield_to_mountaineerbowl= new Navigation("#practicefield", "practicefield_to_mountaineerbowl", "To the Mountaineer Bowl", "#mountaineerbowl", "right", 47, 27, 3);
+	var mountaineerbowl_to_practicefield= new Navigation("#mountaineerbowl", "mountaineerbowl_to_practicefield", "Back to the Practice Field", "#practicefield", "back", 50, 17, 3);
+	var mountaineerbowl_to_gatewayfield= new Navigation("#mountaineerbowl", "mountaineerbowl_to_gatewayfield", "To Gateway Field", "#gatewayfield", "right", 47, 27, 3);
+	var gatewayfield_to_mountaineerbowl= new Navigation("#gatewayfield", "gatewayfield_to_mountaineerbowl", "Back to the Mountaineer Bowl", "#mountaineerbowl", "back", 50, 17, 3);
+	var gatewayfield_to_fieldhouse= new Navigation("#gatewayfield", "gatewayfield_to_fieldhouse", "To the Field House", "#fieldhouse", "left", 42, 27, 3);
 	
 	
 
@@ -141,7 +141,7 @@
 
 		
 		/*======Athletics Array=====*/
-		gatewayfield_to_mountaineerbowlAthletics, gatewayfield_to_fieldhouseAthletics,fieldhouse_to_paulwrightgymAthletics, fieldhouse_to_gatewayfieldAthletics, 										        paulwrightgym_to_fieldhouseAthletics, paulwrightgym_to_mountaineerbowlAthletics, mountaineerbowl_to_paulwrightgymAthletic,
+		fieldhouse_to_practicefield, fieldhouse_to_begin, practicefield_to_fieldhouse, practicefield_to_mountaineerbowl, mountaineerbowl_to_practicefield, mountaineerbowl_to_gatewayfield, gatewayfield_to_fieldhouse, gatewayfield_to_mountaineerbowl,
 		
 		/*======Outdoor Array=====*/
 		dtToHr, dtTorm, hrToCb,hrTOdt,cbToRm, cbtohr, rmToDt, rmTOCb ];
