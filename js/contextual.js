@@ -6,37 +6,36 @@
 	var borick = new Location("#borick", "Borick Buisness Building", "academic",
             "Prominent and relatively new, state-of-the-art Borick is home to Western's new School of Business. It includes a virtual classroom that can connect easily with similar facilities around the world.", 1582, 1259);
 	var chipeta = new Location("#chipeta", "Chipeta Student Housing", "studentlife",
-            "Home of Social Sciences and Environment & Sustainability programs",  345, 1206);	
+            "Co-ed apartments on the southwest corner of campus, featuring furnished one- and two-bedroom units. Also home to Western's Lesbian/Gay/Bisexual Student Alliance.",  345, 1206);	
 	var crawford = new Location("#crawford", "Crawford Hall", "academic",
-            "Home of Social Sciences and Environment & Sustainability programs",  1605, 992);	
-	var escalante = new Location("#escalante", "Escalante Housing", "studentlife",
-            "Home of Social Sciences and Environment & Sustainability programs",  2305, 888);
+            "A compact and appealing classroom building, primarily for Education courses.",  1605, 992);	
+	var escalante = new Location("#escalante", "Escalante Terrace", "studentlife",
+            "Formerly Western's Fitness Center, Escalante Terrace is slated to house WesternÕs ICE program for entrepreneurship. For 2015-2016, it will house art programs, while Quigley Hall undergoes renovations.",  2305, 888);
 	var fieldhouse = new Location("#fieldhouse", "Mountaineer Field House", "athletic", 
-	 "65,000-square-foot LEED-Gold certified field house.", 1313, 869);
+	 "This spectacular new building includes a high-tech surface across its main floor, with the highest indoor NCAA track, a 43.5-foot climbing wall, an athletic weight room, a fitness center, the HAPLab and more.", 1313, 869);
 	var gatewayfield = new Location("#gatewayfield", "Gateway Soccer Fields", "athletic", 
 	 "65,000-square-foot LEED-Gold certified field house.", 1315, 869);
 	var hurst = new Location("#hurst", "Hurst Hall", "academic",
-            "Home of Science and Mathematics departments", 2422, 1227);
+            "One of the campus's most modern classroom buildings, Hurst houses Science, Mathematics and Computer Science labs, along with offices.", 2422, 1227);
 	var kelley = new Location("#kelley", "Kelley Hall", "academic",
-            "Home of Social Sciences and Environment & Sustainability programs", 2288, 1100);
+            "Topped by solar-hot-water panels that boost its efficiency, Kelley is an important classroom building, housing Western's Social Sciences and Environment & Sustainability programs, among others.", 2288, 1100);
     var library = new Location("#library", "Leslie J. Savage Library", "studentlife",
-            "The research hub for campus and a great study spot",  1918, 994);
-	var mears = new Location("#mears", "Mears Student Housing", "studentlife",
-            "Home of Social Sciences and Environment & Sustainability programs", 1087, 1082);
+            "Savage Library is a research hub for campus and great study spot. You'll find the expected stacks of books, but also large computer labs, access to electronic libraries around the world and the university archives.",  1918, 994);
+	var mears = new Location("#mears", "Mears Complex", "studentlife",
+            "These co-ed dormitories Ð Mears, Robidoux and Moffat Ð connect by enclosed corridors. They feature suite-style double rooms, with two rooms sharing each bathroom.", 1087, 1082);
 	var paulwrightgym= new Location("#paulwrightgym", "Paul Wright Gym", "athletic", 
-	 "65,000-square-foot LEED-Gold certified field house.", 1313, 869);
+	 "At 7,723 feet above sea level, this is the world's highest collegiate gym. It seats 1,800 and includes an indoor pool, a wrestling room, locker rooms, the Hall of Fame trophy room and classrooms.", 1313, 869);
 	var pinnacles = new Location("#pinnacles", "Pinnacles Student Housing", "studentlife",
-            "Home of Social Sciences and Environment & Sustainability programs",  765, 997);
+            "Western's newest apartments have furnished two-, three- and four-bedroom units. Each has a large kitchen and common room, with plenty of cabinet and closet space. It also has many common spaces and facilities.",  765, 997);
 	var mountaineerbowl = new Location("#mountaineerbowl", "Mountaineer Bowl", "athletic",
-            "The world's highest collegiate football stadium",  2023, 644);	
+            "Home of Mountaineer football and Western's high-tech-surface track, itÕs also world's highest collegiate football stadium at 7,750 feet above sea level, seating 4,000 fans, with room for more on its hills.",  2023, 644);	
 	var quigley = new Location("#quigley", "Quigley Hall", "academic",
-            "Home of the Music and Art departments", 2170, 1419);		
+            "Home of Western's Art and Music programs, Quigley is undergoing a $25.8 million renovation, upgrading studios, presenation spaces, practice rooms and more, with expected completion in Fall 2016.", 2170, 1419);		
     var taylor = new Location("#taylor", "Taylor Hall", "academic",
-            "Home of administrative offices, classrooms, faculty offices, computer labs, as well as an " +
-            "auditorium and theater.", 1905, 1200);
-    var universitycenter = new Location("#universitycenter", "University Center", "studentlife", "The hub of student life on campus", 1849, 887);
+            "Renovated in 2010, Taylor is a LEED-certified, energy-efficient structure. Its bold atrium serves is Western's Welcome Center. It also houses the administration, an auditorium, a theater and many classrooms.", 1905, 1200);
+    var universitycenter = new Location("#universitycenter", "University Center", "studentlife", "This fairly new and extremely capable building is a hub of student life. It houses meeting rooms; a ballroom; dining facilities, the bookstore, the University Theater, Wilderness Pursuits, student groups and more.", 1849, 887);
 	var ute = new Location("#ute", "Ute Student Housing", "studentlife",
-            "Home of Social Sciences and Environment & Sustainability programs", 1224, 1275);
+            "One of the older residence halls on campus, Ute has seen recent renovations and offers first-year students fully furnished rooms in a traditional, community-style dormitory that opens right onto lush Taylor Lawn.", 1224, 1275);
 	
 
     var telluride = new Location("#telluride", "Telluride", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 988, 432);
@@ -61,30 +60,25 @@
 
 
 
-    /**
+    /**************************************
      * Navigation object instances
-     */
-	/*====================Default Arrows================== Arrow Color: White - Default == 0*/
-   
-	var begin_to_gatewayfield = new Navigation("#begin", "begin_to_gatewayfield", "to Gateway Soccer Fields", "#gatewayfield", "back", 48, 15, 0); 
-	var begin_to_taylor = new Navigation("#begin", "begin_to_taylor", "to Taylor Hall", "#taylor","forward", 47, 38, 0);//
-	
-	
+     *************************************/
 	/*====================Academic Arrows================== Arrow Color: Black -Academic Tour = 1*/
-	var taylor_to_borickAcademic = new Navigation("#taylor", "taylor_to_borick", "to Borick", "#borick", "left", 38, 27, 1);
-	var taylor_to_quigleyAcademic = new Navigation("#taylor", "taylor_to_quigleyAcademic", "to Quigley", "#quigley", "right", 58, 27, 1); //
-	var hurst_to_quigleyAcademic = new Navigation("#hurst", "hurst_to_quigleyAcademic", "Back to Quigley Hall", "#quigley", "right", 50, 17, 1);
-	var hurst_to_kelleyAcademic = new Navigation("#hurst", "hurst_to_kelleyAcademic", "to Kelley Hall", "#kelley", "left", 42, 20, 1);
-    var quigley_to_taylorAcademic = new Navigation("#quigley", "quigley_to_taylorAcademic", "back to Taylor", "#taylor", "backleft", 42, 18, 1);
-	var quigley_to_hurstAcademic = new Navigation("#quigley", "quigly_to_hurstAcademic", "to Hurst", "#hurst", "right", 50, 27, 1);
-    var kelley_to_hurstAcademic = new Navigation("#kelley", "kelley_to_hurstAcademic", "Back to Hurst Hall", "#hurst", "back", 50, 17, 1);
-    var kelley_to_libraryAcademic = new Navigation("#kelley", "kelley_to_libraryAcademic", "To the library", "#library", "left", 42, 27, 1);  
-    var library_to_kelleyAcademic = new Navigation("#library", "library_to_kelleyAcademic", "Back to Kelley Hall ", "#kelley", "back", 50, 17, 1);
-	var library_to_crawfordAcademic = new Navigation("#library", "library_to_crawfordAcademic", "to Crawford", "#crawford", "left", 38, 27, 1);
-	var crawford_to_libraryAcademic = new Navigation("#crawford", "crawford_to_libraryAcademic", "to the Library", "#library", "back", 50, 17, 1);
-	var crawford_to_borickAcademic = new Navigation("#crawford", "crawford_to_borickAcademic", "to Borick", "#borick", "left", 38, 27, 1);
-	var borick_to_taylorAcademic = new Navigation("#borick", "borick_to_taylorAcademic", "to Taylor", "#taylor", "right", 58, 27, 1);
-	var borick_to_crawfordAcademic = new Navigation("#borick", "borick_to_crawfordAcademic", "Back to Crawford", "#crawford", "back", 50, 17, 1);
+	   var taylor_to_quigley = new Navigation("#taylor", "taylor_to_quigley", "to Quigley Hall", "#quigley", "right", 58, 27, 1);   var quigley_to_taylor = new 		Navigation("#quigley", "quigley_to_taylor", "Back to Taylor Hall", "#taylor", "backleft", 50, 17, 1);
+   var quigley_to_hurst = new Navigation("#quigley", "quigley_to_hurst", "To Hurst Hall", "#hurst", "right", 58, 27, 1);
+   var hurst_to_quigley = new Navigation("#hurst", "hurst_to_quigley", "Back to Quigley Hall", "#quigley", "backright",50, 17, 1);
+   var hurst_to_kelley = new Navigation("#hurst", "hurst_to_kelley", "To Kelley Hall", "#kelley", "left", 42, 27, 1);
+   var kelley_to_hurst = new Navigation("#kelley", "kelley_to_hurst", "Back to Hurst Hall", "#hurst", "back", 50, 17, 1);
+   var kelley_to_library = new Navigation("#kelley", "kelley_to_library", "To Savage J. Library", "#library", "left", 42, 27, 1);
+   var library_to_kelley = new Navigation("#library", "library_to_kelley", "Back to Kelley Hall", "#kelley", "backright", 50, 17, 1);
+   var library_to_paulwrightgym = new Navigation("#library", "library_to_paulwrightgym", "To Paul Wright Gymnasium", "#paulwrightgym", "forward", 47, 27, 1);
+    var paulwrightgym_to_library = new Navigation("#paulwrightgym", "paulwrightgym_to_library", "Back to Savage J. Library", "#library", "backright", 50, 17, 1);
+	var paulwrightgym_to_crawford = new Navigation("#paulwrightgym", "paulwrightgym_to_crawford", "To Crawford Hall", "#crawford", "left", 42, 27, 1);
+	var crawford_to_paulwrightgym = new Navigation("#crawford", "crawford_to_paulwrightgym", "Back to Paul Wright Gymnasium", "#paulwrightgym", "backleft", 48, 15, 1);
+	var crawford_to_borick = new Navigation("#crawford", "crawford_to_borick", "To Borick Buisness Building", "#borick", "right", 58, 27, 1);
+	var borick_to_crawford = new Navigation("#borick", "borick_to_crawford", "Back to Crawford Hall", "#crawford", "backleft", 50, 17, 1);
+	var borick_to_taylor = new Navigation("#borick", "borick_to_taylor", "To Taylor Hall", "#taylor", "right", 58, 27, 1);
+	var taylor_to_begin = new Navigation("#taylor", "taylor_to_begin", "Back to the Welcome Center", "#begin", "back", 50, 17, 1);
 	
 	
 	/*====================Student Life Arrows================== Arrow Color: Red - StudentLife Tour = 2*/
@@ -136,11 +130,11 @@
     var rmToDt = new Navigation("#rockymountains", "rmtodt", "to Downtown", "#mainstreet", "left", 25, 20, 4);
     var rmTOCb = new Navigation("#rockymountains", "rmtocb", "to Crested Butte", "#cb", "right", 65, 20, 4);
 
-    var navs = [ begin_to_gatewayfield, begin_to_taylor,
+    var navs = [ 
 		
 		/*======Academics Array=====*/
-		taylor_to_borickAcademic, taylor_to_quigleyAcademic, hurst_to_kelleyAcademic, quigley_to_taylorAcademic, quigley_to_hurstAcademic, kelley_to_hurstAcademic, kelley_to_libraryAcademic, hurst_to_quigleyAcademic, library_to_kelleyAcademic, library_to_crawfordAcademic, crawford_to_libraryAcademic, crawford_to_borickAcademic, borick_to_taylorAcademic, escalante_to_librarySL,
-		escalante_to_universitycenterSL, universitycenter_to_librarySL, universitycenter_to_uteSL, borick_to_crawfordAcademic,
+		   taylor_to_quigley, quigley_to_taylor, quigley_to_hurst, hurst_to_quigley, hurst_to_quigley, hurst_to_kelley, kelley_to_hurst, kelley_to_library, library_to_kelley, library_to_paulwrightgym, paulwrightgym_to_library, paulwrightgym_to_crawford, crawford_to_borick, crawford_to_paulwrightgym, borick_to_crawford, borick_to_taylor, taylor_to_begin,
+		
 		
 		/*======Student Life Array=====*/
 		crawford_to_librarySL, crawford_to_universitycenterSL, library_to_escalanteSL, escalante_to_fieldhouseSL, library_to_universitycenterSL, fieldhouse_to_pinnaclesSL, pinnacles_to_chipetaSL, pinnacles_to_fieldhouseSL, chipeta_to_pinnaclesSL, chipeta_to_mearsSL, mears_to_chipetaSL, mears_to_uteSL, ute_to_mearsSL, borick_to_uteSL, mountaineerbowl_to_escalanteSL, fieldhouse_to_universitycenterSL,
