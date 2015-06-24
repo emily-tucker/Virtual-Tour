@@ -2,9 +2,9 @@
      * Location object instances
      */
 	var begin = new Location("#begin", "Welcome to Western", "default",
-	"Western offers a private college experience at a public university cost, deep in the heart of the Rockies eep in the heart of the Rockies eep in the heart of the Rockies eep in the heart of the Rockies eep in the.", 1801, 1246);
+	"Western offers a private college experience at a public university cost, deep in the heart of the Rockies.", 1801, 1246);
 	var borick = new Location("#borick", "Borick Buisness Building", "academic",
-            "Home of Social Sciences and Environment & Sustainability programs", 1582, 1259);
+            "Prominent and relatively new, state-of-the-art Borick is home to Western's new School of Business. It includes a virtual classroom that can connect easily with similar facilities around the world.", 1582, 1259);
 	var chipeta = new Location("#chipeta", "Chipeta Student Housing", "studentlife",
             "Home of Social Sciences and Environment & Sustainability programs",  345, 1206);	
 	var crawford = new Location("#crawford", "Crawford Hall", "academic",
