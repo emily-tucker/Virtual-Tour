@@ -202,6 +202,7 @@ function loadMainButtons() {
         });
 
     }
+	
     /*
     function instructions(){
     	$("#navigation").innerHTML="<div id ='navigation', data-intro='The Best Will Ever See!!', data-position='bottom'></div>";
@@ -260,6 +261,7 @@ function getNavs(locationTag) {
                     });
                 }
             }
+			
         }
     }
 }

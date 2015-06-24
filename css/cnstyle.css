@@ -122,6 +122,9 @@ body.contextual_navigation
 	display:inline-block;
     cursor:pointer;
     text-decoration:none;
+	overflow:hidden;
+	min-width:20px;
+	min-height:4%;
 
 }
 .athletics_button {
@@ -138,6 +141,7 @@ body.contextual_navigation
 	display:inline-block;
     cursor:pointer;
     text-decoration:none;
+	overflow:hidden;
 
 }
 .academics_button {
@@ -154,6 +158,7 @@ body.contextual_navigation
 	display:inline-block;
     cursor:pointer;
     text-decoration:none;
+	overflow:hidden;
 }
 .sl_button {
     position: fixed;
@@ -167,6 +172,7 @@ body.contextual_navigation
 	display:inline-block;
     cursor:pointer;
     text-decoration:none;
+	overflow:hidden;
 
 
 }
@@ -182,6 +188,7 @@ body.contextual_navigation
     letter-spacing: -.1px;
     font-size: 1.7vw;
 	text-shadow: 1px 1px #000;
+	overflow:hidden;
 }
 .athletics_button:hover, .academics_button:hover, .sl_button:hover, .switch_button:hover{
 	text-align:center;
@@ -194,6 +201,7 @@ body.contextual_navigation
     letter-spacing: -.1px;
     font-size: 1.7vw;	
 	text-shadow: 1px 1px #000;
+	overflow:hidden;
 
 	
 }
@@ -249,7 +257,7 @@ section:target, .show{
 
 .hotspot {
     position: fixed;
-	height: 85%;
+	height: auto;
     z-index: 1;
     max-width: 12%;
     border: 0;
