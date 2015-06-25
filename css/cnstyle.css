@@ -14,7 +14,7 @@ body.contextual_navigation
   }
 
 .dd-wrapper .dd-menu {
-  overflow: auto; position: absolute; width:84%;
+  overflow: hidden; position: absolute; width:84%;
   }
 .dd-wrapper  .dd-menu ul {
   position: absolute; top: 0; right: 0;
