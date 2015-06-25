@@ -157,7 +157,7 @@ function loadMainButtons() {
             inner_html +=
 
                 "<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
-                "<button class='to_studentlife sl_button' onclick=window.location='#library'>Student Life Tour</button>" +
+                "<button class='to_studentlife sl_button' onclick=window.location='#universitycenter'>Student Life Tour</button>" +
                 "<button class='to_academics academics_button' onclick=window.location='#taylor'>Academics Tour</button>" +
                 "<button class='to_offcampus switch_button' onclick=window.location='#mainstreet'>Off Campus Tour</button>" +
                 "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +

@@ -82,26 +82,23 @@
 	
 	
 	/*====================Student Life Arrows================== Arrow Color: Red - StudentLife Tour = 2*/
-	var crawford_to_librarySL = new Navigation("#crawford", "crawford_to_librarySL", "Back to Library", "#library", "back", 50, 17, 2);
-	var crawford_to_universitycenterSL = new Navigation("#crawford", "crawford_to_universitycenterSL", "to University Center", "#universitycenter", "forward", 47, 27, 2);
-	var library_to_universitycenterSL = new Navigation("#library", "library_to_universitycenterSL", "Back to the University Center", "#universitycenter", "back", 50, 17, 2);
-    var library_to_escalanteSL = new Navigation("#library", "library_to_escalanteSL", "to Escalante Student Housing", "#escalante", "forward", 47, 27, 2);
-	var escalante_to_fieldhouseSL = new Navigation("#escalante", "escalante_to_fieldhouseSL", "Back to Field House", "#fieldhouse", "forward", 47, 27, 2);
-	var escalante_to_librarySL = new Navigation("#escalante", "escalante_to_librarySL", "Back to Library", "#library", "back", 50, 17, 2);
-	var escalante_to_universitycenterSL = new Navigation("#escalante", "escalante_to_universitycenterSL", "to University Center", "#universitycenter", "left", 38, 27, 2);
-	var universitycenter_to_librarySL = new Navigation("#universitycenter", "universitycenter_to_librarySL", "to Library", "#library", "right", 58, 27, 2);
-	var universitycenter_to_uteSL = new Navigation("#universitycenter", "universitycenter_to_uteSL", "to Ute Student Housing", "#ute", "left", 38, 27, 2);
-	var fieldhouse_to_pinnaclesSL = new Navigation("#fieldhouse", "fieldhouse_to_pinnaclesSL", "to the Pinaccles", "#pinnacles", "left", 38, 27, 2);
-	var pinnacles_to_chipetaSL = new Navigation("#pinnacles", "pinnacles_to_chipetaSL", "to Chipeta", "#chipeta", "forward", 47, 27, 2);
-	var pinnacles_to_fieldhouseSL = new Navigation("#pinnacles", "pinnacles_to_fieldhouseSL", "Back to the Fieldhouse", "#chipeta", "back", 50, 17, 2);
-	var chipeta_to_pinnaclesSL = new Navigation("#chipeta", "chipeta_to_pinnaclesSL", "Back to Pinnacles", "#pinnacles", "back", 50, 17, 2);
-	var chipeta_to_mearsSL = new Navigation("#chipeta", "chipeta_to_mearsSL", "to Mears", "#mears", "forward", 47, 27, 2);
-	var mears_to_chipetaSL = new Navigation("#mears", "mears_to_chipetaSL", "back to Chipeta", "#chipeta", "back", 50, 17, 2);
-	var mears_to_uteSL = new Navigation("#mears", "mears_to_uteSL", "to Ute", "#ute", "forward", 47, 27, 2);
-	var ute_to_mearsSL = new Navigation("#ute", "ute_to_mearsSL", "Back to Mears", "#mears", "back", 50, 17, 2);
-	var borick_to_uteSL = new Navigation("#borick", "borick_to_uteSL", "Back to Ute", "#ute", "back", 50, 17, 2);
-	var mountaineerbowl_to_escalanteSL = new Navigation("#mountaineerbowl", "mountaineerbowl_to_escalanteSL", "to Escalante", "#escalante", "back", 50, 17, 2);
-    var fieldhouse_to_universitycenterSL = new Navigation("#fieldhouse", "fieldhouse_to_universitycenterSL", "to University Center", "#universitycenter", "back", 50, 17, 2);
+	var universitycenter_to_fieldhouse = new Navigation("#universitycenter", "universitycenter_to_fieldhouse", "To the Fieldhouse", "#fieldhouse", "left", 46, 27, 2);
+	var universitycenter_to_begin = new Navigation("#universitycenter", "universitycenter_to_begin", "Back to the Welcome Center", "#begin", "back", 50, 17, 2);
+	var fieldhouse_to_mears = new Navigation("#fieldhouse", "fieldhouse_to_mears", "To the Mears Complex", "#mears", "left", 38, 27, 2);
+	var fieldhouse_to_universitycenter = new Navigation("#fieldhouse", "fieldhouse_to_universitycenter", "Back to the University Center", "#universitycenter", "backright", 50, 17, 2);
+	var mears_to_fieldhouse = new Navigation("#mears", "mears_to_fieldhouse", "Back to the Field House", "#fieldhouse", "backright", 50, 17, 2);
+	var mears_to_pinnacles = new Navigation("#mears", "mears_to_pinnacles", "To the Pinnacles", "#pinnacles", "left", 38, 27, 2);
+	var pinnacles_to_mears = new Navigation("#pinnacles", "pinnacles_to_mears", "Back to the Mears Complex", "#mears", "backright", 50, 17, 2);
+	var pinnacles_to_chipeta = new Navigation("#pinnacles", "pinnacles_to_chipeta", "To Chipeta Hall", "#mears", "left", 38, 27, 2);
+	var chipeta_to_ute = new Navigation("#chipeta", "chipeta_to_ute", "To Ute Hall", "#ute", "right", 58, 27, 2);
+	var chipeta_to_pinnacles = new Navigation("#chipeta", "chipeta_to_pinnacles", "Back to the Pinnacles", "#pinnacles", "backleft", 50, 17, 2);
+	var ute_to_chipeta = new Navigation("#ute", "ute_to_chipeta", "Back to Chipeta Hall", "#chipeta", "backright", 50, 17, 2);
+	var ute_to_library = new Navigation("#ute", "ute_to_library", "To Savage J. Library", "#library", "forward", 47, 27, 2);
+	var library_to_ute = new Navigation("#library", "library_to_ute", "Back to Ute Hall", "#ute", "backleft", 50, 17, 2);
+	var library_to_escalante = new Navigation("#library", "library_to_escalante", "To the Escalante Terrace", "#escalante", "forward", 50, 17, 2);
+	var escalante_to_library = new Navigation("#escalante", "escalante_to_library", "Back to the Library", "#library", "back", 50, 17, 2);
+	var escalante_to_universitycenter = new Navigation("#escalante", "escalante_to_universitycenter", "To the University Center", "#universitycenter", "left", 38, 27, 2);
+	
 
 
 	
@@ -137,7 +134,7 @@
 		
 		
 		/*======Student Life Array=====*/
-		crawford_to_librarySL, crawford_to_universitycenterSL, library_to_escalanteSL, escalante_to_fieldhouseSL, library_to_universitycenterSL, fieldhouse_to_pinnaclesSL, pinnacles_to_chipetaSL, pinnacles_to_fieldhouseSL, chipeta_to_pinnaclesSL, chipeta_to_mearsSL, mears_to_chipetaSL, mears_to_uteSL, ute_to_mearsSL, borick_to_uteSL, mountaineerbowl_to_escalanteSL, fieldhouse_to_universitycenterSL,
+		universitycenter_to_fieldhouse, universitycenter_to_begin, fieldhouse_to_mears, fieldhouse_to_universitycenter, mears_to_fieldhouse, mears_to_pinnacles, pinnacles_to_mears, pinnacles_to_chipeta, chipeta_to_ute, chipeta_to_pinnacles, ute_to_chipeta, ute_to_library, library_to_ute, library_to_escalante, escalante_to_library, escalante_to_universitycenter,
 
 		
 		/*======Athletics Array=====*/
