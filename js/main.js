@@ -118,7 +118,7 @@ function getLocation(locationTag) {
     var inner_html = "";
     for (var i in locations) {
         if (locationTag === locations[i].tag) {
-            inner_html = "<div class='caption_wrapper'><div class='caption'><div id='caption_title'>" +
+            inner_html = "<div class='caption_wrapper'><div class='caption' data-intro='The caption will give you a description of each building' data-postition='right'><div id='caption_title'>" +
                 locations[i].name + "</div><div id='caption_text' class='description'>" + locations[i].description +
                 "</div></div></div>";
             $('#text_overlay').html(inner_html);
@@ -474,7 +474,6 @@ $(function () {
                     setTimeout(function () {
                         $(".menu").show();
                         $("#map").show();
-                        $('body').chardinJs('start');
                         $("#video").animate({
                             opacity: 0
                         }, video_fade, 'easeOutQuart', function () {
