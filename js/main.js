@@ -203,13 +203,7 @@ function loadMainButtons() {
 
     }
 	
-    /*
-    function instructions(){
-    	$("#navigation").innerHTML="<div id ='navigation', data-intro='The Best Will Ever See!!', data-position='bottom'></div>";
-        $("#buttons").html="<div id ='buttons', data-intro='The Best Virtual Tour You Will Ever See!!', data-position='top'></div>";
-        $(".menu").innerHTML="<div class='menu', data-intro='The Best Virtual Tour You Will Ever See!!', data-position='left'></div>";
-        $("#mapbuttons").innerHTML="<div id ='buttons', data-intro='The Best Virtual Tour You Will Ever See!!', data-position='right'></div>";
-    }
+
     /*******************************************************
      *
      *  Render all navigation items at the current location
