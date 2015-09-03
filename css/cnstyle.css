@@ -113,30 +113,30 @@ body.contextual_navigation
 .switch_button  {
     position: fixed;
     z-index:2000;
+	padding-left:8px;
+	padding-right:8px;
 	right: 34.6%;
     top: 30%;
     max-height: 8%;
 	display: block;
-    width: auto;
+    width: inherit;
     height: 100%;
 	display:inline-block;
     cursor:pointer;
     text-decoration:none;
 	overflow:hidden;
-	min-width:20px;
-	min-height:4%;
 
 }
 .athletics_button {
     position: fixed;
     z-index:2000;
-	padding-left:18px;
+	padding-left:20px;
 	padding-right:20px;
 	top: 20%;
     right: 34.6%; 
     max-height: 8%;
 	display: block;
-    width: auto;
+    width: inherit;
     height: 100%;
 	display:inline-block;
     cursor:pointer;
@@ -153,7 +153,7 @@ body.contextual_navigation
 	padding-right:11px;
     max-height: 8%;
 	display: block;
-    width: auto;
+    width: inherit;
     height: 100%;
 	display:inline-block;
     cursor:pointer;
@@ -167,7 +167,7 @@ body.contextual_navigation
     top: 30%;
     max-height: 8%;
 	display: block;
-    width: auto;
+    width: inherit;
     height: 100%;
 	display:inline-block;
     cursor:pointer;

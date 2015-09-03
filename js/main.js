@@ -156,20 +156,20 @@ function loadMainButtons() {
             // If the current location of the tour is on the begin page (#begin)
             inner_html +=
 
-                "<button class='to_athletics athletics_button' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
-                "<button class='to_studentlife sl_button' onclick=window.location='#universitycenter'>Student Life Tour</button>" +
-                "<button class='to_academics academics_button' onclick=window.location='#taylor'>Academics Tour</button>" +
-                "<button class='to_offcampus switch_button' onclick=window.location='#mainstreet'>Off Campus Tour</button>" +
-                "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
-                "<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
-                "<button class='restart_button' id = 'rb' onclick=load()>Restart Tour</button>";
+                "<button class='to_athletics athletics_button row' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
+                "<button class='to_studentlife sl_button row' onclick=window.location='#universitycenter'>Student Life Tour</button>" +
+                "<button class='to_academics academics_button row' onclick=window.location='#taylor'>Academics Tour</button>" +
+                "<button class='to_offcampus switch_button row' onclick=window.location='#mainstreet'>Off Campus Tour</button>" +
+                "<button class='schedule_button row' onclick='visitURL();'>Schedule A Visit</button>" +
+                "<button class='contact_button row' onclick='visitURL2();'>Contact Admissions</button>" +
+                "<button class='restart_button row' id = 'rb' onclick=load()>Restart Tour</button>";
         } else {
             inner_html +=
 
-                "<button class='schedule_button' onclick='visitURL();'>Schedule A Visit</button>" +
-                "<button class='contact_button' onclick='visitURL2();'>Contact Admissions</button>" +
-                "<button id='hide' class='hide_button' onclick='hideShowCarousel();'>Hide</button>" +
-                "<button class='restart_button' id = 'rb' onclick=load()>Restart Tour</button>";
+                "<button class='schedule_button row' onclick='visitURL();'>Schedule A Visit</button>" +
+                "<button class='contact_button row' onclick='visitURL2();'>Contact Admissions</button>" +
+                "<button id='hide' class='hide_button row' onclick='hideShowCarousel();'>Hide</button>" +
+                "<button class='restart_button row' id = 'rb' onclick=load()>Restart Tour</button>";
 
 
         }
