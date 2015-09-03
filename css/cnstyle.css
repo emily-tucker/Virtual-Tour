@@ -14,7 +14,7 @@ body.contextual_navigation
   }
 
 .dd-wrapper .dd-menu {
-  overflow: hidden; position: absolute; width:84%;
+  overflow: hidden; position: absolute; width:84%; max-width:84%;
   }
 .dd-wrapper  .dd-menu ul {
   position: absolute; top: 0; right: 0;
@@ -57,6 +57,7 @@ body.contextual_navigation
 .menu{
     position: fixed;
     width: 20%;
+	min-width:20%;
     top: 5%;
     z-index: 0;
 }
@@ -296,19 +297,20 @@ section:target, .show{
 .hide_button{
     position: fixed;
     z-index: 3000;
-    right: -8%;
+    right: -6.5%;
     bottom: 10%;
     max-height: 8%;
 	transform: rotate(90deg);
     transform-origin: left top 0;
     width: 8%;
     height: 5%;
+	min-height:5%;
+	min-width:8%;
 	margin-top: 5%;
-	background-color: rgba(0,0,0,.40);
+	background-color: rgba(0,0,0,.70);
 	border:1.3px solid #C00;
-    display:inline-block;
+    display:block;
     cursor:pointer;
-    text-decoration:none;
     color:#FFF;
     font: bold 20px Arial,Verdana,sans-serif;
     letter-spacing: -.1px;
@@ -334,7 +336,7 @@ section:target, .show{
     position: fixed;
     z-index: 1;
     right: 1%;
-    top: 40%;
+    top: 42%;
     max-height: 7%;
 	
 }
@@ -346,7 +348,7 @@ section:target, .show{
     position: fixed;
     z-index: 1;
     right: 1%;
-    top:35%;
+    top:36%;
     max-height: 7%;
 }
 
@@ -394,7 +396,7 @@ section:target, .show{
 
 .beginButton, .restart_button, .visit_button, .schedule_button, .contact_button, .map_button, .map_button_initial, .map_button2 {
 	margin-top: 5%;
-	background-color: rgba(0,0,0,.50);
+	background-color: rgba(0,0,0,.70);
 	border:1.3px solid #C00;
     display:inline-block;
     cursor:pointer;
