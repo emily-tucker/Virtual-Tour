@@ -140,8 +140,6 @@ function getLocation(locationTag) {
  ***************************/
 function load() {
     window.location = '#begin';
-    tour_track = 0;
-    localNavs.push(navs[i].styleClass);
     console.log("tour track: " + tour_track);
 }
 
@@ -183,23 +181,24 @@ function loadMainButtons() {
 
         $('body').on('click', '.to_academics', function () {
             tour_track = academics;
-            console.log(tour_track);
+            console.log('Tour ' + tour_track);
         });
 
         $('body').on('click', '.to_studentlife', function () {
             tour_track = studentLife;
-            console.log(tour_track);
+            console.log('Tour ' + tour_track);
         });
 
         $('body').on('click', '.to_athletics', function () {
             tour_track = athletics;
-            console.log(tour_track);
+            console.log('Tour ' + tour_track);
         });
         $('body').on('click', '.to_offcampus', function () {
             tour_track = offCampus;
-            console.log(tour_track);
+            console.log('Tour ' + tour_track);
 
-        });
+        }); 
+		
 
     }
 	

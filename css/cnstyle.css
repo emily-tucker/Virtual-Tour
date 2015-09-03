@@ -14,8 +14,9 @@ body.contextual_navigation
   }
 
 .dd-wrapper .dd-menu {
-  overflow: hidden; position: absolute; width:84%; max-width:84%;
+  overflow: hidden; position: absolute; width:84%; 
   }
+
 .dd-wrapper  .dd-menu ul {
   position: absolute; top: 0; right: 0;
   }
@@ -57,7 +58,6 @@ body.contextual_navigation
 .menu{
     position: fixed;
     width: 20%;
-	min-width:20%;
     top: 5%;
     z-index: 0;
 }
