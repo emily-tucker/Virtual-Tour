@@ -180,7 +180,7 @@ body.contextual_navigation
 
 .athletics_button, .academics_button, .sl_button, .switch_button  {
 	text-align:center;
-	background-color: rgba(0,0,0,.75);
+	background-color: rgba(0,0,0,.65);
 	border:1.5px solid #C00;
     display:inline-block;
     cursor:pointer;
@@ -193,7 +193,7 @@ body.contextual_navigation
 }
 .athletics_button:hover, .academics_button:hover, .sl_button:hover, .switch_button:hover{
 	text-align:center;
-	background-color: rgba(0,0,0,.75);
+	background-color: rgba(0,0,0,.65);
 	border:3px solid #C00;
     display:inline-block;
     cursor:pointer;
@@ -307,7 +307,7 @@ section:target, .show{
 	min-height:5%;
 	min-width:8%;
 	margin-top: 5%;
-	background-color: rgba(0,0,0,.70);
+	background-color: rgba(0,0,0,.65);
 	border:1.3px solid #C00;
     display:block;
     cursor:pointer;
@@ -401,7 +401,7 @@ section:target, .show{
 
 .beginButton, .restart_button, .visit_button, .schedule_button, .contact_button, .map_button, .map_button_initial, .map_button2 {
 	margin-top: 5%;
-	background-color: rgba(0,0,0,.70);
+	background-color: rgba(0,0,0,.60);
 	border:1.3px solid #C00;
     display:inline-block;
     cursor:pointer;
@@ -417,7 +417,7 @@ section:target, .show{
 }
 .beginButton:hover, .restart_button:hover, .visit_button:hover,  .schedule_button:hover, .contact_button:hover, .map_button2:hover, .map_button:hover, .map_button_initial:hover{
 	margin-top: 5%;
-	background-color: rgba(0,0,0,.50);
+	background-color: rgba(0,0,0,.60);
 	border:1.5px solid #C00;
     display:inline-block;
     cursor:pointer;
@@ -461,7 +461,7 @@ comment out so the map doesn't auto scale
     width:100%;
     text-align:center;
     color:#FFF;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     font-weight:bold;
     position:relative;
     z-index:2;
