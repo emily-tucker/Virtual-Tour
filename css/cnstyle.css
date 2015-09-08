@@ -333,11 +333,13 @@ section:target, .show{
 * Restart Tour Button
 *********************/
 .restart_button {
-    position: fixed;
+    position:absolute;
     z-index: 1;
     right: 1%;
     top: 42%;
     max-height: 7%;
+	padding-right: 80px;
+	padding-left:10px;
 	
 }
 
@@ -345,15 +347,18 @@ section:target, .show{
 * Schedule A Visit Button
 *******************/
 .schedule_button {
-    position: fixed;
+    position: absolute;
     z-index: 1;
     right: 1%;
     top:36%;
     max-height: 7%;
+	padding-right: 44px;
+	padding-left:7px;
 }
 
 .contact_button {
-    position: fixed;
+    position:absolute;
+	padding-right: 10px;
     z-index: 1;
     right: 1%;
     top:30%;
