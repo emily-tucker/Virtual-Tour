@@ -10,15 +10,16 @@ body.contextual_navigation
 ***********************/
 
 .dd-wrapper ul, .dd-wrapper ul li, .dd-wrapper li, .dd-wrapper li ul, .dd-wrapper li ul li {
-  margin: 0; padding: 0; list-style: none; top: 90%; color: black;
+  margin: 0; padding: 0; list-style: none; top: 90%; color: black; 
   }
 
 .dd-wrapper .dd-menu {
-  overflow: hidden; position: absolute; width:84%; 
+/*Max-width controls the invisable column. but now makes text scroll*/
+  overflow: hidden; position: absolute; width:84%; max-width:84%; 
   }
 
 .dd-wrapper  .dd-menu ul {
-  position: absolute; top: 0; right: 0;
+  position: absolute; top: 0; right: 0; 
   }
 .first{
     color: black;
@@ -26,6 +27,7 @@ body.contextual_navigation
 }
 .fa-times{
     color: white;
+	
 }
 
 /***********************
