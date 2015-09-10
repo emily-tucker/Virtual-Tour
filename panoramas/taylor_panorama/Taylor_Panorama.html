@@ -1,13 +1,23 @@
-<!DOCTYPE HTML>
-  <html><head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title></title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="jquery-1.11.3.js"></script>
+	<script src="jquery.panorama_viewer.js"></script>
+	<link rel="stylesheet" type="text/css" href="panorama_viewer.css">
+	<title>Test Pic</title>
+
+	<script>
+		$(document).ready(function(){
+			$(".panorama").panorama_viewer({
+				repeat: true
+			});
+		});
+	</script>
+
 </head>
 <body>
-	<div align="center" style="height: 100%; overflow:hidden;">
-	  <noscript><div style="color: red; width: 30%; border: 1px solid red; padding: 4px; font-family: sans-serif;">ERROR: Your web browser must have JavaScript enabled to show this panorama.</div></noscript>
-	  <div id="panoStudioViewerID"></div>
-	  <script type="text/javascript" src="panoStudioViewer.js"></script>
-	  <script type="text/javascript">panoStudioViewer.embed("panoStudioViewerID","100%","100%","Taylor_Panorama.xml","true","false");</script>
-	</div>
-</body></html>
+<div class="panorama">
+	<img src="CourmayeurFromMontChetif01.jpg">
+</div>
+</body>
+</html>
