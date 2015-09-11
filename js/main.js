@@ -33,8 +33,8 @@
  * Variables for functions      *
  ********************************/
 var video_time = 15000;
-var map_slide_time = 1500;
-var description_delay = 5000;
+var map_slide_time = 1000;
+var description_delay = 3000;
 var video_fade = 2000;
 var map_state = 1;
 var first_time = false;
@@ -140,7 +140,9 @@ function getLocation(locationTag) {
  ***************************/
 function load() {
     window.location = '#begin';
+	
     console.log("tour track: " + tour_track);
+	 
 }
 
 /***********************************
@@ -268,9 +270,6 @@ function getNavs(locationTag) {
 
 function mapButtonLoad() {
     var inner_html = "";
-    if (first_time) {
-        inner_html += "<button class='map_button_initial'>Expand Map</button>"
-    }
     if (map_state === 2) {
         inner_html += "<button class='map_button'>Collapse Map</button>"
     } else if (map_state === 1) {
@@ -293,13 +292,13 @@ function mapButtonLoad() {
             $(".map_button").text("Enlarge Map");
             $("#map").show(function () {
                 $("#map").animate({
-                    width: window.innerWidth * 0.25,
-                    height: window.innerHeight * 0.38
+                    width: window.innerWidth * 0.20,
+                    height: window.innerHeight * 0.33
                 }, function () {
                     animate_map(currentLocation, map_slide_time);
                 });
                 $(".map_button").animate({
-                    right: window.innerWidth * 0.14
+                    right: window.innerWidth * 0.08
                 });
             });
             map_state += 1;
@@ -312,7 +311,7 @@ function mapButtonLoad() {
                 animate_map(currentLocation, map_slide_time);
             });
             $(".map_button").animate({
-                right: window.innerWidth * 0.63
+                right: window.innerWidth * 0.62
             });
             map_state += 1;
         } else if (map_state === 2) {
@@ -330,16 +329,7 @@ function mapButtonLoad() {
         }
     });
 
-    if (!first_time && map_state != 0) {
-        $(".map_button").animate({
-            top: -10 + ($("#map").height() - ($(".map_button").height() * 8.15))
-        }, 0);
-    } else if (map_state === 0) {
-        $(".map_button").animate({
-            top: window.innerHeight * 0.1,
-            right: -125
-        }, 0);
-    }
+  
 
 
 }

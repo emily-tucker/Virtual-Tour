@@ -35,8 +35,8 @@ body.contextual_navigation
 ************************/
 
 .blue .dd-wrapper {
-  font-family: Helvetica;
   font-size: 1.25vw;
+      letter-spacing: .60px;
   }
 
 .blue .dd-menu a {
@@ -113,6 +113,7 @@ body.contextual_navigation
  * Tour Buttons - Appear on the first page only
  * 
  *******************************************/
+
 .switch_button  {
     position: fixed;
     z-index:2000;
@@ -152,13 +153,12 @@ body.contextual_navigation
     top: 20%;
 	padding-left:11px;
 	padding-right:11px;
-    max-height: 8%;
+	height: 8%;
 	display: block;
-    width: inherit;
-    height: 100%;
     cursor:pointer;
     text-decoration:none;
 	overflow:hidden;
+	
 }
 .sl_button {
     position: fixed;
@@ -372,7 +372,6 @@ section:target, .show{
 
 .map_button{
     position: fixed;
-	top: 15%;
     right: 8%;
     max-height: 7%;
     z-index: 10;
@@ -434,18 +433,6 @@ comment out so the map doesn't auto scale
 *************************/
 
 
-
-.tooltip {
-    display:none;
-    position:absolute;
-    border:1px solid #333;
-    background-color:#161616;
-    border-radius:5px;
-    padding:10px;
-    color:#fff;
-    font-size:12px;
-}
-
 .caption_wrapper {
     width:33.33%;
     height:auto;
@@ -456,26 +443,28 @@ comment out so the map doesn't auto scale
 }
 
 .caption {
+	font:Arial, Helvetica, sans-serif;
     height:auto;
     padding-bottom: 5px;
     width:100%;
     text-align:center;
     color:#FFF;
-    background-color: rgba(0, 0, 0, 0.6);
-    font-weight:bold;
+    background-color: rgba(0, 0, 0, 0.65);
     position:relative;
     z-index:2;
 }
 
 #caption_title {
-    font: bold 20px Arial,Verdana,sans-serif;
-    letter-spacing: -1px;
-    font-size: 2vw;
+   font:Arial, Helvetica, sans-serif;
+    letter-spacing: .75px;
+    font-size: 1.8vw;
+	
+	
 }
 
 .description {
-    font: 20px Arial,Verdana,sans-serif;
-    letter-spacing: -1px;
-    font-size: 1.25vw;
+    font:"Arial Black", Gadget, sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.2vw;
 }
 
