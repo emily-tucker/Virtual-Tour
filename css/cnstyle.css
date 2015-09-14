@@ -14,7 +14,7 @@ body.contextual_navigation
   }
 
 .dd-wrapper .dd-menu {
-/*Max-width controls the invisable column. but now makes text scroll*/
+/*Max-width controls the invisable column. but now makes text scroll, left: 0px; makes the scrolling stop but menu glitches*/
   overflow: hidden; position: absolute; width:84%; max-width:84%; 
   }
 
@@ -24,9 +24,11 @@ body.contextual_navigation
 .first{
     color: black;
     text-decoration: none;
+	
 }
 .fa-times{
     color: white;
+	
 	
 }
 
@@ -37,21 +39,23 @@ body.contextual_navigation
 .blue .dd-wrapper {
   font-size: 1.25vw;
       letter-spacing: .60px;
+	 
   }
 
 .blue .dd-menu a {
-  background:rgba(0,0,0,0.5); text-decoration: none; padding: 3% 3% 3% 5%; display: block; color: white;
+  background:rgba(0,0,0,0.5); text-decoration: none; padding: 3% 3% 3% 5%; display: block; color: white; 
   }
 
 .blue .dd-menu ul a {
     background: rgba(0, 0, 0, 0.7);
     text-shadow: 1px 1px #000;
+	
 }
 .blue .dd-menu a:hover {
   background: rgba(255,255,255,.5);
   }
 .blue .dd-menu li.dd-parent a:hover {
-  color: black; text-shadow: 0 0;
+  color: black; text-shadow: 0 0; 
   }
 .blue .dd-menu li.dd-parent a.active {
   color: #ccc; background: rgba(0,0,0,0.6);

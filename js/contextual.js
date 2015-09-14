@@ -71,7 +71,7 @@
    var kelley_to_hurst = new Navigation("#kelley", "kelley_to_hurst", "Back to Hurst Hall", "#hurst", "back", 50, 17, 1);
    var kelley_to_library = new Navigation("#kelley", "kelley_to_library", "To Savage J. Library", "#library", "left", 42, 27, 1);
    var library_to_kelley = new Navigation("#library", "library_to_kelley", "Back to Kelley Hall", "#kelley", "backright", 50, 17, 1);
-   var library_to_paulwrightgym = new Navigation("#library", "library_to_paulwrightgym", "To Paul Wright Gymnasium", "#paulwrightgym", "forward", 47, 27, 1);
+   var library_to_paulwrightgym = new Navigation("#library", "library_to_paulwrightgym", "To Paul Wright Gymnasium", "#paulwrightgym", "left", 42, 27, 1);
     var paulwrightgym_to_library = new Navigation("#paulwrightgym", "paulwrightgym_to_library", "Back to Savage J. Library", "#library", "backright", 50, 17, 1);
 	var paulwrightgym_to_crawford = new Navigation("#paulwrightgym", "paulwrightgym_to_crawford", "To Crawford Hall", "#crawford", "left", 42, 27, 1);
 	var crawford_to_paulwrightgym = new Navigation("#crawford", "crawford_to_paulwrightgym", "Back to Paul Wright Gymnasium", "#paulwrightgym", "backleft", 48, 15, 1);
@@ -82,33 +82,33 @@
 	
 	
 	/*====================Student Life Arrows================== Arrow Color: Red - StudentLife Tour = 2*/
-	var universitycenter_to_fieldhouse = new Navigation("#universitycenter", "universitycenter_to_fieldhouse", "To the Fieldhouse", "#fieldhouse", "left", 46, 27, 2);
+	var universitycenter_to_fieldhouse = new Navigation("#universitycenter", "universitycenter_to_fieldhouse", "To the Fieldhouse", "#fieldhouse", "left", 42, 27, 2);
 	var universitycenter_to_begin = new Navigation("#universitycenter", "universitycenter_to_begin", "Back to the Welcome Center", "#begin", "back", 50, 17, 2);
-	var fieldhouse_to_mears = new Navigation("#fieldhouse", "fieldhouse_to_mears", "To the Mears Complex", "#mears", "left", 38, 27, 2);
+	var fieldhouse_to_mears = new Navigation("#fieldhouse", "fieldhouse_to_mears", "To the Mears Complex", "#mears", "left", 42, 27, 2);
 	var fieldhouse_to_universitycenter = new Navigation("#fieldhouse", "fieldhouse_to_universitycenter", "Back to the University Center", "#universitycenter", "backright", 50, 17, 2);
 	var mears_to_fieldhouse = new Navigation("#mears", "mears_to_fieldhouse", "Back to the Field House", "#fieldhouse", "backright", 50, 17, 2);
-	var mears_to_pinnacles = new Navigation("#mears", "mears_to_pinnacles", "To the Pinnacles", "#pinnacles", "left", 38, 27, 2);
+	var mears_to_pinnacles = new Navigation("#mears", "mears_to_pinnacles", "To the Pinnacles", "#pinnacles", "left", 42, 27, 2);
 	var pinnacles_to_mears = new Navigation("#pinnacles", "pinnacles_to_mears", "Back to the Mears Complex", "#mears", "backright", 50, 17, 2);
-	var pinnacles_to_chipeta = new Navigation("#pinnacles", "pinnacles_to_chipeta", "To Chipeta Hall", "#chipeta", "left", 38, 27, 2);
+	var pinnacles_to_chipeta = new Navigation("#pinnacles", "pinnacles_to_chipeta", "To Chipeta Hall", "#chipeta", "left", 42, 27, 2);
 	var chipeta_to_ute = new Navigation("#chipeta", "chipeta_to_ute", "To Ute Hall", "#ute", "right", 58, 27, 2);
 	var chipeta_to_pinnacles = new Navigation("#chipeta", "chipeta_to_pinnacles", "Back to the Pinnacles", "#pinnacles", "backleft", 50, 17, 2);
 	var ute_to_chipeta = new Navigation("#ute", "ute_to_chipeta", "Back to Chipeta Hall", "#chipeta", "backright", 50, 17, 2);
-	var ute_to_library = new Navigation("#ute", "ute_to_library", "To Savage J. Library", "#library", "forward", 47, 27, 2);
-	var library_to_ute = new Navigation("#library", "library_to_ute", "Back to Ute Hall", "#ute", "backleft", 50, 17, 2);
-	var library_to_escalante = new Navigation("#library", "library_to_escalante", "To the Escalante Terrace", "#escalante", "forward", 50, 17, 2);
+	var ute_to_library = new Navigation("#ute", "ute_to_library", "To Savage J. Library", "#library", "left", 42, 27, 2);
+	var library_to_ute = new Navigation("#library", "library_to_ute", "Back to Ute Hall", "#ute", "backleft", 42, 15, 2);
+	var library_to_escalante = new Navigation("#library", "library_to_escalante", "To the Escalante Terrace", "#escalante", "forward", 47, 27, 2);
 	var escalante_to_library = new Navigation("#escalante", "escalante_to_library", "Back to the Library", "#library", "back", 50, 17, 2);
-	var escalante_to_universitycenter = new Navigation("#escalante", "escalante_to_universitycenter", "To the University Center", "#universitycenter", "left", 38, 27, 2);
+	var escalante_to_universitycenter = new Navigation("#escalante", "escalante_to_universitycenter", "To the University Center", "#universitycenter", "left", 46, 27, 2);
 	
 
 
 	
 	/*====================Athletics Arrows================== Arrow Color: Slate- Athetic Tour = 3*/
-	var fieldhouse_to_practicefield= new Navigation("#fieldhouse", "fieldhouse_to_practicefield", "to the Practice Field", "#practicefield", "forward", 47, 27, 3);
+	var fieldhouse_to_practicefield= new Navigation("#fieldhouse", "fieldhouse_to_practicefield", "To the Practice Field", "#practicefield", "forward", 47, 27, 3);
 	var fieldhouse_to_begin= new Navigation("#fieldhouse", "fieldhouse_to_begin", "Back to the Welcome Center", "#begin", "back",50, 17, 3);
 	var practicefield_to_fieldhouse= new Navigation("#practicefield", "practicefield_to_fieldhouse", "Back to the Field House", "#fieldhouse", "back", 50, 17, 3);
-	var practicefield_to_mountaineerbowl= new Navigation("#practicefield", "practicefield_to_mountaineerbowl", "To the Mountaineer Bowl", "#mountaineerbowl", "right", 47, 27, 3);
+	var practicefield_to_mountaineerbowl= new Navigation("#practicefield", "practicefield_to_mountaineerbowl", "To the Mountaineer Bowl", "#mountaineerbowl", "right", 58, 27, 3);
 	var mountaineerbowl_to_practicefield= new Navigation("#mountaineerbowl", "mountaineerbowl_to_practicefield", "Back to the Practice Field", "#practicefield", "back", 50, 17, 3);
-	var mountaineerbowl_to_gatewayfield= new Navigation("#mountaineerbowl", "mountaineerbowl_to_gatewayfield", "To Gateway Field", "#gatewayfield", "right", 47, 27, 3);
+	var mountaineerbowl_to_gatewayfield= new Navigation("#mountaineerbowl", "mountaineerbowl_to_gatewayfield", "To Gateway Field", "#gatewayfield", "right", 58, 27, 3);
 	var gatewayfield_to_mountaineerbowl= new Navigation("#gatewayfield", "gatewayfield_to_mountaineerbowl", "Back to the Mountaineer Bowl", "#mountaineerbowl", "back", 50, 17, 3);
 	var gatewayfield_to_fieldhouse= new Navigation("#gatewayfield", "gatewayfield_to_fieldhouse", "To the Field House", "#fieldhouse", "left", 42, 27, 3);
 	
