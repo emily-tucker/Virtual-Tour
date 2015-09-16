@@ -1,7 +1,7 @@
 /**
      * Location object instances
      */
-	var begin = new Location("#begin", "Welcome to Western", "default",
+	var begin = new Location("#begin", "Welcome to Western", "main",
 	"Western offers a private college experience at a public university cost, deep in the heart of the Rockies.", 1801, 1246);
 	var borick = new Location("#borick", "Borick Buisness Building", "academic",
             "Prominent and relatively new, state-of-the-art Borick is home to Western's new School of Business. It includes a virtual classroom that can connect easily with similar facilities around the world.", 1582, 1259);
@@ -64,7 +64,7 @@
      * Navigation object instances
      *************************************/
 	/*====================Academic Arrows================== Arrow Color: Black -Academic Tour = 1*/
-	   var taylor_to_quigley = new Navigation("#taylor", "taylor_to_quigley", "to Quigley Hall", "#quigley", "right", 58, 27, 1);   var quigley_to_taylor = new 		Navigation("#quigley", "quigley_to_taylor", "Back to Taylor Hall", "#taylor", "backleft", 50, 17, 1);
+	   var taylor_to_quigley = new Navigation("#taylor", "taylor_to_quigley", "to Quigley Hall", "#quigley", "right", 58, 27, 1); var quigley_to_taylor = new Navigation("#quigley", "quigley_to_taylor", "Back to Taylor Hall", "#taylor", "backleft", 50, 17, 1);
    var quigley_to_hurst = new Navigation("#quigley", "quigley_to_hurst", "To Hurst Hall", "#hurst", "right", 58, 27, 1);
    var hurst_to_quigley = new Navigation("#hurst", "hurst_to_quigley", "Back to Quigley Hall", "#quigley", "backright",50, 17, 1);
    var hurst_to_kelley = new Navigation("#hurst", "hurst_to_kelley", "To Kelley Hall", "#kelley", "left", 42, 27, 1);

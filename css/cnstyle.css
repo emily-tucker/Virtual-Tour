@@ -309,26 +309,23 @@ section:target, .show{
 	min-height:5%;
 	min-width:8%;
 	margin-top: 5%;
-	background-color: rgba(0,0,0,.65);
-	border:1px solid #C00;
-    display:block;
-    cursor:pointer;
-    color:#FFF;
-    font: bold 20px Arial,Verdana,sans-serif;
-    letter-spacing: -.1px;
-    font-size: 1.7vw;	
-	text-shadow: 1px 1px #000;
-}
-.hide_button:hover{
-	background-color: rgba(0,0,0,.20);
-	border:1px solid #C00;
+	background-color: rgba(0,0,0,.60);
+	border:1px solid rgba(167,25,48,1);
     display:inline-block;
     cursor:pointer;
+    text-decoration:none;
     color:#FFF;
-   	font: bold 18px Arial,Verdana,sans-serif;
-    letter-spacing: -.1px;
-    font-size: 1.7vw;	
-	text-shadow: 1px 1px #000;
+    font:"Arial Black", Gadget, sans-serif 16px;
+    letter-spacing: 1px;
+    font-size: 1.7vw;
+	overflow:auto;
+}
+.hide_button:hover{
+	margin-top: 5%;
+	background-color: rgba(0,0,0,.60);
+	border:1.5px solid rgba(167,25,48,1);
+    display:inline-block;
+    cursor:pointer;
 }
 
 /**********************
@@ -404,7 +401,7 @@ section:target, .show{
 .beginButton, .restart_button, .visit_button, .schedule_button, .contact_button, .map_button, .map_button_initial, .map_button2 {
 	margin-top: 5%;
 	background-color: rgba(0,0,0,.60);
-	border:1px solid #C00;
+	border:1px solid rgba(167,25,48,1);
     display:inline-block;
     cursor:pointer;
     text-decoration:none;
@@ -413,7 +410,6 @@ section:target, .show{
     letter-spacing: 1px;
     font-size: 1.7vw;
 	overflow:auto;
-	text-shadow: 1px 1px #000;
 	
 	
 
@@ -421,7 +417,7 @@ section:target, .show{
 .beginButton:hover, .restart_button:hover, .visit_button:hover,  .schedule_button:hover, .contact_button:hover, .map_button2:hover, .map_button:hover, .map_button_initial:hover{
 	margin-top: 5%;
 	background-color: rgba(0,0,0,.60);
-	border:1px solid #C00;
+	border:1.5px solid rgba(167,25,48,1);
     display:inline-block;
     cursor:pointer;
 }

@@ -141,7 +141,8 @@ function getLocation(locationTag) {
 function load() {
     window.location = '#begin';
 	
-    console.log("tour track: " + tour_track);
+    console.log("Tour track: " + tour_track);
+	
 	 
 }
 
@@ -152,7 +153,7 @@ function load() {
 
 function loadMainButtons() {
         var inner_html = "";
-        if (currentLocation.locationType === "default") {
+        if (currentLocation.locationType === "main") {
             // If the current location of the tour is on the begin page (#begin)
             inner_html +=
 
@@ -181,6 +182,7 @@ function loadMainButtons() {
          * Tour Instance functionality
          **************************/
 
+		
         $('body').on('click', '.to_academics', function () {
             tour_track = academics;
             console.log('Tour ' + tour_track);
@@ -438,7 +440,7 @@ $(function () {
                 first_time = true;
                 $(".menu").hide();
                 $("#start").removeClass("show");
-                document.getElementById('video').innerHTML = '<video z-index="10000" width="100%" height="100%"  controls autoplay>' +
+                document.getElementById('video').innerHTML = '<video z-index="10000" width="100%" height="120%"  controls autoplay>' +
                     '<source src="video/fly-in2.webm" type="video/webm"></video>';
                 $("#map").css({
                     "right": "0"
@@ -596,6 +598,7 @@ function getCIs(tag) /*Carousel Items*/ {
     }
     var width = window.innerWidth - (ciCount * 100);
     var margin = width / (ciCount - 1) * .10;
+
 
     $("#carousel").html(inner);
     $(".citem").css("margin-left", margin);
