@@ -90,6 +90,9 @@ function video_out(location, mapTime) {
 function visitURL() {
     window.open("http://www.western.edu/future-students/visiting-campus/visit-western", "_blank");
 }
+function visitHome() {
+    window.open("http://www.western.edu/", "_blank");
+}
 
 function visitURL2() {
     window.open("http://www.western.edu/future-students/contact-admissions", "_blank");
@@ -156,7 +159,9 @@ function loadMainButtons() {
         if (currentLocation.locationType === "main") {
             // If the current location of the tour is on the begin page (#begin)
             inner_html +=
-
+				
+				
+				/*"<a href='http://www.western.edu/'><img class='homeButton-img' src='imgs/westernLogo.png'  '></a>" + */
                 "<button class='to_athletics athletics_button row' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
                 "<button class='to_studentlife sl_button row' onclick=window.location='#universitycenter'>Student Life Tour</button>" +
                 "<button class='to_academics academics_button row' onclick=window.location='#taylor'>Academics Tour</button>" +
@@ -171,7 +176,8 @@ function loadMainButtons() {
                 "<button class='contact_button row' onclick='visitURL2();'>Contact Admissions</button>" +
                 "<button id='hide' class='hide_button row' onclick='hideShowCarousel();'>Hide</button>" +
                 "<button class='restart_button row' id = 'rb' onclick=load()>Restart Tour</button>";
-
+			
+			tour_track = 1;
 
         }
         $("#buttons").html(inner_html);

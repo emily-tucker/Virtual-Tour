@@ -23,8 +23,8 @@
             "Savage Library is a research hub for campus and great study spot. You'll find the expected stacks of books, but also large computer labs, access to electronic libraries around the world and the university archives.",  1918, 994);
 	var mears = new Location("#mears", "Mears Complex", "studentlife",
             "These co-ed dormitories Ð Mears, Robidoux and Moffat Ð connect by enclosed corridors. They feature suite-style double rooms, with two rooms sharing each bathroom.", 1087, 1082);
-	var paulwrightgym= new Location("#paulwrightgym", "Paul Wright Gym", "athletic", 
-	 "At 7,723 feet above sea level, this is the world's highest collegiate gym. It seats 1,800 and includes an indoor pool, a wrestling room, locker rooms, the Hall of Fame trophy room and classrooms.", 1313, 869);
+	 var paulwrightgym = new Location("#paulwrightgym", "Paul Wright Gymnasium", "academic",
+            "At 7,723 feet above sea level, this is the world's highest collegiate gym. It seats 1,800 and includes an indoor pool, a wrestling room, locker rooms, the Hall of Fame trophy room and classrooms.", 1905, 1200);
 	var pinnacles = new Location("#pinnacles", "Pinnacles Student Housing", "studentlife",
             "Western's newest apartments have furnished two-, three- and four-bedroom units. Each has a large kitchen and common room, with plenty of cabinet and closet space. It also has many common spaces and facilities.",  765, 997);
 	var mountaineerbowl = new Location("#mountaineerbowl", "Mountaineer Bowl", "athletic",
@@ -33,6 +33,8 @@
             "Home of Western's Art and Music programs, Quigley is undergoing a $25.8 million renovation, upgrading studios, presenation spaces, practice rooms and more, with expected completion in Fall 2016.", 2170, 1419);		
     var taylor = new Location("#taylor", "Taylor Hall", "academic",
             "Renovated in 2010, Taylor is a LEED-certified, energy-efficient structure. Its bold atrium serves is Western's Welcome Center. It also houses the administration, an auditorium, a theater and many classrooms.", 1905, 1200);
+	 var taylorQuad = new Location("#taylorQuad", "Taylor Quad", "studentlife",
+            "Need Description", 1905, 1200);
     var universitycenter = new Location("#universitycenter", "University Center", "studentlife", "This fairly new and extremely capable building is a hub of student life. It houses meeting rooms; a ballroom; dining facilities, the bookstore, the University Theater, Wilderness Pursuits, student groups and more.", 1849, 887);
 	var ute = new Location("#ute", "Ute Student Housing", "studentlife",
             "One of the older residence halls on campus, Ute has seen recent renovations and offers first-year students fully furnished rooms in a traditional, community-style dormitory that opens right onto lush Taylor Lawn.", 1224, 1275);
@@ -54,7 +56,7 @@
     var pathway2 = new Location("#pathway2", "Kelley Steps", "walkway", "Pathway to Taylor", true, 2083, 1076);
     var rockymountains = new Location("#rockymountains", "Rocky Mountains", "The Rocky Mounains", true, 0, 0);
 
-    var locations = [begin, borick, chipeta, crawford, escalante, pinnacles, ute, mears, taylor, pathway, pathway2, quigley, hurst, kelley, library, universitycenter, mountaineerbowl, 
+    var locations = [begin, borick, chipeta, crawford, escalante, paulwrightgym, pinnacles, ute, mears, taylor, pathway, pathway2, quigley, hurst, kelley, library, universitycenter, mountaineerbowl, 
 	
 	telluride, taylorcanyon, crestedbutte, monarchmountain, taylorreservoir, hartmanrocks,gunnison, cbmr, artscenter, wmountain, fieldhouse, rockymountains];
 

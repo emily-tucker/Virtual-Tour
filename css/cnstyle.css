@@ -258,6 +258,16 @@ section:target, .show{
     border: 0;
 }
 
+.homeButton{
+    position: fixed;
+    z-index:10000000;
+    top:0%;
+	max-width:30%;
+	max-height:20%;
+
+    
+}
+
 .hotspot {
     position: fixed;
 	height: auto;
@@ -354,6 +364,7 @@ section:target, .show{
 	padding-right: 44px;
 	padding-left:7px;
 }
+
 
 .contact_button {
     position:absolute;
