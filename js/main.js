@@ -143,8 +143,8 @@ function getLocation(locationTag) {
  ***************************/
 function load() {
     window.location = '#begin';
-	
     console.log("Tour track: " + tour_track);
+	tour_track = 1; /**Need's to be here for the Off-campus map to On-campus map switch**/
 	
 	 
 }
@@ -157,9 +157,10 @@ function load() {
 function loadMainButtons() {
         var inner_html = "";
         if (currentLocation.locationType === "main") {
+			
+			
             // If the current location of the tour is on the begin page (#begin)
             inner_html +=
-				
 				
 				/*"<a href='http://www.western.edu/'><img class='homeButton-img' src='imgs/westernLogo.png'  '></a>" + */
                 "<button class='to_athletics athletics_button row' onclick=window.location='#fieldhouse'>Athletics Tour</button>" +
@@ -169,6 +170,8 @@ function loadMainButtons() {
                 "<button class='schedule_button row' onclick='visitURL();'>Schedule A Visit</button>" +
                 "<button class='contact_button row' onclick='visitURL2();'>Contact Admissions</button>" +
                 "<button class='restart_button row' id = 'rb' onclick=load()>Restart Tour</button>";
+				
+				
         } else {
             inner_html +=
 
@@ -177,9 +180,10 @@ function loadMainButtons() {
                 "<button id='hide' class='hide_button row' onclick='hideShowCarousel();'>Hide</button>" +
                 "<button class='restart_button row' id = 'rb' onclick=load()>Restart Tour</button>";
 			
-			tour_track = 1;
+				
 
         }
+		
         $("#buttons").html(inner_html);
 
 
