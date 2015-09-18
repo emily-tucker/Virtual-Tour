@@ -179,9 +179,7 @@ function loadMainButtons() {
                 "<button class='contact_button row' onclick='visitURL2();'>Contact Admissions</button>" +
                 "<button id='hide' class='hide_button row' onclick='hideShowCarousel();'>Hide</button>" +
                 "<button class='restart_button row' id = 'rb' onclick=load()>Restart Tour</button>";
-			
-				
-
+	
         }
 		
         $("#buttons").html(inner_html);
@@ -231,6 +229,7 @@ function getNavs(locationTag) {
     for (var i in navs) {
         if (navs[i].tag === locationTag) {
             if (navs[i].tourTracks === academics && tour_track === academics || navs[i].tourTracks === studentLife && tour_track === studentLife || navs[i].tourTracks === athletics && tour_track === athletics) {
+				
                 inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                     navs[i].styleClass + " arrow' src='imgs/navs/" + navs[i].direction + "_white.png'" +
@@ -250,12 +249,14 @@ function getNavs(locationTag) {
                 localNavs.push(navs[i].styleClass);
             }
         }
+		
         $("#navigation").html(inner_html);
         $(".arrow").tipsy({
             gravity: 's',
             fade: true,
             html: true
-        });
+        
+	});
         /**************************************************************
          *Positioning for naviagtion arrows
          *****************************************************************/
@@ -536,9 +537,12 @@ $(function () {
         mapButtonLoad();
         animate_map(currentLocation, map_slide_time);
         loadMainButtons();
+		
+
     });
 
     if (window.location.hash) {
+		
         dispMainMenu();
         $('#drilldown-1').dcDrilldown({
             speed: 'fast',
