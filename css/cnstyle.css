@@ -10,12 +10,12 @@ body.contextual_navigation
 ***********************/
 
 .dd-wrapper ul, .dd-wrapper ul li, .dd-wrapper li, .dd-wrapper li ul, .dd-wrapper li ul li {
-  margin: 0; padding: 0; list-style: none; top: 90%; color: black; 
+  margin: 0; padding: 0; list-style: none; top: 80%; color: black; 
   }
 
 .dd-wrapper .dd-menu {
 /*Max-width controls the invisable column. but now makes text scroll, left: 0px; makes the scrolling stop but menu glitches*/
-  overflow: hidden; position: absolute; width:84%; max-width:84%; 
+  overflow: hidden;   white-space: nowrap; position: absolute; width:84%; max-width:84%;
   }
 
 .dd-wrapper  .dd-menu ul {
@@ -38,7 +38,7 @@ body.contextual_navigation
 
 .blue .dd-wrapper {
   font-size: 1.25vw;
-      letter-spacing: .60px;
+  letter-spacing: .60px;
 	 
   }
 
@@ -64,7 +64,7 @@ body.contextual_navigation
 .menu{
     position: fixed;
     width: 20%;
-    top: 5%;
+    top: 8%;
     z-index: 0;
 }
 
@@ -146,7 +146,9 @@ body.contextual_navigation
     z-index:2000;
 	left: 33%;
     top: 30%;
-
+	border:1px solid gray;
+  
+  
 }
 
 .athletics_button, .academics_button, .sl_button, .switch_button  {
@@ -156,6 +158,7 @@ body.contextual_navigation
     height: 100%;
 	overflow: hidden;
     white-space: nowrap;
+	word-wrap:normal;
 	text-align:center;
 	background-color: rgba(167,25,48,.90);
 	border:1px solid #000;
