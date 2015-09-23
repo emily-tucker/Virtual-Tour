@@ -86,8 +86,9 @@ body.contextual_navigation
 
 .mapImage{
     z-index: 5;
+	
 }
-
+	
 /******************************************
  * 
  * Image Properties
@@ -121,33 +122,16 @@ body.contextual_navigation
 .switch_button  {
     position: fixed;
     z-index:2000;
-	padding-left:8px;
-	padding-right:8px;
 	right: 34.6%;
     top: 30%;
-    max-height: 8%;
-	display: block;
-    width: inherit;
-    height: 100%;
-    cursor:pointer;
-    text-decoration:none;
-	overflow:hidden;
 
 }
 .athletics_button {
     position: fixed;
     z-index:2000;
-	padding-left:20px;
-	padding-right:20px;
 	top: 20%;
     right: 34.6%; 
-    max-height: 8%;
-	display: block;
-    width: inherit;
-    height: 100%;
-    cursor:pointer;
-    text-decoration:none;
-	overflow:hidden;
+
 
 }
 .academics_button {
@@ -155,13 +139,6 @@ body.contextual_navigation
     z-index:2000;
 	left: 33%;
     top: 20%;
-	padding-left:11px;
-	padding-right:11px;
-	height: 8%;
-	display: block;
-    cursor:pointer;
-    text-decoration:none;
-	overflow:hidden;
 	
 }
 .sl_button {
@@ -169,35 +146,30 @@ body.contextual_navigation
     z-index:2000;
 	left: 33%;
     top: 30%;
-    max-height: 8%;
-	display: block;
-    width: inherit;
-    height: 100%;
-    cursor:pointer;
-    text-decoration:none;
-	overflow:hidden;
-
 
 }
 
 .athletics_button, .academics_button, .sl_button, .switch_button  {
+	max-height: 8.5%;
+	display: inline-block;
+    width: inherit;
+    height: 100%;
+	overflow:scroll;
 	text-align:center;
 	background-color: rgba(167,25,48,.90);
 	border:1px solid #000;
-    display:inline-block;
-    cursor:pointer;
     color:#FFF;
     font:"Arial Black", Gadget, sans-serif 20px;
     letter-spacing: 1px;
     font-size: 1.7vw;
-	overflow:auto;
 	text-shadow: 1px 1px #000;
+	width:9.5em;
 }
 .athletics_button:hover, .academics_button:hover, .sl_button:hover, .switch_button:hover{
 	text-align:center;
 	background-color: rgba(167,25,48,.90);
 	border:2px solid #000;
-    display:inline-block;
+    display:block;
     cursor:pointer;
     color:#FFF;
     font:"Arial Black", Gadget, sans-serif 20px;
@@ -347,8 +319,7 @@ section:target, .show{
     right: 1%;
     top: 42%;
     max-height: 7%;
-	padding-right: 80px;
-	padding-left:10px;
+	width:12em;
 	
 }
 
@@ -361,8 +332,7 @@ section:target, .show{
     right: 1%;
     top:36%;
     max-height: 7%;
-	padding-right: 44px;
-	padding-left:7px;
+	width:12em;
 }
 
 
@@ -373,6 +343,7 @@ section:target, .show{
     right: 1%;
     top:30%;
     max-height: 7%;
+	width:12em;
 }
 
 	
@@ -410,10 +381,10 @@ section:target, .show{
 	
 
 .beginButton, .restart_button, .visit_button, .schedule_button, .contact_button, .map_button, .map_button_initial, .map_button2 {
-	margin-top: 5%;
+	margin-top: 2%;
 	background-color: rgba(0,0,0,.60);
 	border:1px solid rgba(167,25,48,1);
-    display:inline-block;
+    display:block;
     cursor:pointer;
     text-decoration:none;
     color:#FFF;
@@ -479,3 +450,20 @@ comment out so the map doesn't auto scale
     font-size: 1.2vw;
 }
 
+
+/*************************
+*
+* Disable portrait view in mobile
+*
+*************************/
+@media (max-device-width: 480px) and (orientation: portrait) {
+  .landscape-in-phone {  
+        display:block;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+         min-width:460px;
+    }  
+}
