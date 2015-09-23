@@ -42,11 +42,11 @@ var is_mobile = false;
 var showHide = true; /*bool to determine weather to show or hide the carousel.*/
 var show = 0;
 var currentLocation; //used by just about everything, initialized here
-var tour_track = 0;
 var academics = 1;
 var studentLife = 2;
 var athletics = 3;
 var offCampus = 4;
+var tour_track;
 
 
 
@@ -143,8 +143,7 @@ function getLocation(locationTag) {
  ***************************/
 function load() {
     window.location = '#begin';
-    console.log("Tour track: " + tour_track);
-	tour_track = 1; /**Need's to be here for the Off-campus map to On-campus map switch**/
+	tour_track = 2; /**Needs to be here for the Off-campus map to On-campus map switch**/
 	
 	 
 }
@@ -190,7 +189,7 @@ function loadMainButtons() {
          * Tour Instance functionality
          **************************/
 
-		
+
         $('body').on('click', '.to_academics', function () {
             tour_track = academics;
             console.log('Tour ' + tour_track);
@@ -209,7 +208,7 @@ function loadMainButtons() {
             tour_track = offCampus;
             console.log('Tour ' + tour_track);
 
-        }); 
+        });
 		
 
     }
@@ -228,7 +227,7 @@ function getNavs(locationTag) {
     var localNavs = [];
     for (var i in navs) {
         if (navs[i].tag === locationTag) {
-            if (navs[i].tourTracks === academics && tour_track === academics || navs[i].tourTracks === studentLife && tour_track === studentLife || navs[i].tourTracks === athletics && tour_track === athletics) {
+            if (navs[i].tourTracks === academics || navs[i].tourTracks === studentLife || navs[i].tourTracks === athletics) {
 				
                 inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
@@ -239,7 +238,7 @@ function getNavs(locationTag) {
                 localNavs.push(navs[i].styleClass);
             }
 
-            if (navs[i].tourTracks === offCampus && tour_track === offCampus) {
+            if (navs[i].tourTracks === offCampus) {
                 inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                     navs[i].styleClass + " arrow' src='imgs/navs/" + navs[i].direction + "_offcampus.png'" +
@@ -399,13 +398,16 @@ function getImage(locationTag) {
  * Load static image map screen
  * for on and off campus
  *********************************/
+
 function loadMap(locationTag) {
     for (var i in locations) {
         if (locations[i].tag === locationTag) {
-            if (tour_track === offCampus) {
+            if (tour_track === 4) {
+                $.cookie("tour_track", 4);
                 document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/offcampusmap.png">';
 
             } else {
+                $.cookie("tour_track", "onCampus");
                 document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/oncampusmap.jpg">';
 
             }
@@ -413,6 +415,13 @@ function loadMap(locationTag) {
         }
     }
 }
+
+function getCookie(){
+    tour_track = parseInt($.cookie("tour_track"));
+}
+
+window.onbeforeunload = getCookie();
+
 
 /*************************************************
  * Calling of all functions
@@ -462,7 +471,6 @@ $(function () {
                 $("#video").click(function () {
                     video_out(currentLocation, map_slide_time);
                     $(".menu").show();
-                    $('body').chardinJs('start');
 
                 });
 
