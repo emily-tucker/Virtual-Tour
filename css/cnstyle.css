@@ -154,7 +154,8 @@ body.contextual_navigation
 	display: inline-block;
     width: inherit;
     height: 100%;
-	overflow:scroll;
+	overflow: hidden;
+    white-space: nowrap;
 	text-align:center;
 	background-color: rgba(167,25,48,.90);
 	border:1px solid #000;
@@ -173,9 +174,10 @@ body.contextual_navigation
     cursor:pointer;
     color:#FFF;
     font:"Arial Black", Gadget, sans-serif 20px;
-    letter-spacing: 1px;
+    letter-spacing: .8px;
     font-size: 1.7vw;
-	overflow:auto;
+	overflow: hidden;
+    white-space: nowrap;
 	text-shadow: 1px 1px #000;
 
 	
@@ -255,7 +257,6 @@ section:target, .show{
 .visit_button{
     position: fixed;
     right: 30%;
-    top: -8%;
     max-height: 7%;
     z-index: 10;
 }
@@ -286,7 +287,7 @@ section:target, .show{
     max-height: 8%;
 	transform: rotate(90deg);
     transform-origin: left top 0;
-    width: 8%;
+    width: 2em;
     height: 5%;
 	min-height:5%;
 	min-width:8%;
@@ -355,7 +356,7 @@ section:target, .show{
 
 .map_button{
     position: fixed;
-    right: 8%;
+    right: 8.6%;
     max-height: 7%;
     z-index: 10;
     transform: rotate(90deg);
@@ -364,7 +365,7 @@ section:target, .show{
 
 .map_button_initial{
     position: fixed;
-    right: -20%;
+    right: -8.6%;
     top: 0;
     max-height: 7%;
     z-index: 10;
@@ -390,18 +391,27 @@ section:target, .show{
     color:#FFF;
     font:"Arial Black", Gadget, sans-serif 16px;
     letter-spacing: 1px;
-    font-size: 1.7vw;
-	overflow:auto;
+    font-size: 1.6vw;
+	overflow: hidden;
+    white-space: nowrap;
 	
 	
 
 }
 .beginButton:hover, .restart_button:hover, .visit_button:hover,  .schedule_button:hover, .contact_button:hover, .map_button2:hover, .map_button:hover, .map_button_initial:hover{
-	margin-top: 5%;
+	margin-top: 2%;
 	background-color: rgba(0,0,0,.60);
 	border:1.5px solid rgba(167,25,48,1);
-    display:inline-block;
+    display:block;
     cursor:pointer;
+    text-decoration:none;
+    color:#FFF;
+    font:"Arial Black", Gadget, sans-serif 16px;
+    letter-spacing: 1px;
+    font-size: 1.6vw;
+	  overflow: hidden;
+    white-space: nowrap;
+		
 }
 
 
