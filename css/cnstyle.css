@@ -15,7 +15,7 @@ body.contextual_navigation
 
 .dd-wrapper .dd-menu {
 /*Max-width controls the invisable column. but now makes text scroll, left: 0px; makes the scrolling stop but menu glitches*/
-  overflow: hidden;   white-space: nowrap; position: absolute; width:84%; max-width:84%;
+  overflow: hidden; position: absolute; width:84%; 
   }
 
 .dd-wrapper  .dd-menu ul {
@@ -64,7 +64,8 @@ body.contextual_navigation
 .menu{
     position: fixed;
     width: 20%;
-    top: 8%;
+	max-width:20%;  !important;
+    top: 12%;
     z-index: 0;
 }
 
@@ -236,13 +237,8 @@ section:target, .show{
 }
 
 .homeButton{
-    position: fixed;
-    z-index:10000000;
-    top:0%;
-	max-width:30%;
-	max-height:20%;
-
-    
+	width: 20% !important;
+	height: 10% !important; 
 }
 
 .hotspot {
@@ -431,7 +427,7 @@ comment out so the map doesn't auto scale
 .caption_wrapper {
     width:33.33%;
     height:auto;
-    left: 21%;
+    left: 25%;
     overflow:hidden;
     position:fixed;
 	top:0;
