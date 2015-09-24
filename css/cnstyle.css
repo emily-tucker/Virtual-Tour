@@ -5,31 +5,22 @@ body.contextual_navigation
 }
 
 
-/**********************
-* Drill Down Menu Stylesimage
-***********************/
-
 .dd-wrapper ul, .dd-wrapper ul li, .dd-wrapper li, .dd-wrapper li ul, .dd-wrapper li ul li {
-  margin: 0; padding: 0; list-style: none; top: 80%; color: black; 
+  margin: 0; padding: 0; list-style: none; top: 90%; color: black;
   }
 
 .dd-wrapper .dd-menu {
-/*Max-width controls the invisable column. but now makes text scroll, left: 0px; makes the scrolling stop but menu glitches*/
-  overflow: hidden; position: absolute; width:84%; 
+  overflow: auto; position: absolute; width:84%;
   }
-
 .dd-wrapper  .dd-menu ul {
-  position: absolute; top: 0; right: 0; 
+  position: absolute; top: 0; right: 0;
   }
 .first{
     color: black;
     text-decoration: none;
-	
 }
 .fa-times{
     color: white;
-	
-	
 }
 
 /***********************
@@ -37,13 +28,12 @@ body.contextual_navigation
 ************************/
 
 .blue .dd-wrapper {
+  font-family: Helvetica;
   font-size: 1.25vw;
-  letter-spacing: .60px;
-	 
   }
 
 .blue .dd-menu a {
-  background:rgba(0,0,0,0.5); text-decoration: none; padding: 3% 3% 3% 5%; display: block; color: white; 
+  background:rgba(0,0,0,0.5);  padding: 3% 3% 3% 5%; display:block; color: white; width:12em;
   }
 
 .blue .dd-menu ul a {
@@ -55,11 +45,12 @@ body.contextual_navigation
   background: rgba(255,255,255,.5);
   }
 .blue .dd-menu li.dd-parent a:hover {
-  color: black; text-shadow: 0 0; 
+  color: black; text-shadow: 0 0;
   }
 .blue .dd-menu li.dd-parent a.active {
   color: #ccc; background: rgba(0,0,0,0.6);
   }
+
 
 .menu{
     position: fixed;
