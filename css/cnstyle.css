@@ -228,10 +228,10 @@ section:target, .show{
 }
 
 .homeButton{
-	top: -7px;
+	top: 0px;
 	left: 20px;
-	width: 11% !important;
-	height: 19% !important; 
+	width: 12% !important;
+	height: 16% !important; 
 }
 
 .hotspot {
