@@ -56,7 +56,7 @@ body.contextual_navigation
     position: fixed;
     width: 20%;
 	max-width:20%;  !important;
-    top: 12%;
+    top: 18%;
     z-index: 0;
 }
 
@@ -228,8 +228,10 @@ section:target, .show{
 }
 
 .homeButton{
-	width: 20% !important;
-	height: 10% !important; 
+	top: -7px;
+	left: 20px;
+	width: 11% !important;
+	height: 19% !important; 
 }
 
 .hotspot {
@@ -418,7 +420,7 @@ comment out so the map doesn't auto scale
 .caption_wrapper {
     width:33.33%;
     height:auto;
-    left: 25%;
+    left: 20%;
     overflow:hidden;
     position:fixed;
 	top:0;
