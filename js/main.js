@@ -655,7 +655,8 @@ function hideShowCarousel() {
  * Hspot object instances
  */
 var taylor_hotspot = new Hspot("#taylor", "taylor_panorama_hs", "view Panorama", "panoramas/taylor_panorama/Taylor_Panorama.html", 60, 75);
-var hotspots = [taylor_hotspot];
+var library_hotspot = new Hspot("#library", "taylor_panorama_hs", "view Panorama", "panoramas/library_panorama/Library_Panorama.html", 60, 75);
+var hotspots = [taylor_hotspot, library_hotspot];
 
 /***********************
  *  Menu Function
