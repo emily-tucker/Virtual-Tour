@@ -409,7 +409,7 @@ function loadMap(locationTag) {
 
             } else {
                 $.cookie("tour_track", "onCampus"); /** Create Cookie for on campus Tour Track **/
-                document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/oncampusmap.jpg">';
+                document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/oncampusmap1.jpg">';
 
             }
 
@@ -523,8 +523,8 @@ $(function () {
                     e.preventDefault();
                     var directionX = (previousX - e.clientX) > 2 ? 1 : (previousX - e.clientX) < -2 ? -1 : 0;
                     var directionY = (previousY - e.clientY) > 2 ? 1 : (previousY - e.clientY) < -2 ? -1 : 0;
-                    $("#map").scrollLeft($("#map").scrollLeft() + 10 * directionX);
-                    $("#map").scrollTop($("#map").scrollTop() + 10 * directionY);
+                    $("#map").scrollLeft($("#map").scrollLeft() + 2 * directionX);
+                    $("#map").scrollTop($("#map").scrollTop() + 2 * directionY);
                     previousX = e.clientX;
                     previousY = e.clientY
 
