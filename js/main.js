@@ -404,11 +404,11 @@ function loadMap(locationTag) {
     for (var i in locations) {
         if (locations[i].tag === locationTag) {
             if (tour_track === 4) {
-                $.cookie("tour_track", 4);
+                $.cookie("tour_track", 4); /** Create Cookie for off campus Tour Track **/
                 document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/offcampusmap.png">';
 
             } else {
-                $.cookie("tour_track", "onCampus");
+                $.cookie("tour_track", "onCampus"); /** Create Cookie for on campus Tour Track **/
                 document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/oncampusmap.jpg">';
 
             }
@@ -417,6 +417,9 @@ function loadMap(locationTag) {
     }
 }
 
+/****************************
+ * Function to get cookie on refresh
+ ***************************/
 function getCookie(){
     tour_track = parseInt($.cookie("tour_track"));
 }
