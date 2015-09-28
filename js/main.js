@@ -161,7 +161,7 @@ function loadMainButtons() {
             // If the current location of the tour is on the begin page (#begin)
             inner_html +=
 				
-				"<a href='http://www.western.edu/'><img src='imgs/westernLogo.png' class='homeButton''></a>" + 
+				"<a href='http://www.western.edu/' target='_blank'><img src='imgs/westernLogo.png' class='homeButton''></a>" + 
                 "<button class='to_athletics athletics_button row' onclick=window.location='#fieldhouse'> Athletics Tour</button>" +
                 "<button class='to_studentlife sl_button row' onclick=window.location='#universitycenter'>Student Life Tour</button>" +
                 "<button class='to_academics academics_button row' onclick=window.location='#taylor'> Academics Tour</button>" +
@@ -174,7 +174,7 @@ function loadMainButtons() {
         } else {
             inner_html +=
 			
-				"<a href='http://www.western.edu/'><img src='imgs/westernLogo.png' class='homeButton''></a>" + 
+				"<a href='http://www.western.edu/' target='_blank'><img src='imgs/westernLogo.png' class='homeButton''></a>" + 
                 "<button class='schedule_button row' onclick='visitURL();'>Schedule A Visit</button>" +
                 "<button class='contact_button row' onclick='visitURL2();'>Contact Admissions</button>" +
                 "<button id='hide' class='hide_button row' onclick='hideShowCarousel();'>Hide</button>" +

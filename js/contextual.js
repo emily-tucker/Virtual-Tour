@@ -69,42 +69,42 @@
      * Navigation object instances
      *************************************/
 	/*====================Academic Arrows================== Arrow Color: Black -Academic Tour = 1*/
-	var taylor_to_quigley = new Navigation("#taylor", "taylor_to_quigley", "to Quigley Hall", "#quigley", "right", 58, 27, 1);
-    var quigley_to_taylor = new Navigation("#quigley", "quigley_to_taylor", "Back to Taylor Hall", "#taylor", "backleft", 50, 17, 1);
-    var quigley_to_hurst = new Navigation("#quigley", "quigley_to_hurst", "To Hurst Hall", "#hurst", "right", 58, 27, 1);
+	var taylor_to_quigley = new Navigation("#taylor", "taylor_to_quigley", "To Quigley Hall", "#quigley", "right", 55, 27, 1);
+    var quigley_to_taylor = new Navigation("#quigley", "quigley_to_taylor", "Back to Taylor Hall", "#taylor", "backleft", 45, 17, 1);
+    var quigley_to_hurst = new Navigation("#quigley", "quigley_to_hurst", "To Hurst Hall", "#hurst", "right", 55, 27, 1);
     var hurst_to_quigley = new Navigation("#hurst", "hurst_to_quigley", "Back to Quigley Hall", "#quigley", "backright",50, 17, 1);
     var hurst_to_kelley = new Navigation("#hurst", "hurst_to_kelley", "To Kelley Hall", "#kelley", "left", 42, 27, 1);
-    var kelley_to_hurst = new Navigation("#kelley", "kelley_to_hurst", "Back to Hurst Hall", "#hurst", "back", 50, 17, 1);
+    var kelley_to_hurst = new Navigation("#kelley", "kelley_to_hurst", "Back to Hurst Hall", "#hurst", "back", 45, 17, 1);
     var kelley_to_library = new Navigation("#kelley", "kelley_to_library", "To Savage J. Library", "#library", "left", 42, 27, 1);
     var library_to_kelley = new Navigation("#library", "library_to_kelley", "Back to Kelley Hall", "#kelley", "backright", 50, 17, 1);
     var library_to_paulwrightgym = new Navigation("#library", "library_to_paulwrightgym", "To Paul Wright Gymnasium", "#paulwrightgym", "left", 42, 27, 1);
     var paulwrightgym_to_library = new Navigation("#paulwrightgym", "paulwrightgym_to_library", "Back to Savage J. Library", "#library", "backright", 50, 17, 1);
 	var paulwrightgym_to_crawford = new Navigation("#paulwrightgym", "paulwrightgym_to_crawford", "To Crawford Hall", "#crawford", "left", 42, 27, 1);
-	var crawford_to_paulwrightgym = new Navigation("#crawford", "crawford_to_paulwrightgym", "Back to Paul Wright Gymnasium", "#paulwrightgym", "backleft", 48, 15, 1);
-	var crawford_to_borick = new Navigation("#crawford", "crawford_to_borick", "To Borick Buisness Building", "#borick", "right", 58, 27, 1);
-	var borick_to_crawford = new Navigation("#borick", "borick_to_crawford", "Back to Crawford Hall", "#crawford", "backleft", 50, 17, 1);
-	var borick_to_taylor = new Navigation("#borick", "borick_to_taylor", "To Taylor Hall", "#taylor", "right", 58, 27, 1);
-	var taylor_to_begin = new Navigation("#taylor", "taylor_to_begin", "Back to the Welcome Center", "#begin", "back", 50, 17, 1);
+	var crawford_to_paulwrightgym = new Navigation("#crawford", "crawford_to_paulwrightgym", "Back to Paul Wright Gymnasium", "#paulwrightgym", "backleft", 45, 15, 1);
+	var crawford_to_borick = new Navigation("#crawford", "crawford_to_borick", "To Borick Buisness Building", "#borick", "right", 55, 27, 1);
+	var borick_to_crawford = new Navigation("#borick", "borick_to_crawford", "Back to Crawford Hall", "#crawford", "backleft", 45, 17, 1);
+	var borick_to_taylor = new Navigation("#borick", "borick_to_taylor", "To Taylor Hall", "#taylor", "right", 55, 27, 1);
+	var taylor_to_begin = new Navigation("#taylor", "taylor_to_begin", "Back to the Welcome Center", "#begin", "back", 45, 17, 1);
 	
 	
 	/*====================Student Life Arrows================== Arrow Color: Red - StudentLife Tour = 2*/
 	var universitycenter_to_fieldhouse = new Navigation("#universitycenter", "universitycenter_to_fieldhouse", "To the Fieldhouse", "#fieldhouse", "left", 42, 27, 2);
-	var universitycenter_to_begin = new Navigation("#universitycenter", "universitycenter_to_begin", "Back to the Welcome Center", "#begin", "back", 50, 17, 2);
+	var universitycenter_to_begin = new Navigation("#universitycenter", "universitycenter_to_begin", "Back to the Welcome Center", "#begin", "back", 45, 17, 2);
 	var fieldhouse_to_mears = new Navigation("#fieldhouse", "fieldhouse_to_mears", "To the Mears Complex", "#mears", "left", 42, 27, 2);
 	var fieldhouse_to_universitycenter = new Navigation("#fieldhouse", "fieldhouse_to_universitycenter", "Back to the University Center", "#universitycenter", "backright", 50, 17, 2);
 	var mears_to_fieldhouse = new Navigation("#mears", "mears_to_fieldhouse", "Back to the Field House", "#fieldhouse", "backright", 50, 17, 2);
 	var mears_to_pinnacles = new Navigation("#mears", "mears_to_pinnacles", "To the Pinnacles", "#pinnacles", "left", 42, 27, 2);
 	var pinnacles_to_mears = new Navigation("#pinnacles", "pinnacles_to_mears", "Back to the Mears Complex", "#mears", "backright", 50, 17, 2);
 	var pinnacles_to_chipeta = new Navigation("#pinnacles", "pinnacles_to_chipeta", "To Chipeta Hall", "#chipeta", "left", 42, 27, 2);
-	var chipeta_to_ute = new Navigation("#chipeta", "chipeta_to_ute", "To Ute Hall", "#ute", "right", 58, 27, 2);
-	var chipeta_to_pinnacles = new Navigation("#chipeta", "chipeta_to_pinnacles", "Back to the Pinnacles", "#pinnacles", "backleft", 50, 17, 2);
-	var ute_to_chipeta = new Navigation("#ute", "ute_to_chipeta", "Back to Chipeta Hall", "#chipeta", "back", 50, 17, 2);
-	var ute_to_taylorQuad = new Navigation("#ute","ute_to_taylorQuad", "To Taylor Quad", "#taylorQuad", "right", 58, 27, 2);
+	var chipeta_to_ute = new Navigation("#chipeta", "chipeta_to_ute", "To Ute Hall", "#ute", "right", 55, 27, 2);
+	var chipeta_to_pinnacles = new Navigation("#chipeta", "chipeta_to_pinnacles", "Back to the Pinnacles", "#pinnacles", "backleft", 45, 17, 2);
+	var ute_to_chipeta = new Navigation("#ute", "ute_to_chipeta", "Back to Chipeta Hall", "#chipeta", "back", 45, 17, 2);
+	var ute_to_taylorQuad = new Navigation("#ute","ute_to_taylorQuad", "To Taylor Quad", "#taylorQuad", "right", 55, 27, 2);
 	var taylorQuad_to_ute = new Navigation("#taylorQuad","taylorQuad_to_ute", "Back to Ute", "#ute", "backleft", 40, 17, 2);
 	var taylorQuad_to_library = new Navigation("#taylorQuad","taylorQuad_to_library", "To the Library", "#library", "forward", 47, 27, 2);
 	//var library_to_taylorQuad = new Navigation("#library", "library_to_taylorQuad", "Back to Taylor Quad", "#taylorQuad", "backleft", 42, 15, 2);
 	//var library_to_escalante = new Navigation("#library", "library_to_escalante", "To the Escalante Terrace", "#escalante", "forward", 47, 27, 2);
-	//var escalante_to_library = new Navigation("#escalante", "escalante_to_library", "Back to the Library", "#library", "back", 50, 17, 2);
+	//var escalante_to_library = new Navigation("#escalante", "escalante_to_library", "Back to the Library", "#library", "back", 45, 17, 2);
 	var escalante_to_universitycenter = new Navigation("#escalante", "escalante_to_universitycenter", "To the University Center", "#universitycenter", "left", 46, 27, 2);
 	
 
@@ -112,46 +112,46 @@
 	
 	/*====================Athletics Arrows================== Arrow Color: Slate- Athetic Tour = 3*/
 	var fieldhouse_to_practicefield= new Navigation("#fieldhouse", "fieldhouse_to_practicefield", "To the Practice Field", "#practicefield", "forward", 47, 27, 3);
-	//var fieldhouse_to_begin= new Navigation("#fieldhouse", "fieldhouse_to_begin", "Back to the Welcome Center", "#begin", "back",50, 17, 3);
-	var practicefield_to_fieldhouse= new Navigation("#practicefield", "practicefield_to_fieldhouse", "Back to the Field House", "#fieldhouse", "back", 50, 17, 3);
-	var practicefield_to_mountaineerbowl= new Navigation("#practicefield", "practicefield_to_mountaineerbowl", "To the Mountaineer Bowl", "#mountaineerbowl", "right", 58, 27, 3);
-	var mountaineerbowl_to_practicefield= new Navigation("#mountaineerbowl", "mountaineerbowl_to_practicefield", "Back to the Practice Field", "#practicefield", "back", 50, 17, 3);
-	var mountaineerbowl_to_gatewayfield= new Navigation("#mountaineerbowl", "mountaineerbowl_to_gatewayfield", "To Gateway Field", "#gatewayfield", "right", 58, 27, 3);
-	var gatewayfield_to_mountaineerbowl= new Navigation("#gatewayfield", "gatewayfield_to_mountaineerbowl", "Back to the Mountaineer Bowl", "#mountaineerbowl", "back", 50, 17, 3);
+	//var fieldhouse_to_begin= new Navigation("#fieldhouse", "fieldhouse_to_begin", "Back to the Welcome Center", "#begin", "back",45, 17, 3);
+	var practicefield_to_fieldhouse= new Navigation("#practicefield", "practicefield_to_fieldhouse", "Back to the Field House", "#fieldhouse", "back", 45, 17, 3);
+	var practicefield_to_mountaineerbowl= new Navigation("#practicefield", "practicefield_to_mountaineerbowl", "To the Mountaineer Bowl", "#mountaineerbowl", "right", 55, 27, 3);
+	var mountaineerbowl_to_practicefield= new Navigation("#mountaineerbowl", "mountaineerbowl_to_practicefield", "Back to the Practice Field", "#practicefield", "back", 45, 17, 3);
+	var mountaineerbowl_to_gatewayfield= new Navigation("#mountaineerbowl", "mountaineerbowl_to_gatewayfield", "To Gateway Field", "#gatewayfield", "right", 55, 27, 3);
+	var gatewayfield_to_mountaineerbowl= new Navigation("#gatewayfield", "gatewayfield_to_mountaineerbowl", "Back to the Mountaineer Bowl", "#mountaineerbowl", "back", 45, 17, 3);
 	var gatewayfield_to_fieldhouse= new Navigation("#gatewayfield", "gatewayfield_to_fieldhouse", "To the Field House", "#fieldhouse", "left", 42, 27, 3);
 	
 
 
 	/*====================Outdoor Arrows================== *Left arrow points to a new location, right arrows points to the old location*/
-    var mainstreet_to_hartmanrocks = new Navigation("#mainstreet", "mainstreet_to_hartmanrocks", "to Hartman Rocks", "#hartmanrocks", "left", 25, 20, 4);
-   	var mainstreet_to_cranorhill = new Navigation("#mainstreet", "mainstreet_to_cranorhill", "to Cranor Hill", "#cranorhill", "right", 65, 20, 4);
+    var mainstreet_to_hartmanrocks = new Navigation("#mainstreet", "mainstreet_to_hartmanrocks", "To Hartman Rocks", "#hartmanrocks", "left", 26, 20, 4);
+   	var mainstreet_to_cranorhill = new Navigation("#mainstreet", "mainstreet_to_cranorhill", "To Cranor Hill", "#cranorhill", "right", 68, 20, 4);
 	
-	var hartmanrocks_to_mainstreet = new Navigation("#hartmanrocks", "hartmanrocks_to_mainstreet", "to Main Street", "#mainstreet", "right", 65, 20, 4);
-    var hartmanrocks_to_bluemesa = new Navigation("#hartmanrocks", "hartmanrocks_to_bluemesa", "to Blue Mesa", "#bluemesa", "left", 25,20, 4);
+	var hartmanrocks_to_mainstreet = new Navigation("#hartmanrocks", "hartmanrocks_to_mainstreet", "To Main Street", "#mainstreet", "right", 68, 20, 4);
+    var hartmanrocks_to_bluemesa = new Navigation("#hartmanrocks", "hartmanrocks_to_bluemesa", "To Blue Mesa", "#bluemesa", "left", 26,20, 4);
 	
-	var bluemesa_to_telluride = new Navigation("#bluemesa", "bluemesa_to_telluride", "to Telluride", "#telluride", "left", 25,20, 4);
-	var bluemesa_to_hartmanrocks = new Navigation("#bluemesa", "bluemesa_to_hartmanrocks", "to Hartman Rocks", "#hartmanrocks", "right", 65, 20, 4);
+	var bluemesa_to_telluride = new Navigation("#bluemesa", "bluemesa_to_telluride", "to Telluride", "#telluride", "left", 26,20, 4);
+	var bluemesa_to_hartmanrocks = new Navigation("#bluemesa", "bluemesa_to_hartmanrocks", "To Hartman Rocks", "#hartmanrocks", "right", 68, 20, 4);
 	
-	var telluride_to_monarchmountain = new Navigation("#telluride", "telluride_to_monarchmountain", "to Monarch Mountain", "#monarchmountain", "left", 25,20, 4);
-	var telluride_to_bluemesa = new Navigation("#telluride", "telluride_to_bluemesa", "to Blue Mesa", "#bluemesa", "right", 65, 20, 4);
+	var telluride_to_monarchmountain = new Navigation("#telluride", "telluride_to_monarchmountain", "To Monarch Mountain", "#monarchmountain", "left", 26,20, 4);
+	var telluride_to_bluemesa = new Navigation("#telluride", "telluride_to_bluemesa", "To Blue Mesa", "#bluemesa", "right", 68, 20, 4);
 	
-	var monarchmountain_to_taylorpark = new Navigation("#monarchmountain", "monarchmountain_to_taylorpark", "to Taylor Park", "#taylorpark", "left", 25,20, 4);
-	var monarchmountain_to_telluride = new Navigation("#monarchmountain", "monarchmountain_to_telluride", "to Telluride", "#telluride", "right", 65, 20, 4);
+	var monarchmountain_to_taylorpark = new Navigation("#monarchmountain", "monarchmountain_to_taylorpark", "To Taylor Park", "#taylorpark", "left", 26,20, 4);
+	var monarchmountain_to_telluride = new Navigation("#monarchmountain", "monarchmountain_to_telluride", "To Telluride", "#telluride", "right", 68, 20, 4);
 	
-	var taylorpark_to_lakeirwin = new Navigation("#taylorpark", "taylorpark_to_lakeirwin", "to Lake Irwin", "#lakeirwin", "right", 65, 20, 4);
-	var taylorpark_to_monarchmountain = new Navigation("#taylorpark", "taylorpark_to_monarchmountain", "to Monarch Mountain", "#monarchmountain", "left", 25,20, 4);
+	var taylorpark_to_lakeirwin = new Navigation("#taylorpark", "taylorpark_to_lakeirwin", "To Lake Irwin", "#lakeirwin", "left", 26,20, 4);
+	var taylorpark_to_monarchmountain = new Navigation("#taylorpark", "taylorpark_to_monarchmountain", "To Monarch Mountain", "#monarchmountain", "right", 68, 20, 4);
 	
-	var lakeirwin_to_taylorpark = new Navigation("#lakeirwin", "lakeirwin_to_taylorpark", "to Taylor Park", "#taylorpark", "left", 25,20, 4);
-	var lakeirwin_to_cbmr = new Navigation("#lakeirwin", "lakeirwin_to_cbmr", "to Crested Butte Mountain Resort", "#cbmr", "right", 65, 20, 4);
+	var lakeirwin_to_taylorpark = new Navigation("#lakeirwin", "lakeirwin_to_taylorpark", "To Taylor Park", "#taylorpark", "right", 68, 20, 4);
+	var lakeirwin_to_cbmr = new Navigation("#lakeirwin", "lakeirwin_to_cbmr", "To Crested Butte Mountain Resort", "#cbmr", "left", 26,20, 4);
 
-	var cbmr_to_lakeirwin = new Navigation("#cbmr", "cbmr_to_lakeirwin", "to Lake Irwin", "#lakeirwin", "left", 25,20, 4);
-	var cbmr_to_crestedbutte = new Navigation("#cbmr", "cbmr_to_crestedbutte", "to Crested Butte", "#crestedbutte", "right", 65, 20, 4);
+	var cbmr_to_lakeirwin = new Navigation("#cbmr", "cbmr_to_lakeirwin", "To Lake Irwin", "#lakeirwin", "right", 68, 20, 4);
+	var cbmr_to_crestedbutte = new Navigation("#cbmr", "cbmr_to_crestedbutte", "To Crested Butte", "#crestedbutte", "left", 26,20, 4);
 	
-	var crestedbutte_to_cbmr = new Navigation("#crestedbutte", "crestedbutte_to_cbmr", "to Crested Butte Mountian Resort", "#cbmr", "left", 25,20, 4);
-	var crestedbutte_to_cranorhill = new Navigation("#crestedbutte", "crestedbutte_to_cranorhill", "to Cranor Hill", "#cranorhill", "right", 65, 20, 4);
+	var crestedbutte_to_cbmr = new Navigation("#crestedbutte", "crestedbutte_to_cbmr", "To Crested Butte Mountian Resort", "#cbmr", "right", 68, 20, 4);
+	var crestedbutte_to_cranorhill = new Navigation("#crestedbutte", "crestedbutte_to_cranorhill", "To Cranor Hill", "#cranorhill", "left", 26,20, 4);
 	
-	var craynorhill_to_crestedbutte = new Navigation("#craynorhill", "craynorhill_to_crestedbutte", "to Crested Butte", "#crestedbutte", "left", 25,20, 4);
-	var craynorhill_to_mainstreet = new Navigation("#craynorhill", "craynorhill_to_mainstreet", "to Gunnison Main Street", "#mainstreet", "right", 65, 20, 4);
+	var cranorhill_to_crestedbutte = new Navigation("#cranorhill", "cranorhill_to_crestedbutte", "To Crested Butte", "#crestedbutte", "right", 68, 20, 4);
+	var cranorhill_to_mainstreet = new Navigation("#cranorhill", "cranorhill_to_mainstreet", "To Gunnison Main Street", "#mainstreet", "left", 26,20, 4);
 	
 	
     var navs = [ 
@@ -168,7 +168,7 @@
 		fieldhouse_to_practicefield, practicefield_to_fieldhouse, practicefield_to_mountaineerbowl, mountaineerbowl_to_practicefield, mountaineerbowl_to_gatewayfield, gatewayfield_to_fieldhouse, gatewayfield_to_mountaineerbowl,
 		
 		/*======Outdoor Array=====*/
-        mainstreet_to_hartmanrocks, mainstreet_to_cranorhill, hartmanrocks_to_mainstreet,  hartmanrocks_to_bluemesa, bluemesa_to_telluride, bluemesa_to_hartmanrocks, telluride_to_monarchmountain, telluride_to_bluemesa,  monarchmountain_to_taylorpark, monarchmountain_to_telluride,   taylorpark_to_lakeirwin, taylorpark_to_monarchmountain,  lakeirwin_to_taylorpark, lakeirwin_to_cbmr, cbmr_to_lakeirwin, cbmr_to_crestedbutte, crestedbutte_to_cbmr, crestedbutte_to_cranorhill, craynorhill_to_crestedbutte, craynorhill_to_mainstreet ];
+        mainstreet_to_hartmanrocks, mainstreet_to_cranorhill, hartmanrocks_to_mainstreet,  hartmanrocks_to_bluemesa, bluemesa_to_telluride, bluemesa_to_hartmanrocks, telluride_to_monarchmountain, telluride_to_bluemesa,  monarchmountain_to_taylorpark, monarchmountain_to_telluride,   taylorpark_to_lakeirwin, taylorpark_to_monarchmountain,  lakeirwin_to_taylorpark, lakeirwin_to_cbmr, cbmr_to_lakeirwin, cbmr_to_crestedbutte, crestedbutte_to_cbmr, crestedbutte_to_cranorhill, cranorhill_to_crestedbutte, cranorhill_to_mainstreet ];
 
 
 /***********************
