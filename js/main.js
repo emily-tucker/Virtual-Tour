@@ -410,7 +410,7 @@ function loadMap(locationTag) {
 
             } else {
                 $.cookie("tour_track", "onCampus"); /** Create Cookie for on campus Tour Track **/
-                document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/oncampusmap1.jpg">';
+                document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/oncampusmap2.jpg">';
 
             }
 
