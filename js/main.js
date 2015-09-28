@@ -71,6 +71,7 @@ function animate_map(locationTag, time) {
         scrollTop: locationTag.y - ($('#map').height() / 2)
     }, time, 'easeInOutQuad');
 
+
 }
 
 /**************************
@@ -423,7 +424,6 @@ function loadMap(locationTag) {
 function getCookie(){
     tour_track = parseInt($.cookie("tour_track"));
 }
-
 window.onbeforeunload = getCookie();
 
 
