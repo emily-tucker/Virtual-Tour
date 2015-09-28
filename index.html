@@ -4,7 +4,7 @@
 <head>
     <title>Western Virtual Tour</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> <!-- Added user-scalable=no -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="css/cnstyle.css">
     <link type="text/css" rel="stylesheet" href="css/tipsy.css">
@@ -34,21 +34,14 @@
     <!--<script>google.maps.event.addDomListener(window,'load',initialize);</script>-->
 
     <script src="js/main.js"></script>
-<!--
-<script>
-    $(document).ready(function(){
-        location.hash = "#begin";
-    });
 
-</script>
--->
+
 </head>
 
 <body class="contextual_navigation noselect">
     <!-- ISSUE: Content width doesn't appear to be responsive in Firefox-->
     <!-- Div class and id names are important for the JS -->
-    
-    <div class="landscape-in-phone"> <!-- This is the div for landscape -->
+
     <div class="contextual_assets">
         <section class="show" id="start">
             <a href="#begin">
@@ -76,12 +69,7 @@
     
  
    <div id="map">
-<script>
-    var height = $(window).height() - '20%';
-    var width = $(window).width() - '20%';
-    $("#map").height(height);
-    $("#map").width(width);
-</script>
+
     
     </div>
 
@@ -92,8 +80,9 @@
             </div>
     </div>
     <div id="carousel" class="owl-carousel col-sm-3">
-     
+        <div id="owl-demo" class="owl-carousel noselect col-sm-3">
 
+        </div>
     </div>
 
 
@@ -102,7 +91,6 @@
     <script>
         $(document).ready(function ($) {
             dispMainMenu();
-
             $('#drilldown-1').dcDrilldown({
                 speed: 'fast',
                 saveState: true,
@@ -116,11 +104,10 @@
                 showCount: false,
                 linkType: 'link'
             });
-
         });
 		  
     </script>
-    </div> <!-- This is the end of div for landscape -->
+
 
 </body>
 
