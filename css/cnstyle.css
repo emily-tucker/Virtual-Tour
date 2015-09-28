@@ -310,7 +310,7 @@ section:target, .show{
     position:absolute;
     z-index: 1;
     right: 1%;
-    top: 42%;
+    top: 45.5%;
     max-height: 7%;
 	width:12em;
 	
@@ -323,7 +323,7 @@ section:target, .show{
     position: absolute;
     z-index: 1;
     right: 1%;
-    top:36%;
+    top:37.5%;
     max-height: 7%;
 	width:12em;
 }
