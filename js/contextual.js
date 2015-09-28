@@ -46,22 +46,22 @@
 	
 
     var telluride = new Location("#telluride", "Telluride", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 988, 432);
-    var crestedbutte = new Location("#cb", "Crested Butte", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 658, 454);
-    var monarchmountain = new Location("#mm", "Monarch Mountain", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 1193, 716);
-    var hartmanrocks = new Location("#hartmans", "Hartman Rocks", "recreation", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 600, 893);
+    var crestedbutte = new Location("#crestedbutte", "Crested Butte", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 658, 454);
+    var monarchmountain = new Location("#monarchmountain", "Monarch Mountain", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 1193, 716);
+    var hartmanrocks = new Location("#hartmanrocks", "Hartman Rocks", "recreation", " 8,000 acres of open BLM land with hundreds of miles of single-track trails and dirt roads, Hartman Rocks is a desert paradise for mountain biking, hiking, motorcycling, rock climbing, horseback riding, trail running and Nordic skiing.", true, 600, 893);
     var cbmr = new Location("#cbmr", "Crested Butte Mountain Resort", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 658, 454);
     var gunnison = new Location("#mainstreet", "Gunnison", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 702, 753);
 
     
-	var lakeIrwin = new Location("#lakeIrwin", "Lake Irwin", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 738, 363);
-	var blueMesa = new Location("#blueMesa", "Blue Mesa", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 738, 363);
-	var taylorPark = new Location("#taylorPark", "Taylor Park", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 738, 363);
-	var blackCanyon = new Location("#blackCanyon", "Black Canyon", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 738, 363);
-	var craynorHill = new Location("#craynorHill", "Craynor Hill", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 738, 363);
+	var lakeirwin = new Location("#lakeirwin", "Lake Irwin", "offcampus", " High-mountain lake surrounded by snow-capped peaks and beautiful 4x4 roads, mountain bike trails, hiking, fly fishing, lake fishing, paddle-boarding, camping, backpacking, snowcat skiing and snowmobiling.", true, 738, 363);
+	var bluemesa = new Location("#bluemesa", "Blue Mesa", "offcampus", "Colorado's largest lake and a popular destination for outdoor recreation, Blue Mesa offers fishing, camping, boating, 		  	paddleboarding, windsurfing, waterskiing and hiking.", true, 738, 363);
+	var taylorpark = new Location("#taylorpark", "Taylor Park", "offcampus", "Taylor Park offers a vast mountain playground for all types of recreational activities. The Taylor Canyon offers rock climbing, river rafting, hiking, fly fishing, mountain biking, camping, boating and fishing in the Taylor Reservoir and 4x4 exploring.", true, 738, 363);
+	var blackcanyon = new Location("#blackcanyon", "Black Canyon", "offcampus", "Spectacular! No other canyon in North America combines the narrow opening, sheer walls, and startling depths offered by the Black Canyon. Prepare yourself for breathtaking views while you enjoy hiking, fishing, camping, world-class rock climbing and wildlife viewing.", true, 738, 363);
+	var cranorhill = new Location("#cranorhill", "Cranor Hill", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 738, 363);
 
     var locations = [aquaticCenter, begin, borick, chipeta, crawford, escalante, paulwrightgym, pinnacles, ute, mears, taylor, quigley, hurst, kelley, library, universitycenter, mountaineerbowl, intramuralField, taylorQuad, fieldhouse,
 	
-	telluride, crestedbutte, monarchmountain, hartmanrocks,gunnison, cbmr, lakeIrwin, blueMesa, taylorPark, blackCanyon, craynorHill];
+	telluride, crestedbutte, monarchmountain, hartmanrocks, gunnison, cbmr, lakeirwin, bluemesa, taylorpark, blackcanyon, cranorhill];
 
 
 
@@ -120,22 +120,40 @@
 	var gatewayfield_to_mountaineerbowl= new Navigation("#gatewayfield", "gatewayfield_to_mountaineerbowl", "Back to the Mountaineer Bowl", "#mountaineerbowl", "back", 50, 17, 3);
 	var gatewayfield_to_fieldhouse= new Navigation("#gatewayfield", "gatewayfield_to_fieldhouse", "To the Field House", "#fieldhouse", "left", 42, 27, 3);
 	
+
+
+	/*====================Outdoor Arrows================== *Left arrow points to a new location, right arrows points to the old location*/
+    var mainstreet_to_hartmanrocks = new Navigation("#mainstreet", "mainstreet_to_hartmanrocks", "to Hartman Rocks", "#hartmanrocks", "left", 25, 20, 4);
+   	var mainstreet_to_cranorhill = new Navigation("#mainstreet", "mainstreet_to_cranorhill", "to Cranor Hill", "#cranorhill", "right", 65, 20, 4);
 	
+	var hartmanrocks_to_mainstreet = new Navigation("#hartmanrocks", "hartmanrocks_to_mainstreet", "to Main Street", "#mainstreet", "right", 65, 20, 4);
+    var hartmanrocks_to_bluemesa = new Navigation("#hartmanrocks", "hartmanrocks_to_bluemesa", "to Blue Mesa", "#bluemesa", "left", 25,20, 4);
+	
+	var bluemesa_to_telluride = new Navigation("#bluemesa", "bluemesa_to_telluride", "to Telluride", "#telluride", "left", 25,20, 4);
+	var bluemesa_to_hartmanrocks = new Navigation("#bluemesa", "bluemesa_to_hartmanrocks", "to Hartman Rocks", "#hartmanrocks", "right", 65, 20, 4);
+	
+	var telluride_to_monarchmountain = new Navigation("#telluride", "telluride_to_monarchmountain", "to Monarch Mountain", "#monarchmountain", "left", 25,20, 4);
+	var telluride_to_bluemesa = new Navigation("#telluride", "telluride_to_bluemesa", "to Blue Mesa", "#bluemesa", "right", 65, 20, 4);
+	
+	var monarchmountain_to_taylorpark = new Navigation("#monarchmountain", "monarchmountain_to_taylorpark", "to Taylor Park", "#taylorpark", "left", 25,20, 4);
+	var monarchmountain_to_telluride = new Navigation("#monarchmountain", "monarchmountain_to_telluride", "to Telluride", "#telluride", "right", 65, 20, 4);
+	
+	var taylorpark_to_lakeirwin = new Navigation("#taylorpark", "taylorpark_to_lakeirwin", "to Lake Irwin", "#lakeirwin", "right", 65, 20, 4);
+	var taylorpark_to_monarchmountain = new Navigation("#taylorpark", "taylorpark_to_monarchmountain", "to Monarch Mountain", "#monarchmountain", "left", 25,20, 4);
+	
+	var lakeirwin_to_taylorpark = new Navigation("#lakeirwin", "lakeirwin_to_taylorpark", "to Taylor Park", "#taylorpark", "left", 25,20, 4);
+	var lakeirwin_to_cbmr = new Navigation("#lakeirwin", "lakeirwin_to_cbmr", "to Crested Butte Mountain Resort", "#cbmr", "right", 65, 20, 4);
 
-	/*====================Outdoor Arrows==================*/
-    var dtToHr = new Navigation("#mainstreet", "dt_to_hr", "to Hartmans", "#hartmans", "left", 25, 20, 4);
-    var dtTorm = new Navigation("#mainstreet", "dttorm", " to Rocky Mountains", "#rockymountains", "right", 65, 20, 4);
-
-    var hrToCb = new Navigation("#hartmans", "hrToCb", "to Crested Butte", "#cb", "left", 25,20, 4);
-    var hrTOdt = new Navigation("#hartmans", "hrtodt", "to Downtown", "#mainstreet", "right", 65, 20, 4);
-
-    var cbToRm = new Navigation("#cb", "cbtorm", "to Rocky Mountains", "#rockymountains", "left", 25, 20, 4);
-    var cbtohr = new Navigation("#cb", "cbtohr", "to Hartmans", "#hartmans", "right", 65, 20, 4);
-
-    var rmToDt = new Navigation("#rockymountains", "rmtodt", "to Downtown", "#mainstreet", "left", 25, 20, 4);
-    var rmTOCb = new Navigation("#rockymountains", "rmtocb", "to Crested Butte", "#cb", "right", 65, 20, 4);
-
-
+	var cbmr_to_lakeirwin = new Navigation("#cbmr", "cbmr_to_lakeirwin", "to Lake Irwin", "#lakeirwin", "left", 25,20, 4);
+	var cbmr_to_crestedbutte = new Navigation("#cbmr", "cbmr_to_crestedbutte", "to Crested Butte", "#crestedbutte", "right", 65, 20, 4);
+	
+	var crestedbutte_to_cbmr = new Navigation("#crestedbutte", "crestedbutte_to_cbmr", "to Crested Butte Mountian Resort", "#cbmr", "left", 25,20, 4);
+	var crestedbutte_to_cranorhill = new Navigation("#crestedbutte", "crestedbutte_to_cranorhill", "to Cranor Hill", "#cranorhill", "right", 65, 20, 4);
+	
+	var craynorhill_to_crestedbutte = new Navigation("#craynorhill", "craynorhill_to_crestedbutte", "to Crested Butte", "#crestedbutte", "left", 25,20, 4);
+	var craynorhill_to_mainstreet = new Navigation("#craynorhill", "craynorhill_to_mainstreet", "to Gunnison Main Street", "#mainstreet", "right", 65, 20, 4);
+	
+	
     var navs = [ 
 		
 		/*======Academics Array=====*/
@@ -150,7 +168,7 @@
 		fieldhouse_to_practicefield, practicefield_to_fieldhouse, practicefield_to_mountaineerbowl, mountaineerbowl_to_practicefield, mountaineerbowl_to_gatewayfield, gatewayfield_to_fieldhouse, gatewayfield_to_mountaineerbowl,
 		
 		/*======Outdoor Array=====*/
-		dtToHr, dtTorm, hrToCb,hrTOdt,cbToRm, cbtohr, rmToDt, rmTOCb ];
+        mainstreet_to_hartmanrocks, mainstreet_to_cranorhill, hartmanrocks_to_mainstreet,  hartmanrocks_to_bluemesa, bluemesa_to_telluride, bluemesa_to_hartmanrocks, telluride_to_monarchmountain, telluride_to_bluemesa,  monarchmountain_to_taylorpark, monarchmountain_to_telluride,   taylorpark_to_lakeirwin, taylorpark_to_monarchmountain,  lakeirwin_to_taylorpark, lakeirwin_to_cbmr, cbmr_to_lakeirwin, cbmr_to_crestedbutte, crestedbutte_to_cbmr, crestedbutte_to_cranorhill, craynorhill_to_crestedbutte, craynorhill_to_mainstreet ];
 
 
 /***********************
