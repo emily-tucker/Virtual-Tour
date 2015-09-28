@@ -103,8 +103,8 @@ var FieldHouse_InfoGymFishEyeFull = new Image("Fieldhouse_InfoGymFishEyeFull", "
 var FieldHouse_InfoGymFishEyeThumb = new Image("Fieldhouse_InfoGymFishEyeThumb", "imgs/FieldHouse_InfoGymFishEyeThumb.jpg");
 var FieldHouse_InfoGymFishEye = new CarouselItem(["#fieldhouse"], FieldHouse_InfoGymFishEyeFull, FieldHouse_InfoGymFishEyeThumb, "Gym Fish Eye", '<b>Student Testimonials - Garen Hanks</b><br />It`s been a year since Westerns Track & Field team held its first practice in Mountaineer Field House, less than that since the building opened to the public. And during the past few weeks, the vast, energy-efficient structure, which could accommodate a jetliner, welcomed regional Track & Field teams to compete in the rare air of a track 7,700 feet above sea level.</br>&lt;a target=`_self` onClick=&quot;window.location.href=&#x27;http://www.western.edu/profile/student/chris-noah&#x27;&quot;   href=`http://www.western.edu/profile/student/chris-noah`&gt;Click here to read more...&lt;/a&gt;">');
 
-var FieldHouse_MovieThumb = new Image("Field_MovieThumb", "imgs/Field_MovieThumb.jpg");
-var FieldHouse_Movie = new CarouselItem(["#fieldhouse"], FieldHouse_MovieThumb, "Field House Movie",  '<a class="iframe"  title="Western State Colorado University" href="https://www.youtube.com/watch?v=vVYL6Npiuvc"target="_blank" ><div class="Thumbimage"><img src="imgs/FieldHouse_MovieThumb.jpg" alt="" />');
+//var FieldHouse_MovieThumb = new Image("Field_MovieThumb", "imgs/Field_MovieThumb.jpg");
+//var FieldHouse_Movie = new CarouselItem(["#fieldhouse"], FieldHouse_MovieThumb, "Field House Movie",  '<a class="iframe"  title="Western State Colorado University" href="https://www.youtube.com/watch?v=vVYL6Npiuvc"target="_blank" ><div class="Thumbimage"><img src="imgs/FieldHouse_MovieThumb.jpg" alt="" />');
 
 
 
