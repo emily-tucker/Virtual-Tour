@@ -1,9 +1,9 @@
 #carousel {
     position: fixed;
     top: 85%;
-    height: -10%;
     width:auto;
-    left: 20%;
+    margin-left: 30%;
+    margin-right: auto;
 	z-index:0;
 }
 

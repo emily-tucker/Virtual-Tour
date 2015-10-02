@@ -25,7 +25,7 @@ new MenuItem({
     }),
 ]
 
-var subon = [
+var subhousing = [
     new MenuItem({
         text: 'Escalante',
         icon: 'fa fa-home',
@@ -53,60 +53,7 @@ var subon = [
 ]
 
 
-var subhousing = [
-    new MenuItem({
-        text: 'On Campus',
-        icon: 'fa fa-building',
-        items: subon
-    }),
-]
 
-var subclub = [
-    new MenuItem({
-        text: 'Academic Clubs',
-        icon: 'fa fa-university',
-        target: 'external',
-        href: "http://www.western.edu/current-students/student-activities/academic-clubs-and-honor-societies"
-    }),
-    new MenuItem({
-        text: 'Club Sports',
-        icon: 'fa fa-futbol-o',
-        target: 'external',
-        href: "http://www.western.edu/current-students/campus-recreation/club-sports"
-    }),
-    new MenuItem({
-        text: 'Cultural',
-        icon: 'fa fa-euro',
-        target: 'external',
-        href: "http://www.western.edu/current-students/multicultural-center"
-    }),
-    new MenuItem({
-        text: 'Student Government',
-        icon: 'fa fa-gavel',
-        target: 'external',
-        href: "http://www.western.edu/current-students/student-government-association/sga-documents"
-    }),
-    new MenuItem({
-        text: 'KWSB Radio',
-        icon: 'fa fa-headphones',
-        target: 'external',
-        href: "http://www.western.edu/current-students/other-student-activities/kwsb-911fm"
-    })
-]
-
-var subactivities = [
-    new MenuItem({
-        text: 'Clubs',
-        icon: 'fa fa-music',
-        items: subclub
-    }),
-    new MenuItem({
-        text: 'Recreation',
-        icon: 'fa fa-gamepad',
-        target: 'external',
-        href: "http://www.western.edu/future-students/life-western/recreation"
-    })
-]
 var subvisit = [
     new MenuItem({
         text: 'Setup Visit',
@@ -124,12 +71,7 @@ var subvisit = [
 
 
 var subfuture = [
-    new MenuItem({
-        text: 'Apply Now!',
-        icon: 'fa fa-star ',
-        target: 'external',
-        href: "http://www.western.edu/future-students/apply-now-western"
-    }),
+
     new MenuItem({
         text: 'Tution and Fees',
         icon: 'fa fa-credit-card ',
@@ -142,125 +84,35 @@ var subfuture = [
         items: subvisit
     }),
     new MenuItem({
-        text: 'Activities',
+        text: 'Activities & Clubs',
         icon: 'fa fa-smile-o ',
-        items: subactivities
+        target: 'external',
+        href: "http://www.western.edu/current-students/student-activities"
     }),
     new MenuItem({
         text: 'Housing',
         icon: 'fa fa-home ',
         items: subhousing
     }),
-    new MenuItem({
-        text: 'Nearby',
-        icon: 'fa fa-road ',
-        items: subnear
-    }),
-]
-
-var subbike = [
-    new MenuItem({
-        text: 'Hartmans Rocks',
-        icon: 'fa fa-tree',
-        target: 'external',
-        href: "#"
-    }),
-    new MenuItem({
-        text: 'Trails Nearby',
-        icon: 'fa fa-motorcycle',
-        target: 'external',
-        href: "#"
-    })
-]
-var subski = [
-    new MenuItem({
-        text: 'CBMR',
-        icon: 'fa fa-tree',
-        target: 'external',
-        href: "#"
-    }),
-    new MenuItem({
-        text: 'Monarch',
-        icon: 'fa fa-tree',
-        target: 'external',
-        href: "#"
-    })
+ 
 ]
 
 
-var submountain = [
-    new MenuItem({
-        text: 'Ski and Snowboard',
-        icon: 'fa fa-tree',
-        target: 'external',
-        href: "http://wscumountainsports.com/come-ski-with-the-team/"
-    }),
-    new MenuItem({
-        text: 'Mountain Biking',
-        icon: 'fa fa-bicycle',
-        target: 'external',
-        href: "http://wscumountainsports.com/new-mountain-biking/"
-    }),
-    new MenuItem({
-        text: 'Trail Running',
-        icon: 'fa fa-bicycle',
-        target: 'external',
-        href: "http://wscumountainsports.com/trail-running/"
-    })
-]
-
-
-var subncaa = [
-    new MenuItem({
-        text: 'Football',
-        icon: 'fa fa-skyatlas',
-        target: 'external',
-        href: 'http://www.gomountaineers.com/'
-    }),
-    new MenuItem({
-        text: 'Basketball',
-        icon: 'fa fa-trophy',
-        target: 'external',
-        href: 'http://www.gomountaineers.com/'
-    }),
-    new MenuItem({
-        text: 'Wrestling',
-        icon: 'fa fa-bell',
-        target: 'external',
-        href: 'http://www.gomountaineers.com/'
-    }),
-    new MenuItem({
-        text: 'Track',
-        icon: 'fa fa-bolt',
-        target: 'external',
-        href: 'http://www.gomountaineers.com/'
-    }),
-    new MenuItem({
-        text: 'Swimming',
-        icon: 'fa fa-life-ring',
-        target: 'external',
-        href: 'http://www.gomountaineers.com/'
-    }),
-    new MenuItem({
-        text: 'Soccer',
-        icon: 'fa fa-futbol-o',
-        target: 'external',
-        href: 'http://www.gomountaineers.com/'
-    })
-]
 
 
 var subathletics = [
     new MenuItem({
         text: 'NCAA Sports',
-        icon: 'fa fa-futbol-o ',
-        items: subncaa
+        icon: 'fa fa-trophy  ',
+        target: 'external',
+        href: "http://www.gomountaineers.com/"
     }),
     new MenuItem({
         text: 'Mountain Sports',
-        icon: 'fa fa-motorcycle ',
-        items: submountain
-    })
+        icon: 'fa fa-trophy  ',
+        target: 'external',
+        href: "http://wscumountainsports.com/"
+    }),
 ]
 
 var subconcurrent = [
@@ -272,28 +124,12 @@ var subconcurrent = [
     })
 ]
 
-var subaccess = [
-    new MenuItem({
-        text: 'Learn More',
-        icon: 'fa fa-hand-o-right',
-        target: 'external',
-        href: "#"
-    })
-]
 
-var subregister = [
-    new MenuItem({
-        text: 'Join In',
-        icon: 'fa fa-smile-o',
-        target: 'external',
-        href: "#"
-    })
-]
 
 var subacademics = [
 new MenuItem({
         text: 'Areas of Study',
-        icon: 'fa fa-arrow-right ',
+        icon: 'fa fa-graduation-cap ',
         target: "external",
         href: "http://www.western.edu/academics/undergraduate-areas-study"
     }),
@@ -421,28 +257,35 @@ var subgo = [
 var submenu = [
     new MenuItem({
         text: 'Academics',
-        icon: 'fa fa-book ',
+        icon: 'fa fa-graduation-cap ',
         items: subacademics
     }),
     new MenuItem({
         text: 'Athletics',
-        icon: 'fa fa-bicycle ',
+        icon: 'fa  fa-trophy  ',
         items: subathletics
     }),
-    new MenuItem({
-        text: 'Schedule A Visit',
-        icon: 'fa fa-suitcase',
-        target: 'external',
-        href: 'http://www.western.edu/future-students/visiting-campus/visit-western'
-    }),
+
     new MenuItem({
         text: 'Student Life',
         icon: 'fa fa-users',
         items: subfuture
     }),
+	    new MenuItem({
+        text: 'Schedule A Visit',
+        icon: 'fa fa-suitcase',
+        target: 'external',
+        href: 'http://www.western.edu/future-students/visiting-campus/visit-western'
+    }),
+	    new MenuItem({
+        text: 'Apply Now!',
+        icon: 'fa fa-star ',
+        target: 'external',
+        href: "http://www.western.edu/future-students/apply-now-western"
+    }),
     new MenuItem({
         text: 'Go To',
-        icon: 'fa fa-street-view',
+        icon: 'fa fa-map-marker ',
         items: subgo
     })
 ]
