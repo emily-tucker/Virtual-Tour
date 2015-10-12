@@ -4,44 +4,44 @@
 	 var aquaticCenter = new Location("#aquaticCenter", "Aquatic Center", "studentlife",
             "Need This.",  345, 1206);
 	var begin = new Location("#begin", "Welcome to Western", "main",
-	"Western offers a private college experience at a public university cost, deep in the heart of the Rockies.", 1302, 785);
+	"Western offers a private college experience at a public university cost, deep in the heart of the Rockies.", 986, 581);
 	var borick = new Location("#borick", "Borick Buisness Building", "academic",
-            "Prominent and relatively new, state-of-the-art Borick is home to Western's new School of Business. It includes a virtual classroom that can connect easily with similar facilities around the world.", 1132, 865);
+            "Prominent and relatively new, state-of-the-art Borick is home to Western's new School of Business. It includes a virtual classroom that can connect easily with similar facilities around the world.", 842, 635);
 	var chipeta = new Location("#chipeta", "Chipeta Student Housing", "studentlife",
-            "Co-ed apartments on the southwest corner of campus, featuring furnished one- and two-bedroom units. Also home to Western's Lesbian/Gay/Bisexual Student Alliance.",  274, 813);
+            "Co-ed apartments on the southwest corner of campus, featuring furnished one- and two-bedroom units. Also home to Western's Lesbian/Gay/Bisexual Student Alliance.",  203, 611);
 	var crawford = new Location("#crawford", "Crawford Hall", "academic",
-            "A compact and appealing classroom building, primarily for Education courses.",  1114, 657);
+            "A compact and appealing classroom building, primarily for Education courses.",  832, 484);
 	var escalante = new Location("#escalante", "Escalante Terrace", "studentlife",
-            "Formerly Western's Fitness Center, Escalante Terrace is slated to house WesternÕs ICE program for entrepreneurship. For 2015-2016, it will house art programs, while Quigley Hall undergoes renovations.",  1650, 532);
+            "Formerly Western's Fitness Center, Escalante Terrace is slated to house WesternÕs ICE program for entrepreneurship. For 2015-2016, it will house art programs, while Quigley Hall undergoes renovations.",  1238, 399);
 	var fieldhouse = new Location("#fieldhouse", "Mountaineer Field House", "athletic", 
-	 "This spectacular new building includes a high-tech surface across its main floor, with the highest indoor NCAA track, a 43.5-foot climbing wall, an athletic weight room, a fitness center, the HAPLab and more.", 958, 508);
+	 "This spectacular new building includes a high-tech surface across its main floor, with the highest indoor NCAA track, a 43.5-foot climbing wall, an athletic weight room, a fitness center, the HAPLab and more.", 715, 385);
 	var gatewayfield = new Location("#gatewayfield", "Gateway Soccer Fields", "athletic", 
-	 "65,000-square-foot LEED-Gold certified field house.", 919, 1044);
+	 "65,000-square-foot LEED-Gold certified field house.", 697, 784);
 	var hurst = new Location("#hurst", "Hurst Hall", "academic",
-            "One of the campus's most modern classroom buildings, Hurst houses Science, Mathematics and Computer Science labs, along with offices.", 1729, 778);
+            "One of the campus's most modern classroom buildings, Hurst houses Science, Mathematics and Computer Science labs, along with offices.", 1301, 586);
 	var intramuralField = new Location("#intramuralField", "Intramural Sports Field", "studentlife",
             "Need Desc.", 1083, 588);
 	var kelley = new Location("#kelley", "Kelley Hall", "academic",
-            "Topped by solar-hot-water panels that boost its efficiency, Kelley is an important classroom building, housing Western's Social Sciences and Environment & Sustainability programs, among others.", 1650, 710);
+            "Topped by solar-hot-water panels that boost its efficiency, Kelley is an important classroom building, housing Western's Social Sciences and Environment & Sustainability programs, among others.", 1232, 530);
     var library = new Location("#library", "Leslie J. Savage Library", "studentlife",
-            "Savage Library is a research hub for campus and great study spot. You'll find the expected stacks of books, but also large computer labs, access to electronic libraries around the world and the university archives.",  1313, 652);
+            "Savage Library is a research hub for campus and great study spot. You'll find the expected stacks of books, but also large computer labs, access to electronic libraries around the world and the university archives.",  973, 494);
 	var mears = new Location("#mears", "Mears Complex", "studentlife",
-            "These co-ed dormitories Ð Mears, Robidoux and Moffat Ð connect by enclosed corridors. They feature suite-style double rooms, with two rooms sharing each bathroom.", 829, 685);
+            "These co-ed dormitories Ð Mears, Robidoux and Moffat Ð connect by enclosed corridors. They feature suite-style double rooms, with two rooms sharing each bathroom.", 626, 509);
 	 var paulwrightgym = new Location("#paulwrightgym", "Paul Wright Gymnasium", "academic",
-            "At 7,723 feet above sea level, this is the world's highest collegiate gym. It seats 1,800 and includes an indoor pool, a wrestling room, locker rooms, the Hall of Fame trophy room and classrooms.", 1188, 500);
+            "At 7,723 feet above sea level, this is the world's highest collegiate gym. It seats 1,800 and includes an indoor pool, a wrestling room, locker rooms, the Hall of Fame trophy room and classrooms.", 883, 374);
 	var pinnacles = new Location("#pinnacles", "Pinnacles Student Housing", "studentlife",
-            "Western's newest apartments have furnished two-, three- and four-bedroom units. Each has a large kitchen and common room, with plenty of cabinet and closet space. It also has many common spaces and facilities.",  677, 663);
+            "Western's newest apartments have furnished two-, three- and four-bedroom units. Each has a large kitchen and common room, with plenty of cabinet and closet space. It also has many common spaces and facilities.",  510, 496);
 	var mountaineerbowl = new Location("#mountaineerbowl", "Mountaineer Bowl", "athletic",
-            "Home of Mountaineer football and Western's high-tech-surface track, itÕs also world's highest collegiate football stadium at 7,750 feet above sea level, seating 4,000 fans, with room for more on its hills.",  1411, 381);
+            "Home of Mountaineer football and Western's high-tech-surface track, itÕs also world's highest collegiate football stadium at 7,750 feet above sea level, seating 4,000 fans, with room for more on its hills.",  1042, 296);
 	var quigley = new Location("#quigley", "Quigley Hall", "academic",
-            "Home of Western's Art and Music programs, Quigley is undergoing a $25.8 million renovation, upgrading studios, presenation spaces, practice rooms and more, with expected completion in Fall 2016.", 1512, 890);
+            "Home of Western's Art and Music programs, Quigley is undergoing a $25.8 million renovation, upgrading studios, presenation spaces, practice rooms and more, with expected completion in Fall 2016.", 1134, 659);
     var taylor = new Location("#taylor", "Taylor Hall", "academic",
-            "Renovated in 2010, Taylor is a LEED-certified, energy-efficient structure. Its bold atrium serves is Western's Welcome Center. It also houses the administration, an auditorium, a theater and many classrooms.", 1317, 738);
+            "Renovated in 2010, Taylor is a LEED-certified, energy-efficient structure. Its bold atrium serves is Western's Welcome Center. It also houses the administration, an auditorium, a theater and many classrooms.", 985, 553);
 	 var taylorQuad = new Location("#taylorQuad", "Taylor Quad", "studentlife",
-            "Need Description", 1161, 737);
-    var universitycenter = new Location("#universitycenter", "University Center", "studentlife", "This fairly new and extremely capable building is a hub of student life. It houses meeting rooms; a ballroom; dining facilities, the bookstore, the University Theater, Wilderness Pursuits, student groups and more.", 1314, 528);
+            "Need Description", 812, 573);
+    var universitycenter = new Location("#universitycenter", "University Center", "studentlife", "This fairly new and extremely capable building is a hub of student life. It houses meeting rooms; a ballroom; dining facilities, the bookstore, the University Theater, Wilderness Pursuits, student groups and more.", 987, 402);
 	var ute = new Location("#ute", "Ute Student Housing", "studentlife",
-            "One of the older residence halls on campus, Ute has seen recent renovations and offers first-year students fully furnished rooms in a traditional, community-style dormitory that opens right onto lush Taylor Lawn.", 883, 835);
+            "One of the older residence halls on campus, Ute has seen recent renovations and offers first-year students fully furnished rooms in a traditional, community-style dormitory that opens right onto lush Taylor Lawn.", 653, 634);
 
 	
 
