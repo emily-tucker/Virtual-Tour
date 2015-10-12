@@ -236,6 +236,7 @@ a:active {
 	visibility: visible;
 	right: auto;
 	position:absolute;
+	max-width: 600px;
 }
 
 .fancybox-title-float-wrap {
@@ -334,7 +335,7 @@ a:active {
 	height: 30px;
 	text-indent: -9999px;
 	background-color: transparent;
-	background-image: url('FancyBox_Carousel/source/fancybox_buttons.png');
+	background-image: url('../imgs/fancybox_buttons.png');
 	background-repeat: no-repeat;
 	outline: none;
 	opacity: 0.8;
@@ -389,7 +390,8 @@ a:active {
 	   only screen and (min-device-pixel-ratio: 1.5){
 
 	#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-		background-image: url('fancybox_sprite@2x.png');
+	
+		background-image: url('../imgs/fancybox_sprite@2x.png');
 		background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
 	}
 

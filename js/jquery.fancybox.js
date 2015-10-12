@@ -83,8 +83,7 @@
 		version: '2.1.5',
 
 		defaults: {
-			
-			padding : 0,
+			padding : 5,
 			margin  : 0,
 
 			width     : 600,
@@ -180,7 +179,6 @@
 
 			// Properties for each animation type
 			// Opening fancyBox
-			
 			
 			
 			openEffect  : 'elastic', // 'elastic', 'fade' or 'none'
