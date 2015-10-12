@@ -176,9 +176,9 @@
  * @type {Hspot}
  ***********************/
 
-    var uc_hotspot = new Hspot("#universitycenter", "taylor_panorama_hs", "view Panorama", "panoramas/uc_panorama/UC_Panorama.html", 60, 75);
-    var taylor_hotspot = new Hspot("#taylor", "taylor_panorama_hs", "view Panorama", "panoramas/taylor_panorama/Taylor_Panorama.html", 60, 75);
-    var library_hotspot = new Hspot("#library", "taylor_panorama_hs", "view Panorama", "panoramas/library_panorama/Library_Panorama.html", 60, 75);
+    var uc_hotspot = new Hspot("#universitycenter", "taylor_panorama_hs", "View Panorama", "panoramas/uc_panorama/UC_Panorama.html", 60, 75);
+    var taylor_hotspot = new Hspot("#taylor", "taylor_panorama_hs", "View Panorama", "panoramas/taylor_panorama/Taylor_Panorama.html", 60, 75);
+    var library_hotspot = new Hspot("#library", "taylor_panorama_hs", "View Panorama", "panoramas/library_panorama/Library_Panorama.html", 60, 75);
 
 
     var hotspots = [taylor_hotspot, library_hotspot, uc_hotspot];

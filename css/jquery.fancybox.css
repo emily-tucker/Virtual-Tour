@@ -52,9 +52,9 @@ a:active {
 	background: #f9f9f9;
 	color: #444;
 	text-shadow: none;
-	-webkit-border-radius: 4px;
-	   -moz-border-radius: 4px;
-	        border-radius: 4px;
+	-webkit-border-radius: 0px;
+	   -moz-border-radius: 0px;
+	        border-radius: 0px;
 }
 
 .fancybox-opened {
@@ -81,9 +81,9 @@ a:active {
 
 .fancybox-error {
 	color: #444;
-	font: 12px/24px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font: 12px/16px "Arial Black", Gadget, sans-serif;
 	margin: 0;
-	padding: 15px;
+	padding: 0px;
 	white-space: nowrap;
 }
 
@@ -172,7 +172,7 @@ a:active {
 }
 
 .fancybox-nav:hover span {
-	visibility: visible;
+	visibility:hidden;
 }
 
 .fancybox-tmp {
@@ -225,7 +225,8 @@ a:active {
 
 .fancybox-title {
 	visibility: hidden;
-	font: normal 13px/12px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font: "Arial", Helvetica, sans-serif;
+	font-size:9px;
 	position: relative;
 	text-shadow: none;
 	z-index: 8050;
@@ -235,14 +236,13 @@ a:active {
 	visibility: visible;
 	right: auto;
 	position:absolute;
-	max-width: 300px;
 }
 
 .fancybox-title-float-wrap {
 	bottom: 0;
 	right: 500%;
 	margin-bottom: 100px;
-	margin-left:10px;
+	margin-left:20px;
 	z-index: 8050;
 	text-align: left;
 }
@@ -250,7 +250,7 @@ a:active {
 .fancybox-title-float-wrap .child {
 	display: block;
 	margin-right: -100%;
-	padding: 200px 10px;
+	padding: 20px 10px;
 	background: transparent; /* Fallback for web browsers that doesn't support RGBa */
 	background: rgba(0, 0, 0, 0.8);
 	-webkit-border-radius: 15px;

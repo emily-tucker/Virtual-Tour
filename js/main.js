@@ -469,7 +469,7 @@ $(function () {
                 $("#map").css({
                     "right": "0"
                 });
-                $("#map").hide();
+                $("#map").hide('blind');
                 $("#carousel").hide('blind');
                 $(this).off("click");
                 $("#video").click(function () {

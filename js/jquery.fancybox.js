@@ -83,11 +83,12 @@
 		version: '2.1.5',
 
 		defaults: {
-			padding : 15,
-			margin  : 20,
+			
+			padding : 0,
+			margin  : 0,
 
-			width     : 800,
-			height    : 800,
+			width     : 600,
+			height    : 600,
 			minWidth  : 100,
 			minHeight : 100,
 			maxWidth  : 9999,
@@ -95,8 +96,8 @@
 			pixelRatio: 1, // Set to 2 for retina display support
 
 			autoSize   : true,
-			autoHeight : false,
-			autoWidth  : false,
+			autoHeight : true,
+			autoWidth  : true,
 
 			autoResize  : true,
 			autoCenter  : !isTouch,
@@ -105,13 +106,13 @@
 			topRatio    : 0.5,
 			leftRatio   : 0.5,
 
-			scrolling : 'auto', // 'auto', 'yes' or 'no'
+			scrolling : 'no', // 'auto', 'yes' or 'no'
 			wrapCSS   : '',
 
 			arrows     : true,
 			closeBtn   : true,
 			closeClick : false,
-			nextClick  : false,
+			nextClick  : true,
 			mouseWheel : true,
 			autoPlay   : false,
 			playSpeed  : 3000,
@@ -124,8 +125,9 @@
 				headers  : { 'X-fancyBox': true }
 			},
 			iframe : {
-				scrolling : 'auto',
-				preload   : true
+				scrolling : 'no',
+				preload   : true,
+				
 			},
 			swf : {
 				wmode: 'transparent',
@@ -169,7 +171,7 @@
 			tpl: {
 				wrap     : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
 				image    : '<img class="fancybox-image" src="{href}" alt="" />',
-				iframe   : '<iframe id="fancybox-frame{rnd}" name="fancybox-frame{rnd}" class="fancybox-iframe" frameborder="0" vspace="0" hspace="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen' + (IE ? ' allowtransparency="true"' : '') + '></iframe>',
+				iframe   : '<iframe id="fancybox-frame{rnd}" name="fancybox-frame{rnd}" class="fancybox-iframe" frameborder="0" vspace="0" hspace="0" webkitAllowFullScreen mozallowfullscreen 		allowFullScreen' + (IE ? ' allowtransparency="true"' : '') + '></iframe>',
 				error    : '<p class="fancybox-error">The requested content cannot be loaded.<br/>Please try again later.</p>',
 				closeBtn : '<a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>',
 				next     : '<a title="Next" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
@@ -178,6 +180,7 @@
 
 			// Properties for each animation type
 			// Opening fancyBox
+			
 			
 			
 			openEffect  : 'elastic', // 'elastic', 'fade' or 'none'

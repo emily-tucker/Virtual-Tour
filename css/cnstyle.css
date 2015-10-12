@@ -275,24 +275,19 @@ section:target, .show{
     z-index: 3000;
     right: -6.5%;
     bottom: 10%;
-    max-height: 8%;
 	transform: rotate(90deg);
     transform-origin: left top 0;
-    width: 2em;
+    width:auto;
     height: 5%;
-	min-height:5%;
 	min-width:8%;
 	margin-top: 5%;
 	background-color: rgba(0,0,0,.60);
 	border:1px solid rgba(167,25,48,1);
-    display:inline-block;
-    cursor:pointer;
     text-decoration:none;
     color:#FFF;
     font:"Arial Black", Gadget, sans-serif 16px;
     letter-spacing: 1px;
     font-size: 1.7vw;
-	overflow:auto;
 }
 .hide_button:hover{
 	margin-top: 5%;

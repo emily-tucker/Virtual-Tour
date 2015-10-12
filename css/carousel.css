@@ -2,7 +2,7 @@
     position: fixed;
     top: 85%;
     width:auto;
-    margin-left: 30%;
+    margin-left: 25%;
     margin-right: auto;
 	z-index:0;
 }
@@ -27,7 +27,7 @@
 
 .Thumbcaption
 {
-  font:"Arial Black", Gadget, sans-serif 20px;
+  font:"Arial Black", Gadget, sans-serif 16px;
   letter-spacing: 1px;
   color:#FFF;
   text-align:center;
