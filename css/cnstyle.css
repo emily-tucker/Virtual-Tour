@@ -292,7 +292,6 @@ section:target, .show{
     font:"Arial Black", Gadget, sans-serif 16px;
     letter-spacing: 1px;
     font-size: 1.7vw;
-	overflow:auto;
 }
 .hide_button:hover{
 	margin-top: 5%;
