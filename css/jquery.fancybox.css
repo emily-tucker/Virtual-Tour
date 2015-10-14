@@ -72,7 +72,7 @@ a:active {
 }
 
 .fancybox-inner {
-	overflow: hidden;
+	overflow:visible;
 }
 
 .fancybox-type-iframe .fancybox-inner {

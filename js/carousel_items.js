@@ -222,3 +222,5 @@ var RockyMountains_STRobinBing = new CarouselItem(["#rockymountains"], RockyMoun
 CIs.push(RockyMountains_STRobinBing);
 
 
+var panorama_MovieThumb = new Image("RockyMountains_MovieThumb", "imgs/RockyMountains_MovieThumb.jpg");
+var RockyMountains_Movie = new CarouselItem(["#rockymountains"], RockyMountains_MovieThumb, "Rocky Mountains Movie", '<a class="iframe"  title="Western State Colorado University" href="https://www.youtube.com/watch?v=uMUCVcpGKrA"target="_blank" >');
