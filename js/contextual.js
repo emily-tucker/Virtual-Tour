@@ -13,7 +13,9 @@
             "A compact and appealing classroom building, primarily for Education courses.",  832, 484);
 	var escalante = new Location("#escalante", "Escalante Terrace", "studentlife",
             "Formerly Western's Fitness Center, Escalante Terrace is slated to house WesternÕs ICE program for entrepreneurship. For 2015-2016, it will house art programs, while Quigley Hall undergoes renovations.",  1238, 399);
-	var fieldhouse = new Location("#fieldhouse", "Mountaineer Field House", "athletic", 
+	var fieldhouse_Athletic = new Location("#fieldhouse_Athletic", "Mountaineer Field House", "athletic", 
+	 "This spectacular new building includes a high-tech surface across its main floor, with the highest indoor NCAA track, a 43.5-foot climbing wall, an athletic weight room, a fitness center, the HAPLab and more.", 715, 385);
+	 var fieldhouse_SL = new Location("#fieldhouse", "Mountaineer Field House", "studentlife", 
 	 "This spectacular new building includes a high-tech surface across its main floor, with the highest indoor NCAA track, a 43.5-foot climbing wall, an athletic weight room, a fitness center, the HAPLab and more.", 715, 385);
 	var gatewayfield = new Location("#gatewayfield", "Gateway Soccer Fields", "athletic", 
 	 "65,000-square-foot LEED-Gold certified field house.", 697, 784);
@@ -31,6 +33,8 @@
             "At 7,723 feet above sea level, this is the world's highest collegiate gym. It seats 1,800 and includes an indoor pool, a wrestling room, locker rooms, the Hall of Fame trophy room and classrooms.", 883, 374);
 	var pinnacles = new Location("#pinnacles", "Pinnacles Student Housing", "studentlife",
             "Western's newest apartments have furnished two-, three- and four-bedroom units. Each has a large kitchen and common room, with plenty of cabinet and closet space. It also has many common spaces and facilities.",  510, 496);
+	var practicefield = new Location("#practicefield", "Practice Field", "athletic",
+            "Need description",  1042, 296);
 	var mountaineerbowl = new Location("#mountaineerbowl", "Mountaineer Bowl", "athletic",
             "Home of Mountaineer football and Western's high-tech-surface track, itÕs also world's highest collegiate football stadium at 7,750 feet above sea level, seating 4,000 fans, with room for more on its hills.",  1042, 296);
 	var quigley = new Location("#quigley", "Quigley Hall", "academic",
@@ -59,7 +63,7 @@
 	var blackcanyon = new Location("#blackcanyon", "Black Canyon", "offcampus", "Spectacular! No other canyon in North America combines the narrow opening, sheer walls, and startling depths offered by the Black Canyon. Prepare yourself for breathtaking views while you enjoy hiking, fishing, camping, world-class rock climbing and wildlife viewing.", true, 738, 363);
 	var cranorhill = new Location("#cranorhill", "Cranor Hill", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 738, 363);
 
-    var locations = [aquaticCenter, begin, borick, chipeta, crawford, escalante, paulwrightgym, pinnacles, ute, mears, taylor, quigley, hurst, kelley, library, universitycenter, mountaineerbowl, intramuralField, taylorQuad, fieldhouse,
+    var locations = [aquaticCenter, begin, borick, chipeta, crawford, escalante, paulwrightgym, pinnacles, practicefield, ute, mears, taylor, quigley, hurst, kelley, library, universitycenter, mountaineerbowl, intramuralField, taylorQuad, fieldhouse_SL, fieldhouse_Athletic,
 	
 	telluride, crestedbutte, monarchmountain, hartmanrocks, gunnison, cbmr, lakeirwin, bluemesa, taylorpark, blackcanyon, cranorhill];
 
@@ -88,11 +92,11 @@
 	
 	
 	/*====================Student Life Arrows================== Arrow Color: Red - StudentLife Tour = 2*/
-	var universitycenter_to_fieldhouse = new Navigation("#universitycenter", "universitycenter_to_fieldhouse", "To the Fieldhouse", "#fieldhouse", "left", 42, 27, 2);
+	var universitycenter_to_fieldhouse_SL = new Navigation("#universitycenter", "universitycenter_to_fieldhouse_SL", "To the Fieldhouse", "#fieldhouse_SL", "left", 42, 27, 2);
 	var universitycenter_to_begin = new Navigation("#universitycenter", "universitycenter_to_begin", "Back to the Welcome Center", "#begin", "back", 45, 17, 2);
-	var fieldhouse_to_mears = new Navigation("#fieldhouse", "fieldhouse_to_mears", "To the Mears Complex", "#mears", "left", 42, 27, 2);
-	var fieldhouse_to_universitycenter = new Navigation("#fieldhouse", "fieldhouse_to_universitycenter", "Back to the University Center", "#universitycenter", "backright", 50, 17, 2);
-	var mears_to_fieldhouse = new Navigation("#mears", "mears_to_fieldhouse", "Back to the Field House", "#fieldhouse", "backright", 50, 17, 2);
+	var fieldhouse_SL_to_mears = new Navigation("#fieldhouse_SL", "fieldhouse_SL_to_mears", "To the Mears Complex", "#mears", "left", 42, 27, 2);
+	var fieldhouse_SL_to_universitycenter = new Navigation("#fieldhouse_SL", "fieldhouse_SL_to_universitycenter", "Back to the University Center", "#universitycenter", "backright", 50, 17, 2);
+	var mears_to_fieldhouse_SL = new Navigation("#mears", "mears_to_fieldhouse_SL", "Back to the Field House", "#fieldhouse_SL", "backright", 50, 17, 2);
 	var mears_to_pinnacles = new Navigation("#mears", "mears_to_pinnacles", "To the Pinnacles", "#pinnacles", "left", 42, 27, 2);
 	var pinnacles_to_mears = new Navigation("#pinnacles", "pinnacles_to_mears", "Back to the Mears Complex", "#mears", "backright", 50, 17, 2);
 	var pinnacles_to_chipeta = new Navigation("#pinnacles", "pinnacles_to_chipeta", "To Chipeta Hall", "#chipeta", "left", 42, 27, 2);
@@ -102,9 +106,9 @@
 	var ute_to_taylorQuad = new Navigation("#ute","ute_to_taylorQuad", "To Taylor Quad", "#taylorQuad", "right", 55, 27, 2);
 	var taylorQuad_to_ute = new Navigation("#taylorQuad","taylorQuad_to_ute", "Back to Ute", "#ute", "backleft", 40, 17, 2);
 	var taylorQuad_to_library = new Navigation("#taylorQuad","taylorQuad_to_library", "To the Library", "#library", "forward", 47, 27, 2);
-	//var library_to_taylorQuad = new Navigation("#library", "library_to_taylorQuad", "Back to Taylor Quad", "#taylorQuad", "backleft", 42, 15, 2);
-	//var library_to_escalante = new Navigation("#library", "library_to_escalante", "To the Escalante Terrace", "#escalante", "forward", 47, 27, 2);
-	//var escalante_to_library = new Navigation("#escalante", "escalante_to_library", "Back to the Library", "#library", "back", 45, 17, 2);
+	var library_to_taylorQuad = new Navigation("#library", "library_to_taylorQuad", "Back to Taylor Quad", "#taylorQuad", "backleft", 42, 15, 2);
+	var library_to_escalante = new Navigation("#library", "library_to_escalante", "To the Escalante Terrace", "#escalante", "forward", 47, 27, 2);
+	var escalante_to_library = new Navigation("#escalante", "escalante_to_library", "Back to the Library", "#library", "back", 45, 17, 2);
 	var escalante_to_universitycenter = new Navigation("#escalante", "escalante_to_universitycenter", "To the University Center", "#universitycenter", "left", 46, 27, 2);
 	
 
@@ -112,7 +116,7 @@
 	
 	/*====================Athletics Arrows================== Arrow Color: Slate- Athetic Tour = 3*/
 	var fieldhouse_to_practicefield= new Navigation("#fieldhouse", "fieldhouse_to_practicefield", "To the Practice Field", "#practicefield", "forward", 47, 27, 3);
-	//var fieldhouse_to_begin= new Navigation("#fieldhouse", "fieldhouse_to_begin", "Back to the Welcome Center", "#begin", "back",45, 17, 3);
+	var fieldhouse_to_begin= new Navigation("#fieldhouse", "fieldhouse_to_begin", "Back to the Welcome Center", "#begin", "back",45, 17, 3);
 	var practicefield_to_fieldhouse= new Navigation("#practicefield", "practicefield_to_fieldhouse", "Back to the Field House", "#fieldhouse", "back", 45, 17, 3);
 	var practicefield_to_mountaineerbowl= new Navigation("#practicefield", "practicefield_to_mountaineerbowl", "To the Mountaineer Bowl", "#mountaineerbowl", "right", 55, 27, 3);
 	var mountaineerbowl_to_practicefield= new Navigation("#mountaineerbowl", "mountaineerbowl_to_practicefield", "Back to the Practice Field", "#practicefield", "back", 45, 17, 3);
@@ -161,11 +165,11 @@
 		
 		
 		/*======Student Life Array=====*/
-		universitycenter_to_fieldhouse, universitycenter_to_begin, fieldhouse_to_mears, fieldhouse_to_universitycenter, mears_to_fieldhouse, mears_to_pinnacles, pinnacles_to_mears, pinnacles_to_chipeta, chipeta_to_ute, chipeta_to_pinnacles, ute_to_chipeta, ute_to_taylorQuad, taylorQuad_to_ute, taylorQuad_to_library, escalante_to_universitycenter,
+		universitycenter_to_fieldhouse_SL, universitycenter_to_begin, fieldhouse_SL_to_mears, fieldhouse_SL_to_universitycenter, mears_to_fieldhouse_SL, mears_to_pinnacles, pinnacles_to_mears, pinnacles_to_chipeta, chipeta_to_ute, chipeta_to_pinnacles, ute_to_chipeta, ute_to_taylorQuad, taylorQuad_to_ute, taylorQuad_to_library, escalante_to_universitycenter,
 
 		
 		/*======Athletics Array=====*/
-		fieldhouse_to_practicefield, practicefield_to_fieldhouse, practicefield_to_mountaineerbowl, mountaineerbowl_to_practicefield, mountaineerbowl_to_gatewayfield, gatewayfield_to_fieldhouse, gatewayfield_to_mountaineerbowl,
+		fieldhouse_to_practicefield, practicefield_to_fieldhouse, fieldhouse_to_begin, practicefield_to_mountaineerbowl, mountaineerbowl_to_practicefield, mountaineerbowl_to_gatewayfield, gatewayfield_to_fieldhouse, gatewayfield_to_mountaineerbowl,
 		
 		/*======Outdoor Array=====*/
         mainstreet_to_hartmanrocks, mainstreet_to_cranorhill, hartmanrocks_to_mainstreet,  hartmanrocks_to_bluemesa, bluemesa_to_telluride, bluemesa_to_hartmanrocks, telluride_to_monarchmountain, telluride_to_bluemesa,  monarchmountain_to_taylorpark, monarchmountain_to_telluride,   taylorpark_to_lakeirwin, taylorpark_to_monarchmountain,  lakeirwin_to_taylorpark, lakeirwin_to_cbmr, cbmr_to_lakeirwin, cbmr_to_crestedbutte, crestedbutte_to_cbmr, crestedbutte_to_cranorhill, cranorhill_to_crestedbutte, cranorhill_to_mainstreet ];

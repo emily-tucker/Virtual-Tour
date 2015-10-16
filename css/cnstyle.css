@@ -274,9 +274,14 @@ section:target, .show{
 .hide_button{
     position: fixed;
     z-index: 3000;
-    right: -6.5%;
-    bottom: 10%;
-	transform: rotate(90deg);
+    right: -6%;
+    bottom: 11%;
+    -webkit-transform: rotate(90deg); /* Safari and Chrome */
+    -moz-transform: rotate(90deg);   /* Firefox */
+    -ms-transform: rotate(90deg);   /* IE 9 */
+    -o-transform: rotate(90deg);   /* Opera */
+    transform: rotate(90deg);
+	-webkit-transform-origin: left top 0; /* Safari and Chrome */
     transform-origin: left top 0;
     width:auto;
     height: 5%;
