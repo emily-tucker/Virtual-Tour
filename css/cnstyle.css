@@ -96,12 +96,11 @@ body.contextual_navigation
 }
 
 .contextual_assets img {
-    position:absolute;
+    position: fixed;
 	display:block;
-    background-size:cover;
-	max-width: 100%;
+    width: 100%;
     height: auto;
-	width:auto\9; /*IE 8 - Still need to test*/
+    max-height: 100%;
     overflow: hidden;
 	
 }
