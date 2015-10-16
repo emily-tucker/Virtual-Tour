@@ -99,8 +99,8 @@ body.contextual_navigation
     position: fixed;
 	display:block;
     width: 100%;
+	max-width: 100%;
     height: auto;
-    max-height: 100%;
     overflow: hidden;
 	
 }
@@ -149,31 +149,32 @@ body.contextual_navigation
     width: inherit;
     height: 100%;
 	overflow: hidden;
-    white-space: nowrap;
 	word-wrap:normal;
 	text-align:center;
 	background-color: rgba(167,25,48,.90);
 	border:1px solid #000;
     color:#FFF;
-    font:"Arial Black", Gadget, sans-serif 20px;
-    letter-spacing: 1px;
+    letter-spacing: .8px;
     font-size: 1.7vw;
 	text-shadow: 1px 1px #000;
 	width:9.5em;
 }
 .athletics_button:hover, .academics_button:hover, .sl_button:hover, .switch_button:hover{
+	border:2px solid #000;
+	max-height: 8.5%;
+	display: inline-block;
+    width: inherit;
+    height: 100%;
+	overflow: hidden;
+	word-wrap:normal;
 	text-align:center;
 	background-color: rgba(167,25,48,.90);
-	border:2px solid #000;
-    display:block;
-    cursor:pointer;
     color:#FFF;
-    font:"Arial Black", Gadget, sans-serif 20px;
     letter-spacing: .8px;
     font-size: 1.7vw;
-	overflow: hidden;
-    white-space: nowrap;
 	text-shadow: 1px 1px #000;
+	width:9.5em;
+    
 
 	
 }
