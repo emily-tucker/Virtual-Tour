@@ -163,7 +163,7 @@ function loadMainButtons() {
             inner_html +=
 				
 				"<a href='http://www.western.edu/' target='_blank'><img src='imgs/westernLogo.png' class='homeButton''></a>" + 
-                "<button class='to_athletics athletics_button row' onclick=window.location='#fieldhouse'> Athletics Tour</button>" +
+                "<button class='to_athletics athletics_button row ' onclick=window.location='#fieldhouse'> Athletics Tour</button>" +
                 "<button class='to_studentlife sl_button row' onclick=window.location='#universitycenter'>Student Life Tour</button>" +
                 "<button class='to_academics academics_button row' onclick=window.location='#taylor'> Academics Tour</button>" +
                 "<button class='to_offcampus switch_button row' onclick=window.location='#mainstreet'>Off Campus Tour</button>" +
