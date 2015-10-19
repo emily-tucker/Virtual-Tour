@@ -145,6 +145,7 @@ body.contextual_navigation
 
 .athletics_button, .academics_button, .sl_button, .switch_button  {
 	max-height: 8.5%;
+	min-height: 35px;
 	display: inline-block;
     width: inherit;
     height: 100%;
@@ -454,19 +455,3 @@ comment out so the map doesn't auto scale
 }
 
 
-/*************************
-*
-* Disable portrait view in mobile
-*
-*************************/
-@media (max-device-width: 480px) and (orientation: portrait) {
-  .landscape-in-phone {  
-        display:block;
-        -webkit-transform: rotate(90deg);
-        -moz-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        transform: rotate(90deg);
-         min-width:460px;
-    }  
-}

@@ -25,8 +25,10 @@
             "Need Desc.", 1083, 588);
 	var kelley = new Location("#kelley", "Kelley Hall", "academic",
             "Topped by solar-hot-water panels that boost its efficiency, Kelley is an important classroom building, housing Western's Social Sciences and Environment & Sustainability programs, among others.", 1232, 530);
-    var library = new Location("#library", "Leslie J. Savage Library", "studentlife",
+    var library = new Location("#library", "Leslie J. Savage Library", "academic",
             "Savage Library is a research hub for campus and great study spot. You'll find the expected stacks of books, but also large computer labs, access to electronic libraries around the world and the university archives.",  973, 494);
+	var library_SL = new Location("#library_SL", "Leslie J. Savage Library", "studentlife",
+	"Savage Library is a research hub for campus and great study spot. You'll find the expected stacks of books, but also large computer labs, access to electronic libraries around the world and the university archives.",  973, 494);
 	var mears = new Location("#mears", "Mears Complex", "studentlife",
             "These co-ed dormitories Ð Mears, Robidoux and Moffat Ð connect by enclosed corridors. They feature suite-style double rooms, with two rooms sharing each bathroom.", 626, 509);
 	 var paulwrightgym = new Location("#paulwrightgym", "Paul Wright Gymnasium", "academic",
@@ -63,7 +65,7 @@
 	var blackcanyon = new Location("#blackcanyon", "Black Canyon", "offcampus", "Spectacular! No other canyon in North America combines the narrow opening, sheer walls, and startling depths offered by the Black Canyon. Prepare yourself for breathtaking views while you enjoy hiking, fishing, camping, world-class rock climbing and wildlife viewing.", true, 738, 363);
 	var cranorhill = new Location("#cranorhill", "Cranor Hill", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 738, 363);
 
-    var locations = [aquaticCenter, begin, borick, chipeta, crawford, escalante, paulwrightgym, pinnacles, practicefield, ute, mears, taylor, quigley, hurst, kelley, library, universitycenter, mountaineerbowl, intramuralField, taylorQuad, fieldhouse_SL, fieldhouse_Athletic,
+    var locations = [aquaticCenter, begin, borick, chipeta, crawford, escalante, paulwrightgym, pinnacles, practicefield, ute, mears, taylor, quigley, hurst, kelley, library, library_SL, universitycenter, mountaineerbowl, intramuralField, taylorQuad, fieldhouse_SL, fieldhouse_Athletic,
 	
 	telluride, crestedbutte, monarchmountain, hartmanrocks, gunnison, cbmr, lakeirwin, bluemesa, taylorpark, blackcanyon, cranorhill];
 
@@ -105,10 +107,10 @@
 	var ute_to_chipeta = new Navigation("#ute", "ute_to_chipeta", "Back to Chipeta Hall", "#chipeta", "back", 45, 17, 2);
 	var ute_to_taylorQuad = new Navigation("#ute","ute_to_taylorQuad", "To Taylor Quad", "#taylorQuad", "right", 55, 27, 2);
 	var taylorQuad_to_ute = new Navigation("#taylorQuad","taylorQuad_to_ute", "Back to Ute", "#ute", "backleft", 40, 17, 2);
-	var taylorQuad_to_library = new Navigation("#taylorQuad","taylorQuad_to_library", "To the Library", "#library", "forward", 47, 27, 2);
-	var library_to_taylorQuad = new Navigation("#library", "library_to_taylorQuad", "Back to Taylor Quad", "#taylorQuad", "backleft", 42, 15, 2);
-	var library_to_escalante = new Navigation("#library", "library_to_escalante", "To the Escalante Terrace", "#escalante", "forward", 47, 27, 2);
-	var escalante_to_library = new Navigation("#escalante", "escalante_to_library", "Back to the Library", "#library", "back", 45, 17, 2);
+	var taylorQuad_to_library = new Navigation("#taylorQuad","taylorQuad_to_library", "To the Library", "#library_SL", "forward", 47, 27, 2);
+	var library_to_taylorQuad = new Navigation("#library_SL", "library_to_taylorQuad", "Back to Taylor Quad", "#taylorQuad", "backleft", 42, 15, 2);
+	var library_to_escalante = new Navigation("#library_SL", "library_to_escalante", "To the Escalante Terrace", "#escalante", "forward", 47, 27, 2);
+	var escalante_to_library = new Navigation("#escalante", "escalante_to_library", "Back to the Library", "#library_SL", "back", 45, 17, 2);
 	var escalante_to_universitycenter = new Navigation("#escalante", "escalante_to_universitycenter", "To the University Center", "#universitycenter", "left", 46, 27, 2);
 	
 
@@ -165,9 +167,9 @@
 		
 		
 		/*======Student Life Array=====*/
-		universitycenter_to_fieldhouse_SL, universitycenter_to_begin, fieldhouse_SL_to_mears, fieldhouse_SL_to_universitycenter, mears_to_fieldhouse_SL, mears_to_pinnacles, pinnacles_to_mears, pinnacles_to_chipeta, chipeta_to_ute, chipeta_to_pinnacles, ute_to_chipeta, ute_to_taylorQuad, taylorQuad_to_ute, taylorQuad_to_library, escalante_to_universitycenter,
+		universitycenter_to_fieldhouse_SL, universitycenter_to_begin, fieldhouse_SL_to_mears, fieldhouse_SL_to_universitycenter, mears_to_fieldhouse_SL, mears_to_pinnacles, pinnacles_to_mears, pinnacles_to_chipeta, chipeta_to_ute, chipeta_to_pinnacles, ute_to_chipeta, ute_to_taylorQuad, taylorQuad_to_ute, taylorQuad_to_library, library_to_taylorQuad, library_to_escalante ,escalante_to_universitycenter, escalante_to_library,
 
-		
+	
 		/*======Athletics Array=====*/
 		fieldhouse_to_practicefield, practicefield_to_fieldhouse, fieldhouse_to_begin, practicefield_to_mountaineerbowl, mountaineerbowl_to_practicefield, mountaineerbowl_to_gatewayfield, gatewayfield_to_fieldhouse, gatewayfield_to_mountaineerbowl,
 		

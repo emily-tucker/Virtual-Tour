@@ -404,8 +404,8 @@ function getImage(locationTag) {
 function loadMap(locationTag) {
     for (var i in locations) {
         if (locations[i].tag === locationTag) {
-            if (tour_track === 4) {
-                $.cookie("tour_track", 4); /** Create Cookie for off campus Tour Track **/
+            if (tour_track === offCampus) {
+                $.cookie("tour_track", offCampus); /** Create Cookie for off campus Tour Track **/
                 document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/offcampusmap1.png">';
 
             } else {
@@ -630,6 +630,7 @@ function getCIs(tag) /*Carousel Items*/ {
     $(".citem").css("margin-left", margin);
     if (is_mobile) {
         document.getElementById('carousel').style.display = 'none';
+		document.getElementById('#map').style.display = 'none'; /**This is why the map should disapear on mobile, remove if does not work**/
         showHide = false;
     }
 
