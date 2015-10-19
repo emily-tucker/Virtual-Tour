@@ -233,9 +233,9 @@ function getNavs(locationTag) {
 				
                 inner_html +=
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/navs/" + navs[i].direction + "_white.png'" +
-                    "onmouseover=" + "this.src='imgs/navs/" + navs[i].direction + "_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/navs/" + navs[i].direction + "_white.png' " +
+                    navs[i].styleClass + " arrow' src='imgs/navs/" + navs[i].direction + "_offcampus.png'" +
+                    "onmouseover=" + "this.src='imgs/navs/" + navs[i].direction + "_offcampus_hover.png'" +
+                    " onmouseout=" + "this.src='imgs/navs/" + navs[i].direction + "_offcampus.png' " +
                     "title='" + navs[i].ttip + "' />";
                 localNavs.push(navs[i].styleClass);
             }
