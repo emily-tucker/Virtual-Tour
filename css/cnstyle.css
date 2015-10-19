@@ -93,6 +93,7 @@ body.contextual_navigation
     max-width: 100%;
     z-index: -1;
     overflow: hidden;
+	
 }
 
 .contextual_assets img {
