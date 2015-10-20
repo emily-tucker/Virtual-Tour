@@ -1,10 +1,14 @@
+/***********************
+* Body Properties - This controls background color behind the pictures
+************************/
 body.contextual_navigation
 {
-    background: #6F737A;
-    margin: 0;
+    background:#999;
 }
 
-
+/***********************
+* Menu CSS 
+************************/
 .dd-wrapper ul, .dd-wrapper ul li, .dd-wrapper li, .dd-wrapper li ul, .dd-wrapper li ul li {
   margin: 0; padding: 0; list-style: none; top: 90%; color: black;
   }
@@ -51,7 +55,11 @@ body.contextual_navigation
   color: #ccc; background: rgba(0,0,0,0.6);
   }
 
-
+/******************************************
+ * 
+ * Menu Width/Position -  Only controls position and width on screen, to change icons use menu_lists
+ * 
+ *******************************************/
 .menu{
     position: fixed;
     width: 20%;
@@ -60,29 +68,9 @@ body.contextual_navigation
     z-index: 0;
 }
 
-#main_image{
-    position: fixed;
-    width: 100%;
-	background-size:contain;
-}
-
-#map{
-    position: fixed;
-    width: 20%;
-    height: 33%;
-    right: 0;
-    overflow: hidden;
-    border: 1px solid black;
-}
-
-.mapImage{
-    z-index: 5;
-	
-}
-	
 /******************************************
  * 
- * Image Properties
+ * Image Properties - Contextual assests img controls the background image 
  * 
  *******************************************/
 .contextual_assets{
@@ -106,11 +94,23 @@ body.contextual_navigation
 	
 }
 
-
+/******************************************
+ * 
+ * Tipsy - Controls the hover on buttons and arrows
+ * 
+ *******************************************/
+.tipsy { padding: 0px; font-size: 16px; font:"Arial Black", Gadget, sans-serif; position: absolute; z-index: 100000; }
+  .tipsy-inner { padding: 0px 8px 4px 8px; background-color: black; color: white; max-width: 400px; text-align: center; }
+  .tipsy-inner { border-radius: 3px; -moz-border-radius:3px; -webkit-border-radius:3px; }
+  #gravity { width: 100%; margin: 5px 0; border-spacing: 5px; }
+  #gravity td { text-align: center; vertical-align: middle; padding: 5px 0; background-color: #d0d0d0; width: 33%; }
+  #gravity a { }
+    #gravity a:hover { color: #505050; background: none; }
+	
 
 /******************************************
  * 
- * Tour Buttons - Appear on the first page only
+ * Tour Buttons - Appear on the first page only, Switch Button (Off Campus BUtton), Athletics Button, Academics Button, SL Button (Student Life Button)
  * 
  *******************************************/
 
@@ -233,9 +233,9 @@ section:target, .show{
 }
 
 .homeButton{
-	top: 0px;
+	top: 2px;
 	left: 20px;
-	width: 12% !important;
+	width: 11.8% !important;
 	height: auto; !important; 
 }
 
@@ -308,21 +308,9 @@ section:target, .show{
     cursor:pointer;
 }
 
-/**********************
-* Restart Tour Button
-*********************/
-.restart_button {
-    position:absolute;
-    z-index: 1;
-    right: 1%;
-    top: 45.5%;
-    max-height: 7%;
-	width:12em;
-	
-}
 
 /*******************
-* Schedule A Visit Button
+* Schedule A Visit Button, Contact Button, Restart Button - These are on every page 
 *******************/
 .schedule_button {
     position: absolute;
@@ -344,12 +332,34 @@ section:target, .show{
 	width:12em;
 }
 
+.restart_button {
+    position:absolute;
+    z-index: 1;
+    right: 1%;
+    top: 45.5%;
+    max-height: 7%;
+	width:12em;
 	
+}
+
 /******************************************
  * 
- * Map Buttons
+ * Map sizing and Button controls
  * 
  *******************************************/
+ #map{
+    position: fixed;
+    width: 20%;
+    height: 33%;
+    right: 0;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.mapImage{
+    z-index: 5;
+	
+}
 
 .map_button{
     position: fixed;
@@ -456,5 +466,54 @@ comment out so the map doesn't auto scale
     letter-spacing: 1px;
     font-size: 1.2vw;
 }
+/******************************************
+ * 
+ * Carousel Properties 
+ * 
+ *******************************************/	
+#carousel {
+    position: fixed;
+    top: 85%;
+    width:auto;
+    margin-left: 30%;
+    margin-right: auto;
+	z-index:0;
+}
 
+/******************
+* Change Carousel Image size
+******************/
+#carousel img{
+    height: auto%;
+    width: 55%;
+}
+
+.citem {
+    float: left;
+	
+}
+
+.Thumbimage { 
+   position: relative;
+   display:block;
+   margin-left:-75px;
+
+}
+
+.Thumbcaption
+{
+
+  font:"Arial Black", Gadget, sans-serif 16px;
+  letter-spacing: .5px;
+  color:#FFF;
+  text-align:center;
+  font-size:10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0%;
+  width: 55%;
+  
+  
+  
+}
 

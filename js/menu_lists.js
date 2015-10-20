@@ -129,7 +129,7 @@ var subconcurrent = [
 var subacademics = [
 new MenuItem({
         text: 'Areas of Study',
-        icon: 'fa fa-graduation-cap ',
+        icon: 'fa fa-university  ',
         target: "external",
         href: "http://www.western.edu/academics/undergraduate-areas-study"
     }),
