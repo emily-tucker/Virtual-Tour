@@ -380,12 +380,18 @@ function getHspots(locationTag) {
  * Render main image for the current location
  * @param {string} locationTag Location tag, should be in form "#" + location, i.e. "#hurst"
  * locationTag should match image file, i.e "hurst_main.jpg" (substring removes "#")
+
+	
  *******************************************************/
-function getImage(locationTag) {
+ function getImage(locationTag) {
     var mainImageDiv = "#main_image";
     $(mainImageDiv).html("<img src='imgs/" + locationTag.substring(1) + "_main.jpg'/>");
-}
+	//$.backstretch("<img src='imgs/library_main.jpg'/>");
 
+	 
+	 //$.backstretch("http://dl.dropbox.com/u/515046/www/garfield-interior.jpg");
+	
+ }
 
 /**********************************
  * Load static image map screen
