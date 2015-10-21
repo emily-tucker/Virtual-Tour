@@ -9,7 +9,9 @@
  * Copyright 2012 Janis Skarnelis - janis@fancyapps.com
  *
  */
-/*$(document).ready(function() {
+
+
+$(document).ready(function() {
 
 			$('.fancybox').fancybox();
 
@@ -38,7 +40,7 @@
 			});
 
 
-		});*/
+		});
 
 (function (window, document, $, undefined) {
 	"use strict";
@@ -83,13 +85,13 @@
 		version: '2.1.5',
 
 		defaults: {
-			padding : 5,
+			padding : 0,
 			margin  : 0,
 
-			width     : 600,
-			height    : 600,
-			minWidth  : 100,
-			minHeight : 100,
+			width     : 800,
+			height    : 800,
+			minWidth  : 300,
+			minHeight : 300,
 			maxWidth  : 9999,
 			maxHeight : 9999,
 			pixelRatio: 1, // Set to 2 for retina display support
@@ -170,7 +172,7 @@
 			tpl: {
 				wrap     : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
 				image    : '<img class="fancybox-image" src="{href}" alt="" />',
-				iframe   : '<iframe id="fancybox-frame{rnd}" name="fancybox-frame{rnd}" class="fancybox-iframe" frameborder="0" vspace="0" hspace="0" webkitAllowFullScreen mozallowfullscreen 		allowFullScreen' + (IE ? ' allowtransparency="true"' : '') + '></iframe>',
+				iframe   : '<iframe id="fancybox-frame{rnd}" name="fancybox-frame{rnd}" class="fancybox-iframe" frameborder="none" vspace="0" hspace="0" webkitAllowFullScreen mozallowfullscreen 		allowFullScreen' + (IE ? ' allowtransparency="true"' : '') + '></iframe>',
 				error    : '<p class="fancybox-error">The requested content cannot be loaded.<br/>Please try again later.</p>',
 				closeBtn : '<a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>',
 				next     : '<a title="Next" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
@@ -215,7 +217,7 @@
 				overlay : true,
 				autoSize: true, // shouldn't be true ?
     			fitToView: true,
-    			minWidth: 940,
+    			minWidth: 160,
 				title : {
 						thumbs : {
 						width  : 160,
