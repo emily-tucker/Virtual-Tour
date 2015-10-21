@@ -386,10 +386,6 @@ function getHspots(locationTag) {
  function getImage(locationTag) {
     var mainImageDiv = "#main_image";
     $(mainImageDiv).html("<img src='imgs/" + locationTag.substring(1) + "_main.jpg'/>");
-	//$.backstretch("<img src='imgs/library_main.jpg'/>");
-
-	 
-	 //$.backstretch("http://dl.dropbox.com/u/515046/www/garfield-interior.jpg");
 	
  }
 
