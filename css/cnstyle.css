@@ -272,16 +272,6 @@ section:target, .show{
 }
 
 
-.right_offcampus {
-    bottom: 25%;
-    left: 75%;
-}
-
-.left_offcampus {
-    bottom: 25%;
-    left: 25%;
-}
-
 .beginButton {
     position: relative;
     padding:7px 25px;
@@ -323,7 +313,7 @@ section:target, .show{
 
 
 /*******************
-* Schedule A Visit Button, Contact Button, Restart Button - These are on every page 
+Schedule A Visit Button, Contact Button, Restart Button - These are on every page 
 *******************/
 .schedule_button {
     position: absolute;
@@ -379,8 +369,12 @@ section:target, .show{
     right: 9%;
     max-height: 7%;
     z-index: 10;
-    transform: rotate(90deg);
     transform-origin: left top 0;
+	-webkit-transform: rotate(90deg); /* Safari and Chrome */
+    -moz-transform: rotate(90deg);   /* Firefox */
+    -ms-transform: rotate(90deg);   /* IE 9 */
+    -o-transform: rotate(90deg);   /* Opera */
+    transform: rotate(90deg);
 }
 
 .map_button_initial{
@@ -389,8 +383,13 @@ section:target, .show{
     top: 0;
     max-height: 7%;
     z-index: 10;
-    transform: rotate(90deg);
     transform-origin: left top 0;
+	-webkit-transform: rotate(90deg); /* Safari and Chrome */
+    -moz-transform: rotate(90deg);   /* Firefox */
+    -ms-transform: rotate(90deg);   /* IE 9 */
+    -o-transform: rotate(90deg);   /* Opera */
+    transform: rotate(90deg);
+	
 }
 
 
@@ -443,8 +442,6 @@ section:target, .show{
 /*************************
 comment out so the map doesn't auto scale
 *************************/
-
-
 .caption_wrapper {
     width:33.33%;
     height:auto;
@@ -488,21 +485,22 @@ comment out so the map doesn't auto scale
     position: fixed;
     top: 85%;
     width:auto;
-    margin-left: 30%;
-    margin-right: auto;
+    margin-left: 32.5%;
 	z-index:0;
+	
 }
 
 /******************
 * Change Carousel Image size
 ******************/
 #carousel img{
-    height: auto%;
+    height: auto;
     width: 55%;
 }
 
 .citem {
-    float: left;
+	float: right;
+	
 	
 }
 
@@ -510,6 +508,7 @@ comment out so the map doesn't auto scale
    position: relative;
    display:block;
    margin-left:-75px;
+   
 
 }
 
@@ -525,8 +524,6 @@ comment out so the map doesn't auto scale
   position: absolute;
   top: 0%;
   width: 55%;
-  
-  
   
 }
 

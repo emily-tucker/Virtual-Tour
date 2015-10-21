@@ -30,7 +30,7 @@
 	var library_SL = new Location("#library_SL", "Leslie J. Savage Library", "studentlife",
 	"Savage Library is a research hub for campus and great study spot. You'll find the expected stacks of books, but also large computer labs, access to electronic libraries around the world and the university archives.",  973, 494);
 	var mears = new Location("#mears", "Mears Complex", "studentlife",
-            "These co-ed dormitories Ð Mears, Robidoux and Moffat Ð connect by enclosed corridors. They feature suite-style double rooms, with two rooms sharing each bathroom.", 626, 509);
+            "These co-ed dormitories Mears, Robidoux and Moffat connect by enclosed corridors. They feature suite-style double rooms, with two rooms sharing each bathroom.", 626, 509);
 	 var paulwrightgym = new Location("#paulwrightgym", "Paul Wright Gymnasium", "academic",
             "At 7,723 feet above sea level, this is the world's highest collegiate gym. It seats 1,800 and includes an indoor pool, a wrestling room, locker rooms, the Hall of Fame trophy room and classrooms.", 883, 374);
 	var pinnacles = new Location("#pinnacles", "Pinnacles Student Housing", "studentlife",

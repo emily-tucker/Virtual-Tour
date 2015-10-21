@@ -106,7 +106,7 @@
 			leftRatio   : 0.5,
 
 			scrolling : 'no', // 'auto', 'yes' or 'no'
-			wrapCSS   : '',
+			wrapCSS   : 'yes',
 
 			arrows     : true,
 			closeBtn   : true,
@@ -153,8 +153,8 @@
 			},
 
 			direction : {
-				next : 'left',
-				prev : 'right'
+				next : 'right',
+				prev : 'left'
 			},
 
 			scrollOutside  : true,
