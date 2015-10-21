@@ -157,29 +157,28 @@ function load() {
 function loadMainButtons() {
         var inner_html = "";
         if (currentLocation.locationType === "main") {
-			
-			
-            // If the current location of the tour is on the begin page (#begin)
+            // If the current location of the tour is at the Welcome center display the 4 tours
             inner_html +=
 				
-				"<a href='http://www.western.edu/' target='_blank'><img src='imgs/westernLogo.png' class='homeButton''></a>" + 
                 "<button class='to_athletics athletics_button row ' onclick=window.location='#fieldhouse'> Athletics Tour</button>" +
                 "<button class='to_studentlife sl_button row' onclick=window.location='#universitycenter'>Student Life Tour</button>" +
                 "<button class='to_academics academics_button row' onclick=window.location='#taylor'> Academics Tour</button>" +
                 "<button class='to_offcampus switch_button row' onclick=window.location='#mainstreet'>Off Campus Tour</button>" +
                 "<button class='schedule_button row' onclick='visitURL();'>Schedule A Visit</button>" +
                 "<button class='contact_button row' onclick='visitURL2();'>Contact Admissions</button>" +
-                "<button class='restart_button row' id = 'rb' onclick=load()>Restart Tour</button>";
+                "<button class='restart_button row' id = 'rb' onclick=load()>Restart Tour</button>" +
+				"<a href='http://www.western.edu/' target='_blank'><img src='imgs/westernLogo.png' class='homeButton''></a>";
 				
 				
         } else {
+			// If on a tour 
             inner_html +=
 			
-				"<a href='http://www.western.edu/' target='_blank'><img src='imgs/westernLogo.png' class='homeButton''></a>" + 
                 "<button class='schedule_button row' onclick='visitURL();'>Schedule A Visit</button>" +
                 "<button class='contact_button row' onclick='visitURL2();'>Contact Admissions</button>" +
                 "<button id='hide' class='hide_button row' onclick='hideShowCarousel();'>Hide</button>" +
-                "<button class='restart_button row' id = 'rb' onclick=load()>Restart Tour</button>";
+                "<button class='restart_button row' id = 'rb' onclick=load()>Restart Tour</button>" +
+				"<a href='http://www.western.edu/' target='_blank'><img src='imgs/westernLogo.png' class='homeButton''></a>";
 	
         }
 		
@@ -216,41 +215,30 @@ function loadMainButtons() {
     }
 	
 
-    /*******************************************************
-     *
-     *  Render all navigation items at the current location
-     *
-     * @param {string} locationTag Location tag, should be in form "#" + location, i.e. "#hurst"
-     *
-     * ******************************************************/
+/*******************************************************
+*
+*  Render all navigation items at the current location
+*
+* @param {string} locationTag Location tag, should be in form "#" + location, i.e. "#hurst"
+*
+* ******************************************************/
 
 function getNavs(locationTag) {
     var inner_html = "";
     var localNavs = [];
     for (var i in navs) {
         if (navs[i].tag === locationTag) {
-            if (navs[i].tourTracks === academics || navs[i].tourTracks === studentLife || navs[i].tourTracks === athletics) {
-				
                 inner_html +=
+				 // Setting the image for the arrow buttons
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                     navs[i].styleClass + " arrow' src='imgs/navs/" + navs[i].direction + "_offcampus.png'" +
                     "onmouseover=" + "this.src='imgs/navs/" + navs[i].direction + "_offcampus_hover.png'" +
                     " onmouseout=" + "this.src='imgs/navs/" + navs[i].direction + "_offcampus.png' " +
                     "title='" + navs[i].ttip + "' />";
-                localNavs.push(navs[i].styleClass);
-            }
-
-            if (navs[i].tourTracks === offCampus) {
-                inner_html +=
-                    "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/navs/" + navs[i].direction + "_offcampus.png'" +
-                    "onmouseover=" + "this.src='imgs/navs/" + navs[i].direction + "_offcampus_hover.png'" +
-                    " onmouseout=" + "this.src='imgs/navs/" + navs[i].direction + "_offcampus.png' " +
-                    "title='" + navs[i].ttip + "' />";
-                localNavs.push(navs[i].styleClass);
-            }
+                	localNavs.push(navs[i].styleClass);
+            
         }
-		
+		 // Adds caption to the arrows
         $("#navigation").html(inner_html);
         $(".arrow").tipsy({
             gravity: 's',
@@ -258,9 +246,11 @@ function getNavs(locationTag) {
             html: true
         
 	});
-        /**************************************************************
-         *Positioning for naviagtion arrows
-         *****************************************************************/
+/**************************************************************
+*
+* Positioning for naviagtion arrows
+*
+*****************************************************************/
         for (var i in localNavs) {
             for (var j in navs) {
                 if (localNavs[i] === navs[j].styleClass) {
@@ -350,6 +340,7 @@ function mapButtonLoad() {
 
 
 /**************************************************************
+ *
  * Render all hotspots at the current location
  * @param {string} locationTag Location tag, should be in form "#" + location, i.e. "#Hurst"
  *****************************************************************/
