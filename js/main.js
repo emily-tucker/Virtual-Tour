@@ -623,7 +623,6 @@ function getCIs(tag) /*Carousel Items*/ {
     $(".citem").css("margin-left", margin);
     if (is_mobile) {
         document.getElementById('carousel').style.display = 'none';
-		document.getElementById('#map').style.display = 'none'; /**This is why the map should disapear on mobile, remove if does not work**/
         showHide = false;
     }
 
