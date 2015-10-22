@@ -255,6 +255,12 @@ var subgo = [
 ]
 
 var submenu = [
+	new MenuItem({
+        text: 'Home',
+        icon: 'fa fa-home  ',
+        onclick: 'http://www.western.edu/future-students/visiting-campus/visit-western'
+    }),
+
     new MenuItem({
         text: 'Academics',
         icon: 'fa fa-graduation-cap ',

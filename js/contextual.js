@@ -18,7 +18,7 @@
 	 var fieldhouse_SL = new Location("#fieldhouse_SL", "Mountaineer Field House", "studentlife", 
 	 "This spectacular new building includes a high-tech surface across its main floor, with the highest indoor NCAA track, a 43.5-foot climbing wall, an athletic weight room, a fitness center, the HAPLab and more.", 715, 385);
 	var gatewayfield = new Location("#gatewayfield", "Gateway Soccer Fields", "athletic", 
-	 "65,000-square-foot LEED-Gold certified field house.", 697, 784);
+	 "Western’s women’s soccer team utilizes Gateway Field for games and practice. The south side of the field is available for recreation or relaxation.", 697, 784);
 	var hurst = new Location("#hurst", "Hurst Hall", "academic",
             "One of the campus's most modern classroom buildings, Hurst houses Science, Mathematics and Computer Science labs, along with offices.", 1301, 586);
 	var intramuralField = new Location("#intramuralField", "Intramural Sports Field", "studentlife",
@@ -36,7 +36,7 @@
 	var pinnacles = new Location("#pinnacles", "Pinnacles Student Housing", "studentlife",
             "Western's newest apartments have furnished two-, three- and four-bedroom units. Each has a large kitchen and common room, with plenty of cabinet and closet space. It also has many common spaces and facilities.",  510, 496);
 	var practicefield = new Location("#practicefield", "Practice Field", "athletic",
-            "Need description",  1042, 296);
+            "Home of Western’s sledding hill, the practice fields are a flurry of activity during the spring and fall while football and other sports are in season, and it’s groomed for skate skiing during the winter.",  1042, 296);
 	var mountaineerbowl = new Location("#mountaineerbowl", "Mountaineer Bowl", "athletic",
             "Home of Mountaineer football and Western's high-tech-surface track, itÕs also world's highest collegiate football stadium at 7,750 feet above sea level, seating 4,000 fans, with room for more on its hills.",  1042, 296);
 	var quigley = new Location("#quigley", "Quigley Hall", "academic",
@@ -44,26 +44,26 @@
     var taylor = new Location("#taylor", "Taylor Hall", "academic",
             "Renovated in 2010, Taylor is a LEED-certified, energy-efficient structure. Its bold atrium serves is Western's Welcome Center. It also houses the administration, an auditorium, a theater and many classrooms.", 985, 553);
 	 var taylorQuad = new Location("#taylorQuad", "Taylor Quad", "studentlife",
-            "Need Description", 812, 573);
+            "The center hub of campus. Hang out on the lawn, slackline beneath the shady trees or tramp through the snow. The Quad is home to annual events like Western’s Rail Jam and Spring Fest.", 812, 573);
     var universitycenter = new Location("#universitycenter", "University Center", "studentlife", "This fairly new and extremely capable building is a hub of student life. It houses meeting rooms; a ballroom; dining facilities, the bookstore, the University Theater, Wilderness Pursuits, student groups and more.", 987, 402);
 	var ute = new Location("#ute", "Ute Student Housing", "studentlife",
             "One of the older residence halls on campus, Ute has seen recent renovations and offers first-year students fully furnished rooms in a traditional, community-style dormitory that opens right onto lush Taylor Lawn.", 653, 634);
 
 	
 
-    var telluride = new Location("#telluride", "Telluride", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 988, 432);
-    var crestedbutte = new Location("#crestedbutte", "Crested Butte", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 658, 454);
-    var monarchmountain = new Location("#monarchmountain", "Monarch Mountain", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 1193, 716);
+    var telluride = new Location("#telluride", "Telluride", "offcampus", "Home to summer music festivals, Telluride Ski Resort, jeeping, biking, hiking, camping and climbing. Nestled in the San Juan Mountains 130 miles southwest of Gunnison.", true, 988, 432);
+    var crestedbutte = new Location("#crestedbutte", "Crested Butte", "offcampus", "Gunnison’s neighbor community located 38 miles north. It’s easy to access using the free RTA bus systems. Explore Colorado’s last great ski town. Recreational, culinary and shopping opportunities abound.", true, 658, 454);
+    var monarchmountain = new Location("#monarchmountain", "Monarch Mountain", "offcampus", "Less than an hour’s drive east of Gunnison, Monarch Ski Area boasts 800 skiable acres and 150 inches annual snowfall. Backcountry and cross country skiing and mountain biking are all easily accessible.", true, 1193, 716);
     var hartmanrocks = new Location("#hartmanrocks", "Hartman Rocks", "recreation", " 8,000 acres of open BLM land with hundreds of miles of single-track trails and dirt roads, Hartman Rocks is a desert paradise for mountain biking, hiking, motorcycling, rock climbing, horseback riding, trail running and Nordic skiing.", true, 600, 893);
-    var cbmr = new Location("#cbmr", "Crested Butte Mountain Resort", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 658, 454);
-    var gunnison = new Location("#mainstreet", "Gunnison", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 702, 753);
+    var cbmr = new Location("#cbmr", "Crested Butte Mountain Resort", "offcampus", "World-class skiing with more than 1,500 skiable acres 30 miles from Gunnison. Take the bus straight from campus to the base area. Western students can purchase discounted season passes.", true, 658, 454);
+    var gunnison = new Location("#mainstreet", "Gunnison", "offcampus", "Main Street is the hub of the community with shopping for every budget, yummy restaurants and buzzing coffee shops. It’s located only four blocks west of campus.", true, 702, 753);
 
     
 	var lakeirwin = new Location("#lakeirwin", "Lake Irwin", "offcampus", " High-mountain lake surrounded by snow-capped peaks and beautiful 4x4 roads, mountain bike trails, hiking, fly fishing, lake fishing, paddle-boarding, camping, backpacking, snowcat skiing and snowmobiling.", true, 738, 363);
 	var bluemesa = new Location("#bluemesa", "Blue Mesa", "offcampus", "Colorado's largest lake and a popular destination for outdoor recreation, Blue Mesa offers fishing, camping, boating, 		  	paddleboarding, windsurfing, waterskiing and hiking.", true, 738, 363);
 	var taylorpark = new Location("#taylorpark", "Taylor Park", "offcampus", "Taylor Park offers a vast mountain playground for all types of recreational activities. The Taylor Canyon offers rock climbing, river rafting, hiking, fly fishing, mountain biking, camping, boating and fishing in the Taylor Reservoir and 4x4 exploring.", true, 738, 363);
 	var blackcanyon = new Location("#blackcanyon", "Black Canyon", "offcampus", "Spectacular! No other canyon in North America combines the narrow opening, sheer walls, and startling depths offered by the Black Canyon. Prepare yourself for breathtaking views while you enjoy hiking, fishing, camping, world-class rock climbing and wildlife viewing.", true, 738, 363);
-	var cranorhill = new Location("#cranorhill", "Cranor Hill", "offcampus", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", true, 738, 363);
+	var cranorhill = new Location("#cranorhill", "Cranor Hill", "offcampus", "Gunnison’s very own ski hill. Opened in 1962 as a private hill, it opened to the public in 1966 and is now owned by the city. It relies on natural snow, and its four runs are serviced by a Poma lift.", true, 738, 363);
 
     var locations = [aquaticCenter, begin, borick, chipeta, crawford, escalante, paulwrightgym, pinnacles, practicefield, ute, mears, taylor, quigley, hurst, kelley, library, library_SL, universitycenter, mountaineerbowl, intramuralField, taylorQuad, fieldhouse_SL, fieldhouse_Athletic,
 	
@@ -81,10 +81,10 @@
     var hurst_to_quigley = new Navigation("#hurst", "hurst_to_quigley", "Back to Quigley Hall", "#quigley", "left", 26,20, 1);
     var hurst_to_kelley = new Navigation("#hurst", "hurst_to_kelley", "To Kelley Hall", "#kelley", "right", 68, 20, 1);
     var kelley_to_hurst = new Navigation("#kelley", "kelley_to_hurst", "Back to Hurst Hall", "#hurst", "left", 26,20, 1);
-    var kelley_to_library = new Navigation("#kelley", "kelley_to_library", "To Savage J. Library", "#library", "right", 68, 20, 1);
+    var kelley_to_library = new Navigation("#kelley", "kelley_to_library", "To Savage Library", "#library", "right", 68, 20, 1);
     var library_to_kelley = new Navigation("#library", "library_to_kelley", "Back to Kelley Hall", "#kelley", "left", 26,20, 1);
     var library_to_paulwrightgym = new Navigation("#library", "library_to_paulwrightgym", "To Paul Wright Gymnasium", "#paulwrightgym", "right", 68, 20, 1);
-    var paulwrightgym_to_library = new Navigation("#paulwrightgym", "paulwrightgym_to_library", "Back to Savage J. Library", "#library", "left", 26,20, 1);
+    var paulwrightgym_to_library = new Navigation("#paulwrightgym", "paulwrightgym_to_library", "Back to Savage Library", "#library", "left", 26,20, 1);
 	var paulwrightgym_to_crawford = new Navigation("#paulwrightgym", "paulwrightgym_to_crawford", "To Crawford Hall", "#crawford", "right", 68, 20, 1);
 	var crawford_to_paulwrightgym = new Navigation("#crawford", "crawford_to_paulwrightgym", "Back to Paul Wright Gymnasium", "#paulwrightgym", "left", 26,20, 1);
 	var crawford_to_borick = new Navigation("#crawford", "crawford_to_borick", "To Borick Buisness Building", "#borick", "right", 68, 20, 1);
