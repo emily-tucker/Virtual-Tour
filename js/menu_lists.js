@@ -1,3 +1,52 @@
+var submenu = [
+	new MenuItem({
+        text: 'Home',
+        icon: 'fa fa-home  ',
+       	target: "locations",
+        href: '#begin'
+    }),
+
+    new MenuItem({
+        text: 'Academics',
+        icon: 'fa fa-graduation-cap ',
+        items: subacademics
+    }),
+    new MenuItem({
+        text: 'Athletics',
+        icon: 'fa  fa-trophy  ',
+        items: subathletics
+    }),
+
+    new MenuItem({
+        text: 'Student Life',
+        icon: 'fa fa-users',
+        items: subfuture
+    }),
+	    new MenuItem({
+        text: 'Schedule A Visit',
+        icon: 'fa fa-suitcase',
+        target: 'external',
+        href: 'http://www.western.edu/future-students/visiting-campus/visit-western'
+    }),
+	    new MenuItem({
+        text: 'Apply Now!',
+        icon: 'fa fa-star ',
+        target: 'external',
+        href: "http://www.western.edu/future-students/apply-now-western"
+    }),
+    new MenuItem({
+        text: 'Go To',
+        icon: 'fa fa-map-marker ',
+        items: subgo
+    })
+]
+
+var menu = new MenuItem({
+    text: 'Menu',
+    icon: 'fa fa-bars',
+    items: submenu
+})
+menu.items = submenu;
 var subnear = [
 new MenuItem({
         text: 'CBMR',
@@ -254,51 +303,3 @@ var subgo = [
 
 ]
 
-var submenu = [
-	new MenuItem({
-        text: 'Home',
-        icon: 'fa fa-home  ',
-        onclick: 'http://www.western.edu/future-students/visiting-campus/visit-western'
-    }),
-
-    new MenuItem({
-        text: 'Academics',
-        icon: 'fa fa-graduation-cap ',
-        items: subacademics
-    }),
-    new MenuItem({
-        text: 'Athletics',
-        icon: 'fa  fa-trophy  ',
-        items: subathletics
-    }),
-
-    new MenuItem({
-        text: 'Student Life',
-        icon: 'fa fa-users',
-        items: subfuture
-    }),
-	    new MenuItem({
-        text: 'Schedule A Visit',
-        icon: 'fa fa-suitcase',
-        target: 'external',
-        href: 'http://www.western.edu/future-students/visiting-campus/visit-western'
-    }),
-	    new MenuItem({
-        text: 'Apply Now!',
-        icon: 'fa fa-star ',
-        target: 'external',
-        href: "http://www.western.edu/future-students/apply-now-western"
-    }),
-    new MenuItem({
-        text: 'Go To',
-        icon: 'fa fa-map-marker ',
-        items: subgo
-    })
-]
-
-var menu = new MenuItem({
-    text: 'Menu',
-    icon: 'fa fa-bars',
-    items: submenu
-})
-menu.items = submenu;

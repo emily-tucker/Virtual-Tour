@@ -13,12 +13,12 @@
             "A compact and appealing classroom building, primarily for Education courses.",  832, 484);
 	var escalante = new Location("#escalante", "Escalante Terrace", "studentlife",
             "Formerly Western's Fitness Center, Escalante Terrace is slated to house WesternÕs ICE program for entrepreneurship. For 2015-2016, it will house art programs, while Quigley Hall undergoes renovations.",  1238, 399);
-	var fieldhouse_Athletic = new Location("#fieldhouse_Athletic", "Mountaineer Field House", "athletic", 
-	 "This spectacular new building includes a high-tech surface across its main floor, with the highest indoor NCAA track, a 43.5-foot climbing wall, an athletic weight room, a fitness center, the HAPLab and more.", 715, 385);
+	var fieldhouse_Athletic = new Location("#fieldhouse", "Mountaineer Field House", "athletic", 
+	 "This spectacular new building includes a high-tech surface across its main floor, with the highest indoor NCAA track, a 43.5-foot climbing wall, an athletic weight room, a fitness center, the HAPLab and more.", 687, 410);
 	 var fieldhouse_SL = new Location("#fieldhouse_SL", "Mountaineer Field House", "studentlife", 
-	 "This spectacular new building includes a high-tech surface across its main floor, with the highest indoor NCAA track, a 43.5-foot climbing wall, an athletic weight room, a fitness center, the HAPLab and more.", 715, 385);
+	 "This spectacular new building includes a high-tech surface across its main floor, with the highest indoor NCAA track, a 43.5-foot climbing wall, an athletic weight room, a fitness center, the HAPLab and more.", 687, 410);
 	var gatewayfield = new Location("#gatewayfield", "Gateway Soccer Fields", "athletic", 
-	 "Western’s women’s soccer team utilizes Gateway Field for games and practice. The south side of the field is available for recreation or relaxation.", 697, 784);
+	 "Western’s women’s soccer team utilizes Gateway Field for games and practice. The south side of the field is available for recreation or relaxation.", 700, 797);
 	var hurst = new Location("#hurst", "Hurst Hall", "academic",
             "One of the campus's most modern classroom buildings, Hurst houses Science, Mathematics and Computer Science labs, along with offices.", 1301, 586);
 	var intramuralField = new Location("#intramuralField", "Intramural Sports Field", "studentlife",
@@ -32,13 +32,13 @@
 	var mears = new Location("#mears", "Mears Complex", "studentlife",
             "These co-ed dormitories Mears, Robidoux and Moffat connect by enclosed corridors. They feature suite-style double rooms, with two rooms sharing each bathroom.", 626, 509);
 	 var paulwrightgym = new Location("#paulwrightgym", "Paul Wright Gymnasium", "academic",
-            "At 7,723 feet above sea level, this is the world's highest collegiate gym. It seats 1,800 and includes an indoor pool, a wrestling room, locker rooms, the Hall of Fame trophy room and classrooms.", 883, 374);
+            "At 7,723 feet above sea level, this is the world's highest collegiate gym. It seats 1,800 and includes an indoor pool, a wrestling room, locker rooms, the Hall of Fame trophy room and classrooms.", 840, 366);
 	var pinnacles = new Location("#pinnacles", "Pinnacles Student Housing", "studentlife",
             "Western's newest apartments have furnished two-, three- and four-bedroom units. Each has a large kitchen and common room, with plenty of cabinet and closet space. It also has many common spaces and facilities.",  510, 496);
 	var practicefield = new Location("#practicefield", "Practice Field", "athletic",
-            "Home of Western’s sledding hill, the practice fields are a flurry of activity during the spring and fall while football and other sports are in season, and it’s groomed for skate skiing during the winter.",  1042, 296);
+            "Home of Western’s sledding hill, the practice fields are a flurry of activity during the spring and fall while football and other sports are in season, and it’s groomed for skate skiing during the winter.",  850, 296);
 	var mountaineerbowl = new Location("#mountaineerbowl", "Mountaineer Bowl", "athletic",
-            "Home of Mountaineer football and Western's high-tech-surface track, itÕs also world's highest collegiate football stadium at 7,750 feet above sea level, seating 4,000 fans, with room for more on its hills.",  1042, 296);
+            "Home of Mountaineer football and Western's high-tech-surface track, it's also world's highest collegiate football stadium at 7,750 feet above sea level, seating 4,000 fans, with room for more on its hills.",  1042, 296);
 	var quigley = new Location("#quigley", "Quigley Hall", "academic",
             "Home of Western's Art and Music programs, Quigley is undergoing a $25.8 million renovation, upgrading studios, presenation spaces, practice rooms and more, with expected completion in Fall 2016.", 1134, 659);
     var taylor = new Location("#taylor", "Taylor Hall", "academic",
@@ -56,7 +56,7 @@
     var monarchmountain = new Location("#monarchmountain", "Monarch Mountain", "offcampus", "Less than an hour’s drive east of Gunnison, Monarch Ski Area boasts 800 skiable acres and 150 inches annual snowfall. Backcountry and cross country skiing and mountain biking are all easily accessible.", true, 1193, 716);
     var hartmanrocks = new Location("#hartmanrocks", "Hartman Rocks", "recreation", " 8,000 acres of open BLM land with hundreds of miles of single-track trails and dirt roads, Hartman Rocks is a desert paradise for mountain biking, hiking, motorcycling, rock climbing, horseback riding, trail running and Nordic skiing.", true, 600, 893);
     var cbmr = new Location("#cbmr", "Crested Butte Mountain Resort", "offcampus", "World-class skiing with more than 1,500 skiable acres 30 miles from Gunnison. Take the bus straight from campus to the base area. Western students can purchase discounted season passes.", true, 658, 454);
-    var gunnison = new Location("#mainstreet", "Gunnison", "offcampus", "Main Street is the hub of the community with shopping for every budget, yummy restaurants and buzzing coffee shops. It’s located only four blocks west of campus.", true, 702, 753);
+    var gunnison = new Location("#mainstreet", "Gunnison", "offcampus", "Main Street is the hub of the community with shopping for every budget, yummy restaurants and buzzing coffee shops. It’s located only four blocks west of campus.", true, 702, 757);
 
     
 	var lakeirwin = new Location("#lakeirwin", "Lake Irwin", "offcampus", " High-mountain lake surrounded by snow-capped peaks and beautiful 4x4 roads, mountain bike trails, hiking, fly fishing, lake fishing, paddle-boarding, camping, backpacking, snowcat skiing and snowmobiling.", true, 738, 363);
@@ -125,7 +125,6 @@
 	var mountaineerbowl_to_gatewayfield= new Navigation("#mountaineerbowl", "mountaineerbowl_to_gatewayfield", "To Gateway Field", "#gatewayfield", "right", 68, 20, 3);
 	var gatewayfield_to_mountaineerbowl= new Navigation("#gatewayfield", "gatewayfield_to_mountaineerbowl", "Back to the Mountaineer Bowl", "#mountaineerbowl", "left", 26,20, 3);
 	var gatewayfield_to_fieldhouse= new Navigation("#gatewayfield", "gatewayfield_to_fieldhouse", "To the Field House", "#fieldhouse", "right", 68, 20, 3);
-	
 
 
 	/*====================Outdoor Arrows================== *Left arrow points to a new location, right arrows points to the old location*/
@@ -167,7 +166,7 @@
 		
 		
 		/*======Student Life Array=====*/
-		universitycenter_to_fieldhouse_SL, universitycenter_to_begin, fieldhouse_SL_to_mears, fieldhouse_SL_to_universitycenter, mears_to_fieldhouse_SL, mears_to_pinnacles, pinnacles_to_mears, pinnacles_to_chipeta, chipeta_to_ute, chipeta_to_pinnacles, ute_to_chipeta, ute_to_taylorQuad, taylorQuad_to_ute, taylorQuad_to_library, library_to_taylorQuad, library_to_escalante ,escalante_to_universitycenter, escalante_to_library,
+		universitycenter_to_fieldhouse_SL, universitycenter_to_begin, fieldhouse_SL_to_mears, fieldhouse_SL_to_universitycenter, mears_to_fieldhouse_SL, mears_to_pinnacles, pinnacles_to_mears, pinnacles_to_chipeta, chipeta_to_ute, chipeta_to_pinnacles, ute_to_chipeta, ute_to_taylorQuad, taylorQuad_to_ute, taylorQuad_to_library, library_to_taylorQuad, library_to_escalante,escalante_to_universitycenter, escalante_to_library,
 
 	
 		/*======Athletics Array=====*/
