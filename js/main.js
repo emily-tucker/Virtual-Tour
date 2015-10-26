@@ -42,7 +42,7 @@ var is_mobile = false;
 var showHide = true; /*bool to determine weather to show or hide the carousel.*/
 var show = 0;
 var currentLocation; //used by just about everything, initialized here
-var academics = 1;
+var academics, main = 1;
 var studentLife = 2;
 var athletics = 3;
 var offCampus = 4;
