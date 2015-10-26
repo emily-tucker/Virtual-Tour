@@ -4,6 +4,9 @@
 body.contextual_navigation
 {
     background:#999;
+	background-image:url(../imgs/begin_button.jpg);
+	background-size: cover;
+	
 }
 
 /***********************
@@ -246,7 +249,8 @@ section:target, .show{
 .arrow  {
 	position: fixed;
     z-index: 1;
-    max-width: 12% 
+    max-width: 12%;
+	min-width:3.5%;
     border: 0;
 }
 

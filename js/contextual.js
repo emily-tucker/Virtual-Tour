@@ -56,7 +56,7 @@
     var monarchmountain = new Location("#monarchmountain", "Monarch Mountain", "offcampus", "Less than an hour’s drive east of Gunnison, Monarch Ski Area boasts 800 skiable acres and 150 inches annual snowfall. Backcountry and cross country skiing and mountain biking are all easily accessible.", true, 1193, 716);
     var hartmanrocks = new Location("#hartmanrocks", "Hartman Rocks", "recreation", " 8,000 acres of open BLM land with hundreds of miles of single-track trails and dirt roads, Hartman Rocks is a desert paradise for mountain biking, hiking, motorcycling, rock climbing, horseback riding, trail running and Nordic skiing.", true, 600, 893);
     var cbmr = new Location("#cbmr", "Crested Butte Mountain Resort", "offcampus", "World-class skiing with more than 1,500 skiable acres 30 miles from Gunnison. Take the bus straight from campus to the base area. Western students can purchase discounted season passes.", true, 658, 454);
-    var gunnison = new Location("#mainstreet", "Gunnison", "offcampus", "Main Street is the hub of the community with shopping for every budget, yummy restaurants and buzzing coffee shops. It’s located only four blocks west of campus.", true, 702, 757);
+    var gunnison = new Location("#mainstreet", "Gunnison", "offcampus", "Main Street is the hub of the community with shopping for every budget, yummy restaurants and buzzing coffee shops. It’s located only four blocks west of campus.", true, 1000, 757);
 
     
 	var lakeirwin = new Location("#lakeirwin", "Lake Irwin", "offcampus", " High-mountain lake surrounded by snow-capped peaks and beautiful 4x4 roads, mountain bike trails, hiking, fly fishing, lake fishing, paddle-boarding, camping, backpacking, snowcat skiing and snowmobiling.", true, 738, 363);
@@ -65,7 +65,7 @@
 	var blackcanyon = new Location("#blackcanyon", "Black Canyon", "offcampus", "Spectacular! No other canyon in North America combines the narrow opening, sheer walls, and startling depths offered by the Black Canyon. Prepare yourself for breathtaking views while you enjoy hiking, fishing, camping, world-class rock climbing and wildlife viewing.", true, 738, 363);
 	var cranorhill = new Location("#cranorhill", "Cranor Hill", "offcampus", "Gunnison’s very own ski hill. Opened in 1962 as a private hill, it opened to the public in 1966 and is now owned by the city. It relies on natural snow, and its four runs are serviced by a Poma lift.", true, 738, 363);
 
-    var locations = [aquaticCenter, begin, borick, chipeta, crawford, escalante, paulwrightgym, pinnacles, practicefield, ute, mears, taylor, quigley, hurst, kelley, library, library_SL, universitycenter, mountaineerbowl, intramuralField, taylorQuad, fieldhouse_SL, fieldhouse_Athletic,
+    var locations = [aquaticCenter, begin, borick, chipeta, crawford, escalante, paulwrightgym, pinnacles, practicefield, ute, mears, taylor, quigley, hurst, kelley, library, library_SL, universitycenter, mountaineerbowl, intramuralField, taylorQuad, fieldhouse_SL, fieldhouse_Athletic, gatewayfield,
 	
 	telluride, crestedbutte, monarchmountain, hartmanrocks, gunnison, cbmr, lakeirwin, bluemesa, taylorpark, blackcanyon, cranorhill];
 
