@@ -399,7 +399,7 @@ function loadMap(locationTag) {
         if (locations[i].tag === locationTag) {
             if (tour_track === offCampus) {
                 $.cookie("tour_track", offCampus); /** Create Cookie for off campus Tour Track **/
-                document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/offcampusmap1.png">';
+                document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/offcampusmap.png">';
 
             } else {
                 $.cookie("tour_track", "onCampus"); /** Create Cookie for on campus Tour Track **/
