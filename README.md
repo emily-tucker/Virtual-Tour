@@ -1,2 +1,0 @@
-# vtour
-Virutal Tour Project
