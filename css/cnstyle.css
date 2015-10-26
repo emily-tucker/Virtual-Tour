@@ -3,10 +3,9 @@
 ************************/
 body.contextual_navigation
 {
-    background:#999;
+    background: #666 no-repeat center center fixed;
 	background-image:url(../imgs/begin_button.jpg);
 	background-size: cover;
-	
 }
 
 /***********************
