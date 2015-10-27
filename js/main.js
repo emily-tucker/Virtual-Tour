@@ -33,7 +33,6 @@
  * Variables for functions      *
  ********************************/
 var video_time = 15000;
-var map_slide_time = 1000;
 var description_delay = 3000;
 var video_fade = 2000;
 var map_state = 1;
@@ -161,9 +160,9 @@ function loadMainButtons() {
             inner_html +=
 				
                 "<button class='to_athletics athletics_button row ' onclick=window.location='#fieldhouse'> Athletics Tour</button>" +
-                "<button class='to_studentlife sl_button row' onclick=window.location='#universitycenter'>Student Life Tour</button>" +
+                "<button class='to_studentlife sl_button row ' onclick=window.location='#universitycenter'>Student Life Tour</button>" +
                 "<button class='to_academics academics_button row' onclick=window.location='#taylor'> Academics Tour</button>" +
-                "<button class='to_offcampus switch_button row' onclick=window.location='#mainstreet'>Off Campus Tour</button>" +
+                "<button class='to_offcampus switch_button row ' onclick=window.location='#mainstreet'>Off Campus Tour</button>" +
                 "<button class='schedule_button row' onclick='visitURL();'>Schedule A Visit</button>" +
                 "<button class='contact_button row' onclick='visitURL2();'>Contact Admissions</button>" +
                 "<button class='restart_button row' id = 'rb' onclick=load()>Restart Tour</button>" +
@@ -231,7 +230,7 @@ function getNavs(locationTag) {
                 inner_html +=
 				 // Setting the image for the arrow buttons
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
-                    navs[i].styleClass + " arrow' src='imgs/navs/" + navs[i].direction + "_offcampus.png'" +
+                    navs[i].styleClass + " arrow ' src='imgs/navs/" + navs[i].direction + "_offcampus.png'" +
                     "onmouseover=" + "this.src='imgs/navs/" + navs[i].direction + "_offcampus_hover.png'" +
                     " onmouseout=" + "this.src='imgs/navs/" + navs[i].direction + "_offcampus.png' " +
                     "title='" + navs[i].ttip + "' />";
@@ -299,7 +298,7 @@ function mapButtonLoad() {
                     width: window.innerWidth * 0.20,
                     height: window.innerHeight * 0.33
                 }, function () {
-                    animate_map(currentLocation, map_slide_time);
+                    animate_map(currentLocation);
                 });
                 $(".map_button").animate({
                     right: window.innerWidth * 0.09
@@ -309,13 +308,13 @@ function mapButtonLoad() {
         } else if (map_state === 1) {
             $(".map_button").text("Collapse Map");
             $("#map").animate({
-                width: window.innerWidth * 0.75,
+                width: window.innerWidth * 0.80,
                 height: window.innerHeight * 0.85
             }, function () {
-                animate_map(currentLocation, map_slide_time);
+                animate_map(currentLocation);
             });
             $(".map_button").animate({
-                right: window.innerWidth * 0.63
+                right: window.innerWidth * 0.70
             });
             map_state += 1;
         } else if (map_state === 2) {
@@ -457,7 +456,7 @@ $(function () {
                 first_time = true;
                 $(".menu").hide();
                 $("#start").removeClass("show");
-                document.getElementById('video').innerHTML = '<video z-index="10000" width="100%" height="120%"  controls autoplay>' +
+                document.getElementById('video').innerHTML = '<video z-index="10000" width="100%" height="auto"  controls autoplay>' +
                     '<source src="video/fly-in2.webm" type="video/webm"></video>';
                 $("#map").css({
                     "right": "0"
@@ -466,7 +465,7 @@ $(function () {
                 $("#carousel").hide('blind');
                 $(this).off("click");
                 $("#video").click(function () {
-                    video_out(currentLocation, map_slide_time);
+                    video_out(currentLocation);
                     $(".menu").show();
 
                 });
@@ -478,7 +477,7 @@ $(function () {
                         $("#video").animate({
                             opacity: 0
                         }, video_fade, 'easeOutQuart', function () {
-                            video_out(currentLocation, map_slide_time);
+                            video_out(currentLocation);
                         });
                     }, video_time);
                 });
@@ -540,7 +539,7 @@ $(function () {
         loadMap(location.hash);
         getCIs(location.hash);
         mapButtonLoad();
-        animate_map(currentLocation, map_slide_time);
+        animate_map(currentLocation);
         loadMainButtons();
 		
 
