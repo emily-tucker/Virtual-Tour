@@ -128,35 +128,35 @@
 
 
 	/*====================Outdoor Arrows================== *Left arrow points to a new location, right arrows points to the old location*/
-    var mainstreet_to_hartmanrocks = new Navigation("#mainstreet", "mainstreet_to_hartmanrocks", "To Hartman Rocks", "#hartmanrocks", "left", 26, 20, 4);
-   	var mainstreet_to_cranorhill = new Navigation("#mainstreet", "mainstreet_to_cranorhill", "To Cranor Hill", "#cranorhill", "right", 68, 20, 4);
+    var mainstreet_to_hartmanrocks = new Navigation("#mainstreet", "mainstreet_to_hartmanrocks", "To Hartman Rocks", "#hartmanrocks", "right", 68, 20, 4);
+   	var mainstreet_to_cranorhill = new Navigation("#mainstreet", "mainstreet_to_cranorhill", "To Cranor Hill", "#cranorhill", "left", 26,20, 4);
 	
-	var hartmanrocks_to_mainstreet = new Navigation("#hartmanrocks", "hartmanrocks_to_mainstreet", "To Main Street", "#mainstreet", "right", 68, 20, 4);
-    var hartmanrocks_to_bluemesa = new Navigation("#hartmanrocks", "hartmanrocks_to_bluemesa", "To Blue Mesa", "#bluemesa", "left", 26,20, 4);
+	var hartmanrocks_to_mainstreet = new Navigation("#hartmanrocks", "hartmanrocks_to_mainstreet", "To Main Street", "#mainstreet", "left", 26,20, 4);
+    var hartmanrocks_to_bluemesa = new Navigation("#hartmanrocks", "hartmanrocks_to_bluemesa", "To Blue Mesa", "#bluemesa", "right", 68, 20, 4);
 	
-	var bluemesa_to_telluride = new Navigation("#bluemesa", "bluemesa_to_telluride", "to Telluride", "#telluride", "left", 26,20, 4);
-	var bluemesa_to_hartmanrocks = new Navigation("#bluemesa", "bluemesa_to_hartmanrocks", "To Hartman Rocks", "#hartmanrocks", "right", 68, 20, 4);
+	var bluemesa_to_telluride = new Navigation("#bluemesa", "bluemesa_to_telluride", "to Telluride", "#telluride", "right", 68, 20, 4);
+	var bluemesa_to_hartmanrocks = new Navigation("#bluemesa", "bluemesa_to_hartmanrocks", "To Hartman Rocks", "#hartmanrocks", "left", 26,20, 4);
 	
-	var telluride_to_monarchmountain = new Navigation("#telluride", "telluride_to_monarchmountain", "To Monarch Mountain", "#monarchmountain", "left", 26,20, 4);
-	var telluride_to_bluemesa = new Navigation("#telluride", "telluride_to_bluemesa", "To Blue Mesa", "#bluemesa", "right", 68, 20, 4);
+	var telluride_to_monarchmountain = new Navigation("#telluride", "telluride_to_monarchmountain", "To Monarch Mountain", "#monarchmountain", "right", 68, 20, 4);
+	var telluride_to_bluemesa = new Navigation("#telluride", "telluride_to_bluemesa", "To Blue Mesa", "#bluemesa", "left", 26,20, 4);
 	
-	var monarchmountain_to_taylorpark = new Navigation("#monarchmountain", "monarchmountain_to_taylorpark", "To Taylor Park", "#taylorpark", "left", 26,20, 4);
-	var monarchmountain_to_telluride = new Navigation("#monarchmountain", "monarchmountain_to_telluride", "To Telluride", "#telluride", "right", 68, 20, 4);
+	var monarchmountain_to_taylorpark = new Navigation("#monarchmountain", "monarchmountain_to_taylorpark", "To Taylor Park", "#taylorpark", "right", 68, 20, 4);
+	var monarchmountain_to_telluride = new Navigation("#monarchmountain", "monarchmountain_to_telluride", "To Telluride", "#telluride", "left", 26,20, 4);
 	
-	var taylorpark_to_lakeirwin = new Navigation("#taylorpark", "taylorpark_to_lakeirwin", "To Lake Irwin", "#lakeirwin", "left", 26,20, 4);
-	var taylorpark_to_monarchmountain = new Navigation("#taylorpark", "taylorpark_to_monarchmountain", "To Monarch Mountain", "#monarchmountain", "right", 68, 20, 4);
+	var taylorpark_to_lakeirwin = new Navigation("#taylorpark", "taylorpark_to_lakeirwin", "To Lake Irwin", "#lakeirwin", "right", 68, 20, 4);
+	var taylorpark_to_monarchmountain = new Navigation("#taylorpark", "taylorpark_to_monarchmountain", "To Monarch Mountain", "#monarchmountain", "left", 26,20, 4);
 	
-	var lakeirwin_to_taylorpark = new Navigation("#lakeirwin", "lakeirwin_to_taylorpark", "To Taylor Park", "#taylorpark", "right", 68, 20, 4);
-	var lakeirwin_to_cbmr = new Navigation("#lakeirwin", "lakeirwin_to_cbmr", "To Crested Butte Mountain Resort", "#cbmr", "left", 26,20, 4);
+	var lakeirwin_to_taylorpark = new Navigation("#lakeirwin", "lakeirwin_to_taylorpark", "To Taylor Park", "#taylorpark", "left", 26,20, 4);
+	var lakeirwin_to_cbmr = new Navigation("#lakeirwin", "lakeirwin_to_cbmr", "To Crested Butte Mountain Resort", "#cbmr", "right", 68, 20, 4);
 
-	var cbmr_to_lakeirwin = new Navigation("#cbmr", "cbmr_to_lakeirwin", "To Lake Irwin", "#lakeirwin", "right", 68, 20, 4);
-	var cbmr_to_crestedbutte = new Navigation("#cbmr", "cbmr_to_crestedbutte", "To Crested Butte", "#crestedbutte", "left", 26,20, 4);
+	var cbmr_to_lakeirwin = new Navigation("#cbmr", "cbmr_to_lakeirwin", "To Lake Irwin", "#lakeirwin", "left", 26,20, 4);
+	var cbmr_to_crestedbutte = new Navigation("#cbmr", "cbmr_to_crestedbutte", "To Crested Butte", "#crestedbutte", "right", 68, 20, 4);
 	
-	var crestedbutte_to_cbmr = new Navigation("#crestedbutte", "crestedbutte_to_cbmr", "To Crested Butte Mountian Resort", "#cbmr", "right", 68, 20, 4);
-	var crestedbutte_to_cranorhill = new Navigation("#crestedbutte", "crestedbutte_to_cranorhill", "To Cranor Hill", "#cranorhill", "left", 26,20, 4);
+	var crestedbutte_to_cbmr = new Navigation("#crestedbutte", "crestedbutte_to_cbmr", "To Crested Butte Mountian Resort", "#cbmr", "left", 26,20, 4);
+	var crestedbutte_to_cranorhill = new Navigation("#crestedbutte", "crestedbutte_to_cranorhill", "To Cranor Hill", "#cranorhill", "right", 68, 20, 4);
 	
-	var cranorhill_to_crestedbutte = new Navigation("#cranorhill", "cranorhill_to_crestedbutte", "To Crested Butte", "#crestedbutte", "right", 68, 20, 4);
-	var cranorhill_to_mainstreet = new Navigation("#cranorhill", "cranorhill_to_mainstreet", "To Gunnison Main Street", "#mainstreet", "left", 26,20, 4);
+	var cranorhill_to_crestedbutte = new Navigation("#cranorhill", "cranorhill_to_crestedbutte", "To Crested Butte", "#crestedbutte", "left", 26,20, 4);
+	var cranorhill_to_mainstreet = new Navigation("#cranorhill", "cranorhill_to_mainstreet", "To Gunnison Main Street", "#mainstreet", "right", 68, 20, 4);
 	
 	
     var navs = [ 
