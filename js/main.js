@@ -145,6 +145,7 @@ function load() {
     window.location = '#begin';
 	tour_track = 2; /**Needs to be here for the Off-campus map to On-campus map switch**/
 	
+	
 	 
 }
 
@@ -158,6 +159,7 @@ function loadMainButtons() {
         if (currentLocation.locationType === "main") {
             // If the current location of the tour is at the Welcome center display the 4 tours
             inner_html +=
+		
 				
                 "<button class='to_athletics athletics_button row ' onclick=window.location='#fieldhouse'> Athletics Tour</button>" +
                 "<button class='to_studentlife sl_button row ' onclick=window.location='#universitycenter'>Student Life Tour</button>" +
@@ -228,6 +230,7 @@ function getNavs(locationTag) {
     for (var i in navs) {
         if (navs[i].tag === locationTag) {
                 inner_html +=
+				
 				 // Setting the image for the arrow buttons
                     "<img onclick=javascript:window.location.hash='" + navs[i].dest + "' class='" +
                     navs[i].styleClass + " arrow ' src='imgs/navs/" + navs[i].direction + "_offcampus.png'" +
@@ -275,10 +278,13 @@ function mapButtonLoad() {
     var inner_html = "";
     if (map_state === 2) {
         inner_html += "<button class='map_button'>Collapse Map</button>"
+		right: window.innerWidth * 0.09
     } else if (map_state === 1) {
         inner_html += "<button class='map_button'>Enlarge Map</button>"
+		 right: window.innerWidth * 0.685
     } else if (map_state === 0) {
         inner_html += "<button class='map_button'>Show Map</button>"
+		right: window.innerWidth * -0.085
     }
     $("#mapbuttons").html(inner_html);
 
@@ -314,7 +320,7 @@ function mapButtonLoad() {
                 animate_map(currentLocation);
             });
             $(".map_button").animate({
-                right: window.innerWidth * 0.70
+                right: window.innerWidth * 0.685
             });
             map_state += 1;
         } else if (map_state === 2) {
@@ -326,7 +332,7 @@ function mapButtonLoad() {
                 $("#map").hide('blind');
             });
             $(".map_button").animate({
-                right: window.innerWidth * -0.099
+                right: window.innerWidth * -0.085
             });
             map_state = 0;
         }
