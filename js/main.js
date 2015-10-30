@@ -337,12 +337,45 @@ function mapButtonLoad() {
             map_state = 0;
         }
     });
-
-  
-
-
 }
+/********************************
+     *  Mouse movement on Map           *
+     ********************************/
+    var clicking = false;
+    var previousX;
+    var previousY;
 
+    $('.mapImage').load(function () {
+
+
+        $('body').on('mousedown', '#map', function (e) {
+            e.preventDefault();
+            previousX = e.clientX;
+            previousY = e.clientY;
+            clicking = true;
+        });
+
+        $(document).mouseup(function () {
+            clicking = false;
+        });
+
+        $('body').on('mousemove', '#map', function (e) {
+            setTimeout(function () {
+                if (clicking) {
+                    e.preventDefault();
+                    var directionX = (previousX - e.clientX) > 2 ? 1 : (previousX - e.clientX) < -2 ? -1 : 0;
+                    var directionY = (previousY - e.clientY) > 2 ? 1 : (previousY - e.clientY) < -2 ? -1 : 0;
+                    $("#map").scrollLeft($("#map").scrollLeft() + 10 * directionX);
+                    $("#map").scrollTop($("#map").scrollTop() + 10 * directionY);
+                    previousX = e.clientX;
+                    previousY = e.clientY
+
+                    console.log(previousX);
+
+                }
+            }, 1000 / 24)
+        });
+    });
 
 /**************************************************************
  *
@@ -372,7 +405,7 @@ function getHspots(locationTag) {
             for (var j in hotspots) {
                 if (items[i] === hotspots[j].styleClass) {
                     $("." + hotspots[j].styleClass).css({
-                        bottom: hotspots[j].y + "%",
+                        "bottom": hotspots[j].y + "%",
                         "left": hotspots[j].x + "%"
                     });
                 }
@@ -385,7 +418,6 @@ function getHspots(locationTag) {
  * Render main image for the current location
  * @param {string} locationTag Location tag, should be in form "#" + location, i.e. "#hurst"
  * locationTag should match image file, i.e "hurst_main.jpg" (substring removes "#")
-
 	
  *******************************************************/
  function getImage(locationTag) {
@@ -494,45 +526,6 @@ $(function () {
         }
     }
 
-    /********************************
-     *  Mouse move on Map           *
-     ********************************/
-    var clicking = false;
-    var previousX;
-    var previousY;
-
-    $('.mapImage').load(function () {
-
-
-        $('body').on('mousedown', '#map', function (e) {
-            e.preventDefault();
-            previousX = e.clientX;
-            previousY = e.clientY;
-            clicking = true;
-        });
-
-        $(document).mouseup(function () {
-            clicking = false;
-        });
-
-        $('body').on('mousemove', '#map', function (e) {
-            setTimeout(function () {
-                if (clicking) {
-                    e.preventDefault();
-                    var directionX = (previousX - e.clientX) > 2 ? 1 : (previousX - e.clientX) < -2 ? -1 : 0;
-                    var directionY = (previousY - e.clientY) > 2 ? 1 : (previousY - e.clientY) < -2 ? -1 : 0;
-                    $("#map").scrollLeft($("#map").scrollLeft() + 2 * directionX);
-                    $("#map").scrollTop($("#map").scrollTop() + 2 * directionY);
-                    previousX = e.clientX;
-                    previousY = e.clientY
-
-                    console.log(previousX);
-
-
-                }
-            }, 1000 / 24)
-        });
-    });
 
     /*****************************************************
      *  Hash Changes   *

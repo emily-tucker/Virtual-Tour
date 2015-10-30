@@ -34,7 +34,7 @@ $(document).ready(function() {
 						width  : 100,
 						height : 100
 						},
-						type : 'over'
+						 type:'iframe'
 					}
 				}
 			});
@@ -163,7 +163,7 @@ $(document).ready(function() {
 
 			// Override some properties
 			index   : 0,
-			type    : null,
+			type    : 'iframe',
 			href    : null,
 			content : null,
 			title   : null,
