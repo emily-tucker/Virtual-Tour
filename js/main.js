@@ -445,6 +445,7 @@ function loadMap(locationTag) {
             }
 
         }
+		
     }
 }
 
