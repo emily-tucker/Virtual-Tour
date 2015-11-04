@@ -233,7 +233,7 @@ var submenu = [
         text: 'Home',
         icon: 'fa fa-home  ',
        	target: 'locations',
-        href: "#mainstreet"
+        href: "#begin"
     }),
 
     new MenuItem({

@@ -1,8 +1,7 @@
-/**
-     * Location object instances
-     */
-	 var aquaticCenter = new Location("#aquaticCenter", "Aquatic Center", "studentlife",
-            "Need This.",  345, 1206);
+/******************************************
+*
+* Location object instances - On Campus 
+********************************************/
 	var begin = new Location("#begin", "Welcome to Western", "main",
 	"Western offers a private college experience at a public university cost, deep in the heart of the Rockies.", 986, 581);
 	var borick = new Location("#borick", "Borick Buisness Building", "academic",
@@ -49,32 +48,38 @@
 	var ute = new Location("#ute", "Ute Student Housing", "studentlife",
             "One of the older residence halls on campus, Ute has seen recent renovations and offers first-year students fully furnished rooms in a traditional, community-style dormitory that opens right onto lush Taylor Lawn.", 653, 634);
 
-	
-
-    var telluride = new Location("#telluride", "Telluride", "offcampus", "Home to summer music festivals, Telluride Ski Resort, jeeping, biking, hiking, camping and climbing. Nestled in the San Juan Mountains 130 miles southwest of Gunnison.", true, 988, 432);
-    var crestedbutte = new Location("#crestedbutte", "Crested Butte", "offcampus", "Gunnison’s neighbor community located 38 miles north. It’s easy to access using the free RTA bus systems. Explore Colorado’s last great ski town. Recreational, culinary and shopping opportunities abound.", true, 658, 454);
-    var monarchmountain = new Location("#monarchmountain", "Monarch Mountain", "offcampus", "Less than an hour’s drive east of Gunnison, Monarch Ski Area boasts 800 skiable acres and 150 inches annual snowfall. Backcountry and cross country skiing and mountain biking are all easily accessible.", true, 1193, 716);
-    var hartmanrocks = new Location("#hartmanrocks", "Hartman Rocks", "recreation", " 8,000 acres of open BLM land with hundreds of miles of single-track trails and dirt roads, Hartman Rocks is a desert paradise for mountain biking, hiking, motorcycling, rock climbing, horseback riding, trail running and Nordic skiing.", true, 600, 893);
-    var cbmr = new Location("#cbmr", "Crested Butte Mountain Resort", "offcampus", "World-class skiing with more than 1,500 skiable acres 30 miles from Gunnison. Take the bus straight from campus to the base area. Western students can purchase discounted season passes.", true, 658, 454);
-    var gunnison = new Location("#mainstreet", "Gunnison", "offcampus", "Main Street is the hub of the community with shopping for every budget, yummy restaurants and buzzing coffee shops. It’s located only four blocks west of campus.", true, 1000, 757);
+/******************************************
+*
+* Location object instances - Off Campus 
+********************************************/
+    var telluride = new Location("#telluride", "Telluride", "offcampus", "Home to summer music festivals, Telluride Ski Resort, jeeping, biking, hiking, camping and climbing. Nestled in the San Juan Mountains 130 miles southwest of Gunnison.", 988, 432);
+    var crestedbutte = new Location("#crestedbutte", "Crested Butte", "offcampus", "Gunnison’s neighbor community located 38 miles north. It’s easy to access using the free RTA bus systems. Explore Colorado’s last great ski town. Recreational, culinary and shopping opportunities abound.", 662, 450);
+    var monarchmountain = new Location("#monarchmountain", "Monarch Mountain", "offcampus", "Less than an hour’s drive east of Gunnison, Monarch Ski Area boasts 800 skiable acres and 150 inches annual snowfall. Backcountry and cross country skiing and mountain biking are all easily accessible.",  1161, 749);
+    var hartmanrocks = new Location("#hartmanrocks", "Hartman Rocks", "recreation", " 8,000 acres of open BLM land with hundreds of miles of single-track trails and dirt roads, Hartman Rocks is a desert paradise for mountain biking, hiking, motorcycling, rock climbing, horseback riding, trail running and Nordic skiing.", 689, 877);
+    var cbmr = new Location("#cbmr", "Crested Butte Mountain Resort", "offcampus", "World-class skiing with more than 1,500 skiable acres 30 miles from Gunnison. Take the bus straight from campus to the base area. Western students can purchase discounted season passes.",  690, 407);
+    var gunnison = new Location("#mainstreet", "Gunnison", "offcampus", "Main Street is the hub of the community with shopping for every budget, yummy restaurants and buzzing coffee shops. It’s located only four blocks west of campus.", 706, 757);
 
     
-	var lakeirwin = new Location("#lakeirwin", "Lake Irwin", "offcampus", " High-mountain lake surrounded by snow-capped peaks and beautiful 4x4 roads, mountain bike trails, hiking, fly fishing, lake fishing, paddle-boarding, camping, backpacking, snowcat skiing and snowmobiling.", true, 738, 363);
-	var bluemesa = new Location("#bluemesa", "Blue Mesa", "offcampus", "Colorado's largest lake and a popular destination for outdoor recreation, Blue Mesa offers fishing, camping, boating, 		  	paddleboarding, windsurfing, waterskiing and hiking.", true, 738, 363);
-	var taylorpark = new Location("#taylorpark", "Taylor Park", "offcampus", "Taylor Park offers a vast mountain playground for all types of recreational activities. The Taylor Canyon offers rock climbing, river rafting, hiking, fly fishing, mountain biking, camping, boating and fishing in the Taylor Reservoir and 4x4 exploring.", true, 738, 363);
-	var blackcanyon = new Location("#blackcanyon", "Black Canyon", "offcampus", "Spectacular! No other canyon in North America combines the narrow opening, sheer walls, and startling depths offered by the Black Canyon. Prepare yourself for breathtaking views while you enjoy hiking, fishing, camping, world-class rock climbing and wildlife viewing.", true, 738, 363);
-	var cranorhill = new Location("#cranorhill", "Cranor Hill", "offcampus", "Gunnison’s very own ski hill. Opened in 1962 as a private hill, it opened to the public in 1966 and is now owned by the city. It relies on natural snow, and its four runs are serviced by a Poma lift.", true, 738, 363);
+	var lakeirwin = new Location("#lakeirwin", "Lake Irwin", "offcampus", " High-mountain lake surrounded by snow-capped peaks and beautiful 4x4 roads, mountain bike trails, hiking, fly fishing, lake fishing, paddle-boarding, camping, backpacking, snowcat skiing and snowmobiling.", 738, 363);
+	var bluemesa = new Location("#bluemesa", "Blue Mesa", "offcampus", "Colorado's largest lake and a popular destination for outdoor recreation, Blue Mesa offers fishing, camping, boating, 		  	paddleboarding, windsurfing, waterskiing and hiking.", 517, 834);
+	var taylorpark = new Location("#taylorpark", "Taylor Park", "offcampus", "Taylor Park offers a vast mountain playground for all types of recreational activities. The Taylor Canyon offers rock climbing, river rafting, hiking, fly fishing, mountain biking, camping, boating and fishing in the Taylor Reservoir and 4x4 exploring.",  738, 363);
+	var blackcanyon = new Location("#blackcanyon", "Black Canyon", "offcampus", "Spectacular! No other canyon in North America combines the narrow opening, sheer walls, and startling depths offered by the Black Canyon. Prepare yourself for breathtaking views while you enjoy hiking, fishing, camping, world-class rock climbing and wildlife viewing.", 738, 363);
+	var cranorhill = new Location("#cranorhill", "Cranor Hill", "offcampus", "Gunnison’s very own ski hill. Opened in 1962 as a private hill, it opened to the public in 1966 and is now owned by the city. It relies on natural snow, and its four runs are serviced by a Poma lift.",  738, 363);
 
-    var locations = [aquaticCenter, begin, borick, chipeta, crawford, escalante, paulwrightgym, pinnacles, practicefield, ute, mears, taylor, quigley, hurst, kelley, library, library_SL, universitycenter, mountaineerbowl, intramuralField, taylorQuad, fieldhouse_SL, fieldhouse_Athletic, gatewayfield,
+/******************************************
+*
+* Location array
+********************************************/
+    var locations = [begin, borick, chipeta, crawford, escalante, paulwrightgym, pinnacles, practicefield, ute, mears, taylor, quigley, hurst, kelley, library, library_SL, universitycenter, mountaineerbowl, intramuralField, taylorQuad, fieldhouse_SL, fieldhouse_Athletic, gatewayfield,
 	
-	telluride, crestedbutte, monarchmountain, hartmanrocks, gunnison, cbmr, lakeirwin, bluemesa, taylorpark, blackcanyon, cranorhill];
+	telluride, crestedbutte, monarchmountain, hartmanrocks, gunnison, cbmr, lakeirwin, bluemesa, blackcanyon, taylorpark, blackcanyon, cranorhill];
 
 
 
-    /**************************************
-     * Navigation object instances
-     *************************************/
-	/*====================Academic Arrows================== Arrow Color: Black -Academic Tour = 1*/
+/**************************************
+ * Navigation object instances
+*************************************/
+	/*====================Academic Arrows================== Academic Tour = 1*/
 	var taylor_to_quigley = new Navigation("#taylor", "taylor_to_quigley", "To Quigley Hall", "#quigley", "right", 68, 20, 1);
     var quigley_to_taylor = new Navigation("#quigley", "quigley_to_taylor", "Back to Taylor Hall", "#taylor", "left", 26,20, 1);
     var quigley_to_hurst = new Navigation("#quigley", "quigley_to_hurst", "To Hurst Hall", "#hurst", "right", 68, 20, 1);
@@ -93,7 +98,7 @@
 	var taylor_to_begin = new Navigation("#taylor", "taylor_to_begin", "Back to the Welcome Center", "#begin", "left", 26,20, 1);
 	
 	
-	/*====================Student Life Arrows================== Arrow Color: Red - StudentLife Tour = 2*/
+	/*====================Student Life Arrows================== StudentLife Tour = 2*/
 	var universitycenter_to_fieldhouse_SL = new Navigation("#universitycenter", "universitycenter_to_fieldhouse_SL", "To the Fieldhouse", "#fieldhouse_SL", "right", 68, 20, 2);
 	var universitycenter_to_begin = new Navigation("#universitycenter", "universitycenter_to_begin", "Back to the Welcome Center", "#begin", "left", 26,20, 2);
 	var fieldhouse_SL_to_mears = new Navigation("#fieldhouse_SL", "fieldhouse_SL_to_mears", "To the Mears Complex", "#mears", "right", 68, 20, 2);
@@ -116,7 +121,7 @@
 
 
 	
-	/*====================Athletics Arrows================== Arrow Color: Slate- Athetic Tour = 3*/
+	/*====================Athletics Arrows================== Athetic Tour = 3*/
 	var fieldhouse_to_practicefield= new Navigation("#fieldhouse", "fieldhouse_to_practicefield", "To the Practice Field", "#practicefield", "right", 68, 20, 3);
 	var fieldhouse_to_begin= new Navigation("#fieldhouse", "fieldhouse_to_begin", "Back to the Welcome Center", "#begin", "left", 26,20, 3);
 	var practicefield_to_fieldhouse= new Navigation("#practicefield", "practicefield_to_fieldhouse", "Back to the Field House", "#fieldhouse", "left", 26,20, 3);
@@ -127,18 +132,21 @@
 	var gatewayfield_to_fieldhouse= new Navigation("#gatewayfield", "gatewayfield_to_fieldhouse", "To the Field House", "#fieldhouse", "right", 68, 20, 3);
 
 
-	/*====================Outdoor Arrows================== *Left arrow points to a new location, right arrows points to the old location*/
+	/*====================Outdoor Arrows================== *Left arrow points to a old location, right arrows points to the new location*/
     var mainstreet_to_hartmanrocks = new Navigation("#mainstreet", "mainstreet_to_hartmanrocks", "To Hartman Rocks", "#hartmanrocks", "right", 68, 20, 4);
    	var mainstreet_to_cranorhill = new Navigation("#mainstreet", "mainstreet_to_cranorhill", "To Cranor Hill", "#cranorhill", "left", 26,20, 4);
 	
 	var hartmanrocks_to_mainstreet = new Navigation("#hartmanrocks", "hartmanrocks_to_mainstreet", "To Main Street", "#mainstreet", "left", 26,20, 4);
     var hartmanrocks_to_bluemesa = new Navigation("#hartmanrocks", "hartmanrocks_to_bluemesa", "To Blue Mesa", "#bluemesa", "right", 68, 20, 4);
 	
-	var bluemesa_to_telluride = new Navigation("#bluemesa", "bluemesa_to_telluride", "to Telluride", "#telluride", "right", 68, 20, 4);
+	var bluemesa_to_blackcanyon = new Navigation("#bluemesa", "bluemesa_to_telluride", "To Black Canyon", "#blackcanyon", "right", 68, 20, 4);
 	var bluemesa_to_hartmanrocks = new Navigation("#bluemesa", "bluemesa_to_hartmanrocks", "To Hartman Rocks", "#hartmanrocks", "left", 26,20, 4);
 	
+	var blackcanyon_to_telluride = new Navigation("#blackcanyon", "blackcanyon_to_telluride", "To Telluride", "#telluride", "right", 68, 20, 4);
+	var blackcanyon_to_bluemesa = new Navigation("#blackcanyon", "blackcanyon_to_bluemesa", "To Blue Mesa", "#bluemesa", "left", 26,20, 4);
+	
 	var telluride_to_monarchmountain = new Navigation("#telluride", "telluride_to_monarchmountain", "To Monarch Mountain", "#monarchmountain", "right", 68, 20, 4);
-	var telluride_to_bluemesa = new Navigation("#telluride", "telluride_to_bluemesa", "To Blue Mesa", "#bluemesa", "left", 26,20, 4);
+	var telluride_to_blackcanyon = new Navigation("#telluride", "telluride_to_blackcanyon", "To Black Canyon", "#blackcanyon", "left", 26,20, 4);
 	
 	var monarchmountain_to_taylorpark = new Navigation("#monarchmountain", "monarchmountain_to_taylorpark", "To Taylor Park", "#taylorpark", "right", 68, 20, 4);
 	var monarchmountain_to_telluride = new Navigation("#monarchmountain", "monarchmountain_to_telluride", "To Telluride", "#telluride", "left", 26,20, 4);
@@ -164,16 +172,14 @@
 		/*======Academics Array=====*/
 		   taylor_to_quigley, quigley_to_taylor, quigley_to_hurst, hurst_to_quigley, hurst_to_quigley, hurst_to_kelley, kelley_to_hurst, kelley_to_library, library_to_kelley, library_to_paulwrightgym, paulwrightgym_to_library, paulwrightgym_to_crawford, crawford_to_borick, crawford_to_paulwrightgym, borick_to_crawford, borick_to_taylor, taylor_to_begin,
 		
-		
 		/*======Student Life Array=====*/
 		universitycenter_to_fieldhouse_SL, universitycenter_to_begin, fieldhouse_SL_to_mears, fieldhouse_SL_to_universitycenter, mears_to_fieldhouse_SL, mears_to_pinnacles, pinnacles_to_mears, pinnacles_to_chipeta, chipeta_to_ute, chipeta_to_pinnacles, ute_to_chipeta, ute_to_taylorQuad, taylorQuad_to_ute, taylorQuad_to_library, library_to_taylorQuad, library_to_escalante,escalante_to_universitycenter, escalante_to_library,
 
-	
 		/*======Athletics Array=====*/
 		fieldhouse_to_practicefield, practicefield_to_fieldhouse, fieldhouse_to_begin, practicefield_to_mountaineerbowl, mountaineerbowl_to_practicefield, mountaineerbowl_to_gatewayfield, gatewayfield_to_fieldhouse, gatewayfield_to_mountaineerbowl,
 		
 		/*======Outdoor Array=====*/
-        mainstreet_to_hartmanrocks, mainstreet_to_cranorhill, hartmanrocks_to_mainstreet,  hartmanrocks_to_bluemesa, bluemesa_to_telluride, bluemesa_to_hartmanrocks, telluride_to_monarchmountain, telluride_to_bluemesa,  monarchmountain_to_taylorpark, monarchmountain_to_telluride,   taylorpark_to_lakeirwin, taylorpark_to_monarchmountain,  lakeirwin_to_taylorpark, lakeirwin_to_cbmr, cbmr_to_lakeirwin, cbmr_to_crestedbutte, crestedbutte_to_cbmr, crestedbutte_to_cranorhill, cranorhill_to_crestedbutte, cranorhill_to_mainstreet ];
+        mainstreet_to_hartmanrocks, mainstreet_to_cranorhill, hartmanrocks_to_mainstreet,  hartmanrocks_to_bluemesa, bluemesa_to_blackcanyon, bluemesa_to_hartmanrocks, telluride_to_monarchmountain, telluride_to_blackcanyon,  monarchmountain_to_taylorpark, monarchmountain_to_telluride,   taylorpark_to_lakeirwin, taylorpark_to_monarchmountain,  lakeirwin_to_taylorpark, lakeirwin_to_cbmr, cbmr_to_lakeirwin, cbmr_to_crestedbutte, crestedbutte_to_cbmr, crestedbutte_to_cranorhill, cranorhill_to_crestedbutte, cranorhill_to_mainstreet, blackcanyon_to_telluride, blackcanyon_to_bluemesa];
 
 
 /***********************
