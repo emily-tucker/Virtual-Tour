@@ -243,7 +243,9 @@ section:target, .show{
     max-width: 12%;
 	min-width:3.5%;
     border: 0;
+	
 }
+
 
 
 
@@ -505,24 +507,31 @@ comment out so the map doesn't auto scale
  * 
  *******************************************/	
 #carousel {
-    position: fixed;
-    top: 85%;
+    position:absolute;
+    top: 90%;
     width:auto;
-    margin-left: 32.5%;
+	height:auto;
 	z-index:0;
+	display:block;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); }
 	
-}
-
 /******************
 * Change Carousel Image size
 ******************/
 #carousel img{
     height: auto;
-    width: 55%;
+    width: 75%;
+	border: 0px none;
+		
 }
 
 .citem {
-	float: right;
+	position: relative;
+	float:left;
+	display: block;
+	margin: 0px;
 	
 	
 }
@@ -530,23 +539,21 @@ comment out so the map doesn't auto scale
 .Thumbimage { 
    position: relative;
    display:block;
-   margin-left:-75px;
-   
+    margin-left:-50px;
 
 }
 
 .Thumbcaption
 {
-
   font:"Arial Black", Gadget, sans-serif 16px;
   letter-spacing: .5px;
   color:#FFF;
   text-align:center;
-  font-size:10px;
+  font-size:16px;
   background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   top: 0%;
-  width: 55%;
+  width: 75%;
   
 }
 
