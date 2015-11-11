@@ -314,13 +314,13 @@ function mapButtonLoad() {
         } else if (map_state === 1) {
             $(".map_button").text("Collapse Map");
             $("#map").animate({
-                width: window.innerWidth * 0.80,
-                height: window.innerHeight * 0.85
+                width: window.innerWidth * 0.70,
+                height: window.innerHeight * 0.80
             }, function () {
                 animate_map(currentLocation);
             });
             $(".map_button").animate({
-                right: window.innerWidth * 0.685
+                right: window.innerWidth * 0.59
             });
             map_state += 1;
         } else if (map_state === 2) {
