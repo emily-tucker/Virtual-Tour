@@ -33,11 +33,12 @@ body.contextual_navigation
 
 .blue .dd-wrapper {
   font-family: Helvetica;
-  font-size: 1.25vw;
+  font-size: 1.3em;
+  
   }
 
 .blue .dd-menu a {
-  background:rgba(0,0,0,0.5);  padding: 3% 3% 3% 5%; display:block; color: white; width:12em;
+  background:rgba(0,0,0,0.5);  padding: 3% 3% 3% 5%; display:block; color: white; width:12em; 
   }
 
 .blue .dd-menu ul a {

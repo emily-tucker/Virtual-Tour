@@ -23,10 +23,9 @@ var subhousing = [
         text: 'Pinnacles',
         icon: 'fa fa-home',
         target: "locations",
-        href: '#pinnacles'
+        href: '#begin'
     })
 ]
-
 
 
 var subvisit = [
