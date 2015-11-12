@@ -1,0 +1,86 @@
+/***************
+*
+* This is going to be css for screens
+*
+***************/
+
+@media handheld {
+
+	.selector-01 {
+		padding: 0;
+		margin: 0;
+		}
+	.selector-02 {
+		padding: 0;
+		margin: 0;
+		}
+	.selector-03 {
+		padding: 0;
+		margin: 0;
+		}
+		
+		/***********************
+* Menu CSS 
+************************/
+.dd-wrapper ul, .dd-wrapper ul li, .dd-wrapper li, .dd-wrapper li ul, .dd-wrapper li ul li {
+  margin: 0; padding: 0; list-style: none; top: 90%; color: black;
+  }
+
+.dd-wrapper .dd-menu {
+  overflow: auto; position: absolute; width:84%;
+  }
+.dd-wrapper  .dd-menu ul {
+  position: absolute; top: 0; right: 0;
+  }
+.first{
+    color: black;
+    text-decoration: none;
+}
+.fa-times{
+    color: white;
+}
+
+/***********************
+* Blue Menu CSS
+************************/
+
+.blue .dd-wrapper {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 2vw;
+  
+  }
+
+.blue .dd-menu a {
+  background:rgba(0,0,0,0.5); padding: 3% 3% 3% 5%; display:block; color: white; width:12em; 
+  }
+
+.blue .dd-menu ul a {
+    background: rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px #000;
+	
+}
+.blue .dd-menu a:hover {
+  background: rgba(255,255,255,.5);
+  }
+.blue .dd-menu li.dd-parent a:hover {
+  color: black; text-shadow: 0 0;
+  }
+.blue .dd-menu li.dd-parent a.active {
+  color: #ccc; background: rgba(0,0,0,0.6);
+  }
+
+/******************************************
+ * 
+ * Menu Width/Position -  Only controls position and width on screen, to change icons use menu_lists
+ * 
+ *******************************************/
+.menu{
+    position: fixed;
+    min-width: 22%; 
+    top: 18%;
+    z-index: 0;
+}
+
+
+}
+
