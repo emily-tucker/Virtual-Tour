@@ -6,20 +6,7 @@
 
 @media handheld {
 
-	.selector-01 {
-		padding: 0;
-		margin: 0;
-		}
-	.selector-02 {
-		padding: 0;
-		margin: 0;
-		}
-	.selector-03 {
-		padding: 0;
-		margin: 0;
-		}
-		
-		/***********************
+/***********************
 * Menu CSS 
 ************************/
 .dd-wrapper ul, .dd-wrapper ul li, .dd-wrapper li, .dd-wrapper li ul, .dd-wrapper li ul li {

@@ -195,7 +195,7 @@ var CIs = [FieldHouse_AquaCenter, FieldHouse_ClimbingWall, FieldHouse_FitCenter,
 
 //Fieldhouse
 
-var Fieldhouse_STJadenFull = new Image("Fieldhouse_STJadenFull", "imgs/Fieldhouse_STJadenFull.jpg");
+/*var Fieldhouse_STJadenFull = new Image("Fieldhouse_STJadenFull", "imgs/Fieldhouse_STJadenFull.jpg");
 var Fieldhouse_STJadenThumb = new Image("Fieldhouse_STJadenThumb", "imgs/Fieldhouse_STJadenThumb.jpg");
 var Fieldhouse_STJaden = new CarouselItem(["#mountaineerbowl"], Fieldhouse_STJadenFull, Fieldhouse_STJadenThumb, "Football - Jaden Terry", '<b>Student Testimonials - Jaden Terry</b><br />I`m Jaden Terry and I`m a student athlete here at Western. I play football and am studying Computer Science.I have really enjoyed my time here and love the small town atmosphere. Being able to play college football and get my degree has been awesome. My professors have been very supportive and understanding of my athletic career. I have also enjoyed hunting and fishing in the Gunnison Valley. Gunnison is known for some of the best locations for hunting and fishing. I couldn`t ask for a better place to spend my college career than Western.</br>&lt;a target=`_self` onClick=&quot;window.location.href=&#x27;http://www.gomountaineers.com/index.aspx?path=football&#x27;&quot;   href=`http://www.gomountaineers.com/index.aspx?path=football`&gt;Click here to read more...&lt;/a&gt;">');
 
@@ -206,7 +206,7 @@ var Fieldhouse_STCaliFull = new Image("Fieldhouse_STCaliFull", "imgs/Fieldhouse_
 var Fieldhouse_STCaliThumb = new Image("Fieldhouse_STCaliThumb", "imgs/Fieldhouse_STCaliThumb.jpg");
 var Fieldhouse_STCali = new CarouselItem(["#fieldhouse"], Fieldhouse_STCaliFull, Fieldhouse_STCaliThumb, "Gym Fish Eye", '<b>Student Testimonials - CaliAntolini </b> <br />Hey there I`m a cross country runner here at western and I cannot imagine being anywhere else chasing my dream! Gunnison gives me the chance to train at the highest elevation, giving me an advantage over any other college competitor. Although cross country is fun, I love the fact that I know a lot of people around here and can make connections since it`s a small friendly town!</br>&lt;a target=`_self` onClick=&quot;window.location.href=&#x27;http://www.gomountaineers.com/index.aspx?path=football&#x27;&quot;   href=`http://www.gomountaineers.com/index.aspx?path=football`&gt;Click here to read more...&lt;/a&gt;">');
 
-CIs.push(Fieldhouse_STCali);
+CIs.push(Fieldhouse_STCali); */
 
 //Hurst
 

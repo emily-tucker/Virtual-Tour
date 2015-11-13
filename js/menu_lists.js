@@ -153,12 +153,7 @@ var subgo = [
         target: "locations",
         href: '#crawford'
     }),
-    new MenuItem({
-        text: 'Escalante',
-        icon: 'fa fa-university ',
-        target: "locations",
-        href: '#escalante'
-    }),
+
     new MenuItem({
         text: 'Hurst Hall',
         icon: 'fa fa-university ',
@@ -188,12 +183,6 @@ var subgo = [
         icon: 'fa fa-university ',
         target: "locations",
         href: '#mountaineerbowl'
-    }),
-    new MenuItem({
-        text: 'Pinnacles',
-        icon: 'fa fa-university ',
-        target: "locations",
-        href: '#pinnacles'
     }),
     new MenuItem({
         text: 'Quigley Hall',
