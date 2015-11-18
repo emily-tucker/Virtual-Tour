@@ -1,0 +1,52 @@
+@media handheld {
+
+	html, body {
+		font: 12px/15px sans-serif;
+		background: #666;
+		padding: 3px;
+		color: #000;
+		margin: 0;
+		}
+	.contextual_assets img {
+    position: fixed;
+	display:block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+	background: repeat center center fixed;
+	 object-fit: cover;
+}
+	.center {
+		width: 100% !important;
+		text-align: center;
+		}
+	a:link, a:visited {
+		text-decoration: underline;
+		color: #0000CC;
+		}
+	a:hover, a:active {
+		text-decoration: underline;
+		color: #660066;
+		}
+
+}
+/* iPhone-specific styles */
+@media only screen and (max-device-width: 480px) { 
+
+	html {
+		-webkit-text-size-adjust: none;
+		}
+
+}
+ @media screen and (orientation:portrait) {
+   .restart_button, .schedule_button, .contact_button {
+	   right: 0px !important;
+}
+
+ }
+ @media screen and (orientation:landscape) {
+     /* Landscape styles */
+     /* show your content*/
+
+ }
+

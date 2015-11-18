@@ -41,7 +41,7 @@ var is_mobile = false;
 var showHide = true; /*bool to determine weather to show or hide the carousel.*/
 var show = 0;
 var currentLocation; //used by just about everything, initialized here
-var academics, main = 1;
+var academics, onCampus = 1;
 var studentLife = 2;
 var athletics = 3;
 var offCampus = 4;
@@ -60,8 +60,8 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
     map_state = 2;
 	
 	if(window.innerHeight > window.innerWidth){
-    alert("Please turn your phone to landscape mode.");
-}
+    alert("Please turn your device to landscape mode."); }
+
 }
 
 /********************************
@@ -445,7 +445,7 @@ function loadMap(locationTag) {
                 document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/offcampusmap4.png">';
 
             } else {
-                $.cookie("tour_track", "onCampus"); /** Create Cookie for on campus Tour Track **/
+                $.cookie("tour_track", onCampus); /** Create Cookie for on campus Tour Track **/
                 document.getElementById("map").innerHTML = '<img class="mapImage" src="imgs/oncampusmap2.jpg">';
 				
 
