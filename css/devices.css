@@ -42,7 +42,9 @@
    .restart_button, .schedule_button, .contact_button {
 	   right: 0px !important;
 }
-
+.dd-wrapper .dd-menu {
+  overflow: auto; position: absolute; min-width: 20%;
+  }
  }
  @media screen and (orientation:landscape) {
      /* Landscape styles */

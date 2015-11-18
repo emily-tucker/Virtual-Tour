@@ -433,7 +433,7 @@ Schedule A Visit Button, Contact Button, Restart Button - These are on every pag
     font:"Arial Black", Gadget, sans-serif 16px;
     letter-spacing: 1px;
     font-size: 1.6vw;
-	  overflow: hidden;
+	overflow: hidden;
     white-space: nowrap;
 		
 }
