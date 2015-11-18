@@ -14,7 +14,7 @@ body.contextual_navigation
   }
 
 .dd-wrapper .dd-menu {
-  overflow: auto; position: absolute; min-width:84%;
+  overflow: auto; position: absolute; 
   }
 .dd-wrapper  .dd-menu ul {
   position: absolute; top: 0; right: 0;
@@ -32,12 +32,12 @@ body.contextual_navigation
 ************************/
 
 .blue .dd-wrapper {
-  font-family: Helvetica;
-  font-size: 1.25vw;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 1.35em;
   }
 
 .blue .dd-menu a {
-  background:rgba(0,0,0,0.5);  padding: 3% 3% 3% 5%; display:block; color: white; width:12em;
+  background:rgba(0,0,0,0.5);  padding: 3% 3% 3% 5%; display:block; color: white; width:14em;
   }
 
 .blue .dd-menu ul a {
@@ -62,7 +62,7 @@ body.contextual_navigation
  *******************************************/
 .menu{
     position: fixed;
-    min-width: 22%; 
+    width: 22%; 
     top: 18%;
     z-index: 0;
 }

@@ -59,8 +59,10 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
     is_mobile = true;
     map_state = 2;
 	
+	
 	if(window.innerHeight > window.innerWidth){
-    alert("Please turn your device to landscape mode."); }
+    //alert("Please turn your device to landscape mode."); 
+	}
 
 }
 
