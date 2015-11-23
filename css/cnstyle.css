@@ -14,7 +14,7 @@ body.contextual_navigation
   }
 
 .dd-wrapper .dd-menu {
-  overflow: auto; position: absolute; 
+  overflow: auto; position: absolute; min-width:84%;
   }
 .dd-wrapper  .dd-menu ul {
   position: absolute; top: 0; right: 0;
@@ -33,11 +33,12 @@ body.contextual_navigation
 
 .blue .dd-wrapper {
   font-family:Arial, Helvetica, sans-serif;
-  font-size: 1.35em;
+  font-size: 2vmin;
+  
   }
 
 .blue .dd-menu a {
-  background:rgba(0,0,0,0.5);  padding: 3% 3% 3% 5%; display:block; color: white; width:14em;
+  background:rgba(0,0,0,0.5);  padding: 3% 3% 3% 5%; display:block; color: white; width:12em;
   }
 
 .blue .dd-menu ul a {
@@ -62,7 +63,7 @@ body.contextual_navigation
  *******************************************/
 .menu{
     position: fixed;
-    width: 22%; 
+    min-width: 22%; 
     top: 18%;
     z-index: 0;
 }
@@ -89,7 +90,7 @@ body.contextual_navigation
     height: 100%;
     overflow: hidden;
 	background: repeat center center fixed;
-	 object-fit: cover;
+    object-fit: cover; /*This right here is the most important css ever. It makes it so the background image in responsive. */
 	
 }
 /******************************************
