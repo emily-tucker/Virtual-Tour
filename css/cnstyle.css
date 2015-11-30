@@ -14,7 +14,7 @@ body.contextual_navigation
   }
 
 .dd-wrapper .dd-menu {
-  overflow: auto; position: absolute; min-width:84%;
+  overflow: auto; position: absolute; min-width:400px;
   }
 .dd-wrapper  .dd-menu ul {
   position: absolute; top: 0; right: 0;
@@ -159,6 +159,7 @@ body.contextual_navigation
 }
 
 .athletics_button, .academics_button, .sl_button, .switch_button  {
+	position: absolute;
 	max-height: 8.5%;
 	min-height: 35px;
 	display: inline-block;
@@ -365,11 +366,18 @@ Schedule A Visit Button, Contact Button, Restart Button - These are on every pag
  * 
  * Other Buttons
  * 
- *******************************************/		
+ *******************************************/	
+.collapse{right: 70% !important;
+			z-index: 100000000;}
+.show{right: 0% !important ;
+		z-index: 100000000;}
+.enlarge{right: 10% !important;
+			z-index: 100000000;} 
+	
 .map_button{
 	position: fixed;
     max-height: 7%;
-    z-index: 100000000;
+    z-index: 10;
 	right: 10%;
     transform-origin: left top 0;
 	-webkit-transform: rotate(90deg); /* Safari and Chrome */
@@ -399,9 +407,7 @@ Schedule A Visit Button, Contact Button, Restart Button - These are on every pag
     font-size: 1.6vw;
 }
 
-.collapse{right: 70% !important;}
-.show{right: 0% !important ;}
-.enlarge{right: 0% !important;}
+
 
 .beginButton, .restart_button, .schedule_button, .contact_button {
 	margin-top: 2%;
@@ -534,4 +540,3 @@ comment out so the map doesn't auto scale
   width: 75%;
   
 }
-

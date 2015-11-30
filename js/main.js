@@ -1,3 +1,4 @@
+
 /*******************************************
  * This file contains all general functions that are called throughout the tour
  * as well as our main calls to functions in other classes the user progresses through the tour
@@ -703,4 +704,5 @@ function dispMainMenu() {
     inner += "</li>";
     $("#drilldown-1").html(inner);
 }
+
 
