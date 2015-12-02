@@ -45,12 +45,21 @@
 }
  @media screen and (orientation:portrait) {
    .restart_button, .schedule_button, .contact_button {
-	   right: 0px !important;
+	   right: 5% !important;
+	   
 }
+.dd-wrapper .dd-menu {
+  overflow: auto; position: absolute; min-width:400px !important;
+  }
  }
  @media screen and (orientation:landscape) {
-     /* Landscape styles */
-     /* show your content*/
+.restart_button, .schedule_button, .contact_button { right: 5% !important; } 
+.switch_button  { position: fixed; z-index:2000; right: 34.6%; top: 40%; }
+.athletics_button { position: fixed; z-index:2000; top: 20%; right: 34.6%; }
+.academics_button { position: fixed; z-index:2000; left: 33%; top: 20%;	}
+.sl_button { position: fixed; z-index:2000; left: 33%; top: 40%; border:1px solid gray;}
+
+
 
  }
 
