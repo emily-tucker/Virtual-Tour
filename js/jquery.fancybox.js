@@ -10,38 +10,6 @@
  *
  */
 
-
-$(document).ready(function() {
-
-			$('.fancybox').fancybox();
-
-			// Disable opening and closing animations, change title type
-			$(".fancybox-effects-b").fancybox({
-				openEffect : 'elastic',
-				openSpeed  : 150,
-
-				closeEffect : 'elastic',
-				closeSpeed  : 150,
-				
-				closeBtn  : true,
-				arrows    : true,
-				nextClick : true,
-				
-
-				helpers : {
-					title : {
-						thumbs : {
-						width  : 100,
-						height : 100
-						},
-						 type:'iframe'
-					}
-				}
-			});
-
-
-		});
-
 (function (window, document, $, undefined) {
 	"use strict";
 
@@ -85,20 +53,20 @@ $(document).ready(function() {
 		version: '2.1.5',
 
 		defaults: {
-			padding : 0,
-			margin  : 0,
+			padding : 15,
+			margin  : 20,
 
 			width     : 800,
-			height    : 800,
-			minWidth  : 300,
-			minHeight : 300,
+			height    : 600,
+			minWidth  : 100,
+			minHeight : 100,
 			maxWidth  : 9999,
 			maxHeight : 9999,
 			pixelRatio: 1, // Set to 2 for retina display support
 
 			autoSize   : true,
-			autoHeight : true,
-			autoWidth  : true,
+			autoHeight : false,
+			autoWidth  : false,
 
 			autoResize  : true,
 			autoCenter  : !isTouch,
@@ -107,13 +75,13 @@ $(document).ready(function() {
 			topRatio    : 0.5,
 			leftRatio   : 0.5,
 
-			scrolling : 'no', // 'auto', 'yes' or 'no'
-			wrapCSS   : 'yes',
+			scrolling : 'auto', // 'auto', 'yes' or 'no'
+			wrapCSS   : '',
 
 			arrows     : true,
 			closeBtn   : true,
 			closeClick : false,
-			nextClick  : true,
+			nextClick  : false,
 			mouseWheel : true,
 			autoPlay   : false,
 			playSpeed  : 3000,
@@ -126,9 +94,8 @@ $(document).ready(function() {
 				headers  : { 'X-fancyBox': true }
 			},
 			iframe : {
-				scrolling : 'no',
-				preload   : true,
-				
+				scrolling : 'auto',
+				preload   : true
 			},
 			swf : {
 				wmode: 'transparent',
@@ -155,15 +122,15 @@ $(document).ready(function() {
 			},
 
 			direction : {
-				next : 'right',
-				prev : 'left'
+				next : 'left',
+				prev : 'right'
 			},
 
 			scrollOutside  : true,
 
 			// Override some properties
 			index   : 0,
-			type    : 'iframe',
+			type    : null,
 			href    : null,
 			content : null,
 			title   : null,
@@ -172,7 +139,7 @@ $(document).ready(function() {
 			tpl: {
 				wrap     : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
 				image    : '<img class="fancybox-image" src="{href}" alt="" />',
-				iframe   : '<iframe id="fancybox-frame{rnd}" name="fancybox-frame{rnd}" class="fancybox-iframe" frameborder="none" vspace="0" hspace="0" webkitAllowFullScreen mozallowfullscreen 		allowFullScreen' + (IE ? ' allowtransparency="true"' : '') + '></iframe>',
+				iframe   : '<iframe id="fancybox-frame{rnd}" name="fancybox-frame{rnd}" class="fancybox-iframe" frameborder="0" vspace="0" hspace="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen' + (IE ? ' allowtransparency="true"' : '') + '></iframe>',
 				error    : '<p class="fancybox-error">The requested content cannot be loaded.<br/>Please try again later.</p>',
 				closeBtn : '<a title="Close" class="fancybox-item fancybox-close" href="javascript:;"></a>',
 				next     : '<a title="Next" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
@@ -181,22 +148,18 @@ $(document).ready(function() {
 
 			// Properties for each animation type
 			// Opening fancyBox
-			
-			
-			openEffect  : 'elastic', // 'elastic', 'fade' or 'none'
+			openEffect  : 'fade', // 'elastic', 'fade' or 'none'
 			openSpeed   : 250,
 			openEasing  : 'swing',
 			openOpacity : true,
 			openMethod  : 'zoomIn',
 
-
 			// Closing fancyBox
-			closeEffect  : 'elastic', // 'elastic', 'fade' or 'none'
+			closeEffect  : 'fade', // 'elastic', 'fade' or 'none'
 			closeSpeed   : 250,
 			closeEasing  : 'swing',
 			closeOpacity : true,
 			closeMethod  : 'zoomOut',
-
 
 			// Changing next gallery item
 			nextEffect : 'elastic', // 'elastic', 'fade' or 'none'
@@ -204,27 +167,16 @@ $(document).ready(function() {
 			nextEasing : 'swing',
 			nextMethod : 'changeIn',
 
-
 			// Changing previous gallery item
-			prevEffect : 'fade', // 'elastic', 'fade' or 'none'
+			prevEffect : 'elastic', // 'elastic', 'fade' or 'none'
 			prevSpeed  : 250,
 			prevEasing : 'swing',
 			prevMethod : 'changeOut',
 
-
 			// Enable default helpers
 			helpers : {
 				overlay : true,
-				autoSize: true, // shouldn't be true ?
-    			fitToView: true,
-    			minWidth: 160,
-				title : {
-						thumbs : {
-						width  : 160,
-						height : 160
-						},
-						type : 'over'}
-			
+				title   : true
 			},
 
 			// Callbacks
@@ -1918,7 +1870,7 @@ $(document).ready(function() {
 
 	F.helpers.title = {
 		defaults : {
-			type     : 'float', // 'float', 'inside', 'outside' or 'over',
+			type     : 'over', // 'float', 'inside', 'outside' or 'over',
 			position : 'bottom' // 'top' or 'bottom'
 		},
 
@@ -1964,7 +1916,7 @@ $(document).ready(function() {
 					title.wrapInner('<span class="child"></span>');
 
 					//Increase bottom margin so this title will also fit into viewport
-					F.current.margin[2] += Math.abs( getScalar(title.css('margin-bottom')) );
+					F.current.margin[6] += Math.abs( getScalar(title.css('margin-bottom')) );
 				break;
 			}
 
@@ -2066,4 +2018,3 @@ $(document).ready(function() {
 	});
 
 }(window, document, jQuery));
-

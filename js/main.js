@@ -574,7 +574,7 @@ $(function () {
      ***********************/
     $(document).on('click', '.fancybox', function (event) {
         event.preventDefault();
-
+ 
         $.fancybox.open({
             type: 'iframe',
             href: this.href,
@@ -582,6 +582,10 @@ $(function () {
 
         })
     });
+	
+});
+ $(".fancybox").fancybox({
+    padding: 0    
 });
 
 /***********************
