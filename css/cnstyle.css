@@ -14,7 +14,7 @@ body.contextual_navigation
   }
 
 .dd-wrapper .dd-menu {
-  overflow: auto; position: absolute; min-width:84%;
+  overflow: auto; position: absolute; min-width:86%;
   }
 .dd-wrapper  .dd-menu ul {
   position: absolute; top: 0; right: 0;
@@ -38,7 +38,7 @@ body.contextual_navigation
   }
 
 .blue .dd-menu a {
-  background:rgba(0,0,0,0.5);  padding: 3% 3% 3% 10%; display:block; color: white; width:12em;
+  background:rgba(0,0,0,0.5);  padding: 5% 5% 5% 5%; display:block; color: white; width:13em;
   }
 
 .blue .dd-menu ul a {
@@ -46,12 +46,6 @@ body.contextual_navigation
     text-shadow: 1px 1px #000;
 	
 }
-.blue .dd-menu a:hover {
-  background: rgba(255,255,255,.5);
-  }
-.blue .dd-menu li.dd-parent a:hover {
-  color: black; text-shadow: 0 0;
-  }
 .blue .dd-menu li.dd-parent a.active {
   color: #ccc; background: rgba(0,0,0,0.6);
   }

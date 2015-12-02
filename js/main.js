@@ -62,7 +62,7 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
 	
 	
 	if(window.innerHeight > window.innerWidth){
-    //alert("Please turn your device to landscape mode."); 
+    $("menu").css("background-color"); 
 	}
 
 }
