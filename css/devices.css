@@ -1,3 +1,34 @@
+.switch_mobile {
+    position: fixed;
+    z-index:2000;
+	right: 34.6%;
+    top: 30%;
+
+}
+.athletics_mobile {
+    position: fixed;
+    z-index:2000;
+	top: 20%;
+    right: 34.6%; 
+
+
+}
+.academics_mobile {
+   position: fixed;
+    z-index:2000;
+	left: 33%;
+    top: 20%;
+	
+}
+.sl_mobile {
+    position: fixed;
+    z-index:2000;
+	left: 33%;
+    top: 30%;
+	border:1px solid gray;
+  
+  
+}
 @media handheld {
 
 /* iPhone-specific styles */

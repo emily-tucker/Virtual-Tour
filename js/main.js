@@ -59,10 +59,15 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
     showHide = false;
     is_mobile = true;
     map_state = 2;
+	$(".menu").hide();
 	
 	
 	if(window.innerHeight > window.innerWidth){
-    $("menu").css("background-color"); 
+    $("to_studentlife").css("");
+	 $("to_studentlife").removeAttr("style"); 
+	$("to_academics").css("background-color"); 
+	$("to_athletics").css("background-color"); 
+	$("to_offcampus").css("background-color"); 
 	}
 
 }
@@ -80,6 +85,32 @@ function animate_map(locationTag, time) {
 
 
 }
+
+        /*************************
+         * Tour Instance functionality
+         **************************/
+
+
+        $('body').on('click', '.to_academics', function () {
+            tour_track = academics;
+            console.log('Tour ' + tour_track);
+        });
+
+        $('body').on('click', '.to_studentlife', function () {
+            tour_track = studentLife;
+            console.log('Tour ' + tour_track);
+        });
+
+        $('body').on('click', '.to_athletics', function () {
+            tour_track = athletics;
+            console.log('Tour ' + tour_track);
+        });
+        $('body').on('click', '.to_offcampus', function () {
+            tour_track = offCampus;
+            console.log('Tour ' + tour_track);
+
+        });
+		
 
 /**************************
  *  Video Out Animation   *
@@ -169,7 +200,7 @@ function loadMainButtons() {
             inner_html +=
 		
 				
-                "<button class='to_athletics athletics_button row ' onclick=window.location='#fieldhouse'> Athletics Tour</button>" +
+                "<button class='to_athletics athletics_button row col-md-*' onclick=window.location='#fieldhouse'> Athletics Tour</button>" +
                 "<button class='to_studentlife sl_button row ' onclick=window.location='#universitycenter'>Student Life Tour</button>" +
                 "<button class='to_academics academics_button row' onclick=window.location='#taylor'> Academics Tour</button>" +
                 "<button class='to_offcampus switch_button row ' onclick=window.location='#mainstreet'>Off Campus Tour</button>" +
@@ -195,31 +226,6 @@ function loadMainButtons() {
 
 
 
-        /*************************
-         * Tour Instance functionality
-         **************************/
-
-
-        $('body').on('click', '.to_academics', function () {
-            tour_track = academics;
-            console.log('Tour ' + tour_track);
-        });
-
-        $('body').on('click', '.to_studentlife', function () {
-            tour_track = studentLife;
-            console.log('Tour ' + tour_track);
-        });
-
-        $('body').on('click', '.to_athletics', function () {
-            tour_track = athletics;
-            console.log('Tour ' + tour_track);
-        });
-        $('body').on('click', '.to_offcampus', function () {
-            tour_track = offCampus;
-            console.log('Tour ' + tour_track);
-
-        });
-		
 
     }
 	
