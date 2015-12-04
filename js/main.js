@@ -63,11 +63,7 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
 	
 	
 	if(window.innerHeight > window.innerWidth){
-    $("to_studentlife").css("");
-	 $("to_studentlife").removeAttr("style"); 
-	$("to_academics").css("background-color"); 
-	$("to_athletics").css("background-color"); 
-	$("to_offcampus").css("background-color"); 
+   
 	}
 
 }
