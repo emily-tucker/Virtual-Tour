@@ -313,7 +313,7 @@ section:target, .show{
 Schedule A Visit Button, Contact Button, Restart Button - These are on every page 
 *******************/
 .schedule_button {
-    position: absolute;
+    position: fixed;
     z-index: 1;
     right: 1%;
     top:37.5%;
@@ -323,7 +323,7 @@ Schedule A Visit Button, Contact Button, Restart Button - These are on every pag
 
 
 .contact_button {
-    position:absolute;
+    position:fixed;
 	padding-right: 10px;
     z-index: 1;
     right: 1%;
@@ -333,7 +333,7 @@ Schedule A Visit Button, Contact Button, Restart Button - These are on every pag
 }
 
 .restart_button {
-    position:absolute;
+    position:fixed;
     z-index: 1;
     right: 1%;
     top: 45.5%;
@@ -530,208 +530,4 @@ comment out so the map doesn't auto scale
   width: 75%;
   
 }
-@media only screen and (max-device-width: 480px) {
-  /* define mobile specific styles come here */
-  .homeButton { 
-	width: 20% !important;
-	height: auto !important; 
-	left: 0px;
-  }
-  
-  .caption_wrapper {
-    width:80% !important;
-    height:auto;
-}
 
-  #caption_title {
-   font:Arial, Helvetica, sans-serif;
-   letter-spacing: .75px;
-   font-size: 16px;	
-}
-
-.description {
-    font:"Arial Black", Gadget, sans-serif;
-    letter-spacing: 1px;
-    font-size: 12px;
-}
-.schedule_button {
-    position: absolute;
-    z-index: 1;
-    top:40%;
-	width:8em;
-}
-
-.contact_button {
-    position:absolute;
-	padding-right: 10px;
-    z-index: 1;
-    top:44%;
-	width:8em;
-}
-
-.restart_button {
-    position:absolute;
-    z-index: 1;
-    top: 48%;
-	width:8em;
-	
-}
-.restart_button, .schedule_button, .contact_button {
-    letter-spacing: 1px;
-    font-size: 10px;
-	overflow:hidden;
-	word-wrap:normal;
-    white-space: nowrap;
-	left: 4%;
-
-}
-.restart_button:hover, .schedule_button:hover, .contact_button:hover{
-	box-shadow: inset 0 0 0 1.5px rgba(167,25,48,1);
-    letter-spacing: 1px;
-    font-size: 10px;
-	word-wrap:normal;
-    white-space: nowrap;	
-}
-.hide_button{display: none !important;}
-.menu{display: none !important;}
-.switch_button  {
-    position: fixed;
-    z-index:2000;
-	right: 20%;
-    top: 40%;
-
-}
-.athletics_button {
-    position: fixed;
-    z-index:2000;
-	top: 50%;
-    right: 25%;
-
-
-}
-.academics_button {
-   position: fixed;
-    z-index:2000;
-	right: 20%;
-    top: 30%;
-	
-}
-.sl_button {
-    position: fixed;
-    z-index:2000;
-	right: 25%;
-    top: 60%;
-  
-}
-.athletics_button, .academics_button, .sl_button, .switch_button  {
-	overflow: hidden;
-	word-wrap:normal;
-    letter-spacing: .8px;
-    font-size: 20px;
-	width:9.5em;
-}
-
-}
- @media only screen and (orientation: portrait){
-  /* define mobile specific styles come here */
-  .homeButton { 
-	width: 20% !important;
-	height: auto !important; 
-	left: 0px;
-  }
-  
-  .caption_wrapper {
-    width:80% !important;
-    height:auto;
-}
-
-  #caption_title {
-   font:Arial, Helvetica, sans-serif;
-   letter-spacing: .75px;
-   font-size: 20px;	
-}
-
-.description {
-    font:"Arial Black", Gadget, sans-serif;
-    letter-spacing: 1px;
-    font-size: 16px;
-}
-.schedule_button {
-    position: absolute;
-    z-index: 1;
-    right: 2%;
-    top:28%;
-	width:8em;
-}
-
-.contact_button {
-    position:absolute;
-    z-index: 1;
-    right: 2%;
-    top:36%;
-	width:8em;
-}
-
-.restart_button {
-    position:absolute;
-    z-index: 1;
-    right: 2%;
-    top: 44%;
-	width:8em;
-	
-}
-.restart_button, .schedule_button, .contact_button {
-    letter-spacing: 1px;
-    font-size: 12px;
-	overflow: hidden;
-    white-space: nowrap;
-	left: 6%;
-
-}
-.hide_button{
-	display: none !important;
-}
-.menu{
-    display: none !important;
-
-}
-
-.switch_button  {
-    position: fixed;
-    z-index:2000;
-	right: 34.6%;
-    top: 40%;
-
-}
-.athletics_button {
-    position: fixed;
-    z-index:2000;
-	top: 60%;
-    right: 34.6%; 
-
-
-}
-.academics_button {
-   position: fixed;
-    z-index:2000;
-	left: 33%;
-    top: 20%;
-	
-}
-.sl_button {
-    position: fixed;
-    z-index:2000;
-	left: 33%;
-    top: 60%;
-  
-}
-
-.athletics_button, .academics_button, .sl_button, .switch_button  {
-	overflow: hidden;
-	word-wrap:normal;
-    letter-spacing: .8px;
-    font-size: 26px;
-	width:9.5em;
-}
-
- }
