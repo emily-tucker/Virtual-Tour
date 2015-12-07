@@ -1,188 +1,19 @@
-
-@media handheld {
-	.switch_mobile {
-    position: fixed;
-    z-index:2000;
-	right: 34.6%;
-    top: 30%;
-
-}
-.athletics_mobile {
-    position: fixed;
-    z-index:2000;
-	top: 20%;
-    right: 34.6%; 
-
-
-}
-.academics_mobile {
-   position: fixed;
-    z-index:2000;
-	left: 33%;
-    top: 20%;
-	
-}
-.sl_mobile {
-    position: fixed;
-    z-index:2000;
-	left: 33%;
-    top: 30%;
-	border:1px solid gray;
-  
-  
-}
-.caption_wrapper {
-    width:33.33%;
-    height:auto;
-    left: 20%;
-    overflow:hidden;
-    position:fixed;
-	top:0;
-}
-
-.caption {
-	font:Arial, Helvetica, sans-serif;
-    height:auto;
-    padding-bottom: 5px;
-    width:100%;
-    text-align:center;
-    color:#FFF;
-    background-color: rgba(0, 0, 0, 0.65);
-    position:relative;
-    z-index:2;
-}
-
-#caption_title {
-   font:Arial, Helvetica, sans-serif;
-    letter-spacing: .75px;
-    font-size: 44px;
-	
-	
-}
-
-.description {
-    font:"Arial Black", Gadget, sans-serif;
-    letter-spacing: 1px;
-    font-size: 36px;
-}
-}
-
-/* iPhone-specific styles */
-@media only screen and (max-device-width: 480px) { 
-
-	html {
-		-webkit-text-size-adjust: none;
-		
-		}
-		.caption_wrapper {
-    width:33.33%;
-    height:auto;
-    left: 20%;
-    overflow:hidden;
-    position:fixed;
-	top:0;
-}
-
-.caption {
-	font:Arial, Helvetica, sans-serif;
-    height:auto;
-    padding-bottom: 5px;
-    width:100%;
-    text-align:center;
-    color:#FFF;
-    background-color: rgba(0, 0, 0, 0.65);
-    position:relative;
-    z-index:2;
-}
-
-#caption_title {
-   font:Arial, Helvetica, sans-serif;
-    letter-spacing: .75px;
-    font-size: 44px;
-	
-	
-}
-
-.description {
-    font:"Arial Black", Gadget, sans-serif;
-    letter-spacing: 1px;
-    font-size: 36px;
-}
-
-}
- @media screen and (orientation:portrait) {
-   .restart_button, .schedule_button, .contact_button {
-	   top: 0% !important;
-	   right: 5% !important;
-	   
-}
-.caption_wrapper {
-    width:33.33%;
-    height:auto;
-    left: 20%;
-    overflow:hidden;
-    position:fixed;
-	top:0;
-}
-
-.caption {
-	font:Arial, Helvetica, sans-serif;
-    height:auto;
-    padding-bottom: 5px;
-    width:100%;
-    text-align:center;
-    color:#FFF;
-    background-color: rgba(0, 0, 0, 0.65);
-    position:relative;
-    z-index:2;
-}
-
-#caption_title {
-   font:Arial, Helvetica, sans-serif;
-    letter-spacing: .75px;
-    font-size: 44px;
-	
-	
-}
-
-.description {
-    font:"Arial Black", Gadget, sans-serif;
-    letter-spacing: 1px;
-    font-size: 36px;
-}
-.dd-wrapper .dd-menu {
-  overflow: auto; position: absolute; min-width:400px !important;
-  
+@media only screen and (max-device-width: 480px) {
+  /* define mobile specific styles come here */
+  .homeButton { 
+	width: 15.8% !important;
+	height: auto !important; 
   }
- }
- @media screen and (orientation:landscape) {
-.caption_wrapper {
-    width:33.33%;
+  
+  .caption_wrapper {
+    width:55%;
     height:auto;
-    left: 20%;
-    overflow:hidden;
-    position:fixed;
-	top:0;
 }
 
-.caption {
-	font:Arial, Helvetica, sans-serif;
-    height:auto;
-    padding-bottom: 5px;
-    width:100%;
-    text-align:center;
-    color:#FFF;
-    background-color: rgba(0, 0, 0, 0.65);
-    position:relative;
-    z-index:2;
-}
-
-#caption_title {
+  #caption_title {
    font:Arial, Helvetica, sans-serif;
-    letter-spacing: .75px;
-    font-size: 44px;
-	
-	
+   letter-spacing: .75px;
+   font-size: 44px;	
 }
 
 .description {
@@ -190,6 +21,38 @@
     letter-spacing: 1px;
     font-size: 36px;
 }
+.schedule_button {
+    position: absolute;
+    z-index: 1;
+    right: 2%;
+    top:0%;
+	width:12em;
+}
 
- }
+.contact_button {
+    position:absolute;
+	padding-right: 10px;
+    z-index: 1;
+    right: 2%;
+    top:10%;
+	width:12em;
+}
+
+.restart_button {
+    position:absolute;
+    z-index: 1;
+    right: 2%;
+    top: 20%;
+	width:12em;
+	
+}
+.restart_button, .schedule_button, .contact_button {
+    letter-spacing: 1px;
+    font-size: 20px;
+	overflow: hidden;
+    white-space: nowrap;
+
+}
+}
+
 

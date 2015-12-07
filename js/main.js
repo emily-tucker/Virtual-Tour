@@ -60,6 +60,7 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
     is_mobile = true;
     map_state = 2;
 	$("#map").hide('blind');
+	$(".menu").hide('blind');
 	
 	
 	if(window.innerHeight > window.innerWidth){
