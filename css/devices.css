@@ -1,4 +1,6 @@
-.switch_mobile {
+
+@media handheld {
+	.switch_mobile {
     position: fixed;
     z-index:2000;
 	right: 34.6%;
@@ -29,14 +31,83 @@
   
   
 }
-@media handheld {
+.caption_wrapper {
+    width:33.33%;
+    height:auto;
+    left: 20%;
+    overflow:hidden;
+    position:fixed;
+	top:0;
+}
+
+.caption {
+	font:Arial, Helvetica, sans-serif;
+    height:auto;
+    padding-bottom: 5px;
+    width:100%;
+    text-align:center;
+    color:#FFF;
+    background-color: rgba(0, 0, 0, 0.65);
+    position:relative;
+    z-index:2;
+}
+
+#caption_title {
+   font:Arial, Helvetica, sans-serif;
+    letter-spacing: .75px;
+    font-size: 44px;
+	
+	
+}
+
+.description {
+    font:"Arial Black", Gadget, sans-serif;
+    letter-spacing: 1px;
+    font-size: 36px;
+}
+}
 
 /* iPhone-specific styles */
 @media only screen and (max-device-width: 480px) { 
 
 	html {
 		-webkit-text-size-adjust: none;
+		
 		}
+		.caption_wrapper {
+    width:33.33%;
+    height:auto;
+    left: 20%;
+    overflow:hidden;
+    position:fixed;
+	top:0;
+}
+
+.caption {
+	font:Arial, Helvetica, sans-serif;
+    height:auto;
+    padding-bottom: 5px;
+    width:100%;
+    text-align:center;
+    color:#FFF;
+    background-color: rgba(0, 0, 0, 0.65);
+    position:relative;
+    z-index:2;
+}
+
+#caption_title {
+   font:Arial, Helvetica, sans-serif;
+    letter-spacing: .75px;
+    font-size: 44px;
+	
+	
+}
+
+.description {
+    font:"Arial Black", Gadget, sans-serif;
+    letter-spacing: 1px;
+    font-size: 36px;
+}
 
 }
  @media screen and (orientation:portrait) {
@@ -45,19 +116,80 @@
 	   right: 5% !important;
 	   
 }
+.caption_wrapper {
+    width:33.33%;
+    height:auto;
+    left: 20%;
+    overflow:hidden;
+    position:fixed;
+	top:0;
+}
+
+.caption {
+	font:Arial, Helvetica, sans-serif;
+    height:auto;
+    padding-bottom: 5px;
+    width:100%;
+    text-align:center;
+    color:#FFF;
+    background-color: rgba(0, 0, 0, 0.65);
+    position:relative;
+    z-index:2;
+}
+
+#caption_title {
+   font:Arial, Helvetica, sans-serif;
+    letter-spacing: .75px;
+    font-size: 44px;
+	
+	
+}
+
+.description {
+    font:"Arial Black", Gadget, sans-serif;
+    letter-spacing: 1px;
+    font-size: 36px;
+}
 .dd-wrapper .dd-menu {
   overflow: auto; position: absolute; min-width:400px !important;
   
   }
  }
  @media screen and (orientation:landscape) {
-.restart_button, .schedule_button, .contact_button { right: 5% !important; } 
-.switch_button  { position: fixed; z-index:2000; right: 34.6%; bottom: 40%; }
-.athletics_button { position: fixed; z-index:2000; top: 20%; right: 34.6%; }
-.academics_button { position: fixed; z-index:2000; left: 33%; top: 20%;	}
-.sl_button { position: fixed; z-index:2000; left: 33%; bottom: 40%; border:1px solid gray;}
+.caption_wrapper {
+    width:33.33%;
+    height:auto;
+    left: 20%;
+    overflow:hidden;
+    position:fixed;
+	top:0;
+}
 
+.caption {
+	font:Arial, Helvetica, sans-serif;
+    height:auto;
+    padding-bottom: 5px;
+    width:100%;
+    text-align:center;
+    color:#FFF;
+    background-color: rgba(0, 0, 0, 0.65);
+    position:relative;
+    z-index:2;
+}
 
+#caption_title {
+   font:Arial, Helvetica, sans-serif;
+    letter-spacing: .75px;
+    font-size: 44px;
+	
+	
+}
+
+.description {
+    font:"Arial Black", Gadget, sans-serif;
+    letter-spacing: 1px;
+    font-size: 36px;
+}
 
  }
-}
+

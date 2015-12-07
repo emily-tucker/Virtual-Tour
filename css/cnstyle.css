@@ -63,7 +63,7 @@ body.contextual_navigation
     position: fixed;
     width: 20%;
 	max-width:20%;  !important;
-    top: 20%;
+    top: 18%;
     z-index: 0;
 }
 /******************************************
@@ -171,7 +171,7 @@ body.contextual_navigation
 	border:1px solid #000;
     color:#FFF;
     letter-spacing: .8px;
-    font-size: 2.5em;
+    font-size: 1.7vw;
 	text-shadow: 1px 1px #000;
 	width:9.5em;
 }
@@ -242,8 +242,13 @@ section:target, .show{
     z-index: 1;
     max-width: 12%;
 	min-width:3.5%;
-    border: 0;	
+    border: 0;
+	
 }
+
+
+
+
 .hotspot {
     position: fixed;
 	height: auto;
@@ -413,7 +418,7 @@ Schedule A Visit Button, Contact Button, Restart Button - These are on every pag
     color:#FFF;
     font:"Arial Black", Gadget, sans-serif 16px;
     letter-spacing: 1px;
-    font-size: 2.45em;
+    font-size: 1.6vw;
 	overflow: hidden;
     white-space: nowrap;
 	
@@ -430,7 +435,7 @@ Schedule A Visit Button, Contact Button, Restart Button - These are on every pag
     color:#FFF;
     font:"Arial Black", Gadget, sans-serif 16px;
     letter-spacing: 1px;
-    font-size: 2em;
+    font-size: 1.6vw;
 	overflow: hidden;
     white-space: nowrap;
 		
@@ -449,7 +454,7 @@ comment out so the map doesn't auto scale
     width:33.33%;
     height:auto;
     left: 20%;
-    overflow:visible;
+    overflow:hidden;
     position:fixed;
 	top:0;
 }
@@ -469,7 +474,7 @@ comment out so the map doesn't auto scale
 #caption_title {
    font:Arial, Helvetica, sans-serif;
     letter-spacing: .75px;
-    font-size: 2.75em;
+    font-size: 1.8vw;
 	
 	
 }
@@ -477,7 +482,7 @@ comment out so the map doesn't auto scale
 .description {
     font:"Arial Black", Gadget, sans-serif;
     letter-spacing: 1px;
-    font-size: 1.75em;
+    font-size: 1.2vw;
 }
 /******************************************
  * 
@@ -533,4 +538,71 @@ comment out so the map doesn't auto scale
   top: 0%;
   width: 75%;
   
+}
+@media handheld {
+	.switch_mobile {
+    position: fixed;
+    z-index:2000;
+	right: 34.6%;
+    top: 30%;
+
+}
+.athletics_mobile {
+    position: fixed;
+    z-index:2000;
+	top: 20%;
+    right: 34.6%; 
+
+
+}
+.academics_mobile {
+   position: fixed;
+    z-index:2000;
+	left: 33%;
+    top: 20%;
+	
+}
+.sl_mobile {
+    position: fixed;
+    z-index:2000;
+	left: 33%;
+    top: 30%;
+	border:1px solid gray;
+  
+  
+}
+.caption_wrapper {
+    width:33.33%;
+    height:auto;
+    left: 20%;
+    overflow:hidden;
+    position:fixed;
+	top:0;
+}
+
+.caption {
+	font:Arial, Helvetica, sans-serif;
+    height:auto;
+    padding-bottom: 5px;
+    width:100%;
+    text-align:center;
+    color:#FFF;
+    background-color: rgba(0, 0, 0, 0.65);
+    position:relative;
+    z-index:2;
+}
+
+#caption_title {
+   font:Arial, Helvetica, sans-serif;
+    letter-spacing: .75px;
+    font-size: 44px;
+	
+	
+}
+
+.description {
+    font:"Arial Black", Gadget, sans-serif;
+    letter-spacing: 1px;
+    font-size: 36px;
+}
 }
