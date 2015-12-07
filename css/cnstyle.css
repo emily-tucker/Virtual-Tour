@@ -558,7 +558,7 @@ comment out so the map doesn't auto scale
     position: absolute;
     z-index: 1;
     right: 2%;
-    top:20%;
+    top:36%;
 	width:8em;
 }
 
@@ -567,7 +567,7 @@ comment out so the map doesn't auto scale
 	padding-right: 10px;
     z-index: 1;
     right: 2%;
-    top:28%;
+    top:40%;
 	width:8em;
 }
 
@@ -575,28 +575,25 @@ comment out so the map doesn't auto scale
     position:absolute;
     z-index: 1;
     right: 2%;
-    top: 36%;
+    top: 44%;
 	width:8em;
 	
 }
 .restart_button, .schedule_button, .contact_button {
     letter-spacing: 1px;
-    font-size: 12px;
+    font-size: 10px;
 	overflow: hidden;
     white-space: nowrap;
+	left: 8%;
 
 }
-.hide_button{
-	display: none !important;
-}
-.menu{
-	display: none;}
-
+.hide_button{display: none !important;}
+.menu{display: none !important;}
 .athletics_button, .academics_button, .sl_button, .switch_button  {
 	overflow: hidden;
 	word-wrap:normal;
     letter-spacing: .8px;
-    font-size: 20px;
+    font-size: 16px !important;
 	width:9.5em;
 }
 
@@ -629,16 +626,15 @@ comment out so the map doesn't auto scale
     position: absolute;
     z-index: 1;
     right: 2%;
-    top:20%;
+    top:28%;
 	width:8em;
 }
 
 .contact_button {
     position:absolute;
-	padding-right: 10px;
     z-index: 1;
     right: 2%;
-    top:28%;
+    top:36%;
 	width:8em;
 }
 
@@ -646,7 +642,7 @@ comment out so the map doesn't auto scale
     position:absolute;
     z-index: 1;
     right: 2%;
-    top: 36%;
+    top: 44%;
 	width:8em;
 	
 }
@@ -655,13 +651,14 @@ comment out so the map doesn't auto scale
     font-size: 12px;
 	overflow: hidden;
     white-space: nowrap;
+	left: 6%;
 
 }
 .hide_button{
 	display: none !important;
 }
 .menu{
-		display: none;
+    display: none !important;
 
 }
 
