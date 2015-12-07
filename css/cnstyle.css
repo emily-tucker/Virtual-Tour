@@ -530,7 +530,7 @@ comment out so the map doesn't auto scale
   width: 75%;
   
 }
-@media only screen {
+@media only screen and (max-device-width: 480px) {
   /* define mobile specific styles come here */
   .homeButton { 
 	width: 20% !important;
