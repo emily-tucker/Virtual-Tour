@@ -23,26 +23,35 @@
     font-size: 16px;
 }
 .schedule_button {
-	position:fixed;
+    position: fixed;
     z-index: 1;
-    right: 2%;
-    top:80%;
-	width:8em;
+    right: 1%;
+     top:85%;
+    min-width: 30%;
+	width:12em;
+	
 }
+
 
 .contact_button {
     position:fixed;
+	padding-right: 10px;
     z-index: 1;
-    right: 2%;
-    top:85%;
-	width:8em;
+    right: 1%;
+    top:90%;
+    min-width: 30%;
+	width:12em;
+
 }
 
 .restart_button {
     position:fixed;
     z-index: 1;
-    top: 90%;
-	width:8em;
+    right: 1%;
+    top: 95%;
+    min-width: 30%;
+	width:12em;
+
 	
 }
 .restart_button, .schedule_button, .contact_button {
