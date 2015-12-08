@@ -161,8 +161,7 @@ body.contextual_navigation
 	position: fixed;
 	max-height: 8.5%;
 	min-height: 35px;
-	display: inline-block;
-    width: inherit;
+	display:block;
     height: 100%;
 	overflow: hidden;
 	word-wrap:normal;

@@ -26,7 +26,7 @@
     position: fixed;
     z-index: 1;
     right: 1%;
-     top:85%;
+     top:79%;
     min-width: 30%;
 	width:12em;
 	
@@ -38,7 +38,7 @@
 	padding-right: 10px;
     z-index: 1;
     right: 1%;
-    top:90%;
+    top:87%;
     min-width: 30%;
 	width:12em;
 
@@ -56,7 +56,7 @@
 }
 .restart_button, .schedule_button, .contact_button {
     letter-spacing: 1px;
-    font-size: 16px;
+    font-size: 18px;
 	overflow:hidden;
 	word-wrap:normal;
     white-space: nowrap;
@@ -67,12 +67,14 @@
 .restart_button:hover, .schedule_button:hover, .contact_button:hover{
 	box-shadow: inset 0 0 0 1.5px rgba(167,25,48,1);
     letter-spacing: 1px;
-    font-size: 16px;
+    font-size: 18px;
 	word-wrap:normal;
     white-space: nowrap;	
 }
 .hide_button{display: none !important;}
 .menu{display: none !important;}
+#map{display: none !important;}
+.map_button{display: none !important;}
 
 .switch_button  {
     position: fixed;
@@ -122,9 +124,12 @@
 
 
  }
- /* @media only screen and (orientation: landscape){
-  /* define mobile specific styles come here */
-  /*.homeButton { 
+  @media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: landscape) {
+  .homeButton { 
 	width: 20% !important;
 	height: auto !important; 
 	left: 0px;
@@ -224,4 +229,4 @@
 	width:9.5em;
 }
 
- }*/
+ }

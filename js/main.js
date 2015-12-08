@@ -350,8 +350,8 @@ function mapButtonLoad() {
     });
 }
 /********************************
-     *  Mouse movement on Map           *
-     ********************************/
+ *  Mouse movement on Map           *
+********************************/
     var clicking = false;
     var previousX;
     var previousY;
