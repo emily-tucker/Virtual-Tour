@@ -75,6 +75,7 @@
 .menu{display: none !important;}
 #map{display: none !important;}
 .map_button{display: none !important;}
+.citem {display: none !important;}
 
 .switch_button  {
     position: fixed;
