@@ -1,9 +1,4 @@
-
-  @media only screen 
-  and (device-width: 320px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 3) 
-  and (orientation: landscape)  {
+@media only screen and (orientation: landscape)  {
   .homeButton { 
 	width: 20% !important;
 	height: auto !important; 
