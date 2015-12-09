@@ -290,7 +290,6 @@ function mapButtonLoad() {
         inner_html += "<button class='map_button'>Collapse Map</button>"
     } else if (map_state === 1) {
         inner_html += "<button class='map_button'>Enlarge Map</button>"
-	 
     } else if (map_state === 0) {
         inner_html += "<button class='map_button'>Show Map</button>"
     }
