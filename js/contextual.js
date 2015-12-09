@@ -7,11 +7,11 @@
 	var borick = new Location("#borick", "Borick Buisness Building", "academic",
             "Prominent and relatively new, state-of-the-art Borick is home to Western's new School of Business. It includes a virtual classroom that can connect easily with similar facilities around the world.", 842, 635);
 	var chipeta = new Location("#chipeta", "Chipeta Student Housing", "studentlife",
-            "Co-ed apartments on the southwest corner of campus, featuring furnished one- and two-bedroom units. Also home to Western's Lesbian/Gay/Bisexual Student Alliance.",  203, 611);
+            "Co-ed apartments on the southwest corner of campus, featuring furnished one- and two-bedroom units. Also home to Western's Lesbian/Gay/Bisexual Student Alliance.",  263, 611);
 	var crawford = new Location("#crawford", "Crawford Hall", "academic",
             "A compact and appealing classroom building, primarily for Education courses.",  832, 484);
 	var escalante = new Location("#escalante", "Escalante Terrace", "studentlife",
-            "Formerly Western's Fitness Center, Escalante Terrace is slated to house WesternÕs ICE program for entrepreneurship. For 2015-2016, it will house art programs, while Quigley Hall undergoes renovations.",  1238, 399);
+            "Formerly Western's Fitness Center, Escalante Terrace is slated to house WesternÕs ICE program for entrepreneurship. For 2615-2616, it will house art programs, while Quigley Hall undergoes renovations.",  1238, 399);
 	var fieldhouse_Athletic = new Location("#fieldhouse", "Mountaineer Field House", "athletic", 
 	 "This spectacular new building includes a high-tech surface across its main floor, with the highest indoor NCAA track, a 43.5-foot climbing wall, an athletic weight room, a fitness center, the HAPLab and more.", 687, 410);
 	 var fieldhouse_SL = new Location("#fieldhouse_SL", "Mountaineer Field House", "studentlife", 
@@ -39,9 +39,9 @@
 	var mountaineerbowl = new Location("#mountaineerbowl", "Mountaineer Bowl", "athletic",
             "Home of Mountaineer football and Western's high-tech-surface track, it's also world's highest collegiate football stadium at 7,750 feet above sea level, seating 4,000 fans, with room for more on its hills.",  1042, 296);
 	var quigley = new Location("#quigley", "Quigley Hall", "academic",
-            "Home of Western's Art and Music programs, Quigley is undergoing a $25.8 million renovation, upgrading studios, presenation spaces, practice rooms and more, with expected completion in Fall 2016.", 1134, 659);
+            "Home of Western's Art and Music programs, Quigley is undergoing a $25.8 million renovation, upgrading studios, presenation spaces, practice rooms and more, with expected completion in Fall 2616.", 1134, 659);
     var taylor = new Location("#taylor", "Taylor Hall", "academic",
-            "Renovated in 2010, Taylor is a LEED-certified, energy-efficient structure. Its bold atrium serves is Western's Welcome Center. It also houses the administration, an auditorium, a theater and many classrooms.", 985, 553);
+            "Renovated in 2610, Taylor is a LEED-certified, energy-efficient structure. Its bold atrium serves is Western's Welcome Center. It also houses the administration, an auditorium, a theater and many classrooms.", 985, 553);
 	 var taylorQuad = new Location("#taylorQuad", "Taylor Quad", "studentlife",
             "The center hub of campus. Hang out on the lawn, slackline beneath the shady trees or tramp through the snow. The Quad is home to annual events like Western’s Rail Jam and Spring Fest.", 812, 573);
     var universitycenter = new Location("#universitycenter", "University Center", "studentlife", "This fairly new and extremely capable building is a hub of student life. It houses meeting rooms; a ballroom; dining facilities, the bookstore, the University Theater, Wilderness Pursuits, student groups and more.", 987, 402);
@@ -80,91 +80,91 @@
  * Navigation object instances
 *************************************/
 	/*====================Academic Arrows================== Academic Tour = 1*/
-	var taylor_to_quigley = new Navigation("#taylor", "taylor_to_quigley", "To Quigley Hall", "#quigley", "right", 68, 20, 1);
-    var quigley_to_taylor = new Navigation("#quigley", "quigley_to_taylor", "Back to Taylor Hall", "#taylor", "left", 26,20, 1);
-    var quigley_to_hurst = new Navigation("#quigley", "quigley_to_hurst", "To Hurst Hall", "#hurst", "right", 68, 20, 1);
-    var hurst_to_quigley = new Navigation("#hurst", "hurst_to_quigley", "Back to Quigley Hall", "#quigley", "left", 26,20, 1);
-    var hurst_to_kelley = new Navigation("#hurst", "hurst_to_kelley", "To Kelley Hall", "#kelley", "right", 68, 20, 1);
-    var kelley_to_hurst = new Navigation("#kelley", "kelley_to_hurst", "Back to Hurst Hall", "#hurst", "left", 26,20, 1);
-    var kelley_to_library = new Navigation("#kelley", "kelley_to_library", "To Savage Library", "#library", "right", 68, 20, 1);
-    var library_to_kelley = new Navigation("#library", "library_to_kelley", "Back to Kelley Hall", "#kelley", "left", 26,20, 1);
-    var library_to_paulwrightgym = new Navigation("#library", "library_to_paulwrightgym", "To Paul Wright Gymnasium", "#paulwrightgym", "right", 68, 20, 1);
-    var paulwrightgym_to_library = new Navigation("#paulwrightgym", "paulwrightgym_to_library", "Back to Savage Library", "#library", "left", 26,20, 1);
-	var paulwrightgym_to_crawford = new Navigation("#paulwrightgym", "paulwrightgym_to_crawford", "To Crawford Hall", "#crawford", "right", 68, 20, 1);
-	var crawford_to_paulwrightgym = new Navigation("#crawford", "crawford_to_paulwrightgym", "Back to Paul Wright Gymnasium", "#paulwrightgym", "left", 26,20, 1);
-	var crawford_to_borick = new Navigation("#crawford", "crawford_to_borick", "To Borick Buisness Building", "#borick", "right", 68, 20, 1);
-	var borick_to_crawford = new Navigation("#borick", "borick_to_crawford", "Back to Crawford Hall", "#crawford", "left", 26,20, 1);
-	var borick_to_taylor = new Navigation("#borick", "borick_to_taylor", "To Taylor Hall", "#taylor", "right", 68, 20, 1);
-	var taylor_to_begin = new Navigation("#taylor", "taylor_to_begin", "Back to the Welcome Center", "#begin", "left", 26,20, 1);
+	var taylor_to_quigley = new Navigation("#taylor", "taylor_to_quigley", "To Quigley Hall", "#quigley", "right", 68, 26, 1);
+    var quigley_to_taylor = new Navigation("#quigley", "quigley_to_taylor", "Back to Taylor Hall", "#taylor", "left", 26,26, 1);
+    var quigley_to_hurst = new Navigation("#quigley", "quigley_to_hurst", "To Hurst Hall", "#hurst", "right", 68, 26, 1);
+    var hurst_to_quigley = new Navigation("#hurst", "hurst_to_quigley", "Back to Quigley Hall", "#quigley", "left", 26,26, 1);
+    var hurst_to_kelley = new Navigation("#hurst", "hurst_to_kelley", "To Kelley Hall", "#kelley", "right", 68, 26, 1);
+    var kelley_to_hurst = new Navigation("#kelley", "kelley_to_hurst", "Back to Hurst Hall", "#hurst", "left", 26,26, 1);
+    var kelley_to_library = new Navigation("#kelley", "kelley_to_library", "To Savage Library", "#library", "right", 68, 26, 1);
+    var library_to_kelley = new Navigation("#library", "library_to_kelley", "Back to Kelley Hall", "#kelley", "left", 26,26, 1);
+    var library_to_paulwrightgym = new Navigation("#library", "library_to_paulwrightgym", "To Paul Wright Gymnasium", "#paulwrightgym", "right", 68, 26, 1);
+    var paulwrightgym_to_library = new Navigation("#paulwrightgym", "paulwrightgym_to_library", "Back to Savage Library", "#library", "left", 26,26, 1);
+	var paulwrightgym_to_crawford = new Navigation("#paulwrightgym", "paulwrightgym_to_crawford", "To Crawford Hall", "#crawford", "right", 68, 26, 1);
+	var crawford_to_paulwrightgym = new Navigation("#crawford", "crawford_to_paulwrightgym", "Back to Paul Wright Gymnasium", "#paulwrightgym", "left", 26,26, 1);
+	var crawford_to_borick = new Navigation("#crawford", "crawford_to_borick", "To Borick Buisness Building", "#borick", "right", 68, 26, 1);
+	var borick_to_crawford = new Navigation("#borick", "borick_to_crawford", "Back to Crawford Hall", "#crawford", "left", 26,26, 1);
+	var borick_to_taylor = new Navigation("#borick", "borick_to_taylor", "To Taylor Hall", "#taylor", "right", 68, 26, 1);
+	var taylor_to_begin = new Navigation("#taylor", "taylor_to_begin", "Back to the Welcome Center", "#begin", "left", 26,26, 1);
 	
 	
 	/*====================Student Life Arrows================== StudentLife Tour = 2*/
-	var universitycenter_to_fieldhouse_SL = new Navigation("#universitycenter", "universitycenter_to_fieldhouse_SL", "To the Fieldhouse", "#fieldhouse_SL", "right", 68, 20, 2);
-	var universitycenter_to_begin = new Navigation("#universitycenter", "universitycenter_to_begin", "Back to the Welcome Center", "#begin", "left", 26,20, 2);
-	var fieldhouse_SL_to_mears = new Navigation("#fieldhouse_SL", "fieldhouse_SL_to_mears", "To the Mears Complex", "#mears", "right", 68, 20, 2);
-	var fieldhouse_SL_to_universitycenter = new Navigation("#fieldhouse_SL", "fieldhouse_SL_to_universitycenter", "Back to the University Center", "#universitycenter", "left", 26,20, 2);
-	var mears_to_fieldhouse_SL = new Navigation("#mears", "mears_to_fieldhouse_SL", "Back to the Field House", "#fieldhouse_SL", "left", 26,20, 2);
-	var mears_to_pinnacles = new Navigation("#mears", "mears_to_pinnacles", "To the Pinnacles", "#pinnacles", "right", 68, 20, 2);
-	var pinnacles_to_mears = new Navigation("#pinnacles", "pinnacles_to_mears", "Back to the Mears Complex", "#mears", "left", 26,20, 2);
-	var pinnacles_to_chipeta = new Navigation("#pinnacles", "pinnacles_to_chipeta", "To Chipeta Hall", "#chipeta", "right", 68, 20, 2);
-	var chipeta_to_ute = new Navigation("#chipeta", "chipeta_to_ute", "To Ute Hall", "#ute", "right", 68, 20, 2);
-	var chipeta_to_pinnacles = new Navigation("#chipeta", "chipeta_to_pinnacles", "Back to the Pinnacles", "#pinnacles", "left", 26,20, 2);
-	var ute_to_chipeta = new Navigation("#ute", "ute_to_chipeta", "Back to Chipeta Hall", "#chipeta", "left", 26,20, 2);
-	var ute_to_taylorQuad = new Navigation("#ute","ute_to_taylorQuad", "To Taylor Quad", "#taylorQuad", "right", 68, 20, 2);
-	var taylorQuad_to_ute = new Navigation("#taylorQuad","taylorQuad_to_ute", "Back to Ute", "#ute", "left", 26,20, 2);
-	var taylorQuad_to_library = new Navigation("#taylorQuad","taylorQuad_to_library", "To the Library", "#library_SL", "right", 68, 20, 2);
-	var library_to_taylorQuad = new Navigation("#library_SL", "library_to_taylorQuad", "Back to Taylor Quad", "#taylorQuad", "left", 26,20, 2);
-	var library_to_escalante = new Navigation("#library_SL", "library_to_escalante", "To the Escalante Terrace", "#escalante", "right", 68, 20, 2);
-	var escalante_to_library = new Navigation("#escalante", "escalante_to_library", "Back to the Library", "#library_SL", "left", 26,20, 2);
-	var escalante_to_universitycenter = new Navigation("#escalante", "escalante_to_universitycenter", "To the University Center", "#universitycenter", "right", 68, 20, 2);
+	var universitycenter_to_fieldhouse_SL = new Navigation("#universitycenter", "universitycenter_to_fieldhouse_SL", "To the Fieldhouse", "#fieldhouse_SL", "right", 68, 26, 2);
+	var universitycenter_to_begin = new Navigation("#universitycenter", "universitycenter_to_begin", "Back to the Welcome Center", "#begin", "left", 26,26, 2);
+	var fieldhouse_SL_to_mears = new Navigation("#fieldhouse_SL", "fieldhouse_SL_to_mears", "To the Mears Complex", "#mears", "right", 68, 26, 2);
+	var fieldhouse_SL_to_universitycenter = new Navigation("#fieldhouse_SL", "fieldhouse_SL_to_universitycenter", "Back to the University Center", "#universitycenter", "left", 26,26, 2);
+	var mears_to_fieldhouse_SL = new Navigation("#mears", "mears_to_fieldhouse_SL", "Back to the Field House", "#fieldhouse_SL", "left", 26,26, 2);
+	var mears_to_pinnacles = new Navigation("#mears", "mears_to_pinnacles", "To the Pinnacles", "#pinnacles", "right", 68, 26, 2);
+	var pinnacles_to_mears = new Navigation("#pinnacles", "pinnacles_to_mears", "Back to the Mears Complex", "#mears", "left", 26,26, 2);
+	var pinnacles_to_chipeta = new Navigation("#pinnacles", "pinnacles_to_chipeta", "To Chipeta Hall", "#chipeta", "right", 68, 26, 2);
+	var chipeta_to_ute = new Navigation("#chipeta", "chipeta_to_ute", "To Ute Hall", "#ute", "right", 68, 26, 2);
+	var chipeta_to_pinnacles = new Navigation("#chipeta", "chipeta_to_pinnacles", "Back to the Pinnacles", "#pinnacles", "left", 26,26, 2);
+	var ute_to_chipeta = new Navigation("#ute", "ute_to_chipeta", "Back to Chipeta Hall", "#chipeta", "left", 26,26, 2);
+	var ute_to_taylorQuad = new Navigation("#ute","ute_to_taylorQuad", "To Taylor Quad", "#taylorQuad", "right", 68, 26, 2);
+	var taylorQuad_to_ute = new Navigation("#taylorQuad","taylorQuad_to_ute", "Back to Ute", "#ute", "left", 26,26, 2);
+	var taylorQuad_to_library = new Navigation("#taylorQuad","taylorQuad_to_library", "To the Library", "#library_SL", "right", 68, 26, 2);
+	var library_to_taylorQuad = new Navigation("#library_SL", "library_to_taylorQuad", "Back to Taylor Quad", "#taylorQuad", "left", 26,26, 2);
+	var library_to_escalante = new Navigation("#library_SL", "library_to_escalante", "To the Escalante Terrace", "#escalante", "right", 68, 26, 2);
+	var escalante_to_library = new Navigation("#escalante", "escalante_to_library", "Back to the Library", "#library_SL", "left", 26,26, 2);
+	var escalante_to_universitycenter = new Navigation("#escalante", "escalante_to_universitycenter", "To the University Center", "#universitycenter", "right", 68, 26, 2);
 	
 
 
 	
 	/*====================Athletics Arrows================== Athetic Tour = 3*/
-	var fieldhouse_to_practicefield= new Navigation("#fieldhouse", "fieldhouse_to_practicefield", "To the Practice Field", "#practicefield", "right", 68, 20, 3);
-	var fieldhouse_to_begin= new Navigation("#fieldhouse", "fieldhouse_to_begin", "Back to the Welcome Center", "#begin", "left", 26,20, 3);
-	var practicefield_to_fieldhouse= new Navigation("#practicefield", "practicefield_to_fieldhouse", "Back to the Field House", "#fieldhouse", "left", 26,20, 3);
-	var practicefield_to_mountaineerbowl= new Navigation("#practicefield", "practicefield_to_mountaineerbowl", "To the Mountaineer Bowl", "#mountaineerbowl", "right", 68, 20, 3);
-	var mountaineerbowl_to_practicefield= new Navigation("#mountaineerbowl", "mountaineerbowl_to_practicefield", "Back to the Practice Field", "#practicefield", "left", 26,20, 3);
-	var mountaineerbowl_to_gatewayfield= new Navigation("#mountaineerbowl", "mountaineerbowl_to_gatewayfield", "To Gateway Field", "#gatewayfield", "right", 68, 20, 3);
-	var gatewayfield_to_mountaineerbowl= new Navigation("#gatewayfield", "gatewayfield_to_mountaineerbowl", "Back to the Mountaineer Bowl", "#mountaineerbowl", "left", 26,20, 3);
-	var gatewayfield_to_fieldhouse= new Navigation("#gatewayfield", "gatewayfield_to_fieldhouse", "To the Field House", "#fieldhouse", "right", 68, 20, 3);
+	var fieldhouse_to_practicefield= new Navigation("#fieldhouse", "fieldhouse_to_practicefield", "To the Practice Field", "#practicefield", "right", 68, 26, 3);
+	var fieldhouse_to_begin= new Navigation("#fieldhouse", "fieldhouse_to_begin", "Back to the Welcome Center", "#begin", "left", 26,26, 3);
+	var practicefield_to_fieldhouse= new Navigation("#practicefield", "practicefield_to_fieldhouse", "Back to the Field House", "#fieldhouse", "left", 26,26, 3);
+	var practicefield_to_mountaineerbowl= new Navigation("#practicefield", "practicefield_to_mountaineerbowl", "To the Mountaineer Bowl", "#mountaineerbowl", "right", 68, 26, 3);
+	var mountaineerbowl_to_practicefield= new Navigation("#mountaineerbowl", "mountaineerbowl_to_practicefield", "Back to the Practice Field", "#practicefield", "left", 26,26, 3);
+	var mountaineerbowl_to_gatewayfield= new Navigation("#mountaineerbowl", "mountaineerbowl_to_gatewayfield", "To Gateway Field", "#gatewayfield", "right", 68, 26, 3);
+	var gatewayfield_to_mountaineerbowl= new Navigation("#gatewayfield", "gatewayfield_to_mountaineerbowl", "Back to the Mountaineer Bowl", "#mountaineerbowl", "left", 26,26, 3);
+	var gatewayfield_to_fieldhouse= new Navigation("#gatewayfield", "gatewayfield_to_fieldhouse", "To the Field House", "#fieldhouse", "right", 68, 26, 3);
 
 
 	/*====================Outdoor Arrows================== *Left arrow points to a old location, right arrows points to the new location*/
-    var mainstreet_to_hartmanrocks = new Navigation("#mainstreet", "mainstreet_to_hartmanrocks", "To Hartman Rocks", "#hartmanrocks", "right", 68, 20, 4);
-   	var mainstreet_to_cranorhill = new Navigation("#mainstreet", "mainstreet_to_cranorhill", "To Cranor Hill", "#cranorhill", "left", 26,20, 4);
+    var mainstreet_to_hartmanrocks = new Navigation("#mainstreet", "mainstreet_to_hartmanrocks", "To Hartman Rocks", "#hartmanrocks", "right", 68, 26, 4);
+   	var mainstreet_to_cranorhill = new Navigation("#mainstreet", "mainstreet_to_cranorhill", "To Cranor Hill", "#cranorhill", "left", 26,26, 4);
 	
-	var hartmanrocks_to_mainstreet = new Navigation("#hartmanrocks", "hartmanrocks_to_mainstreet", "To Main Street", "#mainstreet", "left", 26,20, 4);
-    var hartmanrocks_to_bluemesa = new Navigation("#hartmanrocks", "hartmanrocks_to_bluemesa", "To Blue Mesa", "#bluemesa", "right", 68, 20, 4);
+	var hartmanrocks_to_mainstreet = new Navigation("#hartmanrocks", "hartmanrocks_to_mainstreet", "To Main Street", "#mainstreet", "left", 26,26, 4);
+    var hartmanrocks_to_bluemesa = new Navigation("#hartmanrocks", "hartmanrocks_to_bluemesa", "To Blue Mesa", "#bluemesa", "right", 68, 26, 4);
 	
-	var bluemesa_to_blackcanyon = new Navigation("#bluemesa", "bluemesa_to_telluride", "To Black Canyon", "#blackcanyon", "right", 68, 20, 4);
-	var bluemesa_to_hartmanrocks = new Navigation("#bluemesa", "bluemesa_to_hartmanrocks", "To Hartman Rocks", "#hartmanrocks", "left", 26,20, 4);
+	var bluemesa_to_blackcanyon = new Navigation("#bluemesa", "bluemesa_to_telluride", "To Black Canyon", "#blackcanyon", "right", 68, 26, 4);
+	var bluemesa_to_hartmanrocks = new Navigation("#bluemesa", "bluemesa_to_hartmanrocks", "To Hartman Rocks", "#hartmanrocks", "left", 26,26, 4);
 	
-	var blackcanyon_to_telluride = new Navigation("#blackcanyon", "blackcanyon_to_telluride", "To Telluride", "#telluride", "right", 68, 20, 4);
-	var blackcanyon_to_bluemesa = new Navigation("#blackcanyon", "blackcanyon_to_bluemesa", "To Blue Mesa", "#bluemesa", "left", 26,20, 4);
+	var blackcanyon_to_telluride = new Navigation("#blackcanyon", "blackcanyon_to_telluride", "To Telluride", "#telluride", "right", 68, 26, 4);
+	var blackcanyon_to_bluemesa = new Navigation("#blackcanyon", "blackcanyon_to_bluemesa", "To Blue Mesa", "#bluemesa", "left", 26,26, 4);
 	
-	var telluride_to_monarchmountain = new Navigation("#telluride", "telluride_to_monarchmountain", "To Monarch Mountain", "#monarchmountain", "right", 68, 20, 4);
-	var telluride_to_blackcanyon = new Navigation("#telluride", "telluride_to_blackcanyon", "To Black Canyon", "#blackcanyon", "left", 26,20, 4);
+	var telluride_to_monarchmountain = new Navigation("#telluride", "telluride_to_monarchmountain", "To Monarch Mountain", "#monarchmountain", "right", 68, 26, 4);
+	var telluride_to_blackcanyon = new Navigation("#telluride", "telluride_to_blackcanyon", "To Black Canyon", "#blackcanyon", "left", 26,26, 4);
 	
-	var monarchmountain_to_taylorpark = new Navigation("#monarchmountain", "monarchmountain_to_taylorpark", "To Taylor Park", "#taylorpark", "right", 68, 20, 4);
-	var monarchmountain_to_telluride = new Navigation("#monarchmountain", "monarchmountain_to_telluride", "To Telluride", "#telluride", "left", 26,20, 4);
+	var monarchmountain_to_taylorpark = new Navigation("#monarchmountain", "monarchmountain_to_taylorpark", "To Taylor Park", "#taylorpark", "right", 68, 26, 4);
+	var monarchmountain_to_telluride = new Navigation("#monarchmountain", "monarchmountain_to_telluride", "To Telluride", "#telluride", "left", 26,26, 4);
 	
-	var taylorpark_to_lakeirwin = new Navigation("#taylorpark", "taylorpark_to_lakeirwin", "To Lake Irwin", "#lakeirwin", "right", 68, 20, 4);
-	var taylorpark_to_monarchmountain = new Navigation("#taylorpark", "taylorpark_to_monarchmountain", "To Monarch Mountain", "#monarchmountain", "left", 26,20, 4);
+	var taylorpark_to_lakeirwin = new Navigation("#taylorpark", "taylorpark_to_lakeirwin", "To Lake Irwin", "#lakeirwin", "right", 68, 26, 4);
+	var taylorpark_to_monarchmountain = new Navigation("#taylorpark", "taylorpark_to_monarchmountain", "To Monarch Mountain", "#monarchmountain", "left", 26,26, 4);
 	
-	var lakeirwin_to_taylorpark = new Navigation("#lakeirwin", "lakeirwin_to_taylorpark", "To Taylor Park", "#taylorpark", "left", 26,20, 4);
-	var lakeirwin_to_cbmr = new Navigation("#lakeirwin", "lakeirwin_to_cbmr", "To Crested Butte Mountain Resort", "#cbmr", "right", 68, 20, 4);
+	var lakeirwin_to_taylorpark = new Navigation("#lakeirwin", "lakeirwin_to_taylorpark", "To Taylor Park", "#taylorpark", "left", 26,26, 4);
+	var lakeirwin_to_cbmr = new Navigation("#lakeirwin", "lakeirwin_to_cbmr", "To Crested Butte Mountain Resort", "#cbmr", "right", 68, 26, 4);
 
-	var cbmr_to_lakeirwin = new Navigation("#cbmr", "cbmr_to_lakeirwin", "To Lake Irwin", "#lakeirwin", "left", 26,20, 4);
-	var cbmr_to_crestedbutte = new Navigation("#cbmr", "cbmr_to_crestedbutte", "To Crested Butte", "#crestedbutte", "right", 68, 20, 4);
+	var cbmr_to_lakeirwin = new Navigation("#cbmr", "cbmr_to_lakeirwin", "To Lake Irwin", "#lakeirwin", "left", 26,26, 4);
+	var cbmr_to_crestedbutte = new Navigation("#cbmr", "cbmr_to_crestedbutte", "To Crested Butte", "#crestedbutte", "right", 68, 26, 4);
 	
-	var crestedbutte_to_cbmr = new Navigation("#crestedbutte", "crestedbutte_to_cbmr", "To Crested Butte Mountian Resort", "#cbmr", "left", 26,20, 4);
-	var crestedbutte_to_cranorhill = new Navigation("#crestedbutte", "crestedbutte_to_cranorhill", "To Cranor Hill", "#cranorhill", "right", 68, 20, 4);
+	var crestedbutte_to_cbmr = new Navigation("#crestedbutte", "crestedbutte_to_cbmr", "To Crested Butte Mountian Resort", "#cbmr", "left", 26,26, 4);
+	var crestedbutte_to_cranorhill = new Navigation("#crestedbutte", "crestedbutte_to_cranorhill", "To Cranor Hill", "#cranorhill", "right", 68, 26, 4);
 	
-	var cranorhill_to_crestedbutte = new Navigation("#cranorhill", "cranorhill_to_crestedbutte", "To Crested Butte", "#crestedbutte", "left", 26,20, 4);
-	var cranorhill_to_mainstreet = new Navigation("#cranorhill", "cranorhill_to_mainstreet", "To Gunnison Main Street", "#mainstreet", "right", 68, 20, 4);
+	var cranorhill_to_crestedbutte = new Navigation("#cranorhill", "cranorhill_to_crestedbutte", "To Crested Butte", "#crestedbutte", "left", 26,26, 4);
+	var cranorhill_to_mainstreet = new Navigation("#cranorhill", "cranorhill_to_mainstreet", "To Gunnison Main Street", "#mainstreet", "right", 68, 26, 4);
 	
 	
     var navs = [ 
