@@ -64,7 +64,7 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
 	
 	
 	if(window.innerHeight < window.innerWidth){
-   
+   $(".menu").hide('blind');
 	}
 
 }

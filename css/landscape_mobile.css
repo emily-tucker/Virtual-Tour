@@ -1,4 +1,8 @@
-@media screen and (min-height: 400px)  {
+@media screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape)  {
   .homeButton { 
 	width: 20% !important;
 	height: auto !important; 
