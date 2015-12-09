@@ -63,7 +63,7 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
 	$(".menu").hide('blind');
 	
 	
-	if(window.innerHeight > window.innerWidth){
+	if(window.innerHeight < window.innerWidth){
    
 	}
 
