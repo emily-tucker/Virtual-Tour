@@ -29,9 +29,8 @@
     position: fixed;
     z-index: 1;
     right: 1%;
-     top:74%;
-    min-width: 30%;
-	width:12em;
+    top:69%;
+	width:10em;
 	
 }
 .contact_button {
@@ -39,18 +38,16 @@
 	padding-right: 10px;
     z-index: 1;
     right: 1%;
-    top:82%;
-    min-width: 30%;
-	width:12em;
+    top:78%;
+	width:10em;
 
 }
 .restart_button {
     position:fixed;
     z-index: 1;
     right: 1%;
-    top: 90%;
-    min-width: 30%;
-	width:12em;
+    top: 85%;
+	width:10em;
 	
 }
 .restart_button, .schedule_button, .contact_button {
@@ -77,25 +74,25 @@
 .switch_button  {
     position: fixed;
     z-index:2000;
-	right: 34.6%;
+	right: 50%;
     top: 40%;
 }
 .athletics_button {
     position: fixed;
     z-index:2000;
 	top: 60%;
-    right: 34.6%; 
+    right: 50%; 
 }
 .academics_button {
    position: fixed;
     z-index:2000;
-	left: 33%;
+	left: 50%;
     top: 40%;
 }
 .sl_button {
     position: fixed;
     z-index:2000;
-	left: 33%;
+	left: 50%;
     top: 60%;
   
 }
@@ -104,13 +101,14 @@
 	overflow: hidden;
 	word-wrap:normal;
     letter-spacing: .8px;
-    font-size: 26px;
-	width:9.5em;
+    font-size: 20px;
+	width:8em;
 }
 
 .athletics_button:hover, .academics_button:hover, .sl_button:hover, .switch_button:hover{
     box-shadow: inset 0 0 0 1.5px #000;
-    font-size: 26px;
+    font-size: 20px;
+	width:8em;
     
 
 	

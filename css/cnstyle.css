@@ -141,7 +141,7 @@ body.contextual_navigation
     position: fixed;
     z-index:2000;
 	right: 34.6%;
-    top: 35%;
+    top: 30%;
 
 }
 .athletics_button {
@@ -163,7 +163,7 @@ body.contextual_navigation
     position: fixed;
     z-index:2000;
 	left: 33%;
-    top: 35%;
+    top: 30%;
 	border:1px solid gray;
   
   
@@ -544,4 +544,5 @@ comment out so the map doesn't auto scale
   width: 75%;
   
 }
+
 
