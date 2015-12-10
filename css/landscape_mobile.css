@@ -1,7 +1,7 @@
 @media screen 
  and (min-device-width: 320px)  
   and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
+  and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape)  {
   .homeButton { 
 	width: 20% !important;
@@ -38,7 +38,7 @@
 	padding-right: 10px;
     z-index: 1;
     right: 1%;
-    top:76%;
+    top:77.5%;
 	width:10em;
 
 }
@@ -74,25 +74,25 @@
 .switch_button  {
     position: fixed;
     z-index:2000;
-	left: 35%;
+	left: 20%;
     top: 50%;
 }
 .athletics_button {
     position: fixed;
     z-index:2000;
-    right: 35%; 
+    right: 20%; 
 	top: 50%;
 }
 .academics_button {
    position: fixed;
     z-index:2000;
-	right: 35%;
+	right: 20%;
     top: 30%;
 }
 .sl_button {
     position: fixed;
     z-index:2000;
-	left: 35%;
+	left: 20%;
     top: 30%;
   
 }
