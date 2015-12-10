@@ -30,7 +30,7 @@
     z-index: 1;
     right: 1%;
     top:69%;
-	width:10em;
+	width:12em;
 	
 }
 .contact_button {
@@ -92,8 +92,8 @@
 .sl_button {
     position: fixed;
     z-index:2000;
-    right: 20%; 
-	top: 30%;
+	right: 20%;
+    top: 30%;
   
 }
 
