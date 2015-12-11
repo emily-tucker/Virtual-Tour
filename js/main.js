@@ -66,7 +66,6 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
 	document.getElementById("schedule_button").style.display = "none";
 	document.getElementById("contact_button").style.display = "none";
 	document.getElementById("restart_button").style.top = "69%"; 
-  
 }
 
 }
