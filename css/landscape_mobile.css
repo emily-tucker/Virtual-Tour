@@ -74,27 +74,26 @@
 .switch_button  {
     position: fixed;
     z-index:2000;
-	right: 20%;
+	right: 25%;
     top: 50%;
 }
 .athletics_button {
     position: fixed;
     z-index:2000;
-    left: 20%; 
+    left: 25%; 
 	top: 50%;
 }
 .academics_button {
   position: fixed;
     z-index:2000;
-	left: 20%;
+	left: 25%;
     top: 30%;
 }
 .sl_button {
     position: fixed;
     z-index:2000;
-	right: 20%;
+	right: 25%;
     top: 30%;
-  
 }
 
 .athletics_button, .academics_button, .sl_button, .switch_button  {
