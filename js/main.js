@@ -78,32 +78,6 @@ function animate_map(locationTag, time) {
 
 }
 
-        /*************************
-         * Tour Instance functionality
-         **************************/
-
-
-        $('body').on('click', '.to_academics', function () {
-            tour_track = academics;
-            console.log('Tour ' + tour_track);
-        });
-
-        $('body').on('click', '.to_studentlife', function () {
-            tour_track = studentLife;
-            console.log('Tour ' + tour_track);
-        });
-
-        $('body').on('click', '.to_athletics', function () {
-            tour_track = athletics;
-            console.log('Tour ' + tour_track);
-        });
-        $('body').on('click', '.to_offcampus', function () {
-            tour_track = offCampus;
-            console.log('Tour ' + tour_track);
-
-        });
-		
-
 /**************************
  *  Video Out Animation   *
  **************************/
@@ -177,6 +151,7 @@ function load() {
 	tour_track = 2; /**Needs to be here for the Off-campus map to On-campus map switch**/
 	
 	
+	 
 }
 
 /***********************************
@@ -191,7 +166,7 @@ function loadMainButtons() {
             inner_html +=
 		
 				
-                "<button class='to_athletics athletics_button row col-md-*' onclick=window.location='#fieldhouse'> Athletics Tour</button>" +
+                "<button class='to_athletics athletics_button row ' onclick=window.location='#fieldhouse'> Athletics Tour</button>" +
                 "<button class='to_studentlife sl_button row ' onclick=window.location='#universitycenter'>Student Life Tour</button>" +
                 "<button class='to_academics academics_button row' onclick=window.location='#taylor'> Academics Tour</button>" +
                 "<button class='to_offcampus switch_button row ' onclick=window.location='#mainstreet'>Off Campus Tour</button>" +
@@ -217,6 +192,31 @@ function loadMainButtons() {
 
 
 
+        /*************************
+         * Tour Instance functionality
+         **************************/
+
+
+        $('body').on('click', '.to_academics', function () {
+            tour_track = academics;
+            console.log('Tour ' + tour_track);
+        });
+
+        $('body').on('click', '.to_studentlife', function () {
+            tour_track = studentLife;
+            console.log('Tour ' + tour_track);
+        });
+
+        $('body').on('click', '.to_athletics', function () {
+            tour_track = athletics;
+            console.log('Tour ' + tour_track);
+        });
+        $('body').on('click', '.to_offcampus', function () {
+            tour_track = offCampus;
+            console.log('Tour ' + tour_track);
+
+        });
+		
 
     }
 	
@@ -285,6 +285,7 @@ function mapButtonLoad() {
         inner_html += "<button class='map_button'>Collapse Map</button>"
     } else if (map_state === 1) {
         inner_html += "<button class='map_button'>Enlarge Map</button>"
+	 
     } else if (map_state === 0) {
         inner_html += "<button class='map_button'>Show Map</button>"
     }
@@ -344,8 +345,8 @@ function mapButtonLoad() {
     });
 }
 /********************************
- *  Mouse movement on Map           *
-********************************/
+     *  Mouse movement on Map           *
+     ********************************/
     var clicking = false;
     var previousX;
     var previousY;
@@ -704,5 +705,3 @@ function dispMainMenu() {
     inner += "</li>";
     $("#drilldown-1").html(inner);
 }
-
-
