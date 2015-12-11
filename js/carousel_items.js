@@ -32,7 +32,7 @@ var fieldhouse_athletic_1 = new CarouselItem(["#fieldhouse"], fieldhouse_athleti
 
 var fieldhouse_athletic_2full = new Image("fieldhouse_athletic_2full", "imgs/fieldhouse_athletic_2full.jpg");
 var fieldhouse_athletic_2thumb = new Image("fieldhouse_athletic_2thumb", "imgs/fieldhouse_athletic_2thumb.jpg");
-var fieldhouse_athletic_2 = new CarouselItem(["#fieldhouse"], fieldhouse_athletic_2full, fieldhouse_athletic_2thumb, " MFH Climbing Wall",  'Climb 13 leadable routes, practice on two free-form cracks, learn multi-pitch skills, or try try your hand at climbing for the first time on Western’s 43.5 foot climbing wall.</br>&lt;a target="_self" onClick=&quot;window.location.href=&#x27;http://www.western.edu/climbingwall&#x27;&quot;   href="http://www.western.edu/climbingwall"&gt;Click here to read more...&lt;/a&gt;');
+var fieldhouse_athletic_2 = new CarouselItem(["#fieldhouse"], fieldhouse_athletic_2full, fieldhouse_athletic_2thumb, "MFH Climbing Wall",  'Climb 13 leadable routes, practice on two free-form cracks, learn multi-pitch skills, or try try your hand at climbing for the first time on Western’s 43.5 foot climbing wall.</br>&lt;a target="_self" onClick=&quot;window.location.href=&#x27;http://www.western.edu/climbingwall&#x27;&quot;   href="http://www.western.edu/climbingwall"&gt;Click here to read more...&lt;/a&gt;');
 
 
 var fieldhouse_athletic_3full = new Image("fieldhouse_athletic_3full", "imgs/fieldhouse_athletic_3full.jpg");
@@ -45,7 +45,7 @@ var fieldhouse_athletic_4 = new CarouselItem(["#fieldhouse"], fieldhouse_athleti
 
 var fieldhouse_athletic_5full = new Image("fieldhouse_athletic_5full", "imgs/fieldhouse_athletic_5full.jpg");
 var fieldhouse_athletic_5thumb = new Image("fieldhouse_athletic_5thumb", "imgs/fieldhouse_athletic_5thumb.jpg");
-var fieldhouse_athletic_5 = new CarouselItem(["#fieldhouse"], fieldhouse_athletic_5full, fieldhouse_athletic_5thumb, "Courts, Practice Cages, Trampoline and more!", 'The track in the Mountaineer Field House wraps around three multi-purpose courts and a batting- and golf-practice cage. The facility also houses an in-ground trampoline and foam pit for freeski training, play and more.</br>&lt;a target="_self" onClick=&quot;window.location.href=&#x27;http://www.western.edu/mfh&#x27;&quot;   href="http://www.western.edu/mfh"&gt;Click here to read more...&lt;/a&gt;');
+var fieldhouse_athletic_5 = new CarouselItem(["#fieldhouse"], fieldhouse_athletic_5full, fieldhouse_athletic_5thumb, "MFH Activities!", 'The track in the Mountaineer Field House wraps around three multi-purpose courts and a batting- and golf-practice cage. The facility also houses an in-ground trampoline and foam pit for freeski training, play and more.</br>&lt;a target="_self" onClick=&quot;window.location.href=&#x27;http://www.western.edu/mfh&#x27;&quot;   href="http://www.western.edu/mfh"&gt;Click here to read more...&lt;/a&gt;');
 
 //Fieldhouse___________________________________________________________
 

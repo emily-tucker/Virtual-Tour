@@ -139,7 +139,7 @@
 	var hartmanrocks_to_mainstreet = new Navigation("#hartmanrocks", "hartmanrocks_to_mainstreet", "To Main Street", "#mainstreet", "left", 26,26, 4);
     var hartmanrocks_to_bluemesa = new Navigation("#hartmanrocks", "hartmanrocks_to_bluemesa", "To Blue Mesa", "#bluemesa", "right", 68, 26, 4);
 	
-	var bluemesa_to_blackcanyon = new Navigation("#bluemesa", "bluemesa_to_telluride", "To Black Canyon", "#blackcanyon", "right", 68, 26, 4);
+	var bluemesa_to_blackcanyon = new Navigation("#bluemesa", "bluemesa_to_telluride", "Click to go to Black Canyon", "#blackcanyon", "right", 68, 26, 4);
 	var bluemesa_to_hartmanrocks = new Navigation("#bluemesa", "bluemesa_to_hartmanrocks", "To Hartman Rocks", "#hartmanrocks", "left", 26,26, 4);
 	
 	var blackcanyon_to_telluride = new Navigation("#blackcanyon", "blackcanyon_to_telluride", "To Telluride", "#telluride", "right", 68, 26, 4);
