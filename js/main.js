@@ -61,6 +61,13 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
     map_state = 2;
 	$("#map").hide('blind');
 	$(".menu").hide('blind');
+	
+	if ( $(window).width() > 320) {   
+	document.getElementById("schedule_button").style.display = "none";
+	document.getElementById("contact_button").style.display = "none";
+	document.getElementById("restart_button").style.top = "69%"; 
+  
+}
 
 }
 
