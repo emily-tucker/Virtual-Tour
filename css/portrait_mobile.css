@@ -76,6 +76,12 @@
 #map{display: none !important;}
 .map_button{display: none !important;}
 .citem {display: none !important;}
+.tipsy { display: none !important; }
+.tipsy-inner { display: none !important; }
+.tipsy-inner { display: none !important; }
+#gravity { display: none !important; }
+#gravity td { display: none !important; }
+#gravity a:hover { display: none !important; }
 
 .switch_button  {
     position: fixed;
@@ -111,7 +117,7 @@
 	word-wrap:normal;
     letter-spacing: .8px;
     font-size: 22px;
-	width:9.5em;
+	width:12em;
 }
 
 .athletics_button:hover, .academics_button:hover, .sl_button:hover, .switch_button:hover  {
@@ -119,7 +125,7 @@
 	word-wrap:normal;
     letter-spacing: .8px;
     font-size: 22px;
-	width:9.5em;
+	width:12em;
 }
 
 

@@ -32,14 +32,16 @@
     right: 1%;
     top:69%;
 	width:12em;
+	min-height:2em;
 
 }
 .restart_button {
     position:fixed;
     z-index: 1;
     right: 1%;
-    top: 77%;
+    top: 82%;
 	width:12em;
+	min-height:2em;
 	
 }
 .restart_button, .contact_button {
@@ -63,6 +65,14 @@
 .menu{display: none !important;}
 #map{display: none !important;}
 .map_button{display: none !important;}
+.citem {display: none !important;}
+.tipsy { display: none !important; }
+.tipsy-inner { display: none !important; }
+.tipsy-inner { display: none !important; }
+#gravity { display: none !important; }
+#gravity td { display: none !important; }
+#gravity a:hover { display: none !important; }
+
 .switch_button  {
     position: fixed;
     z-index:2000;
