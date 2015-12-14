@@ -35,6 +35,7 @@
 	min-height:2em;
 
 }
+.schedule_button {display:none !important;}
 .restart_button {
     position:fixed;
     z-index: 1;
