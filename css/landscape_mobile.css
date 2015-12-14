@@ -68,25 +68,25 @@
 .switch_button  {
     position: fixed;
     z-index:2000;
-	right: 18%;
+	right: 20%;
     top: 50%;
 }
 .athletics_button {
     position: fixed;
     z-index:2000;
-    right: 18%;
+    right: 20%;
     top: 30%;
 }
 .academics_button {
   position: fixed;
     z-index:2000;
-	left: 18%;
+	left: 20%;
     top: 30%;
 }
 .sl_button {
     position: fixed;
     z-index:2000;
-	left: 18%;
+	left: 20%;
     top: 50%;
 }
 
@@ -94,13 +94,13 @@
 	overflow: hidden;
 	word-wrap:normal;
     letter-spacing: .8px;
-    font-size: 12px;
+    font-size: 14px;
 	width:10em;
 }
 
 .athletics_button:hover, .academics_button:hover, .sl_button:hover, .switch_button:hover{
     box-shadow: inset 0 0 0 1.5px #000;
-    font-size: 12px;
+    font-size: 16px;
 	width:10em;
     
 
