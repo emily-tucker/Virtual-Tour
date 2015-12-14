@@ -86,7 +86,7 @@
 .switch_button  {
     position: fixed;
     z-index:2000;
-	left: 33%;
+	left: 25%;
     top: 60%;
 
 }
@@ -94,20 +94,20 @@
     position: fixed;
     z-index:2000;
 	top: 50%;
-    left: 33%;
+    left: 25%;
 
 }
 .academics_button {
    position: fixed;
     z-index:2000;
-	left: 33%;
+	left: 25%;
     top: 30%;
 	
 }
 .sl_button {
     position: fixed;
     z-index:2000;
-	left: 33%;
+	left: 25%;
     top: 40%;
   
 }
