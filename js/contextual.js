@@ -41,7 +41,7 @@
 	var quigley = new Location("#quigley", "Quigley Hall", "academic",
             "Home of Western's Art and Music programs, Quigley is undergoing a $25.8 million renovation, upgrading studios, presenation spaces, practice rooms and more, with expected completion in Fall 2616.", 1134, 659);
     var taylor = new Location("#taylor", "Taylor Hall", "academic",
-            "Renovated in 2610, Taylor is a LEED-certified, energy-efficient structure. Its bold atrium serves is Western's Welcome Center. It also houses the administration, an auditorium, a theater and many classrooms.", 985, 553);
+            "Renovated in 2016, Taylor is a LEED-certified, energy-efficient structure. Its bold atrium serves is Western's Welcome Center. It also houses the administration, an auditorium, a theater and many classrooms.", 985, 553);
 	 var taylorQuad = new Location("#taylorQuad", "Taylor Quad", "studentlife",
             "The center hub of campus. Hang out on the lawn, slackline beneath the shady trees or tramp through the snow. The Quad is home to annual events like Western’s Rail Jam and Spring Fest.", 812, 573);
     var universitycenter = new Location("#universitycenter", "University Center", "studentlife", "This fairly new and extremely capable building is a hub of student life. It houses meeting rooms; a ballroom; dining facilities, the bookstore, the University Theater, Wilderness Pursuits, student groups and more.", 987, 402);

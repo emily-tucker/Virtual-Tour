@@ -33,7 +33,7 @@
 /********************************
  * Variables for functions      *
  ********************************/
-var video_time = 15000;
+var video_time = 20000;
 var description_delay = 3000;
 var video_fade = 2000;
 var map_state = 1;
