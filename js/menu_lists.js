@@ -218,33 +218,42 @@ var subgo = [
 ]
 var submenu = [
 	new MenuItem({
-        text: 'Home',
+        text: 'Tour Home',
         icon: 'fa fa-home  ',
        	target: 'locations',
         href: "#begin"
     }),
 
     new MenuItem({
-        text: 'Academics',
+        text: 'Academics Tour',
         icon: 'fa fa-graduation-cap ',
-        items: subacademics
+        target: 'locations',
+        href: '#taylor'
     }),
     new MenuItem({
-        text: 'Athletics',
+        text: 'Athletics Tour',
         icon: 'fa  fa-trophy  ',
-        items: subathletics
+        target: 'locations',
+        href: '#fieldhouse'
     }),
 
     new MenuItem({
-        text: 'Student Life',
+        text: 'Student Life Tour',
         icon: 'fa fa-users',
-        items: subfuture
+        target: 'locations',
+        href: '#universitycenter'
+    }),
+	new MenuItem({
+        text: 'Off Campus Tour',
+        icon: 'fa fa-suitcase',
+         target: 'locations',
+        href: '#mainstreet'
     }),
 	    new MenuItem({
-        text: 'Schedule A Visit',
-        icon: 'fa fa-suitcase',
+        text: 'Request Information',
+        icon: 'fa fa-question-circle',
         target: 'external',
-        href: 'http://www.western.edu/future-students/visiting-campus/visit-western'
+        href: 'http://www.western.edu/future-students/contact-admissions/request-information'
     }),
 	    new MenuItem({
         text: 'Apply Now!',

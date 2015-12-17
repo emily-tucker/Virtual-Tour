@@ -33,8 +33,8 @@
 /********************************
  * Variables for functions      *
  ********************************/
-var video_time = 20000;
-var description_delay = 3000;
+var video_time = 15000;
+var description_delay = 4500;
 var video_fade = 2000;
 var map_state = 1;
 var first_time = false;
@@ -99,7 +99,7 @@ function video_out(location, mapTime) {
  * URL for schedule a visit button
  **********************/
 function visitURL() {
-    window.open("http://www.western.edu/future-students/visiting-campus/visit-western", "_blank");
+    window.open("http://www.western.edu/info", "_blank");
 }
 function visitHome() {
     window.open("http://www.western.edu/", "_blank");
@@ -176,7 +176,7 @@ function loadMainButtons() {
                 "<button class='to_studentlife sl_button row ' onclick=window.location='#universitycenter'>Student Life Tour</button>" +
                 "<button class='to_academics academics_button row' onclick=window.location='#taylor'> Academics Tour</button>" +
                 "<button class='to_offcampus switch_button row ' onclick=window.location='#mainstreet'>Off Campus Tour</button>" +
-                "<button class='schedule_button row' onclick='visitURL();'>Schedule A Visit</button>" +
+                "<button class='schedule_button row' onclick='visitURL();'>Request Information</button>" +
                 "<button class='contact_button row' onclick='visitURL2();'>Contact Admissions</button>" +
                 "<button class='restart_button row' id = 'rb' onclick=load()>Restart Tour</button>" +
 				"<a href='http://www.western.edu/' target='_blank'><img src='imgs/westernLogo.png' class='homeButton''></a>";
@@ -186,7 +186,7 @@ function loadMainButtons() {
 			// If on a tour 
             inner_html +=
 			
-                "<button class='schedule_button row' onclick='visitURL();'>Schedule A Visit</button>" +
+                "<button class='schedule_button row' onclick='visitURL();'>Request Information</button>" +
                 "<button class='contact_button row' onclick='visitURL2();'>Contact Admissions</button>" +
                 "<button id='hide' class='hide_button row' onclick='hideShowCarousel();'>Hide</button>" +
                 "<button class='restart_button row' id = 'rb' onclick=load()>Restart Tour</button>" +

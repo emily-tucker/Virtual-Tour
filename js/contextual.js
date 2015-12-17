@@ -1,3 +1,18 @@
+var gym = new Location("#gym", "Gym", "athletic",
+            "",  263, 611);
+	 var busstop_sl= new Location("#busstop_sl", "Bus Stop", "studentlife",
+            "",  263, 611);
+	var busstop_oc= new Location("#busstop_offcampus", "Bus Stop", "studentlife",
+            "",  263, 611);
+	var mountainsports= new Location("#mountainsports", "Mountain Sports", "studentlife",
+            "",  263, 611);
+	var gearroom= new Location("#gearroom", "Gear Room", "studentlife",
+            "",  263, 611);
+	var climbingwall= new Location("#climbingwall", "Climbing Wall", "studentlife",
+            "",  263, 611);
+	var foampit= new Location("#foampit", "Foam Pit", "studentlife",
+            "",  263, 611);
+
 /******************************************
 *
 * Location object instances - On Campus 
@@ -52,13 +67,17 @@
 *
 * Location object instances - Off Campus 
 ********************************************/
+      var gunnison = new Location("#mainstreet", "Gunnison", "offcampus", "Main Street is the hub of the community with shopping for every budget, yummy restaurants and buzzing coffee shops. It’s located only four blocks west of campus.", 628, 382);
+	  var busstop_oc = new Location("#busstop_oc", "Bus Stop", "offcampus", "", 628, 382);
+	   
+	  var crestedbutte = new Location("#crestedbutte", "Crested Butte", "offcampus", "Gunnison’s neighbor community located 38 miles north. It’s easy to access using the free RTA bus systems. Explore Colorado’s last great ski town. Recreational, culinary and shopping opportunities abound.", 607, 187);
+
     var telluride = new Location("#telluride", "Telluride", "offcampus", "Home to summer music festivals, Telluride Ski Resort, jeeping, biking, hiking, camping and climbing. Nestled in the San Juan Mountains 130 miles southwest of Gunnison.", 173, 743);
-    var crestedbutte = new Location("#crestedbutte", "Crested Butte", "offcampus", "Gunnison’s neighbor community located 38 miles north. It’s easy to access using the free RTA bus systems. Explore Colorado’s last great ski town. Recreational, culinary and shopping opportunities abound.", 607, 187);
+  
     var monarchmountain = new Location("#monarchmountain", "Monarch Mountain", "offcampus", "Less than an hour’s drive east of Gunnison, Monarch Ski Area boasts 800 skiable acres and 150 inches annual snowfall. Backcountry and cross country skiing and mountain biking are all easily accessible.",  926, 386);
     var hartmanrocks = new Location("#hartmanrocks", "Hartman Rocks", "recreation", " 8,000 acres of open BLM land with hundreds of miles of single-track trails and dirt roads, Hartman Rocks is a desert paradise for mountain biking, hiking, motorcycling, rock climbing, horseback riding, trail running and Nordic skiing.", 611, 439);
-    var cbmr = new Location("#cbmr", "Crested Butte Mountain Resort", "offcampus", "World-class skiing with more than 1,500 skiable acres 30 miles from Gunnison. Take the bus straight from campus to the base area. Western students can purchase discounted season passes.",  607, 187);
-    var gunnison = new Location("#mainstreet", "Gunnison", "offcampus", "Main Street is the hub of the community with shopping for every budget, yummy restaurants and buzzing coffee shops. It’s located only four blocks west of campus.", 628, 382);
-
+    var cbmr = new Location("#cbmr", "Crested Butte Mountain Resort", "offcampus", "World-class skiing with more than 1,500 skiable acres 30 miles from Gunnison. Take the free bus straight from campus to the base area. Western students can purchase discounted season passes.",  607, 187);
+ 
     
 	var lakeirwin = new Location("#lakeirwin", "Lake Irwin", "offcampus", " High-mountain lake surrounded by snow-capped peaks and beautiful 4x4 roads, mountain bike trails, hiking, fly fishing, lake fishing, paddle-boarding, camping, backpacking, snowcat skiing and snowmobiling.", 499, 230);
 	var bluemesa = new Location("#bluemesa", "Blue Mesa", "offcampus", "Colorado's largest lake and a popular destination for outdoor recreation, Blue Mesa offers fishing, camping, boating, 		  	paddleboarding, windsurfing, waterskiing and hiking.", 502, 434);
@@ -133,40 +152,43 @@
 
 
 	/*====================Outdoor Arrows================== *Left arrow points to a old location, right arrows points to the new location*/
-    var mainstreet_to_hartmanrocks = new Navigation("#mainstreet", "mainstreet_to_hartmanrocks", "Click to go Hartman Rocks", "#hartmanrocks", "right", 68, 26, 4);
-   	var mainstreet_to_cranorhill = new Navigation("#mainstreet", "mainstreet_to_cranorhill", "Click to go Cranor Hill", "#cranorhill", "left", 26,26, 4);
+   var mainstreet_to_busstop_oc = new Navigation("#mainstreet", "mainstreet_to_busstop_oc", "Click to go to the Bus Stop", "#busstop_oc", "right", 68, 26, 4);
+   	var mainstreet_to_telluride = new Navigation("#mainstreet", "mainstreet_to_telluride", "Click to go to Telluride", "#telluride", "left", 26,26, 4);
 	
-	var hartmanrocks_to_mainstreet = new Navigation("#hartmanrocks", "hartmanrocks_to_mainstreet", "Click to go Main Street", "#mainstreet", "left", 26,26, 4);
-    var hartmanrocks_to_bluemesa = new Navigation("#hartmanrocks", "hartmanrocks_to_bluemesa", "Click to go Blue Mesa", "#bluemesa", "right", 68, 26, 4);
+	var busstop_oc_to_crestedbutte = new Navigation("#busstop_oc", "busstop_oc_to_crestedbutte", "Click to go to Crested Butte", "#crestedbutte", "right", 68, 26, 4);
+	var busstop_oc_to_mainstreet = new Navigation("#busstop_oc", "busstop_oc_to_mainstreet", "Click to go Main Street", "#mainstreet", "left", 26,26, 4);
 	
-	var bluemesa_to_blackcanyon = new Navigation("#bluemesa", "bluemesa_to_telluride", "Click to go to Black Canyon", "#blackcanyon", "right", 68, 26, 4);
-	var bluemesa_to_hartmanrocks = new Navigation("#bluemesa", "bluemesa_to_hartmanrocks", "Click to go Hartman Rocks", "#hartmanrocks", "left", 26,26, 4);
+	var crestedbutte_to_cbmr = new Navigation("#crestedbutte", "crestedbutte_to_cbmr", "Click to go Crested Butte Mountian Resort", "#cbmr", "right", 68, 26, 4);
+	var crestedbutte_to_busstop_oc = new Navigation("#crestedbutte", "crestedbutte_to_busstop_oc", "Click to go to the Bus Stop", "#busstop_oc", "left", 26,26, 4);
 	
-	var blackcanyon_to_telluride = new Navigation("#blackcanyon", "blackcanyon_to_telluride", "Click to go Telluride", "#telluride", "right", 68, 26, 4);
-	var blackcanyon_to_bluemesa = new Navigation("#blackcanyon", "blackcanyon_to_bluemesa", "Click to go Blue Mesa", "#bluemesa", "left", 26,26, 4);
+	var cbmr_to_hartmanrocks = new Navigation("#cbmr", "cbmr_to_hartmanrocks", "Click to go to Hartmans Rocks", "#hartmanrocks", "right", 68, 26, 4);
+	var cbmr_to_crestedbutte = new Navigation("#cbmr", "cbmr_to_crestedbutte", "Click to go to Crested Butte", "#crestedbutte", "left", 26,26, 4);
 	
-	var telluride_to_monarchmountain = new Navigation("#telluride", "telluride_to_monarchmountain", "Click to go Monarch Mountain", "#monarchmountain", "right", 68, 26, 4);
-	var telluride_to_blackcanyon = new Navigation("#telluride", "telluride_to_blackcanyon", "Click to go Black Canyon", "#blackcanyon", "left", 26,26, 4);
+	var hartmanrocks_to_bluemesa = new Navigation("#hartmanrocks", "hartmanrocks_to_bluemesa", "Click to go to the Blue Mesa", "#bluemesa", "right", 68, 26, 4);
+	var hartmanrocks_to_cbmr = new Navigation("#hartmanrocks", "hartmanrocks_to_cbmr", "Click to go to Crested Butte Mountain Resort", "#cbmr", "left", 26,26, 4);
 	
-	var monarchmountain_to_taylorpark = new Navigation("#monarchmountain", "monarchmountain_to_taylorpark", "Click to go Taylor Park", "#taylorpark", "right", 68, 26, 4);
-	var monarchmountain_to_telluride = new Navigation("#monarchmountain", "monarchmountain_to_telluride", "Click to go Telluride", "#telluride", "left", 26,26, 4);
+	var bluemesa_to_blackcanyon = new Navigation("#bluemesa", "bluemesa_to_blackcanyon", "Click to go to the Black Canyon", "#blackcanyon", "right", 68, 26, 4);
+	var bluemesa_to_hartmanrocks = new Navigation("#bluemesa", "bluemesa_to_hartmanrocks", "Click to go to Hartman Rocks", "#hartmanrocks", "left", 26,26, 4);
 	
-	var taylorpark_to_lakeirwin = new Navigation("#taylorpark", "taylorpark_to_lakeirwin", "Click to go Lake Irwin", "#lakeirwin", "right", 68, 26, 4);
-	var taylorpark_to_monarchmountain = new Navigation("#taylorpark", "taylorpark_to_monarchmountain", "Click to go Monarch Mountain", "#monarchmountain", "left", 26,26, 4);
+	var blackcanyon_to_taylorpark = new Navigation("#blackcanyon", "blackcanyon_to_taylorpark", "Click to go to Taylor Park", "#taylorpark", "right", 68, 26, 4);
+	var blackcanyon_to_bluemesa = new Navigation("#blackcanyon", "blackcanyon_to_bluemesa", "Click to go to the Blue Mesa", "#bluemesa", "left", 26,26, 4);
 	
-	var lakeirwin_to_taylorpark = new Navigation("#lakeirwin", "lakeirwin_to_taylorpark", "Click to go Taylor Park", "#taylorpark", "left", 26,26, 4);
-	var lakeirwin_to_cbmr = new Navigation("#lakeirwin", "lakeirwin_to_cbmr", "Click to go Crested Butte Mountain Resort", "#cbmr", "right", 68, 26, 4);
+	var taylorpark_to_lakeirwin = new Navigation("#taylorpark", "taylorpark_to_lakeirwin", "Click to go to Lake Irwin", "#lakeirwin", "right", 68, 26, 4);
+	var taylorpark_to_blackcanyon = new Navigation("#taylorpark", "taylorparkn_to_blackcanyon", "Click to go to the Black Canyon", "#blackcanyon", "left", 26,26, 4);
+	
+	var lakeirwin_to_cranorhill = new Navigation("#lakeirwin", "lakeirwin_to_cranorhill", "Click to go to Cranor Hill", "#cranorhill", "right", 68, 26, 4);
+	var lakeirwin_to_taylorpark = new Navigation("#lakeirwin", "lakeirwin_to_taylorpark", "Click to go to Taylor Park", "#taylorpark", "left", 26,26, 4);
+	
+	var cranorhill_to_monarchmountain = new Navigation("#cranorhill", "cranorhill_to_monarchmountain", "Click to go to Monarch Mountain", "#monarchmountain", "right", 68, 26, 4);
+	var cranorhill_to_lakeirwin = new Navigation("#cranorhill", "cranorhill_to_lakeirwin", "Click to go to Lake Irwin", "#lakeirwin", "left", 26,26, 4);
 
-	var cbmr_to_lakeirwin = new Navigation("#cbmr", "cbmr_to_lakeirwin", "Click to go Lake Irwin", "#lakeirwin", "left", 26,26, 4);
-	var cbmr_to_crestedbutte = new Navigation("#cbmr", "cbmr_to_crestedbutte", "Click to go Crested Butte", "#crestedbutte", "right", 68, 26, 4);
+	var monarchmountain_to_telluride = new Navigation("#monarchmountain", "monarchmountain_to_telluride", "Click to go to Telluride", "#telluride", "right", 68, 26, 4);
+	var monarchmountain_to_cranorhill = new Navigation("#monarchmountain", "monarchmountain_to_cranorhill", "Click to go to Cranor Hil", "#cranorhill", "left", 26,26, 4);
 	
-	var crestedbutte_to_cbmr = new Navigation("#crestedbutte", "crestedbutte_to_cbmr", "Click to go Crested Butte Mountian Resort", "#cbmr", "left", 26,26, 4);
-	var crestedbutte_to_cranorhill = new Navigation("#crestedbutte", "crestedbutte_to_cranorhill", "Click to go Cranor Hill", "#cranorhill", "right", 68, 26, 4);
+	var telluride_to_gunnison = new Navigation("#telluride", "telluride_to_gunnison", "Click to go to Gunnison", "#mainstreet", "right", 68, 26, 4);
+	var telluride_to_monarchmountain = new Navigation("#telluride", "telluride_to_monarchmountain", "Click to go to Monarch Mountian", "#monarchmountain", "left", 26,26, 4);
 	
-	var cranorhill_to_crestedbutte = new Navigation("#cranorhill", "cranorhill_to_crestedbutte", "Click to go Crested Butte", "#crestedbutte", "left", 26,26, 4);
-	var cranorhill_to_mainstreet = new Navigation("#cranorhill", "cranorhill_to_mainstreet", "Click to go Gunnison Main Street", "#mainstreet", "right", 68, 26, 4);
-	
-	
+
     var navs = [ 
 		
 		/*======Academics Array=====*/
@@ -179,7 +201,7 @@
 		fieldhouse_to_practicefield, practicefield_to_fieldhouse, fieldhouse_to_begin, practicefield_to_mountaineerbowl, mountaineerbowl_to_practicefield, mountaineerbowl_to_gatewayfield, gatewayfield_to_fieldhouse, gatewayfield_to_mountaineerbowl,
 		
 		/*======Outdoor Array=====*/
-        mainstreet_to_hartmanrocks, mainstreet_to_cranorhill, hartmanrocks_to_mainstreet,  hartmanrocks_to_bluemesa, bluemesa_to_blackcanyon, bluemesa_to_hartmanrocks, telluride_to_monarchmountain, telluride_to_blackcanyon,  monarchmountain_to_taylorpark, monarchmountain_to_telluride,   taylorpark_to_lakeirwin, taylorpark_to_monarchmountain,  lakeirwin_to_taylorpark, lakeirwin_to_cbmr, cbmr_to_lakeirwin, cbmr_to_crestedbutte, crestedbutte_to_cbmr, crestedbutte_to_cranorhill, cranorhill_to_crestedbutte, cranorhill_to_mainstreet, blackcanyon_to_telluride, blackcanyon_to_bluemesa];
+         mainstreet_to_busstop_oc, mainstreet_to_telluride, busstop_oc_to_crestedbutte, busstop_oc_to_mainstreet, crestedbutte_to_cbmr, crestedbutte_to_busstop_oc, cbmr_to_hartmanrocks, cbmr_to_crestedbutte, hartmanrocks_to_bluemesa, hartmanrocks_to_cbmr, bluemesa_to_blackcanyon,  bluemesa_to_hartmanrocks, blackcanyon_to_taylorpark, blackcanyon_to_bluemesa, taylorpark_to_lakeirwin, taylorpark_to_blackcanyon, lakeirwin_to_cranorhill, lakeirwin_to_taylorpark, cranorhill_to_monarchmountain, cranorhill_to_lakeirwin, monarchmountain_to_telluride, monarchmountain_to_cranorhill, telluride_to_gunnison, telluride_to_monarchmountain];
 
 
 /***********************
