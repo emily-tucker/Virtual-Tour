@@ -1,17 +1,5 @@
-var gym = new Location("#gym", "Gym", "athletic",
-            "",  263, 611);
-	 var busstop_sl= new Location("#busstop_sl", "Bus Stop", "studentlife",
-            "",  263, 611);
-	var busstop_oc= new Location("#busstop_offcampus", "Bus Stop", "studentlife",
-            "",  263, 611);
-	var mountainsports= new Location("#mountainsports", "Mountain Sports", "studentlife",
-            "",  263, 611);
-	var gearroom= new Location("#gearroom", "Gear Room", "studentlife",
-            "",  263, 611);
-	var climbingwall= new Location("#climbingwall", "Climbing Wall", "studentlife",
-            "",  263, 611);
-	var foampit= new Location("#foampit", "Foam Pit", "studentlife",
-            "",  263, 611);
+
+
 
 /******************************************
 *
@@ -21,8 +9,13 @@ var gym = new Location("#gym", "Gym", "athletic",
 	"Western offers a private college experience at a public university cost, deep in the heart of the Rockies.", 986, 581);
 	var borick = new Location("#borick", "Borick Buisness Building", "academic",
             "Prominent and relatively new, state-of-the-art Borick is home to Western's new School of Business. It includes a virtual classroom that can connect easily with similar facilities around the world.", 842, 635);
+	var busstop_sl= new Location("#busstop_sl", "Bus Stop", "studentlife",
+            "",  263, 611);
 	var chipeta = new Location("#chipeta", "Chipeta Student Housing", "studentlife",
             "Co-ed apartments on the southwest corner of campus, featuring furnished one- and two-bedroom units. Also home to Western's Lesbian/Gay/Bisexual Student Alliance.",  263, 611);
+			
+	var climbingwall= new Location("#climbingwall", "Climbing Wall", "studentlife",
+            "",  263, 611);
 	var crawford = new Location("#crawford", "Crawford Hall", "academic",
             "A compact and appealing classroom building, primarily for Education courses.",  832, 484);
 	var escalante = new Location("#escalante", "Escalante Terrace", "studentlife",
@@ -30,9 +23,15 @@ var gym = new Location("#gym", "Gym", "athletic",
 	var fieldhouse_Athletic = new Location("#fieldhouse", "Mountaineer Field House", "athletic", 
 	 "This spectacular new building includes a high-tech surface across its main floor, with the highest indoor NCAA track, a 43.5-foot climbing wall, an athletic weight room, a fitness center, the HAPLab and more.", 687, 410);
 	 var fieldhouse_SL = new Location("#fieldhouse_SL", "Mountaineer Field House", "studentlife", 
-	 "This spectacular new building includes a high-tech surface across its main floor, with the highest indoor NCAA track, a 43.5-foot climbing wall, an athletic weight room, a fitness center, the HAPLab and more.", 687, 410);
+	 "This spectacular new building includes a high-tech surface across its main floor, with the highest indoor NCAA track, a 43.5-foot climbing wall, an athletic weight room, a fitness center, the HAPLab and more.", 687, 410); 
+	var foampit= new Location("#foampit", "Foam Pit", "studentlife",
+            "",  263, 611);
 	var gatewayfield = new Location("#gatewayfield", "Gateway Soccer Fields", "athletic", 
 	 "Western’s women’s soccer team utilizes Gateway Field for games and practice. The south side of the field is available for recreation or relaxation.", 700, 797);
+	var gearroom= new Location("#gearroom", "Gear Room", "studentlife",
+            "",  263, 611);
+	 var gym = new Location("#gym", "Gym", "athletic",
+            "",  263, 611);
 	var hurst = new Location("#hurst", "Hurst Hall", "academic",
             "One of the campus's most modern classroom buildings, Hurst houses Science, Mathematics and Computer Science labs, along with offices.", 1301, 586);
 	var intramuralField = new Location("#intramuralField", "Intramural Sports Field", "studentlife",
@@ -45,6 +44,10 @@ var gym = new Location("#gym", "Gym", "athletic",
 	"Savage Library is a research hub for campus and great study spot. You'll find the expected stacks of books, but also large computer labs, access to electronic libraries around the world and the university archives.",  973, 494);
 	var mears = new Location("#mears", "Mears Complex", "studentlife",
             "These co-ed dormitories Mears, Robidoux and Moffat connect by enclosed corridors. They feature suite-style double rooms, with two rooms sharing each bathroom.", 626, 509);
+	var mountainsports_sl= new Location("#mountainsports_sl", "Mountain Sports", "studentlife",
+            "",  263, 611);
+	var mountainsports_athletic= new Location("#mountainsports_athletic", "Mountain Sports", "athletic",
+            "",  263, 611);
 	 var paulwrightgym = new Location("#paulwrightgym", "Paul Wright Gymnasium", "academic",
             "At 7,723 feet above sea level, this is the world's highest collegiate gym. It seats 1,800 and includes an indoor pool, a wrestling room, locker rooms, the Hall of Fame trophy room and classrooms.", 840, 366);
 	var pinnacles = new Location("#pinnacles", "Pinnacles Student Housing", "studentlife",
@@ -118,11 +121,18 @@ var gym = new Location("#gym", "Gym", "athletic",
 	
 	
 	/*====================Student Life Arrows================== StudentLife Tour = 2*/
-	var universitycenter_to_fieldhouse_SL = new Navigation("#universitycenter", "universitycenter_to_fieldhouse_SL", "Click to go the Fieldhouse", "#fieldhouse_SL", "right", 68, 26, 2);
+	var universitycenter_to_gearroom = new Navigation("#universitycenter", "universitycenter_to_gearroom", "Click to go the WP Gear Room", "#gearroom", "right", 68, 26, 2);
 	var universitycenter_to_begin = new Navigation("#universitycenter", "universitycenter_to_begin", "Click to go back to the Welcome Center", "#begin", "left", 26,26, 2);
-	var fieldhouse_SL_to_mears = new Navigation("#fieldhouse_SL", "fieldhouse_SL_to_mears", "Click to go the Mears Complex", "#mears", "right", 68, 26, 2);
-	var fieldhouse_SL_to_universitycenter = new Navigation("#fieldhouse_SL", "fieldhouse_SL_to_universitycenter", "Click to go back to the University Center", "#universitycenter", "left", 26,26, 2);
-	var mears_to_fieldhouse_SL = new Navigation("#mears", "mears_to_fieldhouse_SL", "Click to go back to the Field House", "#fieldhouse_SL", "left", 26,26, 2);
+	var gearroom_to_fieldhouse_SL = new Navigation("#gearroom", "gearroom_to_fieldhouse_SL", "Click to go the Fieldhouse", "#fieldhouse_SL", "right", 68, 26, 2);
+	var gearroom_to_universitycenter = new Navigation("#gearroom", "gearroom_to_universitycenter", "Click to go back to the University Center", "#universitycenter", "left", 26,26, 2);
+	var fieldhouse_SL_to_climbingwall = new Navigation("#fieldhouse_SL", "fieldhouse_SL_to_climbingwall", "Click to go the Climbing Wall", "#climbingwall", "right", 68, 26, 2);
+	var fieldhouse_SL_to_gearroom = new Navigation("#fieldhouse_SL", "fieldhouse_SL_to_gearroom", "Click to go back to the WP Gear Room", "#gearroom", "left", 26,26, 2);
+	
+	var climbingwall_to_foampit = new Navigation("#climbingwall", "climbingwall_to_foampit", "Click to go the Foam Pit", "#foampit", "right", 68, 26, 2);
+	var climbingwall_to_fieldhouse_SL = new Navigation("#climbingwall", "climbingwall_to_fieldhouse_SL", "Click to go back to the Field House", "#fieldhouse_SL", "left", 26,26, 2);
+	var foampit_to_mears = new Navigation("#foampit", "foampit_to_mears", "Click to go the Mears Complex", "#mears", "right", 68, 26, 2);
+	var foampit_to_climbingwall = new Navigation("#foampit", "foampit_to_climbingwall", "Click to go back to the Climbing Wall", "#climbingwall", "left", 26,26, 2);
+	var mears_to_foampit = new Navigation("#mears", "mears_to_foampit", "Click to go back to the Foam Pit", "#foampit", "left", 26,26, 2);
 	var mears_to_pinnacles = new Navigation("#mears", "mears_to_pinnacles", "Click to go the Pinnacles", "#pinnacles", "right", 68, 26, 2);
 	var pinnacles_to_mears = new Navigation("#pinnacles", "pinnacles_to_mears", "Click to go back to the Mears Complex", "#mears", "left", 26,26, 2);
 	var pinnacles_to_chipeta = new Navigation("#pinnacles", "pinnacles_to_chipeta", "Click to go Chipeta Hall", "#chipeta", "right", 68, 26, 2);
@@ -135,20 +145,28 @@ var gym = new Location("#gym", "Gym", "athletic",
 	var library_to_taylorQuad = new Navigation("#library_SL", "library_to_taylorQuad", "Click to go back to Taylor Quad", "#taylorQuad", "left", 26,26, 2);
 	var library_to_escalante = new Navigation("#library_SL", "library_to_escalante", "Click to go the Escalante Terrace", "#escalante", "right", 68, 26, 2);
 	var escalante_to_library = new Navigation("#escalante", "escalante_to_library", "Click to go back to the Library", "#library_SL", "left", 26,26, 2);
-	var escalante_to_universitycenter = new Navigation("#escalante", "escalante_to_universitycenter", "Click to go the University Center", "#universitycenter", "right", 68, 26, 2);
+	var escalante_to_mountainsports_sl = new Navigation("#escalante", "escalante_to_mountainsports_sl", "Click to go to Mountain Sports", "#mountainsports_sl", "right", 68, 26, 2);
+	var mountainsports_sl_to_escalante = new Navigation("#mountainsports_sl", "mountainsports_sl_to_escalante", "Click to go back to the Escalante Terrace", "#escalante", "left", 26,26, 2);
+	var mountainsports_sl_to_busstop = new Navigation("#mountainsports_sl", "mountainsports_sl_to_busstop", "Click to go to the Bus Stop", "#busstop", "right", 68, 26, 2);
 	
-
+	var busstop_to_mountainsports_sl = new Navigation("#busstop", "busstop_to_mountainsports_sl", "Click to go back to Mountain Sports", "#mountainsports_sl", "left", 26,26, 2);
+	var busstop_to_universitycenter = new Navigation("#busstop", "busstop_to_universitycenter", "Click to go the University Center", "#universitycenter", "right", 68, 26, 2);
+	
 
 	
 	/*====================Athletics Arrows================== Athetic Tour = 3*/
-	var fieldhouse_to_practicefield= new Navigation("#fieldhouse", "fieldhouse_to_practicefield", "Click to go the Practice Field", "#practicefield", "right", 68, 26, 3);
+	var fieldhouse_to_gym= new Navigation("#fieldhouse", "fieldhouse_to_gym", "Click to go the gym", "#gym", "right", 68, 26, 3);
 	var fieldhouse_to_begin= new Navigation("#fieldhouse", "fieldhouse_to_begin", "Click to go back to the Welcome Center", "#begin", "left", 26,26, 3);
-	var practicefield_to_fieldhouse= new Navigation("#practicefield", "practicefield_to_fieldhouse", "Click to go back to the Field House", "#fieldhouse", "left", 26,26, 3);
+	var gym_to_practicefield= new Navigation("#gym", "gym_to_practicefield", "Click to go the Practice Field", "#practicefield", "right", 68, 26, 3);
+	var gym_to_fieldhouse= new Navigation("#gym", "gym_to_fieldhouse", "Click to go the Field House", "#fieldhouse", "left", 26,26, 3);
+	var practicefield_to_gym= new Navigation("#practicefield", "practicefield_to_gym", "Click to go back to the Gym", "#gym", "left", 26,26, 3);
 	var practicefield_to_mountaineerbowl= new Navigation("#practicefield", "practicefield_to_mountaineerbowl", "Click to go the Mountaineer Bowl", "#mountaineerbowl", "right", 68, 26, 3);
 	var mountaineerbowl_to_practicefield= new Navigation("#mountaineerbowl", "mountaineerbowl_to_practicefield", "Click to go back to the Practice Field", "#practicefield", "left", 26,26, 3);
 	var mountaineerbowl_to_gatewayfield= new Navigation("#mountaineerbowl", "mountaineerbowl_to_gatewayfield", "Click to go Gateway Field", "#gatewayfield", "right", 68, 26, 3);
 	var gatewayfield_to_mountaineerbowl= new Navigation("#gatewayfield", "gatewayfield_to_mountaineerbowl", "Click to go back to the Mountaineer Bowl", "#mountaineerbowl", "left", 26,26, 3);
-	var gatewayfield_to_fieldhouse= new Navigation("#gatewayfield", "gatewayfield_to_fieldhouse", "Click to go the Field House", "#fieldhouse", "right", 68, 26, 3);
+	var gatewayfield_to_mountainsports_athletic= new Navigation("#gatewayfield", "gatewayfield_to_mountainsports_athletic", "Click to go to Mountain Sports", "#mountainsports_athletic", "right", 68, 26, 3);
+	var mountainsports_athletic_to_gatewayfield= new Navigation("#mountainsports_athletic", "mountainsports_athletic_to_gatewayfield", "Click to go back to Gateway Field", "#gatewayfield", "left", 26,26, 3);
+	var mountainsports_athletic_to_fieldhouse= new Navigation("#mountainsports_athletic", "mountainsports_athletic_to_fieldhouse", "Click to go the Field House", "#fieldhouse", "right", 68, 26, 3);
 
 
 	/*====================Outdoor Arrows================== *Left arrow points to a old location, right arrows points to the new location*/
@@ -195,10 +213,10 @@ var gym = new Location("#gym", "Gym", "athletic",
 		   taylor_to_quigley, quigley_to_taylor, quigley_to_hurst, hurst_to_quigley, hurst_to_quigley, hurst_to_kelley, kelley_to_hurst, kelley_to_library, library_to_kelley, library_to_paulwrightgym, paulwrightgym_to_library, paulwrightgym_to_crawford, crawford_to_borick, crawford_to_paulwrightgym, borick_to_crawford, borick_to_taylor, taylor_to_begin,
 		
 		/*======Student Life Array=====*/
-		universitycenter_to_fieldhouse_SL, universitycenter_to_begin, fieldhouse_SL_to_mears, fieldhouse_SL_to_universitycenter, mears_to_fieldhouse_SL, mears_to_pinnacles, pinnacles_to_mears, pinnacles_to_chipeta, chipeta_to_ute, chipeta_to_pinnacles, ute_to_chipeta, ute_to_taylorQuad, taylorQuad_to_ute, taylorQuad_to_library, library_to_taylorQuad, library_to_escalante,escalante_to_universitycenter, escalante_to_library,
-
-		/*======Athletics Array=====*/
-		fieldhouse_to_practicefield, practicefield_to_fieldhouse, fieldhouse_to_begin, practicefield_to_mountaineerbowl, mountaineerbowl_to_practicefield, mountaineerbowl_to_gatewayfield, gatewayfield_to_fieldhouse, gatewayfield_to_mountaineerbowl,
+		universitycenter_to_gearroom, universitycenter_to_begin, gearroom_to_fieldhouse_SL, gearroom_to_universitycenter, fieldhouse_SL_to_climbingwall, fieldhouse_SL_to_gearroom, climbingwall_to_foampit, climbingwall_to_fieldhouse_SL, foampit_to_mears, foampit_to_climbingwall, mears_to_foampit, mears_to_pinnacles, pinnacles_to_mears, pinnacles_to_chipeta,  chipeta_to_ute, chipeta_to_pinnacles, ute_to_chipeta, ute_to_taylorQuad, taylorQuad_to_ute, taylorQuad_to_library, library_to_taylorQuad, library_to_escalante,  escalante_to_library, escalante_to_mountainsports_sl, mountainsports_sl_to_escalante, mountainsports_sl_to_busstop, busstop_to_mountainsports_sl, busstop_to_universitycenter,
+		
+	/*=====Athletics Array=====*/
+		fieldhouse_to_gym, fieldhouse_to_begin, gym_to_practicefield, gym_to_fieldhouse, practicefield_to_gym, practicefield_to_mountaineerbowl, mountaineerbowl_to_practicefield, mountaineerbowl_to_gatewayfield, gatewayfield_to_mountaineerbowl, gatewayfield_to_mountainsports_athletic, mountainsports_athletic_to_gatewayfield, mountainsports_athletic_to_fieldhouse,
 		
 		/*======Outdoor Array=====*/
          mainstreet_to_busstop_oc, mainstreet_to_telluride, busstop_oc_to_crestedbutte, busstop_oc_to_mainstreet, crestedbutte_to_cbmr, crestedbutte_to_busstop_oc, cbmr_to_hartmanrocks, cbmr_to_crestedbutte, hartmanrocks_to_bluemesa, hartmanrocks_to_cbmr, bluemesa_to_blackcanyon,  bluemesa_to_hartmanrocks, blackcanyon_to_taylorpark, blackcanyon_to_bluemesa, taylorpark_to_lakeirwin, taylorpark_to_blackcanyon, lakeirwin_to_cranorhill, lakeirwin_to_taylorpark, cranorhill_to_monarchmountain, cranorhill_to_lakeirwin, monarchmountain_to_telluride, monarchmountain_to_cranorhill, telluride_to_gunnison, telluride_to_monarchmountain];
