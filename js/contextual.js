@@ -19,7 +19,7 @@
 	var crawford = new Location("#crawford", "Crawford Hall", "academic",
             "A compact and appealing classroom building, primarily for Education courses.",  832, 484);
 	var escalante = new Location("#escalante", "Escalante Terrace", "studentlife",
-            "Formerly Western's Fitness Center, Escalante Terrace is slated to house Western's ICE program for entrepreneurship. For 2615-2616, it will house art programs, while Quigley Hall undergoes renovations.",  1238, 399);
+            "Formerly Western's Fitness Center, Escalante Terrace is slated to house Western's ICE program for entrepreneurship. For 2015-2016, it will house art programs, while Quigley Hall undergoes renovations.",  1238, 399);
 	var fieldhouse_Athletic = new Location("#fieldhouse", "Mountaineer Field House", "athletic", 
 	 "This spectacular new building includes a high-tech surface across its main floor, with the highest indoor NCAA track, a 43.5-foot climbing wall, an athletic weight room, a fitness center, the HAPLab and more.", 687, 410);
 	 var fieldhouse_SL = new Location("#fieldhouse_SL", "Mountaineer Field House", "studentlife", 
@@ -57,7 +57,7 @@
 	var mountaineerbowl = new Location("#mountaineerbowl", "Mountaineer Bowl", "athletic",
             "Home of Mountaineer football and Western's high-tech-surface track, it's also world's highest collegiate football stadium at 7,750 feet above sea level, seating 4,000 fans, with room for more on its hills.",  1042, 296);
 	var quigley = new Location("#quigley", "Quigley Hall", "academic",
-            "Home of Western's Art and Music programs, Quigley is undergoing a $25.8 million renovation, upgrading studios, presenation spaces, practice rooms and more, with expected completion in Fall 2616.", 1134, 659);
+            "Home of Western's Art and Music programs, Quigley is undergoing a $25.8 million renovation, upgrading studios, presenation spaces, practice rooms and more, with expected completion in Fall 2016.", 1134, 659);
     var taylor = new Location("#taylor", "Taylor Hall", "academic",
             "Renovated in 2016, Taylor is a LEED-certified, energy-efficient structure. Its bold atrium serves is Western's Welcome Center. It also houses the administration, an auditorium, a theater and many classrooms.", 985, 553);
 	 var taylorQuad = new Location("#taylorQuad", "Taylor Quad", "studentlife",
