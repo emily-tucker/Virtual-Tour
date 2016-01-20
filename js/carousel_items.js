@@ -13,7 +13,7 @@ var taylor_2 = new CarouselItem(["#taylor"], taylor_2full, taylor_2thumb, "KWSB 
 
 var taylor_3full = new Image("taylor_3full", "imgs/taylor_3full.jpg");
 var taylor_3thumb = new Image("taylor_3thumb", "imgs/taylor_3thumb.jpg");
-var taylor_3 = new CarouselItem(["#taylor"], taylor_3full, taylor_3thumb, 'The Taylor Auditorium', 'Taylor Hall’s Studio Theater offers an intimate acting space where the audience surrounds three sides of the stage. Peak Productions, Western’s co-curricular program and student-run production board, utilizes the space to present three to four quality live performances each year.');
+var taylor_3 = new CarouselItem(["#taylor"], taylor_3full, taylor_3thumb, 'Studio Theater', 'Taylor Hall’s Studio Theater offers an intimate acting space where the audience surrounds three sides of the stage. Peak Productions, Western’s co-curricular program and student-run production board, utilizes the space to present three to four quality live performances each year.');
 
 var taylor_4full = new Image("taylor_4", "imgs/taylor_4full.jpg");
 var taylor_4thumb = new Image("taylor_4thumb", "imgs/taylor_4thumb.jpg");

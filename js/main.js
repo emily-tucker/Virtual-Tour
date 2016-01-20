@@ -511,8 +511,10 @@ $(function () {
                 document.getElementById('video').innerHTML = '<video z-index="10000" width="100%" height="auto"  controls autoplay>' +
                     '<source src="video/fly-in2.webm" type="video/webm"></video>';
                 $("#map").css({
-                    "right": "0"
+                    "right": "0",
+	
                 });
+				document.getElementById("map").style.border = "thick solid #0000FF";
                 $("#map").hide('blind');
                 $("#carousel").hide('blind');
                 $(this).off("click");

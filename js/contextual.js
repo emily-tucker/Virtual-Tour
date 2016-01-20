@@ -29,7 +29,7 @@
 	var gatewayfield = new Location("#gatewayfield", "Gateway Soccer Fields", "athletic", 
 	 "Western’s women’s soccer team utilizes Gateway Field for games and practice. The south side of the field is available for recreation or relaxation.", 700, 797);
 	var gearroom= new Location("#gearroom", "WP Gear Room", "studentlife",
-            " Wilderness Pursuits provides fun, low-cost, professional-quality co-curricular outdoor expeditions and resources for Western students. Take a trip with WP to explore the Gunnison Valley, attend a free clinic to learn how to tune your equipment, or take advantage of low-cost equipment rentals.",  263, 611);
+            " Wilderness Pursuits provides fun, low-cost, professional-quality co-curricular outdoor expeditions and resources for Western students. Take a trip with WP to explore the Gunnison Valley, attend a free clinic to learn how to tune your equipment, or take advantage of low-cost equipment rentals.",  987, 402);
 	 var gym = new Location("#gym", "Paul Wright Gym", "athletic",
 	  "At 7,723 feet above sea level, the Paul Wright Gymnasium is the world’s highest collegiate gym and houses Western’s indoor pool, wrestling room, Hall of Fame trophy room and classrooms for the Recreation, Exercise & Sports Science department.", 840, 366);
 	var hurst = new Location("#hurst", "Hurst Hall", "academic",
