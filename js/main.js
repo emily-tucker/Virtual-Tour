@@ -514,7 +514,7 @@ $(function () {
                     "right": "0",
 	
                 });
-				document.getElementById("map").style.border = "thick solid #0000FF";
+				document.getElementById("map").style.border = "0px";
                 $("#map").hide('blind');
                 $("#carousel").hide('blind');
                 $(this).off("click");

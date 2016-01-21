@@ -359,7 +359,7 @@ Schedule A Visit Button, Contact Button, Restart Button - These are on every pag
     height: 33%;
     right: 0;
     overflow: hidden;
-    border: none;
+    border: 0px;
 }
 
 .mapImage{
