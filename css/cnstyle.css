@@ -1,3 +1,4 @@
+
 /***********************
 * Mobile CSS Styles
 ************************/
@@ -16,6 +17,7 @@
 body.contextual_navigation
 {
     background:#666;
+	
 }
 /***********************
 * Menu CSS 
@@ -344,9 +346,21 @@ Schedule A Visit Button, Contact Button, Restart Button - These are on every pag
     top: 45.5%;
     max-height: 7%;
 	width:12em;
-
 	
 }
+
+.fb-like{
+    position:fixed;
+    z-index: 700000000000;
+    right: 1%;
+    top: 45.5%;
+    max-height: 7%;
+	width:12em;
+	
+	
+}
+
+
 
 /******************************************
  * 
@@ -360,6 +374,8 @@ Schedule A Visit Button, Contact Button, Restart Button - These are on every pag
     right: 0;
     overflow: hidden;
     border: 0px;
+	border-color:transparent;
+	border-style:none;
 }
 
 .mapImage{
@@ -585,4 +601,26 @@ comment out so the map doesn't auto scale
   
 }
 
+.media_button{
+	position: fixed;
+	display:block;
+	z-index:2000;
+    max-height: 40px;
+	max-width:40px; }
 
+.facebook_button {
+	right: 14%;
+    top: 56%;
+}
+
+.twitter_button {
+	right: 8%;
+    top: 56%;
+}
+
+.google_button {
+	right: 2%;
+    top: 56%;
+}
+	
+  

@@ -273,30 +273,4 @@ var menu = new MenuItem({
     icon: 'fa fa-bars',
     items: submenu
 })
-menu.items = submenu;
-var subnear = [
-new MenuItem({
-        text: 'CBMR',
-        icon: 'fa fa-tree',
-        target: 'locations',
-        href: '#cb'
-    }),
-new MenuItem({
-        text: 'Downtown Gunnison',
-        icon: 'fa fa-building',
-        target: 'locations',
-        href: "#mainstreet"
-    }),
-new MenuItem({
-        text: 'Hartman Rocks',
-        icon: 'fa fa-bicycle',
-        target: 'locations',
-        href: '#hartmans'
-    }),
-new MenuItem({
-        text: 'Rocky Mountains',
-        icon: 'fa fa-cloud',
-        target: 'locations',
-        href: '#rockymountains'
-    }),
-]
+

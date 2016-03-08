@@ -160,6 +160,7 @@ function load() {
 	 
 }
 
+
 /***********************************
  * Function to load the main buttons
  ***********************************/
@@ -167,6 +168,7 @@ function load() {
 
 function loadMainButtons() {
         var inner_html = "";
+		
         if (currentLocation.locationType === "main") {
             // If the current location of the tour is at the Welcome center display the 4 tours
             inner_html +=
@@ -179,7 +181,11 @@ function loadMainButtons() {
                 "<button class='schedule_button row' onclick='visitURL();'>Request Information</button>" +
                 "<button class='contact_button row' onclick='visitURL2();'>Contact Admissions</button>" +
                 "<button class='restart_button row' id = 'rb' onclick=load()>Restart Tour</button>" +
-				"<a href='http://www.western.edu/' target='_blank'><img src='imgs/westernLogo.png' class='homeButton''></a>";
+				"<a href='htp://www.western.edu/' target='_blank'><img src='imgs/westernLogo.png' class='homeButton''></a>" +
+				"<a href='https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwebapps.western.edu%2fvirtualtour' target='_blank'><img src='imgs/facebook.png' class='media_button facebook_button''></a>" +
+				"<a href='https://plus.google.com/share?url=http%3a%2f%2fwebapps.western.edu%2fvirtualtour' target='_blank'><img src='imgs/google.png' class='media_button google_button''></a>" +
+				"<a href='https://twitter.com/intent/tweet?text=Static%20social%20media%20%22share%22%20buttons&url=http%3a%2f%2fwebapps.western.edu%2fvirtualtour' target='_blank'><img src='imgs/twitter.png' class='media_button twitter_button''></a>";
+				
 				
 				
         } else {
@@ -190,9 +196,14 @@ function loadMainButtons() {
                 "<button class='contact_button row' onclick='visitURL2();'>Contact Admissions</button>" +
                 "<button id='hide' class='hide_button row' onclick='hideShowCarousel();'>Hide</button>" +
                 "<button class='restart_button row' id = 'rb' onclick=load()>Restart Tour</button>" +
-				"<a href='http://www.western.edu/' target='_blank'><img src='imgs/westernLogo.png' class='homeButton''></a>";
+				"<a href='http://www.western.edu/' target='_blank'><img src='imgs/westernLogo.png' class='homeButton''></a>" + 
+				"<div class='fb-like' data-href='http://webapps.western.edu/virtualtour' data-width='200' data-layout='standard' data-action='like' data-show-faces='true' data-share='true'></div>" +
+				"<a href='https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwebapps.western.edu%2fvirtualtour' target='_blank'><img src='imgs/facebook.png' class='media_button facebook_button''></a>" +
+				"<a href='https://plus.google.com/share?url=http%3a%2f%2fwebapps.western.edu%2fvirtualtour' target='_blank'><img src='imgs/google.png' class='media_button google_button''></a>" +
+				"<a href='https://twitter.com/intent/tweet?text=Static%20social%20media%20%22share%22%20buttons&url=http%3a%2f%2fwebapps.western.edu%2fvirtualtour' target='_blank'><img src='imgs/twitter.png' class='media_button twitter_button''></a>";
 	
         }
+		
 		
         $("#buttons").html(inner_html);
 
@@ -556,6 +567,8 @@ $(function () {
         mapButtonLoad();
         animate_map(currentLocation);
         loadMainButtons();
+		FB.XFBML.parse();
+		js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&amp;version=v2.3";
 		
 
     });

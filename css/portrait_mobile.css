@@ -128,5 +128,22 @@
 	width:12em;
 }
 
+.facebook_button{
+display: none !important;
 
  } 
+ 
+ .twitter_button{
+display: none !important;
+
+ } 
+ 
+ .google_button{
+display: none !important;
+
+ } 
+ .media_button{
+display: none !important;
+
+ } 
+ }
