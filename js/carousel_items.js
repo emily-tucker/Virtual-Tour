@@ -74,9 +74,26 @@ var universitycenter_5 = new CarouselItem(["#universitycenter"], universitycente
 //var Taylor_MovieThumb = new Image("Taylor_MovieThumb", "imgs/Taylor_MovieThumb.png");
 //var Taylor_Movie = new CarouselItem(["#taylor"], Taylor_MovieThumb, "Taylor Movie", '<a class="iframe" href="https://www.youtube.com/watch?v=NyYG2YRohp8"target="_blank" >');
 
+//Wilderness Pursuits, AKA "gearroom"
+var gearroom_1full = new Image("gearroom_1full.jpg", "imgs/gearroom_1full.jpg");
+var gearroom_1thumb = new Image("gearroom_1thumb.jpg", "imgs/gearroom_1thumb.jpg");
+var gearroom_1 = new CarouselItem(["#gearroom"], gearroom_1full, gearroom_1thumb, "Kayaking for Everyone", 'Whether you’re a first-timer or a seasoned white water rodeo boater, Wilderness Pursuits offers all levels of kayaking adventures to get you started or keep up the fun. WP offers overnight sea kayaking expeditions on Blue Mesa Reservoir or Lake Powell and Intro to Whitewater Kayaking courses on the Gunnison river. WP rents play boats and river runners to experienced whitewater boaters.');
+
+var gearroom_2full = new Image("gearroom_2full.jpg", "imgs/gearroom_2full.jpg");
+var gearroom_2thumb = new Image("gearroom_2thumb.jpg", "imgs/gearroom_2thumb.jpg");
+var gearroom_2 = new CarouselItem(["#gearroom"], gearroom_2full, gearroom_2thumb, "Mountain Biking", 'You’re in the Mountain Biking capital of the world! The Gunnison and Crested Butte area has thousands of miles of trails to explore, and WP offers gear, bike tuning classes and trips to satisfy all skill levels of mountain bikers. Take advantage of nearby Hartman Rocks recreation area or venture out on the world-famous 401 Trail in Crested Butte. There are trails, classes and trips for all types of bikers.');
+
+var gearroom_3full = new Image("gearroom_3full.jpg", "imgs/gearroom_3full.jpg");
+var gearroom_3thumb = new Image("gearroom_3thumb.jpg", "imgs/gearroom_3thumb.jpg");
+var gearroom_3 = new CarouselItem(["#gearroom"], gearroom_3full, gearroom_3thumb, "Climb Every Mountain!", 'No matter what the season or what your skill level, there’s always climbing going on at Wilderness Pursuits. We offer gear rentals at affordable rates so you can ice climb, rock climb or mountaineer until your heart is content. Introductory classes are offered to start your adventure, you can take safety and skills development classes for leveling up, or you can take a trip to a nearby climbing spot and hone your skills with friends. For all levels of adventurers.');
+
+var gearroom_4full = new Image("gearroom_4full.jpg", "imgs/gearroom_4full.jpg");
+var gearroom_4thumb = new Image("gearroom_4thumb.jpg", "imgs/gearroom_4thumb.jpg");
+var gearroom_4 = new CarouselItem(["#gearroom"], gearroom_4full, gearroom_4thumb, "A Night under the Stars", 'Want to get away from it all this weekend? WP offers backpacking trips and gear rentals to help you Go Outside and explore the public lands that surround us. Your WP Pass allows for free personal gear rentals, so you can grab a backpack, sleeping bag, shelter, stove and pay nothing out of pocket for a weekend in the wilderness!');
+
 
 //End of Carousel Items______________________________________________________________
 
 
-var CIs = [taylor_1, taylor_2, taylor_3, taylor_4, taylor_5, fieldhouse_athletic_1, fieldhouse_athletic_2, fieldhouse_athletic_3, fieldhouse_athletic_4, fieldhouse_athletic_5, universitycenter_1, universitycenter_2,universitycenter_3, universitycenter_4, universitycenter_5];
+var CIs = [taylor_1, taylor_2, taylor_3, taylor_4, taylor_5, fieldhouse_athletic_1, fieldhouse_athletic_2, fieldhouse_athletic_3, fieldhouse_athletic_4, fieldhouse_athletic_5, universitycenter_1, universitycenter_2, universitycenter_3, universitycenter_4, universitycenter_5, gearroom_1, gearroom_2, gearroom_3, gearroom_4];
 
